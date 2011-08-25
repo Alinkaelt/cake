@@ -1,0 +1,533 @@
+%Loesungen 6. Uebungsblatt Algorithmische Eigenschaften von Wahlsystemen I WS 10/11
+\documentclass[a4paper,12pt,titlepage,oneside]{article}
+
+%\usepackage[lmargin=2.00cm,rmargin=2.00cm,tmargin=3cm,bmargin= 3cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{times}
+
+\usepackage{color}
+\usepackage{picture}
+%\usepackage{psfig}
+%\usepackage{pst-all}
+\usepackage{epsfig}  
+\usepackage{eqlist}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{eepic,epic}
+\usepackage{tabularx,multirow}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+%\usepackage[all,dvips,arc,curve,frame,graph]{xy}
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{8.6in}
+\setlength{\topmargin}{-0.0in}
+
+
+\newcommand\bc{\begin{center}}
+\newcommand\ec{\end{center}}
+
+\newcommand\beq{\begin{eqnarray*}}
+\newcommand\eeq{\end{eqnarray*}}
+
+\newcommand\be{\begin{enumerate}}
+\newcommand\ee{\end{enumerate}}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\bigoh}{\mathcal{O}}
+
+% COMPLEXITY CLASSES
+\newcommand{\DTIME}[1]{{\mbox{\rm DTIME}}(#1)}
+\newcommand{\DSPACE}[1]{{\mbox{\rm DSPACE}}(#1)}
+\newcommand{\NTIME}[1]{{\mbox{\rm NTIME}}(#1)}
+\newcommand{\NSPACE}[1]{{\mbox{\rm NSPACE}}(#1)}
+\newcommand{\ATIME}[1]{{\mbox{\rm ATIME}}(#1)}
+\newcommand{\ASPACE}[1]{{\mbox{\rm ASPACE}}(#1)}
+
+\newcommand{\realtime}{\mbox{\rm REALTIME}}
+\newcommand{\lintime}{\mbox{\rm LINTIME}}
+\newcommand{\polylogspace}{\mbox{\rm POLYLOGSPACE}}
+\newcommand{\alogtime}{\mbox{\rm ALOGTIME}}
+\newcommand{\linspace}{\mbox{\rm LINSPACE}}
+\newcommand{\nlinspace}{\mbox{\rm NLINSPACE}}
+\newcommand{\NP}{\mbox{\rm NP}}
+
+\newcommand{\reduc}{\leq_{m}^{p}}
+\newcommand{\vs}{\mathcal{E}}
+\newcommand{\wahl}{(C,V)}
+\newcommand{\wahlind}[1]{(C_{#1},V_{#1})}
+\newcommand{\subwahlv}[1]{(C,V_{#1})}
+\newcommand{\subwahl}[1]{(C_{#1},V)}
+\newcommand{\xSet}[2]{\{#1_1,#1_2,\ldots,#1_{#2}\}}
+\newcommand{\xList}[2]{(#1_1,#1_2,\ldots,#1_{#2})}
+\newcommand{\xSetfour}[1]{\{#1_1,#1_2,#1_3,#1_4\}}
+\newcommand{\xListfour}[1]{(#1_1,#1_2,#1_3,#1_4)}
+\newcommand{\coll}{\mathcal{S}}
+
+\newcommand{\scoresub}[2]{\mathit{score}_{#1}(#2)}
+\newcommand{\scoreof}[1]{\mathit{score}(#1)}
+
+\newcommand{\bAnt}{Begr\"unden Sie Ihre Antwort.}
+\newcommand{\seq}{\subseteq}
+\newcommand{\setrestr}[2]{\{#1 \mid #2\}}
+
+\newcommand{\xcovthree}{{\sc Exact Cover By Three Sets}}
+\newcommand{\xcthree}{{\sc X3C}}
+\newcommand{\setcover}{{\sc Set Cover}}
+\newcommand{\setc}{{\sc SC}}
+\newcommand{\hittingset}{{\sc Hitting Set}}
+\newcommand{\hs}{{\sc HS}}
+\newcommand{\subsetsum}{{\sc Subset Sum}}
+\newcommand{\subsets}{{\sc SS}}
+\newcommand{\partition}{{\sc Partition}}
+
+\newcommand{\xcovinst}{(B,\coll)}
+\newcommand{\scovinst}{(B,\coll,k)}
+\newcommand{\hsinst}{(B,\coll,k)}
+\newcommand{\partinst}{(A,s)}
+\newcommand{\ssinst}{(A,s,k)}
+
+
+\newcommand{\ccwmani}[1]{{\sc #1-Constructive Coalitional Weighted Manipulation}}
+\newcommand{\dcwmani}[1]{{\sc #1-Destructive Coalitional Weighted Manipulation}}
+\newcommand{\ccmani}[1]{{\sc #1-Constructive Coalitional Manipulation}}
+\newcommand{\dcmani}[1]{{\sc #1-Destructive Coalitional Manipulation}}
+\newcommand{\cwmani}[1]{{\sc #1-Constructive Weighted Manipulation}}
+\newcommand{\dwmani}[1]{{\sc #1-Destructive Weighted Manipulation}}
+\newcommand{\cmani}[1]{{\sc #1-Constructive Manipulation}}
+\newcommand{\dmani}[1]{{\sc #1-Destructive Manipulation}}
+
+\newcommand{\ccwmanishort}[1]{{\sc #1-CCWM}}
+\newcommand{\dcwmanishort}[1]{{\sc #1-DCWM}}
+\newcommand{\ccmanishort}[1]{{\sc #1-CCM}}
+\newcommand{\dcmanishort}[1]{{\sc #1-DCM}}
+
+\newcommand{\cmanishort}[1]{{\sc #1-CM}}
+\newcommand{\dmanishort}[1]{{\sc #1-DM}}
+\newcommand{\cwmanishort}[1]{{\sc #1-CWM}}
+\newcommand{\dwmanishort}[1]{{\sc #1-DWM}}
+
+\newcommand{\cmaniinst}{(C,V,S,c)}
+\newcommand{\cwmaniinst}{(C,V,S,s,t,c)}
+
+\newcommand{\Algo}[4]{
+\medskip
+\begin{center}
+\begin{tabularx}{0.92\textwidth}{ll}
+\hline
+\multicolumn{2}{c}{\sc{#1}} \\
+\hline
+\em{Eingabe:}& #2\\
+\em{Ausgabe:}& #3 \\
+\em{Arbeitsweise:} & #4 \\
+\hline
+\end{tabularx}
+\end{center}
+\medskip}
+
+\newcommand{\EP}[3]{
+\medskip
+\begin{center}
+\begin{tabularx}{0.92\textwidth}{ll}
+\hline\hline
+\multicolumn{2}{c}{\sc{#1}} \\
+\hline
+\em{Gegeben:}& #2\\
+\em{Frage:}& #3 \\
+\hline\hline
+\end{tabularx}
+\end{center}
+\medskip}
+
+\newcommand{\ccwmaniprob}[1]{
+\EP{\ccwmani{#1}}
+{Eine #1-Wahl $(C,V\cup S)$, wobei $V$ die Menge der \\ 
+& unmanipulierbaren W\"ahler ist  (diese Stimmen stehen fest) und $S$ die \\ 
+& Menge der manipulierenden W\"ahler (diese Stimmen stehen nicht fest) \\ 
+& und ein ausgezeichneter Kandidat $c$.}
+{Ist es m\"oglich,die Stimmen in $S$ so zu w\"ahlen, dass $c$ ein \\ 
+& #1-Gewinner in $(C,V\cup S)$ ist?}}
+\newcommand{\xcovthreeprob}{
+\EP{Exact Cover By Three Sets (X3C)}
+{Eine Menge $B = \xSet{b}{3m}$, wobei $m\geq 1$, und eine Familie \\ 
+& von Teilmengen $\coll = \xSet{S}{n}$ mit $\|S_{i}\| = 3 $ und $S_{i}\seq B$ f\"ur \\ 
+& alle  $i$ mit $ 1\leq i 	\leq n.$}
+{Gibt es eine Teilmenge $\coll'\seq \coll$ derart, dass jedes Element aus $B$ in  \\ 
+& genau einer der Teilmengen aus $\coll'$ enthalten ist? %(Das hei"st, dass $\coll$  \\ 
+%& f\"ur die Menge $B$ eine exakte \"Uberdeckung $\coll'$ enth\"alt.)
+}}
+\newcommand{\setcoverprob}{
+\EP{Set Cover (SC)}
+{Eine Menge $B = \xSet{b}{l}$, wobei $l\geq 1$, und eine Familie von \\ 
+& Teilmengen $\coll = \xSet{S}{n}$ mit $S_i\seq B$ f\"ur alle $i$ mit\\ 
+& $ 1\leq i \leq n$ und eine nat\"urliche Zahl $k$ mit $k\leq \|\coll\|.$}
+{Gibt es eine Teilmenge $\coll'\seq \coll$ mit $\|\coll'\|\leq k$ derart, dass jedes \\ 
+& Element aus $B$ in mindestens einer der Teilmengen aus $\coll'$ enthalten \\ 
+& ist? %(Das hei"st, dass $\coll$ f\"ur die Menge $B$ eine \"Uberdeckung $\coll'$ enth\"alt.)
+}}
+\newcommand{\hittingsetprob}{
+\EP{Hitting Set (HS)}
+{Eine Menge $B = \xSet{b}{m}$, wobei $m\geq 1$, und eine Familie \\ 
+&  von Teilmengen $\coll = \xSet{S}{n}$ mit $S_{i}\seq B$ f"ur alle  $i$ mit \\ 
+& $ 1\leq i 	\leq n.$}
+{Gibt es eine Teilmenge $B'\seq B$ derart, dass jedes Element aus $B'$ in \\ 
+& mindestens einer der Teilmengen aus $\mathcal{S}$ enthalten ist? 
+%(Das hei"st, dass $\mathcal{S}$ f"ur die Menge $B$ eine exakte \"Uberdeckung $\mathcal{S}'$ enth"alt.)
+}}
+\newcommand{\partitionprob}{
+\EP{Partition}
+{Eine Menge $A = \xSet{a}{n}$ und eine Funktion $s:A\rightarrow \mathbb{Z}$.}
+{Gibt es eine Teilmenge $A'\seq A$ derart, dass gilt  $\sum\limits_{a\in A'}s(a) = \sum\limits_{a\not\in A'}s(a)$?}}
+\newcommand{\subsetsumprob}{
+\EP{Subset Sum (SS)}
+{Eine Menge $A = \xSet{a}{n}$, eine Funktion $s:A\rightarrow \mathbb{Z}$ und eine  \\ 
+& positive nat\"urliche Zahl $k$.}
+{Gibt es eine Teilmenge $A'\seq A$ derart, dass gilt  $\sum\limits_{a\in A'}s(a) = k$?}}
+
+%\pagestyle{empty}
+
+\begin{document}
+\vspace{0.5cm}
+
+\begin{center}
+{\Large Klausurvorschlag zur Vorlesung im WS 2010/2011} \\
+{\LARGE \bf Algorithmische Eigenschaften von Wahlsystemen I} \\
+\end{center}
+\vspace{0.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 1   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent{\bf Aufgabe 1 (Ankreuzaufgaben):} 
+\newline 
+\begin{tabular}{ll}
+$\square$ $\square$&Die Gewinnerbestimmung von STV ist nicht in P.\\
+$\square$ $\square$&F"ur ||$C$||=2 ist der PV Gewinner = Condorcet Gewinner.\\
+$\square$ $\square$&Aus dem Konsistenz-Kriterium folgt: Gewinnt $c$ nicht in der gesamten Wahl, so\\&gibt es keine Aufteilung in zwei Unterwahlen in denen ausschlie"slich $c$ gewinnt.\\
+$\square$ $\square$&Erlaube man beim Condorcet Wahlsystem auch Gleichst"ande bei der Gewinnerbe-\\&stimmung, so w"are es nicht mehr streng monoton.\\
+$\square$ $\square$&Ein Veto-Gewinner ist nie ein Condorcet-Verlierer.\\
+$\square$ $\square$&Young ist homogen.\\
+$\square$ $\square$&Es gibt Wahlen in denen der Condorcet-Gewinner existiert, und er nicht\\&der Copeland-Gewinner ist.\\
+$\square$ $\square$&Erf"ullt $k$-Approval f"ur alle $k$ mit $1 \leq k \leq ||C||-1$ ein Kriterium, so erf"ullt es auch Plurality.\\
+$\square$ $\square$&Alle Scoring-Protokolle sind konsistent.\\
+$\square$ $\square$&Es macht keinen Unterschied, ob man die Majorit"at von W"ahlern wie gewohnt als\\&$\lfloor {\frac{||V||}{2}} \rfloor +1$ oder als $\lceil{\frac{||V||}{2}} \rceil$ definiert.\\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\newline
+\begin{tabular}{ll}
+$\square$ \frame{X}&Die Gewinnerbestimmung von STV ist nicht in P.\\
+$\square$ \frame{X}&F"ur ||$C$||=2 ist der PV Gewinner = Condorcet Gewinner.\\
+ \frame{X} $\square$&Aus dem Konsistenz-Kriterium folgt: Gewinnt $c$ nicht in der gesamten Wahl, so\\&gibt es keine Aufteilung in zwei Unterwahlen in denen ausschlie"slich $c$ gewinnt.\\
+ \frame{X} $\square$&Erlaube man beim Condorcet Wahlsystem auch Gleichst"ande bei der Gewinnerbe-\\&stimmung, so w"are es nicht mehr streng monoton.\\
+$\square$ \frame{X}&Ein Veto-Gewinner ist nie ein Condorcet-Verlierer.\\
+$\square$ \frame{X}&Young ist homogen.\\
+$\square$ \frame{X}&Es gibt Wahlen in denen der Condorcet-Gewinner existiert, und er nicht\\&der Copeland-Gewinner ist.\\
+ \frame{X} $\square$&Erf"ullt $k$-Approval f"ur alle $k$ mit $1 \leq k \leq ||C||-1$ ein Kriterium, so erf"ullt es auch Plurality.\\
+ \frame{X} $\square$&Alle Scoring-Protokolle sind konsistent.\\
+$\square$  \frame{X}&Es macht keinen Unterschied, ob man die Majorit"at von W"ahlern wie gewohnt als\\&$\lfloor {\frac{||V||}{2}} \rfloor +1$ oder als $\lceil{\frac{||V||}{2}} \rceil$ definiert.\\
+\end{tabular}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 2   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Aufgabe 2 (Scoring-Protokolle):}
+\newline
+Ein $Scoring$-$Protokoll$ ist f"ur eine Wahl mit $m$ Kandidaten definiert durch einen $Scoring$-$Vektor$ $\alpha=(\alpha_1,...,\alpha_m)$, der die folgende Bedingung erf"ullen muss: $$\alpha_1\geq ...\geq \alpha_m$$
+Wird ein Kandidat in einer Stimme auf dem $k$-ten Platz einsortiert (f"ur $1\leq k \leq m$), so
+erh"alt er aus dieser Stimme $\alpha_k$ Punkte. Der Kandidat mit der h"ochsten Punktzahl gewinnt.\\
+Es sei ein Scoring-Protokoll $\alpha = (\alpha_1, \alpha_2,...,\alpha_m)$ gegeben.\\
+\begin{enumerate}
+\item Zeigen oder widerlegen Sie die folgenden beiden Aussagen:
+\begin{itemize}
+\item F"ur alle nat"urlichen Zahlen $k$ ist $\alpha_{+k'} := (\alpha_1 + k, \alpha_2 + k, . . . ,\alpha_{m-2}+k,\alpha_{m-1},\alpha_{m})$ ein
+Scoring-Protokoll und es gilt f"ur alle Kandidaten $c \in C$ "uber jeder W"ahlermenge $V$:
+Kandidat $c$ ist (eindeutiger) Gewinner in $(C, V)$ bez"uglich des Scoring-Protokolls $\alpha$ genau dann, wenn Kandidat $c$ (eindeutiger) Gewinner in $(C, V)$ bez"uglich des
+Scoring-Protokolls $\alpha_{+k'}$ ist.
+\end{itemize}
+\item Begr"unden Sie warum es Scoring-Protokolle gibt oder nicht geben kann, f"ur welche $\alpha_{+k'}$ beide Eigenschaften erf"ullt. Sofern es m"oglich ist, geben Sie Beispiele aus der Vorlesung an.\\
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\newline
+Gegeben sei das Scoring-Protokoll $\alpha = (\alpha_1, \alpha_2,...,\alpha_m)$. Es gilt also $$\alpha_1\geq ...\geq \alpha_m$$ Sei $score_{\alpha}(c)$ die Punktzahl von $c$ in der Wahl ($C, V$) bez"uglich des Scoring-Protokolls $\alpha$.\\
+\begin{enumerate}
+\item Wir betrachten erstmal die zwei Teile von $\alpha_{+k'}$ separiert. Aus der obigen Eigenschaft und $k \geq 0$ folgt $\alpha_1+k\geq ...\geq \alpha_{m-2}+k$. Daraus folgt auch $\alpha_{m-2}+k \geq \alpha_{m-1}$ und $\alpha_{m-1} \geq \alpha_{m}$ gilt nach Voraussetzung. Damit gilt $\alpha_1 + k \geq \alpha_2 + k \geq . . . \geq \alpha_{m-2}+k \geq \alpha_{m-1} \geq \alpha_{m}$ und $\alpha_{+k'}$ ist ein Scoring-Protokoll.\\
+Gegenbeispiel f"ur die Gewinnererhaltung:\\
+Sei $\alpha$ $m$-1-Approval und die folgende Wahl gegeben:\\
+\bc
+\begin{tabular}{|lc|}
+\hline
+$C_1 =$&$ \{a,b,c,d,\}$ 	\\
+ $V_1:$ 	& $a\,b\,c\,d$\\
+		& $b\,d\,c\,a$\\
+		& $a\,d\,c\,b$\\
+\hline
+\end{tabular}
+\ec
+Der Gewinner in $\alpha$ ist $c$ mit 3 Punkten. Sei nun $k$=1. Damit w"aren die Gewinner von $\alpha_{+k'}$ $\{a,b,d\}$ mit jeweils 4 Punkten.\\
+\item Wahlsysteme bei denen Kandidaten, die auf den letzten zwei Positionen stehen, keine Punkte erhalten, und mindestens einen Punkt auf der ersten Position und die Punktzahl f"ur alle "ubrigen $\alpha_i$'s gleich ist, k"onnen ausgedr"uckt werden als\\$(\alpha_1, \alpha_2, . . . ,\alpha_{m-2},0,0)$. Jeder Kandidat kriegt bei $\alpha_{+k'}$ h"ochtens $(m-2)\cdot k$ Punkte mehr und trivialerweise kriegt keiner mehr als der Gewinner aus $\alpha$. Da wir aus der "Ubung wissen, dass bei einer gleichverteilten Zunahme von Punkten der Gewinner erhalten bleibt, gibt es solche Scoring-Protokolle wie z.B. $(m-2)$-Approval.
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 3   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Aufgabe 3 (Manipulation in Regular Cup):}
+\newline
+Gegeben sei die Regular Cup-Wahl 
+$\wahlind{1}$: 
+\bc
+\begin{tabular}{|lc|}
+\hline
+$C_1 =$&$ \{a,b,c,d,e,f,g\}$ 	\\
+ $V_1:$ 	& $e\,a\,d\,f\,c\,g\,b$		\\
+		& $d\,e\,a\,b\,f\,c\,g$		\\
+		& $g\,f\,b\,e\,c\,a\,d$		\\
+ 		& $a\,f\,e\,g\,c\,d\,b$		\\
+ 		& $b\,e\,d\,g\,a\,f\,c$		\\
+\hline
+\end{tabular}
+\ec
+Die Zuteilung der Bl\"atter erfolge alphabetisch von links nach rechts. In der ersten Runde tritt also $a$ gegen $b$ an und $c$ tritt gegen $d$ und $e$ tritt gegen $f$ an. Gleichst\"ande werden lexikographisch gebrochen: Es gewinnt der
+lexikographisch kleinere Kandidat. Wir betrachten das eindeutige Gewinnermodell.\\
+\begin{enumerate}
+\item Bestimmen Sie den Gewinner der  Regular Cup-Wahl 
+$\wahlind{1}$.
+\item Entscheiden Sie, ob $(C_1,V_1,S,c)$ mit $\|S\|=2$ eine Ja-Instanz f\"ur \ccmani{Regular Cup} ist.
+\item Entscheiden Sie ob ein Manipulator mit nur einer Stimme ausreichen w"urde um $c$ zum Gewinner zu machen. Begr"unden Sie ihre Entscheidung.
+\end{enumerate}
+Geben Sie bei einer Ja-Instanz die Stimmen der manipulierenden W\"ahler explizit an. Konstruieren Sie den entsprechenden Bin\"arb"aume.
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\begin{enumerate}
+\item Der Bin"arbaum sieht folgend aus:\\
+\begin{center}
+		\unitlength1cm
+		\thicklines
+		\begin{picture}(7,4.5)
+			\multiput(0.25,0.75)(1.0,0.0){6}{\circle{0.5}}
+			\multiput(0.75,1.75)(2.0,0.0){4}{\circle{0.5}}
+			\multiput(1.75,2.75)(4.0,0.0){2}{\circle{0.5}}
+			\put(3.75,4.00){\circle{0.5}}
+			%Blaetter
+			\put(0.0,0.5){\makebox(0.5,0.5){a}}\put(0.0,0.0){\makebox(0.5,0.5){3}}
+			\put(1.0,0.5){\makebox(0.5,0.5){b}}\put(1.0,0.0){\makebox(0.5,0.5){2}}
+			\put(2.0,0.5){\makebox(0.5,0.5){c}}\put(2.0,0.0){\makebox(0.5,0.5){2}}
+			\put(3.0,0.5){\makebox(0.5,0.5){d}}\put(3.0,0.0){\makebox(0.5,0.5){3}}
+			\put(4.0,0.5){\makebox(0.5,0.5){e}}\put(4.0,0.0){\makebox(0.5,0.5){3}}
+			\put(5.0,0.5){\makebox(0.5,0.5){f}}\put(5.0,0.0){\makebox(0.5,0.5){2}}
+			\put(6.5,1.5){\makebox(0.5,0.5){g}}\put(6.5,1.0){\makebox(0.5,0.5){1}}
+			%1. Knotenebene
+			\put(0.5,1.5){\makebox(0.5,0.5){a}}\put(0.5,1.0){\makebox(0.5,0.5){3}}
+			\put(2.5,1.5){\makebox(0.5,0.5){d}}\put(2.5,1.0){\makebox(0.5,0.5){2}}
+			\put(1.5,2.5){\makebox(0.5,0.5){a}}\put(1.5,2.0){\makebox(0.5,0.5){1}}
+			\put(4.5,1.5){\makebox(0.5,0.5){e}}\put(4.5,1.0){\makebox(0.5,0.5){4}}
+			\put(5.5,2.5){\makebox(0.5,0.5){e}}\put(5.5,2.0){\makebox(0.5,0.5){4}}
+			%Wurzel
+			\put(3.5,3.75){\makebox(0.5,0.5){e}}\put(3.5,3.5){\makebox(0.5,0.5){}}
+			%Kanten
+			\put(4.25,1.00){\line(1,2){0.3}}
+			\put(5.25,1.00){\line(-1,2){0.3}}
+			\put(0.25,1.00){\line(1,2){0.3}}
+			\put(1.25,1.00){\line(-1,2){0.3}}
+			\put(2.25,1.00){\line(1,2){0.3}}
+			\put(3.25,1.00){\line(-1,2){0.3}}
+			\put(0.75,2.00){\line(4,3){0.8}}
+			\put(2.75,2.00){\line(-4,3){0.8}}
+			\put(4.75,2.00){\line(4,3){0.8}}
+			\put(6.75,2.00){\line(-4,3){0.8}}
+			\put(1.75,3.00){\line(2,1){1.8}}
+			\put(5.75,3.00){\line(-2,1){1.8}}
+		\end{picture}
+	\end{center}
+	Kandidat $e$ ist also Regular-Cup-Gewinner der Wahl $\wahlind{1}$. 
+\item Angenommen, die beiden 
+	W\"ahler in $S$ stimmen wie folgt ab: $c\,g\,f\,b\,a\,d\,e$ und $c\,g\,f\,b\,a\,d\,e$. Dann entsteht folgende Wahl 
+	$(C_1,V_1\cup S)$:
+\begin{center}
+		\unitlength1cm
+		\thicklines
+		\begin{picture}(7,4.5)
+			\multiput(0.25,0.75)(1.0,0.0){6}{\circle{0.5}}
+			\multiput(0.75,1.75)(2.0,0.0){4}{\circle{0.5}}
+			\multiput(1.75,2.75)(4.0,0.0){2}{\circle{0.5}}
+			\put(3.75,4.00){\circle{0.5}}
+			%Blaetter
+			\put(0.0,0.5){\makebox(0.5,0.5){a}}\put(0.0,0.0){\makebox(0.5,0.5){3}}
+			\put(1.0,0.5){\makebox(0.5,0.5){b}}\put(1.0,0.0){\makebox(0.5,0.5){4}}
+			\put(2.0,0.5){\makebox(0.5,0.5){c}}\put(2.0,0.0){\makebox(0.5,0.5){4}}
+			\put(3.0,0.5){\makebox(0.5,0.5){d}}\put(3.0,0.0){\makebox(0.5,0.5){3}}
+			\put(4.0,0.5){\makebox(0.5,0.5){e}}\put(4.0,0.0){\makebox(0.5,0.5){3}}
+			\put(5.0,0.5){\makebox(0.5,0.5){f}}\put(5.0,0.0){\makebox(0.5,0.5){4}}
+			\put(6.5,1.5){\makebox(0.5,0.5){g}}\put(6.5,1.0){\makebox(0.5,0.5){4}}
+			%1. Knotenebene
+			\put(0.5,1.5){\makebox(0.5,0.5){b}}\put(0.5,1.0){\makebox(0.5,0.5){3}}
+			\put(2.5,1.5){\makebox(0.5,0.5){c}}\put(2.5,1.0){\makebox(0.5,0.5){4}}
+			\put(1.5,2.5){\makebox(0.5,0.5){c}}\put(1.5,2.0){\makebox(0.5,0.5){4}}
+			\put(4.5,1.5){\makebox(0.5,0.5){f}}\put(4.5,1.0){\makebox(0.5,0.5){3}}
+			\put(5.5,2.5){\makebox(0.5,0.5){g}}\put(5.5,2.0){\makebox(0.5,0.5){3}}
+			%Wurzel
+			\put(3.5,3.75){\makebox(0.5,0.5){c}}\put(3.5,3.5){\makebox(0.5,0.5){}}
+			%Kanten
+			\put(4.25,1.00){\line(1,2){0.3}}
+			\put(5.25,1.00){\line(-1,2){0.3}}
+			\put(0.25,1.00){\line(1,2){0.3}}
+			\put(1.25,1.00){\line(-1,2){0.3}}
+			\put(2.25,1.00){\line(1,2){0.3}}
+			\put(3.25,1.00){\line(-1,2){0.3}}
+			\put(0.75,2.00){\line(4,3){0.8}}
+			\put(2.75,2.00){\line(-4,3){0.8}}
+			\put(4.75,2.00){\line(4,3){0.8}}
+			\put(6.75,2.00){\line(-4,3){0.8}}
+			\put(1.75,3.00){\line(2,1){1.8}}
+			\put(5.75,3.00){\line(-2,1){1.8}}
+		\end{picture}
+	\end{center}
+	$c$ konnte zum eindeutigen Gewinner gemacht werden. Somit handelt es sich um eine Ja-
+	Instanz.\\ 
+\item Eine Stimme w"urde nicht ausreichen, denn $c$ braucht mindestens einen Punkt mehr als $a$ oder $b$ (da Gleichst\"ande lexikographisch gebrochen werden) um diese zu schlagen und damit sind mindestens zwei Stimmen des Manipulators notwendig.
+\end{enumerate}
+\vspace{0.5cm}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 4   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Aufgabe 4 (Das Wahlsystem Bucklin):} \newline
+Gegeben sei eine Wahl ($C, V$). Wir definieren das folgende Wahlsystem:
+\begin{itemize}
+\item $Bucklin$: Der sogenannte Bucklin-Score eines Kandidaten der Stufe $i$ ist die Anzahl der W"ahler, die diesen Kandidaten innerhalb ihrer ersten $i$ Positionen stellen. Der Bucklin-Score von $c$ in einer Wahl $(C,V)$ ist das kleinste $i$ mit der Eigenschaft, dass der Kandidat bei mindestens einer Majorit"at von W"ahlern innerhalb der ersten $i$ Positionen steht. Alle Kandidaten mit dem kleinsten $i$ und dem h"ochsten Bucklin-Score der Stufe $i$ sind die Bucklin-Gewinner. 
+\end{itemize}
+Eigenschaften von Wahlsystemen: Ein Wahlsystem $\vs$ erf\"ullt das 
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\be
+	\item \emph{Monotonie-Kriterium}, wenn f\"ur jede $\vs$-Wahl $\wahl$ gilt: 
+	Ist Kandidat $c$ ein $\vs$-Gewinner in $\wahl$ und verbessern wir die Position von $c$ in 
+	einigen Stimmen in $V$, wobei sonst keine Ver\"anderungen vorgenommen werden, so ist $c$ 
+	ein $\vs$-Gewinner der ver\"anderten Wahl. 
+ \item \emph{Mehrheitskriterium}, wenn in jeder $\vs$-Wahl immer derjenige Kandidat gewinnt, der von einer absoluten Mehrheit der W"ahler auf den ersten Platz gew"ahlt wird (sofern dieser existiert).
+\item \emph{Konsistenz-Kriterium}, wenn f"ur jede $\vs$-Wahl ($C, V$) gilt: Wird die W"ahlermenge $V$ aufgeteilt in zwei disjunkte Teilmengen $V_1, V_2$ und ist Kandidat $c$ ein $\vs$-Gewinner
+in beiden Unterwahlen $(C, V_1$) und ($C, V_2$), so ist $c$ auch in der Wahl ($C, V$ ) ein $\vs$-Gewinner.
+\ee
+Seien die folgenden Wahlen $E_2=(C_2,V_2)$ und $E_3=(C_3,V_3)$ gegeben:
+\bc
+\begin{tabular}{|lc|lc|}
+\hline
+\multicolumn{2}{|l|}{$C_2 =\{a,b,c,d,e\}$}& \multicolumn{2}{l|}{$C_3 = \{a,b,c,d,e\}$ }	\\
+$V_2:$ 	& $a\,b\,c\,d\,e$			& $V_3:$ 	& $a\,b\,c\,e\,d$		\\
+	& $a\,b\,c\,e\,d$			& 		& $a\,e\,c\,d\,b$		\\
+	& $e\,d\,c\,b\,a$			& 		& $c\,a\,d\,e\,b$		\\
+	& $e\,d\,c\,a\,b$			& 		& $c\,d\,a\,b\,e$		\\
+	& 				& 		& $c\,b\,a\,e\,d$		\\\hline
+\end{tabular}
+\ec
+\begin{enumerate}
+\item[(a)] Bestimmen Sie die Bucklin Gewinner in den Wahlen $E_2$ und $E_3$.
+\item[(b)] Zeigen Sie, oder widerlegen Sie, ob das Wahlsystem Bucklin die drei oben angegebenen Kriterien erf"ullt.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\begin{enumerate} 
+\item[(a)] Der Stufe 3 Gewinner von  $E_2$ ist $c$. Der Stufe 1 Gewinner von  $E_3$ ist $c$.
+\item[(b)] \textbf{Monotoniekriterium:} Jedes Vertauschen des Gewinners nach vorne, kann dessen Bucklin Stufe h"ochstens verringern. Gleichzeitig kann die Stufe der anderen an dem Tausch beteiligten Kandidaten entweder gleich bleiben oder sich erh"ohen.\\
+ \textbf{Mehrheitskriterium:} Bucklin erf"ullt das Mehrheitskriterium, denn wenn es einen Kandidaten gibt, der in mehr als der H"alfte aller Stimmen auf dem ersten Platz platziert ist, so ist er eindeutiger Stufe 1 Gewinner.\\
+\textbf{Konsistenz-Kriterium:} Bucklin erf"ullt nicht das Konsistenz-Kriterium, denn legen wir $E_2$ und $E_3$ zusammen, so ist $a$ Stufe 2 Bucklin Gewinner, obwohl $c$ beide Teilwahlen gewonnen hat. 
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 5   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent{\bf Aufgabe 5 (DCWM f"ur STV und 3 Kandidaten):} \newline
+In der Vorlesung haben Sie die
+Reduktion von PARTITION auf das Manipulationsproblem DCWM f"ur das Wahlsystem
+STV mit 3 Kandidaten kennengelernt. Gegeben seien folgende PARTITION-Instanzen: $(2,5,6,8,4,1)$ und $(5,5,3,7,8,10)$.
+\begin{enumerate}
+\item[(a)]{Konstruieren Sie gem"a"s der Reduktion die STV-Wahl ($C, V$) aus einer der oberen PARTITION-Instanzen. Bestimmen Sie die Stimmen und Gewichte der Manipulatoren in $S$ und berechnen Sie die STV-Punktwerte in den ersten Runden in den Wahlen ($C, V$) und ($C, V \cup S$), so dass eine Manipulation erfolgreich ist.}
+\item[(b)]{Konstruieren Sie gem"a"s der Reduktion die STV-Wahl ($C', V'$) aus einer der oberen PARTITION-Instanzen. Bestimmen Sie die Gewichte der Manipulatoren in $S'$. Erl"autern Sie, weshalb hier keine erfolgreiche Manipulation m"oglich ist.}
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\begin{enumerate}
+\item[(a)]Damit eine Manipulation erfolgreich ist, m"ussen wir eine Ja-Instanz f"ur PARTITION verwenden. $(2,5,6,8,4,1)$ ist eine Ja-Instanz mit z.B. der Partition $(\{2,5,6\},\{8,4,1\})$.\\
+$C=\{a,b,p\}, K=13;$
+\begin{itemize}
+\item es gibt 78 W"ahler der Form $a\ d\ b$ und\\
+\item es gibt 78 W"ahler der Form $b\ d\ a$ und\\
+\item es gibt 104 W"ahler der Form $d\ a\ b$.
+\end{itemize}
+$$score_{(C,V)}(a)=78 \ und \ score_{(C,V)}(b)=78 \ und\  score_{(C,V)}(c)=103$$
+Die Stimmen der 6 Manipulatoren mit den Gewichten sehen folgend aus:\\
+\bc
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+Manipulator $i$& 1&2&3&4&5&6\\
+\hline
+Gewicht&4&10&12&16&8&2\\
+\hline
+Pr"aferenz& $abd$&$abd$&$abd$&$bad$&$bad$&$bad$\\
+\hline
+\end{tabular}
+\ec
+$$score_{(C,V)}(a)=104 \ und \ score_{(C,V)}(b)=104 \ und\  score_{(C,V)}(c)=103$$
+Also scheidet $c$ in der ersten Runde aus und die Manipulation ist erfolgreich.
+\item[(b)] $(5,5,3,7,8,10)$ ist eine Nein-Instanz f"ur PARTITION.\\
+ $C'=\{a,b,p\}, K=19;$
+\begin{itemize}
+\item es gibt 114 W"ahler der Form $a\ d\ b$ und\\
+\item es gibt 114 W"ahler der Form $b\ d\ a$ und\\
+\item es gibt 151 W"ahler der Form $d\ a\ b$.
+\end{itemize}
+$$score_{(C',V')}(a)=114 \ und \ score_{(C',V')}(b)=114 \ und\  score_{(C',V')}(c)=151$$
+Die Stimmen der 6 Manipulatoren mit den Gewichten sehen z.B. folgend aus:\\
+\bc
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+Manipulator $i$& 1&2&3&4&5&6\\
+\hline
+Gewicht&10&10&6&14&16&20\\
+\hline
+Pr"aferenz& $?$&$?$&$?$&$?$&$?$&$?$\\
+\hline
+\end{tabular}
+\ec
+Da es keine Ja-Instanz f"ur PARTITION ist, sind die Pr"aferenzen laut der Konstruktion nicht definiert.\\
+Unabh"angig von der Verteilung der Pr"aferenzen gilt aber immer, dass der Kandidat $a$ oder der Kandidat $b$ weniger Stimmen bekommt als der Kandidat $d$ und damit in der ersten Runde ausscheiden wird. Laut der Konstruktion gilt, dass falls der Kandidat $d$ nicht in der ersten Runde ausscheidet, kann er nicht mehr am gewinnen gehindert werden und somit die Manipulation nicht erfolgreich sein.
+\end{enumerate}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 6   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Bonusaufgabe 6 (Funktion $S_P$ f"ur Veto und $k$-Approval):}\newline
+Es sei $\vs$ ein Wahlsystem, das f\"ur die Pr\"aferenz $P$ eines W\"ahlers jedem 
+Kandidaten $c$ einen Punktwert $S_P(c)$ bez\"uglich $P$ zuweist.\\
+Geben Sie f"ur die Wahlsysteme Veto und $k$-Approval die Funktion $S_P$ an.
+
+\vspace{0.5cm}
+
+\noindent\textbf{L\"osungsvorschlag:}
+\newline
+\textbf{$k$-Approval:} $S_{P}(a)=\lceil {\frac{||\{b \in C - {a}| a\  steht\  vor\  b\}||-n+k+1}{n}}\rceil$\\ 
+\textbf{Veto:} $S_{P}(a)=\lceil {\frac{||\{b \in C - {a}| a\  steht\  vor\  b\}||}{n}}\rceil$ oder $S_{P}(a)=\{|\exists b \in C - {a}| a\  steht\  vor\  b|\}$
+\end{document}
+

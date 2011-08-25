@@ -1,0 +1,10 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}The Historical Content}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Pythagorean Theorem}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Fermat's Heritage}{2}{subsection.2.2}
+\contentsline {section}{\numberline {3}The Proof}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Proof of Fermat's Last Theorem for specific exponents}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Kevin Ondo: The case $x^4+y^4=z^4$ and Sophie Germain's Theorem}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}General Results on Fermat's Last Theorem}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Kummer's ideal primes}{7}{section.4}

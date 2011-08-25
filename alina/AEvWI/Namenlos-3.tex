@@ -1,0 +1,152 @@
+%5.Uebungsblatt Algorithmische Eigenschaften von Wahlsystemen I WS 10/11
+\documentclass[12pt]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{times}
+
+\usepackage{color}
+%\usepackage{psfig}
+\usepackage{epsfig}  
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eepic,epic}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{8.6in}
+\setlength{\topmargin}{-0.0in}
+
+
+\newcommand\bc{\begin{center}}
+\newcommand\ec{\end{center}}
+
+\newcommand\beq{\begin{eqnarray*}}
+\newcommand\eeq{\end{eqnarray*}}
+
+\newcommand\be{\begin{enumerate}}
+\newcommand\ee{\end{enumerate}}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\bigoh}{\mathcal{O}}
+
+% COMPLEXITY CLASSES
+\newcommand{\DTIME}[1]{{\mbox{\rm DTIME}}(#1)}
+\newcommand{\DSPACE}[1]{{\mbox{\rm DSPACE}}(#1)}
+\newcommand{\NTIME}[1]{{\mbox{\rm NTIME}}(#1)}
+\newcommand{\NSPACE}[1]{{\mbox{\rm NSPACE}}(#1)}
+\newcommand{\ATIME}[1]{{\mbox{\rm ATIME}}(#1)}
+\newcommand{\ASPACE}[1]{{\mbox{\rm ASPACE}}(#1)}
+
+\newcommand{\realtime}{\mbox{\rm REALTIME}}
+\newcommand{\lintime}{\mbox{\rm LINTIME}}
+\newcommand{\polylogspace}{\mbox{\rm POLYLOGSPACE}}
+\newcommand{\alogtime}{\mbox{\rm ALOGTIME}}
+\newcommand{\linspace}{\mbox{\rm LINSPACE}}
+\newcommand{\nlinspace}{\mbox{\rm NLINSPACE}}
+\newcommand{\np}{\mbox{\rm NP}}
+
+\newcommand{\red}{\leq_{m}^{p}}
+\newcommand{\vs}{\mathcal{E}}
+\newcommand{\wahl}{(C,V)}
+\newcommand{\wahlind}[1]{(C_{#1},V_{#1})}
+\newcommand{\subwahlv}[1]{(C,V_{#1})}
+\newcommand{\subwahl}[1]{(C_{#1},V)}
+\newcommand{\xSet}[2]{\{#1_1,#1_2,\ldots,#1_{#2}\}}
+\newcommand{\xList}[2]{(#1_1,#1_2,\ldots,#1_{#2})}
+
+\newcommand{\scoresub}[2]{\mathit{score}_{#1}(#2)}
+\newcommand{\scoreof}[1]{\mathit{score}(#1)}
+
+\newcommand{\bAnt}{Begr\"unden Sie Ihre Antwort.}
+%\pagestyle{empty}
+\begin{document}
+Prof. J.~Rothe
+\hfill D\"usseldorf, 11.11.2010
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \"Ubung zur Vorlesung im WS 2010/2011} \\
+{\LARGE \bf Algorithmische Eigenschaften von Wahlsystemen I} \\
+Blatt 5, Abgabe am 18. November 2010\\
+\end{center}
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 1   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Aufgabe 1 (Condorcet-Verlierer):} 
+Der \emph{Condorcet-Verlierer} einer Wahl ist derjenige Kandidat, der im paarweisen Vergleich 
+von allen anderen Kandidaten in mehr als der H\"alfte der Stimmen geschlagen wird.
+\be
+	\item Zeigen Sie, dass ein Condorcet-Verlierer ein Plurality-Gewinner sein kann. \bAnt 
+	\item Zeigen Sie, dass ein Borda-Gewinner nie ein Condorcet-Verlierer ist. \bAnt
+\ee
+\textbf{Hinweis zu (b):} Wir definieren $N(c,d)=\|\{v\in V \mid \mbox{$c$ steht in $v$ vor $d$}\}\|$.
+Zeigen Sie zun\"achst, dass f\"ur eine Borda-Wahl $\wahl$ folgendes gilt:
+\begin{equation}
+	\mathit{Bscore}(c) = \sum\limits_{d\in C-\{c\}}N(c,d), \label{eq:eq1}
+\end{equation}
+wobei $\mathit{Bscore}(c)$ der Borda-Score von Kandidat $c$ ist. Beweisen Sie daraufhin mithilfe von
+(\ref{eq:eq1}) die Aussage in (b) durch Widerspruch.
+
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   Aufgabe 2   %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf Aufgabe 2 (Theorem von Muller und Satterthwaite):}
+Warum wird die Resolut-Eigenschaft f\"ur die G\"ultigkeit des Theorems von Muller und
+Satterthwaite ben\"otigt? \bAnt
+
+\vspace{0.5cm}
+
+\noindent{\bf Aufgabe 3 (Unabh\"angigkeit von irrelevanten Alternativen):} Ein Wahlsystem $\vs$
+ist \emph{unabh\"angig von irrelevanten Alternativen (erf\"ullt die IIA-Eigenschaft)}, wenn 
+f\"ur jede $\vs$-Wahl gilt: Ist $c$ im Gesamtergebnis der Wahl vor $d$ platziert, so \"andert 
+sich an dieser Reihenfolge nichts, auch wenn die Stimmen in $V$ derart ver\"andert werden, 
+dass lediglich die Reihenfolge von $c$ und $d$ erhalten bleibt. 
+
+Es sei $(C,V)$ die 
+Wahl von Blatt 2: Die Kandidatenmenge sei $C=\{a,b,c,d,e\}$, die W\"ahlermenge $V$ enthalte
+sechs W\"ahler mit den folgenden Pr\"aferenzen:
+\[
+\begin{array}{rc@{\ \ }ccccc}
+	v_1: 	& d & c & a & e & b	\\
+	v_2:  & d & c & b & a & e 	\\
+	v_3:  & d & b & e & a & c 	\\
+	v_4:	& e & c & b & a & d 	\\
+	v_5: 	& b & c & a & d & e	\\
+	v_6: 	& a & c & b & d & e	\\
+\end{array}
+\]
+
+\be
+	\item Stellen Sie f\"ur Borda, Plurality Voting und Veto das Ergebnis der 
+	Wahl $\wahl$ als Pr\"aferenz dar. (Gleichst\"ande werden mit \glqq =\grqq\, gekennzeichnet.)
+	\item Zeigen Sie anhand dieser Wahl, dass Borda, Plurality Voting und Veto nicht
+	unabh\"angig von irrelevanten Alternativen sind. \bAnt
+	\item Angenommen, wir definieren das strenge Monotonie-Kriterium analog zu der IIA-Eigenschaft
+	f\"ur den paarweisen Vergleich von Kandidaten:
+	
+	Ein Wahlsystem $\vs$ sei streng monoton, wenn f\"ur jede $\vs$-Wahl $\wahl$ gilt: Steht im Gesamtergebnis
+	der Wahl $c$ vor $d$, so bleibt diese Reihenfolge erhalten, selbst wenn in $V$ die Stimmen derart 
+	ver\"andert werden, dass lediglich gew\"ahrleistet ist, dass Kandidaten, die vor der \"Anderung hinter 
+	$c$ positioniert waren, auch nach der \"Anderung hinter $c$ positioniert sind.
+
+	Worin besteht der Unterschied zwischen der IIA-Eigenschaft und der so definierten strengen 
+	Monotonie? Was k\"onnen Sie daraus f\"ur den Zusammenhang zwischen diesen beiden Eigenschaften folgern? 
+	\bAnt
+\ee
+\end{document}
+

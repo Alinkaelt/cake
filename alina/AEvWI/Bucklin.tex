@@ -1,0 +1,145 @@
+\documentclass[11pt, a4paper, twoside]{article}
+
+\usepackage{a4wide}
+\usepackage[USenglish, ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{doc}
+\usepackage{graphicx}
+\usepackage{lmodern} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{fancyheadings}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{stmaryrd}
+\usepackage{nomencl}
+% Befehl umbenennen in abk
+\let\abk\nomenclature
+% Deutsche Überschrift
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+% Punkte zw. Abkürzung und Erklärung
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% Zeilenabstände verkleinern
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+\newcommand{\rf}{\color{red}}
+\newcommand{\wf}{\color{white}}
+\newcommand{\tf}{\color{black}}
+
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\scshape\leftmark}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Fußzeile links bzw. innen
+\fancyfoot[C]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+\emergencystretch=3em
+
+% Umgebungen für Sätze usw.
+\newtheorem{satz}{Satz}
+\newtheorem{defi}[satz]{Definition}
+\newtheorem{bez}[satz]{Bezeichnung}
+\newtheorem{bsp}[satz]{Beispiel}
+\newtheorem{thm}[satz]{Theorem}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{prob}[satz]{Problem}
+\newtheorem{lem}[satz]{Lemma}
+
+\begin{document}
+\section{Bucklin Wahlsystem: Resistenz unter DCPV im Modell TP}
+\begin{proof}
+Anf"alligkeit wurde in Lemma 3.3 gezeigt. Um NP-H"arte zu zeigen, folgt eine Reduktion von RESTRICTED HITTING SET auf unser Kontrollproblem.
+Sei ($B,\mathcal{S},k$) eine gegebene RESTRICTED HITTING SET-Instanz mit einer Menge $B=\{b_1,...,b_m\}$ und $\mathcal{S} =\{S_1,...,S_n\}$ ist eine Gruppe von nicht-leeren Teilmengen $S_{i}\subseteq B$, sodass $n>m$ und $k$ ist eine positive ganze Zahl mit $1<k<m$. Seien $S_{i}'\subseteq B$ die Teilmengen der $S_{i}$, die aber nur aus den k ausgew"ahlten Elementen bestehen. Definiere die Wahl ($C,V$), mit $C=B \cup A \cup G \cup \{c,w,w'\}$ als die Menge der Kandidaten. Es gibt $6mn+3$ W"ahler mit den folgenden Pr"aferenzen:\\
+\begin{tabular}{|llll|}
+\hline
+$\#$&F"ur jedes...& Anzahl der W"ahler&\textbf{W"ahlerpr"aferenzen}\wf ergrgfffffetrtretrfghvtrbr\tf\\
+\hline
+\textbf{$\cdot$ 1:}& $\forall i \in \{1,...,n\}$& $m-k$ & $S_i$ $c$ ... \\
+\hline
+\textbf{$\cdot$ 2:}& $\forall i \in \{1,...,n\}$& $k$ & $S_i'$ $c$ ... \\
+\hline
+\textbf{$\cdot$ 3:}&& $2kn$ & $c$ $w$  ...\\
+\hline
+\textbf{$\cdot$ 4:}& $\forall i \in \{1,...,n\}$& $k$ & $w$ $a_i$  $c$ ...\\
+\hline
+\textbf{$\cdot$ 5:}& & $1$ & $a_0$ $w$ $c$ ...\\
+\hline
+\textbf{$\cdot$ 6:}& & $1$ & $c$ $a_0$ ...\\
+\hline
+\textbf{$\cdot$ 7:}& $\forall i \in \{1,...,n\}$& $2m-k$ & $c$ $g_i$ ...\\
+\hline
+\textbf{$\cdot$ 8: }& &$3mn-2kn+1$& $w'$  $c$ ...\\
+\hline
+\end{tabular}
+\newline
+In dieser Wahl ist der Kandidat $c$ der eindeutige Stufe 2 Gewinner mit der Punktzahl $5nm-kn+2>3nm+2$.\\
+\begin{minipage}{\textwidth}{}
+\begin{tabular}{|lll|}
+\hline
+$Kandidat$&Stufe 1&Stufe 2\wf ergrgfffffetrtretrftvgoijiojomnfojknmvtrbr\tf\\
+\hline
+c&$n(2m+k)+1$& $5nm-kn+2$\\
+\hline
+w'&$n(3m-2k)+1<3nm+2$& $n(3m-2k)+1<3nm+2$\\
+\hline
+w&$nk$&$3nk+2<3nm+2$\\
+\hline
+$b_i$&$\leq nm$&$\leq nm$\\
+\hline
+$a_0$&1& $2$\\
+\hline
+$a_i$&/& $1$\\
+\hline
+$g_i$&/& $1$\\
+\hline
+\end{tabular}
+\end{minipage}
+\newline
+\newline
+Wir behaupten, dass eine Menge $||B'|| \leq k$ existiert mit $S_i \cup B' \not= \emptyset$  genau dann, wenn der Kandidat $c$ durch eine Partition ($V_1,V_2$) im Modell TP am gewinnen gehindert werden kann.\\
+Von links nach rechts: Es wird angenommen, dass eine solche Menge $B'$ existiert. Teile $V$:
+\begin{itemize}
+\item $V_1$ beinhalte die gesamte Menge 2, Menge 3, Menge 4, Menge 5 und Menge 6 
+\end{itemize}
+Sei $V_2=V-V_1$. In der Unterwahl ($C,V_2$) ist $w'$ der eindeutige Stufe 1 BV Gewinner mit einer Punktzahl von $n(3m-2k)+1$ ($c$ hat eine Punktzahl von $\leq n(3m-2k)$ in der Stufe 1). In der Unterwahl ($C,V_1$) ist $w$ der eindeutige Stufe 2 BV Gewinner mit einer Punktzahl von $3kn+2$. $c$ hat h"ochstens $3kn+1$ in der zweiten Stufe und $2kn+1$ in der ersten Stufe, was nicht zum gewinnen ausreicht, da die Unterwahl ($C,V_1$) aus $4kn+2$ W"ahlern besteht. Damit gewinnt $c$ in keiner Unterwahl und kann auch nicht mehr gewinnen.\\
+Von rechts nach links: Es wird angenommen, man habe $c$ durch eine Partition ($V_1,V_2$) am gewinnen gehindert. Es folgt eine Fallunterscheidung:\\
+Fall 1: Man hat entweder einen Kandidaten gefunden, der im Zweikampf Kandidat $c$ schlagen kann. Dies ist bei unserer Wahl nicht m"oglich, da Kandidat $c$ bei den Pr"aferenzen immer vor den anderen Kandidaten steht, bis auf bei jeweils $nk+1$ Stimmen hinter $w$, $k$ hinter $a_i$, $3mn -2kn+1$ hinter $w'$ und h"ochstens $n$ hinter $b_i$. Somit reicht die Punktzahl nicht aus um $c$ in der gesamten Wahl vor der Stufe $2$ zu schlagen.\\
+Fall 2: Damit kann $c$ nur am gewinnen gehindert werden, in dem er bei beiden Unterwahlen am gewinnen gehindert wird. Daf"ur kommen nur die Kandidaten $w$ und $w'$ in Frage, da nur sie zusammen die Majorit"at der Punkte erreichen. In der ersten Stufe kann $w$ gegen h"ochstens $nk-1$ Stimmen f"ur andere Kandidaten gewinnen und $w'$ $n(3m-2k)$ und somit k"onnten wir bei einer Wahl mit $n(3m-2k)+n(3m-2k)+1+nk-1+nk=4nm-2k<6mn+3$ Stimmen $c$ am Gewinnen hindern. Das reicht uns aber bei dieser Wahl nicht aus, also m"ussen wir die Punkteverteilung in der zweiten Stufe betrachten. $w'$ kann immernoch gegen h"ochstens $n(3m-2k)$ Stimmen f"ur andere Kandidaten gewinnen, aber $w$ kann nun gegen $3nk+1$ antreten und damit k"onnten wir bestenfalls in einer Wahl mit $n(3m-2k)+n(3m-2k)+1+3nk+2+3nk+1=6nm+2nk+4 > 6mn+3$ Stimmen $c$ am Gewinnen hindern. Da wir aber wissen, dass in der zweiten Stufe $c$ auch der Gesamtgewinner ist, m"ussen wir bei der Separierung aufpassen. Nehmen wir die Menge 2. Nun haben wir $3mn-2kn+1$ Punkte, also k"onnen wir $3mn-2kn$ Stimmen dazunehmen, wo $c$ an der ersten Position ist. Dabei achten wir darauf, dass $w$ die restliche Wahl gewinnt. Wir nehmen die Menge 8 dazu, da davon $w$ keinen Nutzen hat. Es bleiben noch $mn-kn$ Stimmen, die wir dazunehmen k"onnten.\\ Betrachten wir aber erstmal die andere Teilwahl. Wie oben angemerkt erreichen wir gen"ugend Stimmen erst in der zweiten Stufe und somit ben"otigen wir die Mengen 3,4,5 und die Menge 6. Damit hat $w$ $3nk+2$ Stimmen und $c$ $2nk+1$, aber bereits in der ersten Stufe. Die Gr"osse dieser Teilwahl muss mind. $4nk+2$ sein um $c$ nicht zum BV Gewinner der Stufe 1 zu haben. Also ben"otigen wir mind. $nk$ Stimmen, wo $c$ nicht auf Platz 1 im Ranking steht. Hierf"ur kommen nur die Mengen 2 und 1 unter bestimmten Umst"anden in Frage. Die Menge 2 wird aber in der anderen Unterwahl gebraucht und falls wir uns trotzdem an dieser vergreifen w"urden, w"are die Menge 1 in keiner Unterwahl mehr so unterzubringen, dass nur $w$ und $w'$ gewinnen in diesen die Gewinner siind. Es folgt, dass wir genau $k$ Stimmen aus der ersten Menge in diese Unterwahl aufnehmen m"ussen, dabei darf $c$ nicht an der ersten Position sein. Es ergeben sich folgende Punkteverteilungen in den Unterwahlen:\\
+\begin{minipage}{\textwidth}{}
+\begin{tabular}{|llll|}
+\hline
+$Kandidat$&Stufe 1 in $(C,V_1)$&Stufe 2 in $(C,V_1)$&Stufe 1 in $(C,V_2)$\wf jhbfjhsbfhjghjsdvdj \tf\\
+\hline
+c&$2kn+1$& $\leq 3kn+1$& $\leq n(3m-2k)$\\
+\hline
+w'&/&/& $n(3m-2k)+1$\\
+\hline
+w&$kn$&$3nk+2$& $/$\\
+\hline
+$b_i$&$\leq n$&$\leq n$& $\leq n$\\
+\hline
+$a_0$&1& $1$& $/$\\
+\hline
+$a_i$&/& $1$& $/$\\
+\hline
+\end{tabular}
+\end{minipage}
+\newline
+\newline
+Eine weitere wichtige Tatsache ist, dass die Unterwahl $(C,V_2)$ nicht mehr als $6mn-4kn+1$ W"ahler beinhalten darf, da sonst $w$ nicht die Mehrheit der Stimmen in der ersten Stufe erreicht und $c$ sp"atestens in der zweiten Stufe gewinnt. Es darf auch nicht weniger W"ahler beinhalten, da keine der Pr"aferenzen mit $w$ an ersten Position entfernt werden d"urfen und falls einer der Anderen bewegt wird, kann $c$ in der Unterwahl $(C,V_1)$ mehr als $2k+1$ Stimmen in der ersten Stufe bekommen, und ist damit in dieser Unterwahl Sieger. Verschieben wir mind. zwei w"ahler aus der zweiten in die erste Unterwahl, so hat $c$ in der zweiten Runde eine Stimme mehr als $w$. Daraus ergibt sich, dass nur die angebene Aufteilung g"ultig ist und nur dann $c$ vom gewinnen abgehalten werden kann, wenn es ein RESTRICTED HITTING SET der Gr"osse $k$ existiert.   
+\end{proof}
+\end{document}

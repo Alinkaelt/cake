@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@sectionintoc {2}{Grundbegriffe}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Der Kuchen und die Bewertung}{7}{0}{2}
+\beamer@sectionintoc {3}{Der Preis der Gerechtigkeit}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Preis der Proportionalit\"at und Neidfreiheit f\"ur $n=2$}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{Zusammenfassung}{26}{0}{3}
+\beamer@sectionintoc {4}{Vorschau und offene Fragen}{27}{0}{4}
+\beamer@sectionintoc {5}{Quellenverzeichnis}{30}{0}{5}

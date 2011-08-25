@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper, twoside]{article}
+
+\usepackage{a4wide}
+\usepackage[USenglish, ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{doc}
+\usepackage{graphicx}
+\usepackage{lmodern} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{fancyheadings}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{stmaryrd}
+\newcommand{\rf}{\color{red}}
+\newcommand{\wf}{\color{white}}
+\newcommand{\tf}{\color{black}}
+
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\scshape\leftmark}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Fußzeile links bzw. innen
+\fancyfoot[C]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+\emergencystretch=3em
+
+% Umgebungen für Sätze usw.
+\newtheorem{satz}{Satz}
+\newtheorem{defi}[satz]{Definition}
+\newtheorem{bez}[satz]{Bezeichnung}
+\newtheorem{bsp}[satz]{Beispiel}
+\newtheorem{thm}[satz]{Theorem}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{prob}[satz]{Problem}
+\newtheorem{lem}[satz]{Lemma}
+
+\numberwithin{equation}{section}
+\begin{document}
+\section{The case $x^4+y^4=z^4$ and Sophie Germain's Theorem}
+\begin{satz}[1.Satz von Sophie Germain]
+Ist $p$ Prim und $a \in \mathbb{N}$ teilerfremd zu $p$, so gilt:\\
+$$a^{p-1} \equiv 1 \pmod  p$$
+\end{satz}
+\begin{defi}
+Eine Primzahl $p$ heisst \underline{Sophie-Germain-Primzahl} (SGP), wenn sie ungerade ist und auch $q=2p+1$ eine Primzahl ist.
+\end{defi}
+\begin{bsp}
+p=3 und q=7 $\rightarrow$ $3 \in SGP$\\
+p=7 und q=15, $q \notin Prim$ $\rightarrow$ $7 \notin SGP$
+\end{bsp}
+\begin{thm}
+Sei $p$  eine SGP. Dann gibt es keine L"osung der Gleichung $$x^p+y^p+z^p=0$$ f"ur $x,y,z \in\mathbb{Z}$ mit $p\nmid xyz$ und $x,y,z$ paarweise teilerfremd.
+\end{thm}
+\begin{proof}
+Sei $q=2p+1$, $(x,y,z)$ eine nichttriviale L"osung.\\
+Aus $x^p+y^p+z^p=0$ $\Rightarrow$ $x^p+y^p=-z^p
+=xy^{p-1}-x^2y^{p-2}+ \cdots -x^{p-1}y+x^p+y^p-xy^{p-1}+x^2y^{p-2}+ \cdots +x^{p-1}y=x(y^{p-1}-xy^{p-2}+ \cdots x^{p-1})+y(y^{p-1}-xy^{p-2}+ \cdots x^{p-1})=(x+y)\underbrace{(y^{p-1}-xy^{p-2}+ \cdots x^{p-1})}_{\alpha}$ wegen $p\nmid z$ gilt $p \nmid (x+y)$.\\
+Sei $r$ eine Primzahl des ggT von $(x+y)$ und $\alpha$. Dann gilt $r \neq p$ und $x \equiv -y \pmod r$, weil $p \nmid (x+y)$ und $r|(x+y)$.\\
+\begin{tabular}{lll}
+Daher gilt:& $0$ & $\equiv y^{p-1} -xy^{p-2} + \cdots + x^{p-1} \pmod r$\\&&$\equiv y^{p-1}-(-y)y^{p-2}+ \cdots + (-y)^{p-1}$\\&&$\equiv y^{p-1}+y^{p-1}+ \cdots + y^{p-1} \pmod 1$\\
+&$0$ & $\equiv py^{p-1} \pmod r$ $\Leftrightarrow r | py^{p-1} $ da $r \nmid p$ \\&& $\Rightarrow r|y$ da $r| (x+y)$ und $r|y$ folgt $r|x$\\ && $\Rightarrow r|z$  WIDERSPRUCH!!!!\\
+\end{tabular}
+\newline
+\newline
+$(-y)^p=x^p+y^p$ und $(-x)^p=y^p+z^p$ analog.\footnote{Frage: Warum $x+y=a^p$ f"ur ein $a,t \in \mathbb{Z}$?\\
+L"osung: Primfaktorzerlegung}\\
+\newline
+$q=2p+1 \Rightarrow q-1=2p$ so $a^{q-1}= \begin{cases}
+
+  1 \pmod q,  & q \nmid a,\\
+  0 \pmod q, & q \nmid a, q|a.
+\end{cases}$ ...\\
+\newline
+F"ur $q>3$ gilt: $x^p+y^p+z^p = 0 \equiv 0 \pmod q$
+\begin{itemize}
+\item $q | 2x = x+y+x+z-y-z= a^p+b^p-c^p \equiv \pmod q$\\
+\item $q|x$ $a^p=x+y$ wenn $q|a^p \Rightarrow q|y $ WIDERSPRUCH!\\ $\Rightarrow q|c^p$ 
+\item $q|(a^p+b^p)=(x+y+x+z)=(2x+y+z) \Rightarrow y+z \equiv 0 \pmod q$
+\end{itemize}
+$s^p = z^{p-1}-yz^{p-2}+ \cdots + y^{p-1} | y \equiv -z \pmod q = py^{p-1} \pmod q$\\
+$s^p \equiv \pm1 \pmod q , q\nmid y$.\\
+\newline 
+$py^{p-1} \equiv \pm1 \pmod q$\\
+\newline
+$(-z)^p = (x+y)t^p$ und $\pm1 \equiv y^p \equiv yt^p \pmod q$ mit $q \nmid y$\\
+$q=2p+1 \Rightarrow p \not\equiv \pm 1 \pmod q$
+\end{proof}
+By Kevin Ondo at 11. November 2011
+\end{document}

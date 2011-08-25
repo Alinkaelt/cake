@@ -1,0 +1,640 @@
+\documentclass[11pt, a4paper, twoside]{article}
+
+\usepackage{a4wide}
+\usepackage[USenglish, ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{doc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{color}
+\newcommand{\wf}{\color{white}}
+\newcommand{\tf}{\color{black}}
+\usepackage{bbm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy} 
+\fancyhead[OR]{\leftmark}
+\fancyhead[OL]{}
+\fancyhead[ER]{}
+\fancyhead[EL]{\leftmark}
+\fancyfoot[CO,CE]{\thepage}
+
+\emergencystretch=3em
+
+% Umgebungen für Sätze usw.
+\newtheorem{satz}{Satz}
+\newtheorem{defi}[satz]{Definition}
+\newtheorem{bez}[satz]{Bezeichnung}
+\newtheorem{bsp}[satz]{Beispiel}
+\newtheorem{thm}[satz]{Theorem}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{prob}[satz]{Problem}
+\newtheorem{lem}[satz]{Lemma}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+
+
+\begin{titlepage}
+\pagenumbering{roman}
+\begin{center}
+\includegraphics[height=4cm]{hhulogo.jpg}\\
+\vspace{1em}
+\textbf{
+\Large Heinrich-Heine-Universit"at D"usseldorf\\
+\smallskip
+\Large Institut f"ur Mathematik\\
+\smallskip}
+
+\vspace{3em}
+{\Huge Bachelorarbeit}
+
+\vspace{4em} {\Huge Neidfreiheit \\ \vspace{1em} in Cake-Cutting-Protokollen}
+\end{center}
+
+\vfill
+
+\begin{center}
+{\large
+\begin{tabular}[l]{ll}
+Name: & Alina Elterman\\
+Matrikelnummer: & 1810231\\
+Betreuer: & Prof. Dr. J"org Rothe\\
+Abgabedatum: & 07.09.2010
+\end{tabular}
+}
+\end{center}
+
+\end{titlepage}
+\newpage
+
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\fancyfoot[CO,CE]{\thepage}
+\setcounter{page}{1}
+
+\pagestyle{plain} %Keine Seitennummer auf dieser Seite
+
+\section{Einleitung}
+Das Cake-Cutting Problem lernt jedes Kind bereits im Alter von nur wenigen Jahren kennen. Und wird somit zu einem un"uberwindbaren Hinderniss f"ur die Eltern, welche am seelischen Wohl ihrer Spr"osslinge h"ochst interessiert sind. Die Schwierigkeit liegt hier darin, dass unser Kind nur dann zufrieden ist, wenn es der Meinung ist, dass kein Anderer ein gr"osseres St"uck als Seines bekommen hat. Bei zwei Kindern ist das Cut$\&$Choose(siehe Protokolle) der Helfer in der Not. Bei drei Kindern k"onnte ein mathematisch interessierter Elternteil durch Selfridge-Conway(siehe Protokolle) selbst bei eigenwilligsten Kindern Hoffnung sch"opfen. Doch was kann man tun, wenn man vier oder sogar f"unf Kinder hat, einen leckeren Geburtstagskuchen und eine endliche Menge an Zeit und Kraft um das Problem zu l"osen?\\
+Dies ist noch ein offenes Problem! Seit den 40ger Jahren sorgt das Cake-Cutting als Teilgebiet der gerechten Aufteilung mit viel Literatur und unterschiedligsten Anwendungsbereichen f"ur Furore. Als Begr"under und Problemsteller gilt Hugo Dionizy Steinhaus. Als der Ursprung der Neidfreiheit in diesem Zusammenhang gilt das von Gamow $\&$ co. im Appendix gestellte Weinteilungsproblem, mit Beteiligten, die sich mit keiner proportionalen L"osung zufrieden geben wollten. Und nun mehrere Dekaden sp"ater mit neue L"osungen und Sichtweisen auf die Neidfreiheit bei Cake-Cutting Protokollen habe ich das Privileg mich mit diesem Thema befassen zu d"urfen.\\ 
+\subsection{Gliederung}
+In dieser Arbeit werde ich eine Einf"uhrung in die Problematik geben mittels der Techniken, die bereits bekannt sind, und Begriffen und Definitionen die von Nutzen sind. Ausserdem liegt die Arbeit von Ariel Procaccia 'Thou Shalt Neighbours' Cake' im Zentrum, sowie eine eventuelle Verbesserung dieser Schranke. Eine Analyse und Typisierung von bekannten proportionallen Algorithmen wird ebenfalls ausgef"uhrt um Knackpunkte zu verdeutlichen, die sie f"ur Neidfreiheit untauglich machen. Ein Ausblick mit Anforderungen an den Algorithmus der f"ur eine beliebige Zahl oder zumindest f"ur vier Spieler wird ebenfalls angef"uhrt im Bezug zu den bekannten Algorithmen.\\
+Das Ziel dieser Bachelorarbeit ist eine kompakte und sofern es m"oglich ist komplette "Ubersicht der neidfreien Teilung von unendlich teilbaren G"utern. Und einen Ausblick auf neue m"ogliche Forschungen.\\
+\newpage
+\section{Mehrere Ansichten der neidfreien Aufteilung}
+Die gerechte Aufteilung spielt in unterschiedlichen akademischen Bereichen eine wichtige Rolle. Der  Begriff der Neidfreiheit bzw. des Neides ist ebenso interdisziplin"ar.  Es folgt eine "Ubersicht der Schwerpunkte  bez"uglich dieser Begriffe aus der Wirtschaft, Psychologie, Politik, Mathematik und Informatik(MARA und A.I.).
+\subsection{Wirtschaft}
+Tinbergen
+D.K.Foley hat 1967 den Begriff der Neidfreiheit eingef"uhrt als 
+\subsection{Psychologie}
+Hier wird untersucht inwiefern individualpsychologische Faktoren oder Besonderheiten der verschiedenen Verfahren zur Aufteilung die Wahl dieser und das Ergebnis beeinflussen. Mit der Annahme nach Elster(1999), dass Emotionen und verinnerlichte Einstellungen als St"orfaktoren f"ur rationale  Entscheidungen gelten wird nach "fair" empfundenen Verhandlungsl"osungen gesucht. Dabei untersucht man ausserdem das Verh"altnis der Beteiligten zueinander und die Auswirkungen der Ergebnisse und Einstellungen w"ahrend der Verhandlungen auf die Zukunft(z.B. Gebietsteilungen und Kriegsrisiko). 
+\subsection{Politik}
+\subsection{Mathematik}
+\subsection{Informatik}
+\newpage
+\section{Wichtige Begriffe}
+Bei der gerechten Aufteilung m"ussen wir zun"achst einmal alle M"oglichkeiten definieren welches Objekt, mit welchem Ziel und zwischen welchen Subjekten aufgeteilt werden kann.
+\subsection{Die Spieler}
+Sei $P_N$=$\{p_1,...,p_n\}$ die Menge von $n$ Agenten (oder Spieler), die ein Interesse an unserem Gut haben. Wir gehen dabei davon aus, dass jeder von Ihnen m"oglichst viel von der Ressource haben m"ochte.(Kommentar: Man kann auch populations beschr"ankte Man"ovren betrachten, sowie Chore division, dies ist aber Spieltheorie. Ausserdem sind unsere Spieler nur an Ihrem eigenen Wohl interessiert, d.h. ob andere Mitspieler weniger kriegen und sie genauso viel ist Ihnen egal).
+\subsection{Die Ressource}
+Wir besch"aftigen uns mit der Aufteilung von einem einzigen heterogenen teilbaren Gut. Es existieren auch Forschungen "uber die Aufteilung von mehreren G"utern (z.B. Cloutier,Nyman,Su:''Two-Player Envy-Free Multi-Cake Division''), die wir hier aber ausser Acht lassen. Ein Objekt ist heterogen, wenn es uneinheitlich hinsichtlich eines oder mehrerer Merkmale ist. Das beste Beispiel ist ein rechteckiger Kuchen (Stollen).(Kommentar: Es gibt mehrere Studien von einer Torte (runder Kuchen) nachzulesen in M.A.Jones:''Some Recent Results on Pie Cutting''). Die Division wird bei uns durch eine Reihe von parallen Schnitten durchgef"uhrt. Es gibt ebenfalls Aufteilungen mit parallelen und rechtwinkligen Schnitten, diese werden hier nicht betrachtet(z.B. Protokoll von Webb). Der Kuchen $X$ wird dabei durch das Intervall $[0,1]\subseteq \mathbb{R}$ repr"asentiert. Wir nennen jedes Telintervall, oder eine Vereinigung von solchen ein St"uck. Diese St"ucke sind immer disjunkt. Eine wichtige Eigenschaft der Kuchenafteilung ist, dass wir nur komplette Aufteilungen (ausser es wird explizit was anderes gesagt) des Kuchens betrachten. Wir bezeichnen als $X_i$ das St"uck des Kuchens, welches der Spieler $p_i$ bekommt.
+\subsection{Das Ma"s} 
+Jeder Spieler $p_i \in P_N$ hat eine Bewertungsfunktion $v_i:\{X'|X'\subseteq X\}\mapsto [0,1]$ des Kuchens $X$.Sie erf"ullt folgende Eigenschaften:
+\begin{enumerate}
+\item Nicht-Negativit"at: $v_i(C)\geq 0$ forall $C\subseteq [0,1]$
+\item Normalisierung: $v_i(\emptyset)=0$ und $v_i([0,1])=1$
+\item Monotonit"t: Wenn $C' \subseteq C$, dann $v_i(C') \leq v_i(C)$
+\item Additivit"at: $v_i(C \cup C')=v_i(C)+v_i(C')$ f"ur disjunkte $C,C'\subseteq [0,1]$
+\item Teilbarkeit: F"ur alle $C\subseteq [0,1]$ und alle $\alpha$, $0\leq \alpha \leq 1$, existiert ein $B\subseteq C$, so dass  $v_i(B)=\alpha \cdot v_i(C)$
+\item  $v_i$ ist kontinuierlich: if $0<x<y\leq 1$ mit $v_i([0,x])=\alpha$ und $v_i([0,y])=\beta$, dann gilt f"ur jedes $\gamma \in [\alpha,\beta]$ existiert ein $z \in [x,y]$ so dass $v_i([0,z])=\gamma$
+\item Inhaltslosigkeit von Punkten:  $v_i([x,x])=0$ f"ur alle $x\in [0,1]$
+\end{enumerate}
+Ausserdem ist es "ublich zu verlangen, dass jede nicht leere Teilmenge des Kuchens einen Wert f"ur jeden Spieler hat, das bedeutet , dass f"ur alle $p_i \in P_N$ $v_i(B)>0$ f"ur $B\subseteq [0,1]$ and $B \neq \emptyset$.
+\subsection{Die unterschiedlichen Gerechtigkeiten}
+Wie wir oben bereits definiert haben, besitzt jeder Spieler eine Bewertungsfunktion. Diese Funktion ist geheim und subjektiv (ein Spieler kennt nur seine Bewertungen, und nur seine Bewertungen haben Einfluss auf sein Wohlbefinden). Nach einer Aufteilung versuchen wir die G"ute dieser zu messen.Damit brauchen wir aber Ma"sst"abe.Das Wichtigste ist die Gerechtigkeit. Aber was bedeutet "uberhaupt gerecht? Dies ist eine philosofische oder psychologische Frage und kann nicht so einfach und f"ur unser Ziel zufriedenstellend beantwortet werden, somit brauchen wir Kriterien um unsere Aufteilungen vergleichen und bewerten zu k"onnen.
+\begin{defi}{\textbf{(Proportionalit"at oder einfache Gerechtigkeit)}}
+\newline Eine Aufteilung ist \underline{proportional (einfach gerecht)} wenn $v_i(X_i) \geq 1/n$ f"ur jeden Spieler $p_i \in P_N$. 
+\end{defi} 
+\begin{defi}{\textbf{(Neidfreiheit)}}
+\newline Eine Aufteilung ist \underline{neidfrei} falls $v_i(X_i) \geq v_i(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N$. 
+\end{defi} 
+Es gibt st"arkere Einschr"ankungen f"ur diese zwei Kriterien. Ich werde diese an dem Bespiel der Neidfreiheit demonstieren. Im Falle der Proportionalit"at gilt das Erste mutatis mutandis.
+\begin{defi}{\textbf{(Starke Neidfreiheit)}}
+\newline  Eine Aufteilung ist \underline{stark neidfrei} falls $v_i(X_i) > v_i(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N$.  
+\end{defi} 
+\begin{defi}{\textbf{(Super Neidfreiheit)}}
+\newline Eine Aufteilung ist \underline{super neidfrei}, falls $v_i(X_j) \leq 1/n$  f"ur jedes Paar von Spielern $p_i, p_j \in P_N$. 
+\end{defi} 
+\begin{defi}{\textbf{(Starke Super Neidfreiheit)}}
+\newline Eine Aufteilung ist \underline{starke super neidfrei}, falls $v_i(X_j) < 1/n$  f"ur jedes Paar von Spielern $p_i, p_j \in P_N$. 
+\end{defi} 
+Das Problem ist, dass f"ur die st"arkeren Einschr"ankungen nicht immer Aufteilungen existieren, z.B. wenn jeder Spieler die gleiche Bewertungsfunktion auf dem Kuchen hat. 
+\begin{defi}{\textbf{(Gerechtigkeit)}}
+\newline Eine Aufteilung ist \underline{gerecht}, falls $v_i(X_i) = v_j(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N$.
+\end{defi} 
+Diese drei Kriterien haben gewisse Zusammenh"ange, die ich auflisten und beweisen m"ochte.
+\begin{lem}
+F"ur alle Aufteilungen gilt:
+\begin{itemize}
+\item Falls eine Aufteilung neidfrei ist, so ist sie auch proportional.
+\item F"ur zwei Spieler ist eine Aufteilung proportional genau dann, wenn sie neidfrei ist.
+\end{itemize}
+\end{lem}
+\begin{proof}
+\begin{itemize}
+\item Falls eine Aufteilung neidfrei ist, so gilt $v_i(X_i) \geq v_i(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N$ und somit hat jeder Spieler mind. soviel wie jeder Andere, damit hat ein Spieler mindestens genauso viel wie $(n-1)$ Andere und damit kriegt Jeder mindestens $1/n$ und unsere Aufteiluing ist proportional.
+\item F"ur zwei Spieler ist eine Aufteilung proportional genau dann, wenn er mind. die H"alfte des Kuchens bekommt, damit kann der andere Spieler h"ochstens die H"alfte bekommen und wird nicht beneidet.\\ Ist die Aufteilung neidfrei, so hat unser Spieler mind. genauso viel wie der zweite Spieler, damit hat er mindestens die H"alfte des Kuchens, und somit mindestens seinen proportionalen Anteil. 
+\end{itemize}
+\end{proof}
+\begin{defi}{\textbf{(Effizient)}}
+\newline Eine Aufteilung ist \underline{effizient(Pareto optimal)} falls keine andere Aufteilung existiert, die einem Spieler ein von ihm besser bewertetes St"uck einbringt, ohne die Situation eines anderen Spielers zu verschlechtern. 
+\end{defi}
+\begin{defi}{\textbf{(Ehrlichkeit)}}
+\newline Eine Aufteilung ist \underline{ehrlich} falls es keine Bewertung gibt, bei dem der Spieler am Ende ein besseres St"uck bekommen h"atte durch L"ugen. 
+\end{defi} 
+Wir sind nur an Aufteilungen interessiert, wo die Ehrlichkeit die beste Strategie f"ur alle Spieler ist und somit allein durch den Algorithmus erzwungen wird.  
+\subsection{Forderungen an die Algorithmen}
+\begin{defi}{\textbf{(Algorithmus)}}
+\newline In Mathematik,Informatik, und verwandten Gebieten, ist ein \underline{Algorithmus} eine effektive Methode zur Probleml"osung ausgedr"uckt als eine endliche Folge von Anweisungen. 
+\end{defi}
+\begin{defi}{\textbf{(Protokoll (Cake-Cutting Protokoll))}}
+\newline Ein \underline{Protokoll (Cake-Cutting Protokoll)} ist ein adaptiver Algorithmus , welcher mehrere Spieler beteiligt mit folgenden Eigenschaften:
+\begin{itemize}
+\item Sofern die Spieler ein Protokoll befolgen, bekommt jeder nach einer endlichen Anzahl von Schritten sein St"uck des Kuchens welches dem geforderten Gerechtigkeitskriterium entspricht.
+\item Jeder Spieler muss zu jeder Zeit in der Lage sein v"ollig unabh"angig von den anderen Spielern einen Schnitt zu machen.
+\item Das Protokoll besitzt keine Informationen "uber die Bewertungen der Spieler, ausser denen die angefragt wurden in dem jeweiligen oder in den vorherigen Schritten. 
+\end{itemize}
+\end{defi}
+Unsere Aufgabe ist es ein Protokoll anzugeben der eine Aufteilung liefert, die eines unserer Gerechtigkeitskriterien erf"ullt. Siehe auch Definition von Even und Paz:''A note on CC'', RObertson und Webb:''Aproximating bla bla'' und Woeginger,Sgall:''An Aproximation Scheme...'' oder ''cc is not a piece of cake'' von magdon....
+\begin{defi}{\textbf{(endlich (diskret)/kontinuierlich)}}
+\newline Ein \underline{endliches (diskretes)} Protokoll liefert eine L"osung nach einer endlichen Anzahl von Entscheidungen(Bewertungen, Markierungen,$\ldots$), dagegen muss ein Spieler bei einem \underline{kontinuierlichen} Protokoll unendlich viele Entscheidungen treffen.
+\end{defi}
+\begin{defi}{\textbf{(endlich beschr"ankt/endlich unbeschr"ankt))}}
+\newline Ein \underline{endlich beschr"anktes} Protokoll hat eine obere Grenze von Schritten (im worst case), das bedeutet, dass die Anzahl von Entscheidungen ggf. nur von der Anzahl der beteiligten Personen abh"angt. Ein \underline{endlich unbeschr"anktes} Protokoll hat im Vergleich eine nicht im Voraus absch"atzbare Anzahl.
+\end{defi}
+Die gew"unschten Protokollen sind endlich beschr"ankt, da sie am einfachsten in der Realit"at umsetzbar sind. Aber es gibt eine Art von kontinuierlich beschr"ankten Protokollen an der wir auch interessiert sind.
+\begin{defi}{\textbf{(Bewegtes Messer (Moving Knife))}}
+\newline Ein Schiedsrichter, welcher unparteisch gegen"uber den Spielern ist und unbeteiligt an der Verteilung der St"ucke, \underline{schwenkt ein Messer kontinuierlich} von links nach rechts und macht parallele Schnitte sofern Spieler ''Halt!'' rufen. Bei manchen Protokollen wird der Schiedsrichter ausgelassen und nur ein Messer oder Schwert geschwungen.
+\end{defi}
+Bemerkung: In mancher Literatur (z.B.:Ulle Endriss''Lecture Notes on Fair Division'') werden kontinuierlich beschr"ankte Protokolle nicht als Protokolle bezeichnet sondern zu neuen Klassen zusammengefasst, die von der Anzahl der Messer abh"angen. 
+\begin{defi}{\textbf{(zusammenh"angend)}}
+\newline Ein \underline{zusammenh"angendes} Protokoll liefert eine Aufteilung die aus genau einem zusammenh"angendem St"uck pro Spieler besteht. Hier d"urfen die St"ucke nicht geteilt und wieder zusammengesetzt werden.
+\end{defi}
+Ein Cake-Cutting Protokoll besteht aus Regeln und Strategien.\\ Regeln sind  Anweisungen, die wir fordern ohne die Bewertungen der Spieler zu kennen.\\ Strategien sind Empfehlungen, welchen der Spieler folgen muss um garantiert seinen gerechten Anteil zu bekommen.
+Eines der Ziele von CC ist solche Protokolle zu finden. Es folgt eine "Ubersicht "uber die wichtigsten, bekannten, neidfreien Protokolle. \section{Die neidfreien Protokolle von Cake-Cutting}
+Die Problematik der proportionalen Aufteilung ist mehr oder weniger komplett gel"ost, das k"onnte man sich im Zusammenhang mit der Neidfreiheit zu Nutze machen indem man den DGEF zur Betrachtung setzt, was in Kapitel 6 auch gemacht wird.\\
+F"ur die gerechte Aufteilung existiert nur ein MK Algorithmus f"ur zwei Spieler.
+Die neidfreie Aufteilung wurde f"ur bis zu vier Spielern im kontinuierlich beschr"ankten und bis zu drei Spielern im endlich beschr"ankten Fall gel"ost. Es gibt einen Algorithmus f"ur beliebig viele Spieler, dieser unterscheidet sich stark von den Bisherigen und ist nicht beschr"ankt.
+Es folgt eine Zusammenfassung der existierenden neidfreien Cake-Cutting Protokolle (CCP). Dabei wird erl"autert wie die Neidfreiheit erreicht wird. Es werden nur Protokolle f"ur einen rechteckigen Kuchen mit parallelen Schnitten betrachtet.
+\subsection{2 Spieler}
+Ein endlich beschr"anktes CCP, dass eine proportionale und neidfreie Aufteilung liefert. Es werden ein Schnitt und eine Bewertung gemacht.
+Die Neidfreiheit wird elementar erreicht, da der erste Spieler unentschlossen bez"uglich der zwei St"ucke ist, und der andere Spieler das Privileg hat zu w"ahlen.\\ Bemerkung: Der erste Spieler kann nie mehr als die H"alfte des Kuchens bekommen.\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Cut \& Choose}\wf ergrgrgergegetdfvafvvvadfffffvfdffffgetgergergtrgbrgbvgvtrbr\tf\\
+\hline
+\textbf{$\cdot$ Schritt 1}&Spieler $p_1$ schneidet den Kuchen in zwei gleichwertige Teile\\&(nach seinem Ma"s).\\
+\textbf{$\cdot$ Schritt 2}&Spieler $p_2$ sucht sich ein St"uck aus, das andere St"uck kriegt Spieler $p_1$.\\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+Ein kontinuierlich beschr"anktes, gerechtes und neidfreies CCP. Es werden h"ochstens zwei Schnitte gemacht. Dies ist das einzige bekannte gerechte Protokoll.\\ Dieses Protokoll ist neidfrei da beide Spieler genau die H"alfte des Kuchens bekommen (nach ihrem Ma"s). Die Idee hier ist: In dem Augenblick wenn der erste Spieler ''Halt!'' ruft, ist das St"uck vom linken Rand bis zum Messer f"ur den zweiten Spieler weniger Wert als die H"alfte des Kuchens (sonst w"urde er auch:''Halt!'' rufen und damit w"are das gew"unschte Ergebnis bereits erzielt). Daraus folgt, dass das St"uck von dem Messer bis zu dem rechten Rand f"ur den zweiten Spieler mehr Wert hat als die H"alfte des Kuchens. Da der erste Spieler nun aber mit zwei Messern aus dem linken St"uck in das rechte St"uck "ubergeht ist gesichert, dass es einen Moment gibt, wo das St"uck zwischen den beiden Messern genau die H"alfte des Kuchens f"ur den zweiten Spieler ist.\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Austins moving-knife}\wf ergrgrgergegetdfvafvvvadfffmgergergtrgbrnbvgvtrffff\tf\\
+\hline
+\textbf{$\cdot$ Schritt 1}& Ein Messer wird kontinuierlich von links nach rechts "uberden Kuchen\\&geschwenkt, bis ein Spieler (sagen wir: $p_1$)''Halt!'' ruft, weil das Messer den\\&Kuchen dort halbiert nach seinem Ma"s.\\
+\textbf{$\cdot$ Schritt 2}& Dieser Spieler platziert ein zweites Messer "uber dem linken Rand des\\&Kuchens und schwenkt beide Messer parallel und kontinuierlich von links\\&nach rechts so "uber den Kuchen, dass zwischen ihnen nach seinem Ma"s\\&stets der Wert des Kuchens $1/2$ ist.\\
+\textbf{$\cdot$ Schritt 3}& Der andere Spieler ruft:''Halt!'', sobald er glaubt dass dieses St"uck den\\&Wert $1/2$ hat.\\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+Diese Prozedur funktioniert auch f"ur jedes beliebige $1/n$ mit $n \in \mathbb{N}$, muss aber im worst case $(n-1)$-mal durchgef"uhrt werden.\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Austins moving-knife f"ur $n$ gleichwertige St"ucke}\wf ffsgfasggfffdgdfgadsaf\tf\\
+\hline
+\textbf{$\cdot$ Schritt 1}& Der Spieler $p_1$ schneidet den Kuchen in $n$ gleichwertige St"ucke nach seinem\\&Ma"s.\\
+\textbf{$\cdot$ Schritt 2}& Der Spieler $p_2$ w"ahlt zwei St"ucke $\{X_1,X_2\}$ davon aus mit der Eigenschaft:\\&$v_2(X_1) < 1/n,v_2(X_2) > 1/n$. Alle St"ucke mit $v_2(X_i)=1/n$ f"ur $3\leq i \leq n$\\&werden als fertig markiert und stehen nicht mehr zur Wahl.\\
+\textbf{$\cdot$ Schritt 3}& Diese zwei St"ucke werden zu einem verschmolzen und darauf wird das\\&Austins Moving Knife Protokoll angewendet. Das resultierende St"uck wird\\&ebenfalls als fertig markiert. Der Rest wird verschmolzen und zu den\\&"ubrigen unfertigen St"ucken zugeordnet, sofern einer der beiden Spieler es\\&nicht als $1/n$ bewertet.\\
+\textbf{$\cdot$ Schritt 4}& Schritt 2 und Schritt 3 werden wiederholt bis alle St"ucke markiert sind.\\
+\hline
+\end{tabular}
+\subsection{3 Spieler}
+Ein endlich beschr"anktes, neidfreies CCP. Es werden h"ochstens f"unf Schnitte gemacht. Dies ist das einzige bekannte endlich beschr"ankte Protokoll f"ur $n \geq 3$.\\ Die erste Aufteilung ist neidfrei, da der dritte Spieler die freie Wahl hat und somit keinen beneiden kann, f"ur den zweiten Spieler existieren zwei St"ucke und da er als Zweiter w"ahlen darf, ist Eines davon immer vorhanden. Der erste Spieler bekommt ein unbeschnittenes St"uck und ist somit der Meinung, dass die Anderen entweder gleichgrosse oder kleinere St"ucke als er haben. Bei Schritt 4 wird falls n"otig der Rest verteilt, hier ist der erste Spieler der Meinung, dass der gesammte Rest eigentlich dem Spieler $P$ geh"ort und hat kein Problem diesen als Ersten w"ahlen zu lassen. Damit beneidet $P$ keinen, denn er durfte sich (nach seinem Ma"s) das gr"osste St"uck aussuchen. Der erste Spieler w"ahlt nun  sein St"uck und kann den Spieler $Q$ nicht benneiden. Und Spieler $Q$ ist der Meinung alle Restst"ucke waren gleich gross, und damit ist die gesammte Aufteilung neidfrei.\\  
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Selfridge-Conway}\wf jsngkdbfkhbdfbdfffkrgergergbdfkfffgnfnhljbfkfkjngk\tf\\
+\hline
+\textbf{$\cdot$ Schritt 1}&Der erste Spieler $p_1$ schneidet den Kuchen $X$ in drei gleiche St"ucke\\&(nach seinem Ma"s). Der zweite Spieler $p_2$ sortiert $\{X_1,X_2,X_3\}$ mit:\\
+& $v_1(X_1)=v_1(X_2)=v_1(X_3)=1/3$ $v_2(X_1) \geq v_2(X_2) \geq v_2(X_3)$\\
+\textbf{$\cdot$ Schritt 2}& Ist $v_2(X_1)>v_2(X_2)$, so schneidet $p_2$ von $X_1$ etwas ab, so dass er\\&$X_1'=X_1-R$ erh"alt mit   $v_2(X_1')=v_2(X_2)$. Ist $v_2(X_1)=v_2(X_2)$,\\&so sei $X_1'=X_1$.\\
+\textbf{$\cdot$ Schritt 3}&Aus $\{X_1',X_2,X_3\}$ w"ahlen $p_3,p_2,p_1$ in dieser Reihenfolge je ein St"uck.\\&Wenn $p_3$ $X_1'$ nicht nimmt, muss $p_2$ es tun.\\
+\textbf{$\cdot$ Schritt 4}& Entweder $p_2$ oder $p_3$ hat $X_1'$. Nenne diesen Spieler\\(nur falls $R \neq \emptyset$)&$P$, den Anderen $Q$.$Q$ schneidet den Rest $R$ in drei gleiche St"ucke\\&(nach seinem Ma"s): $v_Q(R_1)=v_Q(R_2)=v_Q(R_3)=1/3 \cdot R$\\& $P,p_1,Q$ w"ahlen in dieser Reihenfolge je ein St"uck.\\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+Ein kontinuierlich beschr"anktes, neidfreies CCP. Es werden zwei Schnitte gemacht. Wie in der Literatur nachzulesen ist dies das m"ogliche Schnittminimum.\\ Um hier die Neidfreiheit nachzuvollziehen betrachtet man jeden Spieler einzelnnd. Der Spieler der ''Halt!'' ruft ist der Meinung, dass das linke St"uck mehr oder gleich viel wert ist, als beide St"ucke rechts von dem Schwert und wird somit auch keinen beneiden. Die "ubrigen zwei Spieler teieln seine Meinung nicht, so h"atten sie auch ''Halt!'' gerufen. Nun m"ussen wir die St"ucke rechts neidfrei verteilen. Es gibt drei Markierungen, die wichtige ist hier die Mittlere. Mindestens einem der "ubrigen Spieler geh"ort eine andere Markierung, damit kriegt er ein St"uck, das sogar noch mehr wert ist und beneidet den anderen Spieler nicht. F"ur den letzten Spieler gilt entweder exakt das selbe oder er ist der Meinung genauso viel wie der Vorherige bekommen zu haben. Damit sit die gesammte Aufteilung neidfrei.\\
+Sie l"asst sich aber leider nicht auf $n \leq 4$ "ubertragen, denn diese Prozedur muss eine ungerade Anzahl von Spielern haben, um das St"uck in die entsprechenden Teile zu Markieren, oder es werden mehr als ein Schwert verlangt, was den kontinuirlichen Ablauf des Protokolls st"oren w"urde. F"ur $n=5$ tritt ein Problem in der Aufteilung der rechten St"ucke auf, da man wieder hier alle Bewertungen von Allen bis auf den Spieler , der das linke  St"uck bekommen hat beachten muss.\\ Dieses Protokoll l"asst sich nicht diskretisieren.\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Stromquist Moving-Knife}\\
+\hline
+\textbf{$\cdot$ Schritt 1}& Ein Schwert wird kontinuierlich von links nach rechts "uber den Kuchen\\&geschwenkt und teilt ihn (hypothetisch) in ein linkes St"uck $X_L$ und ein\\&rechtes St"uck $X_R$: $X=X_L\cup X_R$. Jeder der drei Spieler halten ihr Messer\\&parallel zum Schwert und bewegen es (w"ahrend das Schwert geschwenkt\\&wird) so, dass sie das rechte St"uck nach ihrem Ma"s stets genau halbiert.\\&Dabei teilt das mittlere Messer $X_R$ in zwei St"ucke:$X_R=X_{RL}\cup X_{RR}$\\
+\textbf{$\cdot$ Schritt 2}& Der erste Spieler, der glaubt, $X_L$ sei mindestens so gut wie sowohl $X_{RL}$ als\\&auch $ X_{RR}$, ruft: ''Halt!'' und bekommt $X_L$. Das mittlere der drei Messer\\&schneidet $X_R$ in zwei St"ucke: $X_R=X_{RL}\cup X_{RR}$. Der "ubriggebliebene\\& Spieler der seine Markierung am n"ahesten an $X_L$ hatte bekommt $X_{RL}$. Der \\&letzte Spieler bekommt $X_{RR}$.\\     
+\hline
+\end{tabular}
+\subsection{4 Spieler}
+Ein kontinuierlich beschr"anktes, neidfreies CCP. Es werden h"ochstens 13(11 in CD with minimal cuts Barbanel $\&$ Brams) Schnitte gemacht. Dies ist das einzige bekannte, beschr"ankte, neidfreie Protokoll f"ur $n \geq 4$.\\
+Die Idee hier ist die selbe wie in Selfridge-Conway. Es werden in den n"otigen Schritten immer zwei Spieler zusammengefasst um die VOrteile des Protokolls auszunutzen. Es l"asst sich nicht verallgemeiner bevor eine M"oglichkeit nicht gefunden wurde f"ur mehr als zwei Spieler einen Kuchen gerecht aufzuteilen.\\ 
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Brams,Taylor \& Zwicker Moving-Knife}\\
+\hline
+\textbf{$\cdot$ Schritt 1}&Der erste Spieler $p_1$ und der zweite Spieler $p_2$ erzeugen mit dem\\&Austins Moving-Knife-Protokoll f"ur beide Spieler vier gleichwertige\\&St"ucke. Der Spieler $p_3$ sortiert diese mit:\\
+& $v_1(X_1)=v_1(X_2)=v_1(X_3)=v_1(X_4)=1/4$\\
+& $v_2(X_1)=v_2(X_2)=v_2(X_3)=v_2(X_4)=1/4$\\
+& $v_3(X_1)\geq  v_3(X_2)\geq v_3(X_3)\geq v_3(X_4)$\\
+\textbf{$\cdot$ Schritt 2}& Ist $v_3(X_1)>v_3(X_2)$, so schneidet $p_3$ von $X_1$ etwas ab, so dass er\\&$X_1'=X_1$-$R$ erh"alt mit $v_3(X_1')=v_3(X_2)$. Ist $v_3(X_1)=v_3(X_2)$, so\\&sei  $X_1'=X_1$.\\
+\textbf{$\cdot$ Schritt 3}&Die Spieler $p_4,p_3,p_2,p_1$ w"ahlen (in dieser Reihenfolge) je ein St"uck aus\\&$\{X_1',X_2,X_3,X_4\}$. Falls $p_4$ $X_1'$ nicht nimmt, muss $p_3$ es tun.\\
+\textbf{$\cdot$ Schritt 4}& Entweder $p_4$ oder $p_3$ hat $X_1'$. Nenne diesen Spieler$P$, den Anderen $Q$.\\(nur falls $R \neq \emptyset$)&$Q$  und  $p_2$ schneiden den Rest $R$ mit dem Austins Moving-\\&Knife-Protokoll in vier gleichwertige St"ucke.\\
+& $v_Q(R_1)=v_Q(R_2)=v_Q(R_3)=v_Q(R_4)=1/4 \cdot v_Q(R)$\\& $v_2(R_1)=v_2(R_2)=v_2(R_3)=v_2(R_4)=1/4 \cdot v_2(R)$\\&Die Spieler $P,p_1,Q,p_2$ w"ahlen (in dieser Reihenfolge) je ein St"uck.\\
+\hline
+\end{tabular}
+\subsection{$n$ Spieler}
+Ein unendliches neidfreies Protokoll f"ur eine beliebige Anzahl von Spielern.
+Das folgende Protokoll l"asst sich verallgemeinern indem die Anzahl der St"ucke in welche der erste Spieler in Schritt 1 den Kuchen teilt immer um einz gr"osser ist als die Summe der Schnitte ab Schritt 2 und bis zu dem Analogon von Schritt 5 ("ublicherweise von Schritt 2 bis Schritt 2$\cdot n$-3). Der $i$-te Spieler mit $2 \leq i \leq (n-1)$ darf immer $n-i$ St"ucke beschneiden.\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Ein unendliches Protokoll}\\
+\hline
+\textbf{$\cdot$ Schritt 1}&Der erste Spieler $p_1$ schneidet den Kuchen $X$ in f"unf gleiche St"ucke (nach\\&seinem Ma"s). Der zweite Spieler $p_2$ sortiert diese als $X_1,X_2,X_3,X_4,X_5$ mit:\\
+&$v_1(X_1)=v_1(X_2)=v_1(X_3)=v_1(X_4)=v_1(X_5)=1/3$\\&$v_2(X_1) \geq v_2(X_2) \geq v_2(X_3)\geq v_2(X_4)\geq v_2(X_5)$\\
+\textbf{$\cdot$ Schritt 2}&Ist $v_2(X_1)>v_2(X_3)$ oder $v_2(X_2)> v_2(X_3)$, so schneidet $p_2$ ggf. von $X_1$ und\\&$X_2$ etwas ab, so dass er $X_1'=X_1-R_1$ und $X_2'=X_2-R_2$ erh"alt mit   \\&$v_2(X_1')=v_2(X_2')=v_2(X_3)$. Ist $v_2(X_1)=v_2(X_3)$ oder $v_2(X_2)=v_2(X_3)$, so\\&sei $X_1'=X_1$ und $X_2'=X_2$.\\
+\textbf{$\cdot$ Schritt 3}&Der dritte Spieler $p_3$ sortiert $\{X_1',X_2',X_3,X_4,X_5\}$ als $Y_1,Y_2,Y_3,Y_4,Y_5$ mit:\\
+&$v_3(Y_1) \geq v_3(Y_2) \geq v_3(Y_3)\geq v_3(Y_4)\geq v_3(Y_5)$\\
+\textbf{$\cdot$ Schritt 4}&Ist $v_3(Y_1)>v_3(Y_2)$, so schneidet $p_3$ von $Y_1$ etwas ab, so dass er $Y_1'=$\\&$Y_1-R_3$ erh"alt mit $v_3(X_Y')=v_3(Y_2)$. Ist $v_3(Y_1)=v_3(Y_2)$, so sei  $Y_1'=Y_1$.\\
+\textbf{$\cdot$ Schritt 5}&Aus $\{Y_1',Y_2,Y_3,Y_4,Y_5\}$ w"ahlen $p_4,p_3,p_2,p_1$ in dieser Reihenfolge je ein\\&St"uck. Falls solche St"ucke noch zur Wahl stehen, muss jeder Spieler eines\\&von den St"ucken nehmen, die er selber beschnitten hat.\\
+\textbf{$\cdot$ Schritt 6}&Die Reste und das "ubriggebliebene St"uck werden verschmolzen und das\\&Protokoll kann beliebig oft wiederholt werden.\\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+Ein endlich unbegrenztes, neidfreies Protokoll f"ur eine beliebige Anzahl von Spielern. Da dieses sehr kompliziert ist folgt das genaue Protokoll nur f"ur $n=4$. F"ur die genaue Beschreibung und den Beweis siehe ... .\\
+\newline
+\begin{tabular}{|ll|}
+\hline
+&\textbf{Zwicker, Galvin $\&$ Taylor Protokoll(Brams $\&$ Taylor)}\\
+\hline
+\textbf{$\cdot$ Schritt 1}&Der Spieler $p_2$ schneidet den Kuchen $X$ in vier gleiche St"ucke (nach seinem\wf ff\tf\\&Ma"s(n.s.M.)) und teilt diese unter allen Spielern auf.\\
+\textbf{$\cdot$ Schritt 2}&Jeder der "ubrigen drei Spieler wird gefragt ob er einen anderen Spieler\\&beneidet.\\
+\textbf{$\cdot$ Schritt 3}&Falls die Aufteilung neidfrei ist, beh"alt Jeder sein St"uck aus Schritt 1, und\\&das Verfahren ist beendet.\\ 
+\textbf{$\cdot$ Schritt 4}&Falls mindestens ein Spieler $p_i$ einen Anderen beneidet, suchen wir uns das\\&kleinste dieser $i$'s. O.B.d.A. sei dies Spieler $p_1$. Er sucht sich nun das St"uck\\&aus, was er besser bewertet und benennt es $A$. Das St"uck, dass er in\\&Schritt 1 bekommen hat, benennt er $B$.\\
+\textbf{$\cdot$ Schritt 5}& Spieler $p_1$ benennt eine ganze Zahl $r \geq 10$ mit der Eigenschaft, dass falls $A$\\&irgendwie in $r$ St"ucke geteilt wird, bevorzugt Spieler $p_1$ immernoch $A$ auch\\&wenn die $7$ kleinsten St"ucke entfernt werden.\\
+\textbf{$\cdot$ Schritt 6}&Der Spieler $p_2$ teilt $A$ und $B$ in jeweils $r$ gleich gro"se St"ucke (n.s.M.).\\
+\textbf{$\cdot$ Schritt 7}&Der Spieler $p_1$ sucht sich die 3 kleinsten St"ucke von $B$ aus und benennt sie\\&$Z_1,Z_2,Z_3$. Er sucht sich auch die 3 gr"ossten St"ucke von $A$ aus (wenn er\\&diese f"ur echt gr"osser als das gr"osste $Z$-St"uck h"alt) oder beschneidet\\&h"ochstens zwei von Diesen (auf die Gr"o"se von dem kleinsten unter den\\&Dreien), ansonsten unterteilt er (das gr"o"ste) St"uck in $A$ in drei St"ucke\\&(gleich gross n.s.M.). Dann benennt er diese in $Y_1,Y_2,Y_3$.\\
+\hline
+\end{tabular}
+\begin{tabular}{|ll|}
+\hline
+\textbf{$\cdot$ Schritt 8}&Der Spieler $p_3$ ordnet die sechs St"ucke $\{V_1,V_2,V_3,V_4,V_5,V_6\}$.\\&Ist $v_1(V_1)>v_1(V_2)$, so schneidet $p_1$ von $V_1$ etwas ab, so dass er $V_1'=V_1$-$R$\\&erh"alt mit $v_1(V_1')=v_1(V_2)$. Ist $v_1(V_1)=v_1(V_2)$, so sei  $V_1'=V_1$.\\
+\textbf{$\cdot$ Schritt 9}&Die Spieler $p_4,p_3,p_2$ und $p_1$ suchen sich in dieser Reihenfolge jeweils ein\\&St"uck aus $\{V_1',V_2,V_3,V_4,V_5,V_6\}$. Der Spieler $p_3$ muss $V_1'$ nehmen, falls $p_4$\\&dies nicht tut. Ausserdem muss $p_2$ eines der urspr"unglichen $\{Z_1,Z_2,Z_3\}$\\&und $p_1$ eines der urspr"unglichen $\{Y_1,Y_2,Y_3\}$ nehmen. Sei $X_i$ das St"uck\\&welches $p_i$ nimmt f"ur alle $i \in \{1,2,3,4\}$. Alle nicht verteilten St"ucke\\&werden verschmolzen zu $R$. Sei $\epsilon=v_1(X_1)-v_1(X_2)$.\\
+\textbf{$\cdot$ Schritt 10}&Der Spieler $p_1$ benennt eine positive ganze Zahl $s$, sodass gilt\\&$[4\cdot v_1(R)/5]^s<\epsilon$.\\
+\textbf{$\cdot$ Schritt 11}&Der Spieler $p_1$ schneidet $R$ in f"unf gleiche St"ucke (n.s.M.).\\
+\textbf{$\cdot$ Schritt 12}&Der Spieler $p_2$ beschneidet falls n"otig die zwei Gr"ossten dieser f"unf  St"ucke,\\&so dass drei gleich grosse St"ucke entstehen (n.s.M.).\\
+\textbf{$\cdot$ Schritt 13}&Der Spieler $p_3$ beschneidet, falls n"otig, das Gr"osste dieser f"unf St"ucke, so\\&dass zwei gleich grosse St"ucke entstehen (n.s.M.).\\
+\textbf{$\cdot$ Schritt 14}&Die Spieler $p_4,p_3,p_2$ und $p_1$ suchen sich in dieser Reihenfolge jeweils ein\\&St"uck aus. Dabei muss ein Spieler falls m"oglich das von ihm beschnittene\\&St"uck nehmen.\\
+\textbf{$\cdot$ Schritt 15}&Die Schritte 11-14 werden $(s-1)$-mal wiederholt, immer wieder mit den\\&"Uberbleibseln der Vorrunde. Das Paar $(p_1,p_2)$ wird zu der Liste der\\&uneinholbaren Vorspr"unge zugeordnet.\\
+\textbf{$\cdot$ Schritt 16}&Der Spieler $p_2$ schneidet den nicht benutzten Rest in 12 gleiche Teile\\&(n.s.M.).\\ 
+\textbf{$\cdot$ Schritt 17}&Jeder ausser Spieler $p_2$ erkl"art sich vom Typ $A$ (wenn er glaubt die St"ucke\\&haben die gleiche Gr"o"se (n.s.M.)) oder sonst Typ $B$. Spieler $p_2$ ist von\\&Typ $A$.\\
+\textbf{$\cdot$ Schritt 18}&Ist jeder Typ $B$ Spieler in der Liste der uneinholbaren Vorspr"unge so\\&bekommen die Typ $A$ Spieler gleichm"a"sig die St"ucke und das Verfahren\\&ist beendet.\\
+\textbf{$\cdot$ Schritt 19}&Wenn nicht jeder Typ $B$ Spieler in der Liste der uneinholbaren Vorspr"unge\\&ist, so w"ahlen wir das erste Paar aus Typ $A$ und Typ $B$ Spielern nicht in\\&der Liste und kehren mit angepassten Rollen zu Schritt 4 zur"uck.\\
+\textbf{$\cdot$ Schritt 20}&Die Schritte 5-18 werden h"ochstens 11-mal wiederholt.\\
+\hline
+\end{tabular}
+\newpage
+\section{Ein Absolutum}
+Wie wir im Kapitel davor bereits gesehen haben, gibt es auch Protokolle die keine komplette Aufteilung liefern, aber in der Teilaufteilung neidfrei sind. So k"onnte man solche Teilaufeilungen untersuchen, und versuchen zu vereinen. Dabe kann man auch aus einem vorgegebenen Zustand ausgehen, und den Kuchen bis zum Ende aufteilen. Eine solche Teilaufteilung ist hier gebenen:
+\begin{defi}{\textbf{(Absolutum)}}
+\newline Eine Kuchenaufteilung f"ur vier Spieler ist ein \underline{Absolutum}, falls es eine Aufteilung $\{X_1,X_2,X_3,X_4,R\}$ in einem neidfreien Zustand gibt mit der Eigenschaft, dass jedem Spieler $p_i$ wurde das St"uck $X_i$, $i\in \{1,2,3,4\}$ bereits zugeodnet und es gilt: Es gibt einen Spieler so dass $v_i(X_i)>v_i(X_j)+1/2\cdot R$ $\forall i,j \in \{1,2,3,4\}, i \neq j$. 
+\end{defi}
+\begin{satz}
+Falls eine Kuchenaufteilung ein Absolutum ist, so existiert eine neidfreie, endlich beschr"ankte Aufteilung f"ur vier Spieler.
+\end{satz}
+\begin{proof}
+Falls
+\end{proof}
+\newpage
+\section{DGEF}
+\newpage
+\section{Existenzbeweis}
+Es gibt mehere Existenzbeweise. Angefangen bei Lyapunov bis zu Su(siehe Buch).
+\subsection{Existenzbeweis von E.Su}
+\textbf{Vorbereitungen:}\\
+\begin{defi}
+Eine endliche Menge von Vektoren $\{x_0,\ldots,x_n\}$ im euklidischen Raum ist \underline{affin unabh"angig}, fall aus $\sum_{i=0}^n\lambda_ix_i=0$ und $\sum_{i=1}^n\lambda_i=0$ folgt, das $\lambda_0=\lambda_1=\ldots=\lambda_n=0$
+
+\end{defi}
+
+Bemerkung:
+Affine Unabh"angigkeit ist "aquivalent dazu, dass $\{x_1-x_0,x_2-x_0,\ldots,x-n-x_0\}$ linear unabh"angig sind.
+
+d.h. $a_1(x_1-x_0)+a_2(x_2-x_0)+\ldots+a_n(x_n-x_0)=0\Rightarrow a_1=a_2=\ldots=a_n$
+
+\begin{defi}
+Ein $n$-Simplex $x_0,x_1,\ldots,x_n$ ist die Menge aller Konvexkombinationen der affin unabh"angigen Mengen von Vektoren $\{x_0,\ldots,x_n\}$, d.h.
+
+$$x_0x_1\ldots x_n=
+\{
+\sum_{i=0}^n\lambda_ix_i | \forall i\in\{0,\ldots,n\},\lambda\geq0, \sum_{i=0}^n\lambda_i=1\}$$
+
+Jedes $x_i$ hei"st ein \underline{Knoten} des Simplexes $x_0x_1\ldots x_n$.
+Jedes $k$-Simplex $x_{i_0},x_{i_1}\ldots x_{i_k}$ hei"st eine \underline{$k$-Fl"ache} von $x_0x_1\ldots x_n$, wobei $i_0,\ldots,i_k\in\{0,\ldots,n\}$.
+\end{defi}
+
+\begin{defi}
+Das \underline{standard $n$-Simplex $\Delta_n$} ist
+$$\{y\in\mathbb{R}^{n+1} | \sum_{i=0}^ny_i=1,\forall i=0,\ldots,n, y_i\geq0\}$$
+
+d.h. $\Delta_n$ ist die Menge der Konvexkombinationen der $n+1$ Basisvektoren $e_0,\ldots,e_n$.
+\end{defi}
+
+\begin{defi}
+Die \underline{simplizial Unterteilung} eines $n$-Simplex $T$ ist die endliche Menge von Simplexen $\{T_i\}$ mit $\cup_iT_i=T$ und für jedes Paar $T_i$ und $T_j\in T$ ist $T_i\cap T_j$ entweder leer oder eine allgemeine Fl"ache.
+\end{defi}
+
+Sei $y\in x_0x_1\ldots x_n$ ein Punkt im Simplex.
+Dies k"onnen wir als Linearkombination der Knoten darstellen:
+$$y=\sum_{i=0}^n\lambda_ix_i.$$
+
+Definiere die Funktion $\chi(y)=\{i | \lambda_i>0\}$
+
+\begin{defi}
+Sei $T=x_0\ldots x_n$ simplizial unterteilt, und sei $V$ die Menge aller (verschiedenen) Knoten in den Untersimplexen.
+Eine Funktion $\mathcal{L}:V\rightarrow\{0,\ldots,n\}$ ist eine \underline{angemessene Markierung} einer Unterteilung,
+falls $\mathcal{L}(v)\in\chi(v)$ $(\forall v\in V)$ 
+
+\end{defi}
+
+\begin{defi}
+Ein Untersimplex ist \underline{vollst"andig markiert} falls die Funktion $\mathcal{L}$ alle Werte $0,\ldots,n$ auf die Knoten verteilt.
+
+\end{defi}
+
+\textbf{Lemma (Sperner's Lemma)}
+Sei $T_n=x_0,\ldots,x_n$ simplizial unterteilt und sei $\mathcal{L}$ eine angemessene Markierung der Unterteilung.
+Dann gibt es eine ungerade Anzahl an vollst"andig markierten Untersimplexen
+
+\textbf{Beweis}
+Induktion nach $n$. (Dimension)
+
+\underline{Induktionsanfang}
+$n=0$
+\begin{itemize}
+
+\item
+Der Simplex besteht aus einem Punkt $x_0$
+
+\item
+Es gibt nur eine simplizialunterteilung. $\{x_0\}$
+
+\item
+Es gibt nur eine Markierungsfunktion, und zwar $\mathcal{L}(x_0)=0$.
+
+\item
+Dies ist eine angemessene Markierung
+
+\item
+Es gibt nur einen vollst"andig markierten Untersimplex, $x_0$.
+
+$\Rightarrow$ ungerade Zahl
+
+\end{itemize}
+
+\underline{Induktionsannahme:}
+Die Aussage gilt f"ur $n-1$
+
+\underline{Induktionsschritt:}
+$n-1\rightarrow n.$
+
+Die simplizial Unterteilung von $T_n$ impliziert eine simplizial Unterteilung der $(n-1)$-Fl"ache $x_0 \ldots x_{n-1}.$
+Diese Fl"ache ist ein $(n-1)$-Simplex, bezeichne den mit $T_{n-1}$.
+Die Markierungsfunktion $ \mathcal{L}$ eingeschr"ankt auf $T_{n-1}$ ergibt eine angemessene Markierung.
+D.h. aus der Induktionsannahme folgt, dass es eime ungerade Anzahl von $n-1$-Simplexen in $T_{n-1}$ gibt, die die Markierung $(0, 1, \ldots,n-1)$ haben.
+
+Im Folgenden definieren wir Regeln, wie man "uber so einen markierten Simplex laufen kann:
+Der Weg beginnt auf einem $n-1$ Untersimplex mit den Markierungen $(0, \ldots, n-1)$ auf der Fl"ache $T_{n-1}$.
+Sei dieser Untersiplex $b$ genannt.
+Es existiert ein eindeutiger $n$-Untersimplex $d$ dessen eine Fl"ache $b$ ist.
+$d$'s Knoten bestehen aus $b$'s Knoten und zus"atzlich ein Knoten $z$.
+
+Ist $z$ markiert mit $n$, so haben wir einen vollst"andig markierten Untersimplex und der Weg endet hier.
+
+Andernfalls ist $z$ markiert mit $\{0, \ldots,n-1\}$, wobei im Untersimplex $d$ wiederholt sich eine Markierung z.B. $j$.
+Dann existiert genau ein $(n-1)$-Untersimplex der eine Fl"ache von $d$ ist und die Markierung $(0, \ldots,n-1)$ hat.
+
+\underline{Begr"undung}
+Alle $(n-1)$-Fl"achen von $d$ bestehen aus $b$'s Knoten bis auf einen Knoten.
+Da nur die Markierung $j$ doppelt ist, eine $(n-1)$-Fl"ache von $d$ ist markiert mit $(0, \ldots,n-1)$ genau dann, wenn einer der beiden mit $j$ markierten Knoten wegf"allt.
+Bezeichne die zweite solche $(n-1)$-Fl"ache mit $e$.
+Der Weg wird von $e$ aus fortgesetzt.
+
+\underline{Eigenschaft:}
+Eine $(n-1)$-Fl"ache eines $n$-Untersimplexes in einer simplizial unterteilten Simplex $T_n$ ist entweder auf einer $(n-1)$-Fl"ache von $T_n$ oder der Schnitt vom zwei $n$-Untersimplexen.
+
+Ist $e$ auf einer $(n-1)$-Fl"ache von $T_n$, dann halten wir an.
+Sonst gehen wir in den  benachbarten $n$-Untersimplex.
+Dieser wiederum ist entweder vollst"andig markiert oder hat wieder 2 Knoten mit der gleichen Markierung. usw.
+
+\underline{Bemerkungen:}
+\begin{itemize}
+
+\item
+Jeder Weg ist eindeutig
+
+\item
+Jeder Weg endet entweder in einem vollst"andig markierten $n$-Untersimplex oder auf der gleichen $n-1$-Fl"ache, mit der Markierung $(0, \ldots, n-1)$ $(T_{n-1})$
+
+\item
+Jeder Weg kann auch R"uckw"arts begangen werden
+
+\item
+Hat ein Weg die Endpunkte $t$ und $t'$ $\Rightarrow t\neq t'$
+\end{itemize}
+
+Laut Induktionsannahme gibt es eine ungerade Anzahl von $n-1$ Untersimplexen mit der Markierung $(0, \ldots,n-1)$ auf der Fl"ache $T_{n-1}$.
+Aus diesem Grund gibt es mindestens einen Weg, der nicht auf dieser Fl"ache endet.
+Da die Wege die auf dieser Fl"ache starten und enden paarweise verbunden sind, gibt es eine ungerade Anzahl von Wegen, die in einem vollst"andig markierten $n$-Untersimplex enden und diese sind auch alle verschieden.
+
+Nicht alle vollst"andig markierten Untersimplexe sind so erreichbar.
+Wenn wir einen Weg aus einem unerreichbaren, vollst"andig markierten Untersimplex starten, dann enden wir wieder in einem (anderen) vollst"andig markierten Untersimplex.
+Die sind dann auch paarweise verbunden.
+
+$\Rightarrow$ Insgesamt ein ungerade Anzahl an vollst"andig markierten Untersimplexen.
+\\
+\textbf{Anwendung Sperner-Lemma auf Kuchenproblem}
+Annahme: Die Pr"aferenzmengen der Spieler sind geschlossen. Das hei"st, dass ein Spieler, der in jedem Punkt einer konvergenten Folge von Punkten, die Kuchenaufteilung angeben, ein bestimmtes St"uck 
+bevorzugt, dieses auch im Grenzwert der Folge bevorzugt.
+Behauptung: Für alle Kuchen existiert f"ur $n$ Spieler eine neidfrei-gerechte Aufteilung.\\
+Beweis: Stellen wir uns den L"osungsraum möglicher Kuchen-Aufteilungen als 
+(n-1)-Simplex vor, den wir so (n-1)-unterteilen, dass nicht nur seine Grenz-
+punkte untereinander, sondern auch alle Grenzpunkte elementarer (n-1)-
+Simplexe untereinander mit paarweise verschiedenen Spielernamen 
+bezeichnet werden können, d.h. in Bezug auf die Spielernamen voll-
+beschriftet sind.\\
+Nun fragen wir für alle Knoten den jeweils bezeichneten Spieler, 
+welches Stück er in dieser Aufteilung bevorzugen würde und
+markieren den Knoten zus"atzlich mit dieser Zahl. Wir stellen fest, 
+dass die resultierende Beschriftung eine Sperner-Beschriftung ist.
+Durch das Sperner-Lemma wissen wir, dass es mindestens einen 
+voll-beschrifteten elementaren (n-1)-Simplex gibt. Seine 
+Grenzpunkte zeigen mehr oder weniger "ahnliche Kuchen-
+aufteilungen, bei denen jeder Spieler ein anderes Stück 
+bevorzugt.
+Betrachten wir zunehmend feinere (n-1)-Unterteilungen, 
+die einen obigen voll-beschrifteten elementaren (n-1)-
+Simplex zunehmend verkleinern. Unter den unendlich 
+vielen zunehmend kleineren elementaren (n-1)-Simplexen gibt es mindestens eine Konfiguration (z.B. "A w"ahlt Stück 1, B 2, C 3, ..."), die unendlich oft auftaucht. Bei dieser fassen wir die Grenzpunkte des (n-1)-
+Simplex' als Folgen auf. Da der (n-1)-Simplex kompakt ist, gibt es konvergente Teilfolgen $a_i \to a, b_i \to b, c_i \to c$... . Mit zunehmend feinerer (n-1)-Unterteilung gilt zudem: $|a_ib_i| \to 0, |a_ic_i| 
+\to 0$, ... (die Aufteilungen werden sich zunehmend "ahnlicher). Also konvergieren die Teilfolgen gegen den 
+gleichen Punkt p: $a_i \to p, b_i \to p, c_i \to p$, ... . Da nach unserer Konfiguration Spieler A in allen $a_i$ das St"uck 1, B in allen bi das St"uck 2, ..., nehmen würde, entscheiden sich die Spieler aufgrund ihrer abgeschlossenen Pr"aferenzmengen auch in Punkt p für jeweils unterschiedliche St"ucke: wir haben eine neidfrei-gerechte 
+Aufteilung. 
+\newpage
+\section{Komplexit"at von Protokollen}
+\subsection{Anfragemodell nach J.Robertson und W.Webb}
+\textbf{Errinerung:}\\
+Ein Protokoll hat am Anfang keine Informationen "uber die Bewertungen der Spieler, bis auf die Normalisierung. Der Kuchen $X$ wird durch das Intervall $[0,1]\subseteq \mathbb{R}$ repr"asentiert. F"ur ein $\alpha \in \mathbb{R}$ mit $0 \leq \alpha \leq 1$ ist ein \underline{$\alpha$-Punkt} vom Spieler $p_i$ f"ur $p_i \in P_N$, die kleinste Zahl $x$ mit der Eigenschaft $v_i([0,x])=\alpha$ (aus den Eigenschaften der Bewertung folgt $v_i([x,1])=1-\alpha$).
+\begin{defi}[Anfragen im Robertson-Webb Modell] \wf rgkhbr \tf \\
+\begin{itemize}
+\item Schnitt($p_i;\alpha$): Der Spieler $p_i$ macht einen Schnitt in seinem $\alpha$-Punkt. Der Wert $x$ wird an das Protokoll zur"uckgegeben.\\
+\item Bewertung($p_i;x$): Der Spieler $p_i$ bewertet den Schnitt $x$ ($x$ ist dabei ein Schnitt, welcher zuvor vom Protokoll ausgef"uhrt wurde). Der Wert $v_i(x)$ wird an das Protokoll zur"uckgegeben.\\
+\item Zuordnung($p_i;x_i,x_j$): Dem Spieler $p_i$ wird das Intervall $[x_i,x_j]$ ($x_i \leq x_j$ sind zwei zuvor ausgef"uhrte Schnitte vom Protokoll oder 0 oder 1). Alle solche Intervalle sind disjunkt.
+\end{itemize}  
+\end{defi}
+Die \underline{Komplexit"at eines Protokolls} ist die Anzahl der Schnitte im worst case.
+\subsection{Resultat von M.Magdon-Ismail, C.Busch und\\M.S.Krishnamoorthy}
+Es wurden zwei Theoreme "uber die unteren Schranken von starken und super neidfreien Cake-Cutting Protokolle in ''HRfCC'' bewiesen.
+\begin{thm}(Untere Schranke von starken neidfreien Protokollen)
+\newline Es gibt Bewertungsfunktionen f"ur welche ein starkes neidfreies Cake-Cutting Protokoll die Komplexit"at $\Omega(0.086\cdot n^2)$ besitzt.
+\end{thm}
+\begin{thm}(Untere Schranke von super neidfreien Protokollen)
+\newline Es gibt Bewertungsfunktionen f"ur welche ein super neidfreies Cake-Cutting Protokoll die Komplexit"at $\Omega(0.25\cdot n^2)$ besitzt.
+\end{thm}
+Das Resultat zeigt bereits eine Trennung zu den proportionalen Protokollen ($\mathcal O(n$log$ n)$ aus Even $\&$ Paz), ist aber leider sehr schwach, da starke und super neidfreien Cake-Cutting Protokolle sehr starke Einschr"ankungen sind, und nicht immer existieren. Dagegen lieferte das folgende Theorem die lang geahnte entg"ultige Separation von der Proportionalit"at.   
+\subsection{Resultat von A.Procaccia}
+Die Komplexit"at bei der neidfreien Aufteilung muss h"oher sein als bei der proportionalen, da man bei jeder Ver"anderung eines St"uckes jeden beteiligten und unbeteiligten Spieler beachten muss. So l"asst sich diese Eigenschaft formuliert als ein kompliziertes Problem ausnutzen um $\Omega( n^2)$ als untere Schranke f"ur die Neidfreiheit zu setzen.
+\newline
+\newline
+\newline
+\newpage
+\subsection{Reduktion auf die Matrixmultiplikation}
+Bei der neidfreien Aufteilung muss man egal ob eine Person bereits ein St"uck erhalten hat oder nicht, immer noch ihre Bewertungen betrachten. Davon ausgehend kommen wir immer zu der folgenden Situation, die wir in Matrixschreibweise darsstellen werden. Sei dies unsere Matrix $X_V$.\\
+\newline
+\begin{tabular}{lcccc}
+Spieler& $p_1$&$p_2$&$\cdots$&$p_n$\\
+St"uck&&&&\\
+$X_1$&$v_1(X_1)$&$v_2(X_1)$&$\cdots$&$v_n(X_1)$\\
+$X_2$&$v_1(X_2)$&$v_2(X_2)$&$\cdots$&$v_n(X_2)$\\
+$\cdots$&$\cdots$&$\cdots$&$\cdots$&$\cdots$\\
+$X_n$&$v_1(X_n)$&$v_2(X_n)$&$\cdots$&$v_n(X_n)$\\
+$R$&$v_1(R)$&$v_2(R)$&$\cdots$&$v_n(R)$\\
+\end{tabular}
+\newline
+\newline
+\newline
+1980 hat Walter Stromquist in seinem Paper gezeigt, dass keine neidfreie Aufteilung existiert f"ur mehr als 3 Personen mit zusammenh"angenden St"ucken.\\ Somit kommen wir immer in die Situation dass ein Rest unter allen Spielern aufgeteilt werden muss. (Das mindestens ein Spieler ein nicht zusammenh"angendes St"uck bekommt, welches alle Spieler bewerten m"ussen.) Die Resteverteilungsmatrix $R_V$ f"ur den einfachsten Fall, dass Spieler $p_1$ den gesammten Rest bekommt und die Bewertungen der Resteverteilung "ubereinstimmen sieht folgend aus:\\ 
+\newline
+\begin{tabular}{lccccc}
+Anteil vom St"uck& $X_1$&$X_2$&$\cdots$&$X_n$&$R$\\
+Ver"anderung vom St"uck&&&&&\\
+$X_1$&$1$&$0$&$\cdots$&$\cdots$&$1$\\
+$X_2$&$0$&$1$&$\cdots$&$\cdots$&$0$\\
+$\cdots$&$\cdots$&$\cdots$&$\cdots$&$\cdots$&$\cdots$\\
+$X_n$&$0$&$0$&$\cdots$&$1$&$0$\\
+\end{tabular}
+\newline
+\newline
+\newline
+F"ur die entg"ultige Verteilung berechnen wir: $R_V\cdot X_V$\\
+Die Komplexit"at von dieser Berechnung ist: $\Theta((n+1)\cdot n \cdot (n+1))$, bzw. etwas besser durch den Strassen-Algorithmus, aber immernoch > $\Theta(n^2)$. 
+\newpage
+\section{Simulation durch ein Programm}
+Um die Forschungen in diesem Gebiet zu erleichtern k"onnte ein Computerprogramm mit folgenden Eigenschaften erstellt werden.\\
+\newline
+\textbf{Spieler}\\
+Die Anzahl der Spieler wird am Anfang eingegeben und f"ur jeden der Spieler wird eine eigene Kopie des Kuchens, sowie eine Bewertungsfunktion f"ur den Kuchen die er bekommt erstellt.\\
+\newline
+\textbf{Kuchen}\\
+Der Kuchen wird f"ur jeden Spieler durch zuf"allig verstreute Punkte in dem Bereich des Kuchens (Intervall $[0,1]$) repr"asentiert.\\ Man kann es sich vorstellen, als ob in eine Backform Salz, Zucker, Pfeffer etc. verstreut wird.\\
+\newline 
+\textbf{Ma"s}\\
+Jeder Spieler bewertet ein St"uck Kuchen in Abh"angigkeit von der Anzahl seiner Punkte. Zum Beispiel ist ein Spieler nur am Salz interessiert, ein Anderer nur am Zucker.\\ 
+\newline
+\textbf{Vorgehensweise}\\
+Die einzelnen Schritte des gepr"uften Protokolls werden eingegeben und ausgef"uhrt.\\
+\newline
+\textbf{Ergebnis}\\
+Am Ende ist der gesammte Kuchen aufgeteilt und jeder Spieler bewertet sein St"uck und die St"ucke der Mitspieler. Es wird gepr"uft ob die entstandene Allokation neidfrei ist.\\
+\newline
+\textbf{Bemerkungen}\\
+Es k"onnen Spezialf"alle eingestellt werden z.B. ein Spieler hat nur seine Punkte im Bereich$[0,1/2]$. Somit ist das Programm sehr realit"atsbezogen.\\
+Es k"onnen neue Prokolle auf ihre Neidfreiheit gepr"uft werden.\\
+Man kann hiermit auch proportionale Protokolle auf neidfreie Erwartungswerte "uberpr"ufen und somit vergleichen.\\ Beispiel: Man l"asst zwei proportionale Protokolle 1000 mal durchlaufen mit stets unterschiedlicher Punkteverteilungen des Kuchens und bekommt an Ende einen Durchschnittswert "uber die Anzahl der Spieler und die H"aufigkeit ihrer Beneidung der Anderen.\\
+\newpage
+\section{Zusammenfassung und Ausblick}
+Es kann untersucht werden ob einige Protokolle Neid garantieren. Wenn man z.B. dem ersten Spieler seinen proportionalen Anteil zuordnet und davon ausgehet, dass die Bewertungsfunktionen nicht gleich sind, so ist Neid garantiert.\\
+Ein weiteres nat"urliches Problem ist die Aufteilung mit Vollmachten. So "ubertragen z.B. ein Teil der Spieler ihre Vollmacht an einen Verantwortlichen, dieser sieht ihre Bewertungen und kann somit Ihnen St"ucke zuordnen. Hier untersuche man ob die Neidfreiheit leichter oder schwieriger erreicht werden kann. Ausserdem kann nun in Abh"angigkeit der Ehrlichkeit des Verantwortlichen die Effizienz der Aufteilungen gepr"uft werden. Es kann auch gepr"uft werden, wie sich die Aufteilung entwickelt, wenn ein Spieler die Vollmacht von allen Anderen hat. Oder wenn mehrere Spieler Vollmachtbeauftragte sind (z.B. Scheidung und das Kind l"asst beide Eltern f"ur es alles regeln).\\
+Es kann untersucht werden ob die Aufteilung mit offenen Bewertungsfunktionen gleichwertig mit dem finden eines Nash-Gleichgewichtes ist.\\ Ausserdem sollte die Arbeit von Sandip Sen $\&$ Anish Biswas:''More than Envy-Free'' fortgef"uhrt auf $n>2$ werden.
+\newpage
+\textbf{B"ucher}\\
+Fair Division and Collective Welfare Von Herve Moulin\\
+Equity: in theory and practice Von H. Peyton Young\\
+J. M. Robertson and W. A. Webb,
+                      \emph{Cake Cutting Algorithms: Be Fair If You Can}. A. K. Peters, 1998. \newline
+\textbf{Paper}\\
+
+\thispagestyle{plain}
+\renewcommand{\refname}{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\bibliographystyle{alpha}
+\bibliography{bach}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+\Huge Erkl"arung
+\end{center}
+\vspace{1cm}
+\noindent Hiermit versichere ich, die vorliegende Bachelorarbeit selbstst"andig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt zu haben.\\
+\vspace{3cm}\\
+Düsseldorf, 07. September 2010 \hfill Alina Elterman
+
+\end{document}

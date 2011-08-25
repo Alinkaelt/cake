@@ -1,0 +1,18 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{AMKP}]\begingroup \uline {A}ustin \uline {M}oving-\uline {K}nife-\uline {P}rotokoll\nomeqref {0.0}
+		\nompageref{iv}
+  \item [{AMKP$n$}]\begingroup \markup{A}ustin \markup{M}oving-\markup{K}nife-\markup{P}rotokoll fur $\markup{n}$ gleichwertige Stucke\nomeqref {4.0}
+		\nompageref{18}
+  \item [{CC}]\begingroup \markup {C}ake-\markup {C}utting\nomeqref {3.0}
+		\nompageref{7}
+  \item [{CCP}]\begingroup \markup{C}ake-\markup{C}utting-\markup{P}rotokoll\nomeqref {4.0}
+		\nompageref{8}
+  \item [{MKP}]\begingroup \markup{M}oving-\markup{K}nife-\markup{P}rotokoll\nomeqref {3.0}
+		\nompageref{8}
+  \item [{n.s.M.}]\begingroup \markup{n}ach \markup{s}einem \markup{M}ass\nomeqref {4.0}
+		\nompageref{10}
+
+\end{thenomenclature}
