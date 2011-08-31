@@ -41,6 +41,23 @@
 \usepackage{ifthen}
 \ifthenelse{\equal{\sprache}{deutsch}}{\usepackage[ngerman]{babel}}{}
 
+\usepackage{lmodern} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+%\usepackage{fancyheadings}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{stmaryrd}
+\usepackage{nomencl}
+\usepackage[normalem]{ulem} 
+\newcommand{\markup}[1]{\uline{#1}}
+% Befehl umbenennen in abk
+\let\abk\nomenclature
+
 \usepackage{a4wide} % ganze A4 Weite verwenden
 
 %\ifpdf
@@ -62,6 +79,23 @@
 \addtolength{\evensidemargin}{-1in}
 
 %\makeindex
+% Umgebungen f"ur Sätze usw.
+\newtheorem*{bemerkung*}{Bemerkung}
+\newtheorem*{defi}{Definition}
+\newtheorem*{defi*}{Definition}
+\newtheorem*{bezeichnungen}{Bezeichnungen}
+\newtheorem*{fakt}{Fakt}
+\newtheorem*{beispiel}{Beispiel}
+\newtheorem*{bsp}{Beispiel}
+\newtheorem*{beispiel*}{Beispiel}
+\newtheorem*{satz}{Satz}
+\newtheorem*{satz*}{Satz}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{protokoll*}{Protokoll}
+\newtheorem*{idee}{Idee}
+
+%definition of new commands
+\newcommand{\DGEF}{\text{\textbf{DGEF}}}
 
 \begin{document}
 
@@ -102,7 +136,8 @@
         %\selectlanguage{german}
         {\Large INSTITUT FÜR INFORMATIK\\}
         {\normalsize
-          Datenbanken und Informationssysteme\\
+          Lehrstuhl für Komplexit\"atstheorie und Kryptologie
+\\
         }
         \vspace{3mm}
         {\small Universitätsstr. 1 \hspace{5ex} D--40225 Düsseldorf\\}
