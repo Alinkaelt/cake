@@ -59,7 +59,7 @@ Hier kommt eine ca.\ einseitige Zusammenfassung der Arbeit rein.
 %%%%%%%%%%%%%%%%%%%%%%%%% BEGINN TEXTTEIL %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Inroduction}
-Cake Cutting is an interdisciplinairy field which is commonly researched and part of economics, political science, mathematics, operations research, and computer science. Game Theory is fulfilling the same property. Except of this fact, they have hardly something in common. While CC is about a fair division of a heterogenous divisible good, game theory is used for 
+Cake Cutting is an interdisciplinairy field which is commonly researched and part of economics, political science, mathematics, operations research, and computer science. Game Theory is fulfilling the same property. Except for the fact, they have hardly something in common. While CC is about a fair division of a heterogenous divisible good, game theory is used for mathematically defining lifes procceses and analysing them.
 %\begin{itemize}
 %\item{division of sports tickets, health resources, computer networking resources, voting power, intellectual property licenses, costs for environmental improvements, etc}
 %\item{formalize fairness, including max-min fairness, proportional fairness, envy-free fairness, etc. which may or may not lead to stable allocations in the sense of say Nash Equilibrium, or strong Nash Equilibrium}
@@ -67,18 +67,20 @@ Cake Cutting is an interdisciplinairy field which is commonly researched and par
 \pagebreak
 
 \section{Preliminaries}
+\subsection{Preliminaries of Game Theory}
+\newpage
 \subsection{Preliminaries of Cake-cutting}
 \subsubsection{Basics}
-First of all we need to define the components of cake-cutting. The following example is going to show the problem statement.\\
-\textbf{Example}\\
+First of all we need to define the components of cake-cutting. The following example sketches the problem statement.\\
+\begin{bsp}
 It was the year 1922 in London, Alan Mathison Turing was visiting a friend on his birthday. There was aswell Vilfredo Federico Pareto, Karl Popper, Felix Hausdorff und Charles West Churchman.
-
+\end{bsp}
 Now, what exactly is cake-cutting about? It involves a discrete set of $n \in \mathbb{N}$ agents (or players\footnote{common used in the game theoretic sence} ) $P_n=\{p_1,\cdots,p_n\}$. After the assumption each of them wants to get as much as possible of the good. Only the allocation of a single, divisible and heterogenous good is included in the consideration of this work. It is common to use for the visualization a rectangular cake.
 \begin{center}
 bild kuchen
 \end{center}
 The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $I=[0,1] \subseteq \mathbb{R}$. Each subinterval $I'\subseteq I$ or a union of subintervals %$\bigcup\nolimits_{\m\in\mathbb{N}}I_m$ 
-with $I_m\subseteq I$ is named as a boundle (piece). All boundles are disjoint. The boundle of the cake, which the player $p_i$ receives is denoted as $X_i$. Only the allocation of the full cake matter. Each piece has a public length, which can be computed as the sum of all bourderdifferences and the private value of a player.\\
+with $I_m\subseteq I$ is named as a boundle (piece). All boundles are disjoint. The boundle of the cake, which the player $p_i$ receives is denoted as $X_i$. When all boundles of the cake are owned by players, this state is called an \textsc{allocation}. Each piece has a public length, which can be computed as the sum of all bourderdifferences and the private value of a player.\\
 
 Each player $p_i\in P_n$ has a valuation function (valuation) $v_i:\{X'|X' \subseteq X\} \mapsto [0,1]$ on the cake $X$ with the following properties:\\
 \begin{enumerate}
@@ -95,88 +97,62 @@ $v_i([0,y])=\beta$, than for every $\gamma \in [\alpha,\beta]$ there exist a $z 
 \item Emptyness of single points:  $v_i([x,x])=0$ forall $x\in [0,1].$
 \end{enumerate}
 
-\subsubsection{Different Types of Fairness}
-The goal of the fair division of a heterogeneous, continous good is to allocate the resource in a fair manner. But what is fair? It can be seen as a efficiency criteria of an allocation, which can be normalized and gives a passibility to compary different allocations. We distinguish between the following fairness criteria. \\
-\begin{defi}{\textbf{(Proportionalit"at oder einfache Gerechtigkeit)}}
-\newline Eine Aufteilung ist \underline{proportional (einfach gerecht)}, falls
-$v_i(X_i) \geq 1/n$ f"ur jeden Spieler $p_i \in P_N$ gilt.
+\textbf{Different Types of Fairness}\\
+\newline
+The goal of the fair division of a heterogeneous, continious good is to allocate the resource in a fair manner. But what is fair? It can be seen as a efficiency criteria of an allocation, which can be normalized and gives a possibility to compare different allocations. We distinguish between the following fairness criteria. \\
+\begin{defi}{\textbf{(Proportional or simple fair)}}
+\newline An allocation is \underline{proportional (simple fair)}, if
+$v_i(X_i) \geq 1/n$ for each player $p_i \in P_N$.
 \end{defi}
-\begin{defi}{\textbf{(Neidfreiheit)}}
-\newline Eine Aufteilung ist \underline{neidfrei}, falls $v_i(X_i) \geq
-v_i(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N$.
+\begin{defi}{\textbf{(Envy-freeness)}}
+\newline An allocation is \underline{envy-free}, if $v_i(X_i) \geq
+v_i(X_j)$ for each couple of players $p_i, p_j \in P_N$.
 \end{defi}
-\begin{defi}{\textbf{(Starke Neidfreiheit)}}
-\newline  Eine Aufteilung ist \underline{stark-neidfrei} falls $v_i(X_i) >
-v_i(X_j)$ f"ur jedes Paar von Spielern $p_i, p_j \in P_N, i \neq j$.
+The following conditions can also be used on the proportional case.\\
+\begin{defi}{\textbf{(Strong Envy-freeness)}}
+\newline  An allocation is \underline{strong-envy-free}, if $v_i(X_i) >
+v_i(X_j)$ for each couple of players $p_i, p_j \in P_N, i \neq j$.
 \end{defi}
-\begin{defi}{\textbf{(Super Neidfreiheit)}}
-\newline Eine Aufteilung ist \underline{super-neidfrei}, falls $v_i(X_j) \leq
-1/n$  f"ur jedes Paar von Spielern $p_i, p_j \in P_N, i \neq j$.
+\begin{defi}{\textbf{(Super Envy-freeness)}}
+\newline An allocation is \underline{super-envy-free}, if $v_i(X_j) \leq
+1/n$  for each couple of players $p_i, p_j \in P_N, i \neq j$.
 \end{defi}
-\begin{defi}{\textbf{(Starke Super Neidfreiheit)}}
-\newline Eine Aufteilung ist \underline{stark-super-neidfrei}, falls $v_i(X_j) <
-1/n$  f"ur jedes Paar von Spielern $p_i, p_j \in P_N, i \neq j$.
+\begin{defi}{\textbf{(Strong Super Envy-freeness)}}
+\newline An allocation is \underline{stong-super-envy-free}, if $v_i(X_j) <
+1/n$  for each couple of players $p_i, p_j \in P_N, i \neq j$.
 \end{defi}
-Das Problem ist, dass f"ur die st"arkeren Einschr"ankungen nicht immer
-Aufteilungen existieren, z.B. wenn alle Spieler die gleiche Bewertungsfunktion
-besitzen.
-\begin{defi}{\textbf{(Exaktheit)\footnote{In der Literatur wird an Stelle von
-Exaktheit oft der Begriff der Gerechtigkeit verwendet, was in gewissem Sinne den
-gesamten Konzept der Begriffe widerspricht, da alle diese Kriterien einzeln als
-Ma"sst"abe von gerecht befunden werden.}}}
-\newline Eine Aufteilung ist \underline{exakt}, falls $v_i(X_i) = v_j(X_j)$ f"ur
-jedes Paar von Spielern $p_i, p_j \in P_N$.
-\end{defi}
-In wirtschaftlichen Texten werden Aufteilungen, die gleichzeitig exakt und
-neidfrei, sind oft als besonders gerecht empfunden. Dennoch hat die Exaktheit
-sogar in Kombination mit der Proportionalit"at keinen direkten Zusammenhang mit
-der Neidfreiheit, wie man sich am folgenden Beispiel leicht veranschaulichen
-kann.\\
-\begin{bsp}Die Spieler Aleph, Beth und Gimel teilen einen Kuchen. Am Ende
-bekommt jeder Spieler genau $1/3$ des Kuchens (nach seinem Ma"s). Diese
-Aufteilung ist exakt und proportional. Doch Aleph ist der Meinung, dass Beths
-St"uck genau die H"alfte des Kuchens ist und beneidet Beth. Damit ist die
-Aufteilung nicht neidfrei.\end{bsp}
-\textbf{Zusammenh"ange der Gerechtigkeitskriterien:}
+Hereby is the problem, that for the stronger conditions an allocations cannot exist always, like in the case when all players have equal values on the cake.\\
+\newline
+\textbf{Correlation between the Fairness-Properties}\\
+\newline
 \begin{lem}
-F"ur alle Aufteilungen gilt:
+Forall allocations \footnote{the proof can be found in \cite{}}:
 \begin{enumerate}
-\item Falls eine Aufteilung neidfrei ist, so ist sie auch proportional.
-\item F"ur zwei Spieler ist eine Aufteilung proportional genau dann, wenn sie
-neidfrei ist.
+\item Every envy-free allocation is proportional.
+\item For two players an allocation is envy-free iff it is proportional.
 \end{enumerate}
 \end{lem}
-\begin{defi}{\textbf{(Effizienz)}}
-\newline Eine Aufteilung ist \underline{effizient (Pareto optimal)} falls keine
-andere Aufteilung existiert, die einem Spieler ein von ihm besser bewertetes
-St"uck einbringt, ohne die Situation eines anderen Spielers zu verschlechtern.
+\begin{defi}{\textbf{(Efficiency)}}
+\newline An allocation is \underline{efficient (Pareto optimal)} if no other allocation exist, where one player do better, without becomming worse for an other player.
 \end{defi}
-\begin{defi}{\textbf{(Ehrlichkeit)\footnote{In den letzten Jahren wurde diesem
-Aspekt ein  neuer Forschungshintergrund gegeben und Brams,Kilgour vgl.
-\cite{23}. Doch man kann es als ein einzelnes Kriterium interpretieren.}}}
-\newline Eine Aufteilung ist \underline{ehrlich}, falls es keine Bewertung gibt,
-bei der ein Spieler am Ende ein besseres St"uck bekommen h"atte durch
-Unaufrichtigkeit.
-\end{defi}
-Es besteht nur Interesse an Aufteilungen, wo die Ehrlichkeit die beste Strategie
-f"ur alle Spieler ist und somit allein durch den Algorithmus erzwungen wird. Oft
-wird dies erreicht, in dem der Spieler durch Unaufrichtigkeit in die Gefahr
-kommt die Garantie auf seinen fairen Anteil zu verlieren.\\
 \newpage
 MEHR UEBER EHRLICHKEIT UND STRATEGIESICHERHEIT (mind. eine SEITE)
 \subsubsection{Strategyproofness}
 
-\begin{defi}[Thruthfully]
-A division is thruthful if there are no valuations where a player will do better
+\begin{defi}{\textbf{(Thruthfully)}}
+An allocation is \underline{thruthful} if there are no valuations where a player will do better
 by lying.
 \end{defi}
-We are only interested in divisions, where without explicit compelling the
-players be thruthful, they will be it, because it is their best strategy
-At the end of an allocation it can be proven whether every player got his fair share. 
+Only such divions are interesting, where without explicit compelling the
+players to be thruthful, they will be it, because it is their best strategy
+It is common that by not following the strategy of the protocol the player get into the risk to loose the garanty for their fair share. At the end of an allocation it can be proven whether every player got his fair share. 
 Each protocol 
+
 \newpage
-\subsubsection{Different Types of Protocols}
-\textbf{Klassen von Protokollen}\\
+\textbf{Different Types of Protocols}\\
+\newline
+Since the protocols are going to be analysed in this work, it is very important to understand the types, structure and design of them.
+\textbf{Classes of Protocols}\\
 \newline
 Intuitive Beschreibung:(Algorithmus)
 \newline In der Mathematik, Informatik und verwandten Gebieten, ist ein
@@ -186,9 +162,9 @@ durch eine endliche Folge von Anweisungen.
 \newline Ein \underline{Protokoll (Cake-Cutting-Protokoll)} ist ein adaptiver
 Algorithmus mit mehreren Spielern und folgenden Eigenschaften:
 \begin{itemize}
-\item{Es besteht aus Regeln und Strategien.\\ \underline{Regeln} sind
+\item{It consists of rules and strategies.\\ \underline{Rules} sind
 Anweisungen, die gefordert werden ohne die Bewertungen der Spieler zu kennen.\\
-\underline{Strategien} sind Empfehlungen, welchen der Spieler folgen muss um
+\underline{Strategies} sind Empfehlungen, welchen der Spieler folgen muss um
 garantiert seinen gerechten Anteil zu bekommen.
 }
 \item{Sofern ein Spieler sich nicht an die Strategie des Protokolls h"alt,
@@ -239,22 +215,10 @@ Spieler ''Halt!'' ruft. Bei manchen
 MKP\abk{MKP}{\markup{M}oving-\markup{K}nife-\markup{P}rotokoll} wird der
 Schiedsrichter ausgelassen und nur ein Messer oder Schwert geschwungen.
 \end{defi}
-Bemerkung: In der Literatur (z.B.:Ulle Endriss:\cite{10} ''Lecture Notes on Fair
-Division'') werden manchmal kontinuierliche Protokolle nicht als Protokolle
-bezeichnet sondern zu neuen Klassen zusammengefasst, die von der Anzahl der
-Messer abh"angen.\\
-\newline
- Eine wichtige Eigenschaft von Cake-Cutting ist, dass nur komplette
-Aufteilungen, wo jedes St"uck einem Spieler zugeordnet wird, des Kuchens
-betrachtet werden.
-
-\newpage
-\subsection{Preliminaries of Game Theory}
-
 \pagebreak
-\section{The Degree of Guaranteed Envy-freeness}
+\subsection{The Degree of Guaranteed Envy-freeness}
 \begin{description}
- \item[Motivation] Für $n\geq4$ ist es offen, ob es ein neidfreies, endlich beschranktes CCP gibt!
+ \item[Motivation] For $n\geq4$ ist es offen, ob es ein neidfreies, endlich beschranktes CCP gibt!
  \item[$\Rightarrow$] Abschwachen des Ideals der Neidfreiheit. 
 \end{description}
 \begin{defi}
@@ -394,12 +358,13 @@ $\Rightarrow\DGEF=\frac{(n-1)n}{2}+2$
 
 \pagebreak
 
-\section{The Procedures and their DGEF}
-Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if you can do it) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
+\section{Proportional Procedures and their DGEF}
+Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if doible(?)) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
 \subsection{The Steinhaus-Kuhn lone divider procedure}
 \newpage
 \subsection{The Banach-Knaster last-diminisher procedure}
 \textbf{satz}
+
 Falls die Bewertungsfunktionen der Spieler nicht "ubereinstimmen, gibt es eine nicht ehrliche Strategie f"ur den ersten Spieler in jeder Runde ein St"uck mit $v_i(S_i)>1/N$ zu bekommen.
 \textbf{satz}
 \textbf{proof}
