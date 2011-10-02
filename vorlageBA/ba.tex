@@ -58,8 +58,9 @@ Hier kommt eine ca.\ einseitige Zusammenfassung der Arbeit rein.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%% BEGINN TEXTTEIL %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Inroduction}
-Cake Cutting is an interdisciplinairy field which is commonly researched and part of economics, political science, mathematics, operations research, and computer science. Game Theory is fulfilling the same property. Except for the fact, they have hardly something in common. While CC is about a fair division of a heterogenous divisible good, game theory is used for mathematically defining lifes procceses and analysing them.
+\section{Introduction}
+Cake Cutting is an interdisciplinairy field which is commonly researched and part of economics, political science, mathematics, operations research, and computer science. Game Theory is fulfilling the same property. Except for this fact, they have hardly something in common. While CC is about fair division of a heterogenous divisible good, game theory is used for defining lifes processes in a mathematical way and analysing them.
+Example Cost Sharing from Algorithmic GT Noam Nissan chap. 15
 %\begin{itemize}
 %\item{division of sports tickets, health resources, computer networking resources, voting power, intellectual property licenses, costs for environmental improvements, etc}
 %\item{formalize fairness, including max-min fairness, proportional fairness, envy-free fairness, etc. which may or may not lead to stable allocations in the sense of say Nash Equilibrium, or strong Nash Equilibrium}
@@ -68,21 +69,27 @@ Cake Cutting is an interdisciplinairy field which is commonly researched and par
 
 \section{Preliminaries}
 \subsection{Preliminaries of Game Theory}
+cooperative vs. noncooperative\\
+algorithmic gt
+
 \newpage
 \subsection{Preliminaries of Cake-cutting}
 \subsubsection{Basics}
-First of all we need to define the components of cake-cutting. The following example sketches the problem statement.\\
+First of all we need to define the components of cake-cutting. Example \ref{bsp1} sketches the problem statement.\\
+%
 \begin{bsp}
+\label{bsp1}
 It was the year 1922 in London, Alan Mathison Turing was visiting a friend on his birthday. There was aswell Vilfredo Federico Pareto, Karl Popper, Felix Hausdorff und Charles West Churchman.
 \end{bsp}
-Now, what exactly is cake-cutting about? It involves a discrete set of $n \in \mathbb{N}$ agents (or players\footnote{common used in the game theoretic sence} ) $P_n=\{p_1,\cdots,p_n\}$. After the assumption each of them wants to get as much as possible of the good. Only the allocation of a single, divisible and heterogenous good is included in the consideration of this work. It is common to use for the visualization a rectangular cake.
+%
+Now, what exactly is cake-cutting about? It involves a discrete set of $n \in \mathbb{N}$ agents (or players ) $P_n=\{p_1,\cdots,p_n\}$. After the assumption each of them wants to get as much as possible of the good. Only the allocation of a single, divisible and heterogenous good is included in the consideration of this work. It is common to use for the visualization a rectangular cake.
 \begin{center}
-bild kuchen
+image cake
 \end{center}
 The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $I=[0,1] \subseteq \mathbb{R}$. Each subinterval $I'\subseteq I$ or a union of subintervals %$\bigcup\nolimits_{\m\in\mathbb{N}}I_m$ 
-with $I_m\subseteq I$ is named as a boundle (piece). All boundles are disjoint. The boundle of the cake, which the player $p_i$ receives is denoted as $X_i$. When all boundles of the cake are owned by players, this state is called an \textsc{allocation}. Each piece has a public length, which can be computed as the sum of all bourderdifferences and the private value of a player.\\
+with $I_m\subseteq I$ is called a boundle (piece). All boundles are disjoint. The boundle of the cake, which the player $p_i$ receives is denoted as $X_i$. When all boundles of the cake are owned by players, this state is called an \textsc{allocation}. Each piece has a public length, which can be computed as the sum of all bourderdifferences, and the private value of each player.\\
 
-Each player $p_i\in P_n$ has a valuation function (valuation) $v_i:\{X'|X' \subseteq X\} \mapsto [0,1]$ on the cake $X$ with the following properties:\\
+Every player $p_i\in P_n$ has a valuation function (valuation) $v_i:\{X'|X' \subseteq X\} \mapsto [0,1]$ on the cake $X$ with the following properties:\\
 \begin{enumerate}
 \item Non-negativity\footnote{It is common to require positivity: $v_i(C)>0$ forall $C\subseteq [0,1]$ and $C \neq \emptyset$}: $v_i(C)\geq 0$ forall $C\subseteq [0,1].$
 \item Normalisation: $v_i(\emptyset)=0$ and $v_i([0,1])=1.$
@@ -151,72 +158,38 @@ Each protocol
 \newpage
 \textbf{Different Types of Protocols}\\
 \newline
-Since the protocols are going to be analysed in this work, it is very important to understand the types, structure and design of them.
+Since the protocols are going to be analysed in this work, it is very important to understand the types, structure and design of them.\\
+\newline
 \textbf{Classes of Protocols}\\
 \newline
-Intuitive Beschreibung:(Algorithmus)
-\newline In der Mathematik, Informatik und verwandten Gebieten, ist ein
-\underline{Algorithmus} eine effektive Methode zur Probleml"osung, ausgedr"uckt
-durch eine endliche Folge von Anweisungen.
-\begin{defi}{\textbf{(Protokoll (Cake-Cutting-Protokoll))}}
-\newline Ein \underline{Protokoll (Cake-Cutting-Protokoll)} ist ein adaptiver
-Algorithmus mit mehreren Spielern und folgenden Eigenschaften:
+Intuitiv:(Algorithm)
+\newline In mathematics, computer science and related subjects, an
+\underline{algorithm} is an effective method for solving a problem, hich can be denoted as a finite set of sequiences.
+\begin{defi}{\textbf{(Protocol (Cake-Cutting-Protocol))}}
+\newline A \underline{Protocol (Cake-Cutting-Protocol)} is an adaptive algorithm with a fixed number of players and the following properties:
 \begin{itemize}
-\item{It consists of rules and strategies.\\ \underline{Rules} sind
-Anweisungen, die gefordert werden ohne die Bewertungen der Spieler zu kennen.\\
-\underline{Strategies} sind Empfehlungen, welchen der Spieler folgen muss um
-garantiert seinen gerechten Anteil zu bekommen.
-}
-\item{Sofern ein Spieler sich nicht an die Strategie des Protokolls h"alt,
-verliert er seinen Anspruch nach einer endlichen Anzahl von Schritten ein St"uck
-des Kuchens zu bekommen, welches dem geforderten Gerechtigkeitskriterium
-entspricht. Sein Vorgehen hat aber keine Auswirkungen auf die Anteile der
-anderen Spieler.}
-\item Jeder Spieler muss zu jeder Zeit in der Lage sein v"ollig unabh"angig von
-den anderen Spielern den Kuchen zu teilen (einen Schnitt zu machen).
-\item Das Protokoll besitzt keine Informationen "uber die Bewertungen der
-Spieler, ausser denen die angefragt wurden in dem jeweiligen oder in den
-vorherigen Schritten.
+\item{It consists of rules and strategies.\\ \underline{Rules} are requirements, which has to be followed by the players without knowledge of their valuations.\\
+\underline{Strategies} are recommendations, which can be followed for getting the guaranteed fair share.}
+\item{If a player does not follow the strategy of a protocol, he looses his guarantee to get after a fixed number of steps to get a fair piece of cake. His actions does not harm the other players.}
+\item Each player has to be possible at each moment indepentent of other players to cut the cake.
+\item The protocol does not own informations about the valuations of the players, except of the ones, it got from the steps before.
 \end{itemize}
 \end{defi}
 \begin{defi}
-Ein Cake-Cutting-Protokoll wird proportional, neidfrei, stark neidfrei etc.
-genannt, falls unabh"angig von den Bewertungsfunktionen der Spieler, jede
-Aufteilung entsprechend proportional, neidfrei etc., unter der Vorraussetzung,
-dass alle Spieler die vom Protokoll vorgegebenen Regeln und Strategien befolgen,
-ist.
+A CCP is called proportional, envy-free, strong envy-free a.s.o., if indepentent of the valuations of the players, each allocation is proportional, envy-free, \cdots under the requirement, that all players follows the rules and strategies given by the protocol.
 \end{defi}
-Eines der Ziele von Cake-Cutting ist solche Protokolle anzugeben.\footnote{Siehe
-auch Definition von \cite{3}, Robertson und Webb:''Approximating ...'' und
-Woeginger,Sgall:''An Aproximation Scheme...'' oder
-''CC\abk{CC}{\markup{C}ake-\markup{C}utting} is not a piece of cake'' von
-magdon....}
-\begin{defi}{\textbf{(endlich (diskret)/kontinuierlich)}}
-\newline Ein \underline{endliches (diskretes)} Protokoll liefert eine L"osung
-nach einer endlichen Anzahl von Entscheidungen (Bewertungen,
-Markierungen,$\ldots$), dagegen muss ein Spieler bei einem
-\underline{kontinuierlichen} Protokoll unendlich viele Entscheidungen treffen.
+One of the main goals of cake-cutting is the developement of such protocols.
+
+\begin{defi}{\textbf{(finite (discrete)/ continious)}}
+\newline A \underline{finite (discrete)} protocol gives a solution after a finite number of queries (valuations, marcs, $\ldots$), in comparison has a player to make in a \underline{continious} protocol infinitely many queries.
 \end{defi}
-\begin{defi}{\textbf{(endlich beschr"ankt/endlich unbeschr"ankt))}}
-\newline Ein \underline{endlich beschr"anktes} Protokoll hat eine obere Grenze
-von Schritten, welche im ung"unstigsten Fall betrachtet wird. Die gesamte Anzahl
-von Entscheidungen h"angt, wenn "uberhaupt, dann nur von der Anzahl der
-beteiligten Personen ab. Ein \underline{endlich unbeschr"anktes} Protokoll hat
-hingegen eine nicht im Voraus absch"atzbare Anzahl.
+\begin{defi}{\textbf{(finite bounded/ finite unbounded))}}
+\newline A \underline{finite bounded} protocol has an upper bound of steps, which are looked at in the worst case. The number of those steps is only correlated, in some cases, with the number of players. A \underline{finite unbounded} protocol has no approximated number of steps.
 \end{defi}
-Die am meisten gesuchten Protokolle sind endlich beschr"ankt, da sie am
-einfachsten in der Realit"at umsetzbar sind. Aber es gibt eine Art von
-kontinuierlich Protokollen, an denen ebenfalls Interesse besteht.
-\begin{defi}{\textbf{(Moving-Knife-Protokoll)}}
-\newline Ein Schiedsrichter, welcher unparteisch gegen"uber den Spielern ist und
-unbeteiligt an der Verteilung der St"ucke, \underline{schwenkt ein Messer
-kontinuierlich} von links nach rechts und macht parallele Schnitte sofern ein
-Spieler ''Halt!'' ruft. Bei manchen
-MKP\abk{MKP}{\markup{M}oving-\markup{K}nife-\markup{P}rotokoll} wird der
-Schiedsrichter ausgelassen und nur ein Messer oder Schwert geschwungen.
-\end{defi}
+The most desirable protocols are the finite bounded, because they are the easiest to realise in real life applications. 
 \pagebreak
 \subsection{The Degree of Guaranteed Envy-freeness}
+In the last sixty years the number of proportional finite bounded protocols have grown for arbitrary n. But there exist none envy-free finite bounded protocol for an arbitrary n. The biggest group we can divide a cake in a fix number of steps in an envy-free way is sadly three. But there exist a compromise between envy-freeness and finite boundness and a possibility to valuate proportional cake-cutting protocols between each other, the degree of guaranteed envy-freeness. 
 \begin{description}
  \item[Motivation] For $n\geq4$ ist es offen, ob es ein neidfreies, endlich beschranktes CCP gibt!
  \item[$\Rightarrow$] Abschwachen des Ideals der Neidfreiheit. 
@@ -359,11 +332,12 @@ $\Rightarrow\DGEF=\frac{(n-1)n}{2}+2$
 \pagebreak
 
 \section{Proportional Procedures and their DGEF}
-Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if doible(?)) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
-\subsection{The Steinhaus-Kuhn lone divider procedure}
+Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if possible) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
+\subsection{The Steinhaus-Kuhn Lone Divider Procedure}
 \newpage
-\subsection{The Banach-Knaster last-diminisher procedure}
+\subsection{The Banach-Knaster Last-Diminisher Procedure}
 \textbf{satz}
+If the valuatons of the players are not equal, there exist a not thruthful strategy for the first player in each round for getting a piece with $v_i(S_i)>1/N$.\\
 
 Falls die Bewertungsfunktionen der Spieler nicht "ubereinstimmen, gibt es eine nicht ehrliche Strategie f"ur den ersten Spieler in jeder Runde ein St"uck mit $v_i(S_i)>1/N$ zu bekommen.
 \textbf{satz}
@@ -372,15 +346,15 @@ Im Schritt 1: Das abgeschnittene St"uck soll den Wert $1/N+$ Rest von $S_1$ habe
 Fallunterscheidung: Entweder Spieler $p_1$ kriegt dieses St"uck oder Spieler $p_i$ beschneidet es und somit kann Spieler $p_1$ ein solches St"uck in der darauffolgenden Runde bekommen, oder bei Cut und Choose am Ende.
 \textbf{proof}
 \newpage
-\subsection{The Fink lone-chooser procedure}
+\subsection{The Fink Lone-Chooser Procedure}
 \newpage
-\subsection{The Cut-Your-Own-Piece procedure}
+\subsection{The Cut-Your-Own-Piece Procedure}
 \newpage
-\subsection{The Divide-and-Conquer procedure}
+\subsection{The Divide-and-Conquer Procedure}
 \newpage
-\subsection{Erweiterte procedure}
+\subsection{The Extended Procedure}
 \newpage
-\subsection{Erweitertung der Erweiterten procedure}
+\subsection{The Extension of the Extended Procedure}
 \newpage
 \section{Related Work}
 \pagebreak
