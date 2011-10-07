@@ -176,7 +176,7 @@ Intuitiv:(Algorithm)
 \end{itemize}
 \end{defi}
 \begin{defi}
-A CCP is called proportional, envy-free, strong envy-free a.s.o., if indepentent of the valuations of the players, each allocation is proportional, envy-free, \cdots under the requirement, that all players follows the rules and strategies given by the protocol.
+A CCP is called proportional, envy-free, strong envy-free a.s.o., if indepentent of the valuations of the players, each allocation is proportional, envy-free, $\cdots$ under the requirement, that all players follows the rules and strategies given by the protocol.
 \end{defi}
 One of the main goals of cake-cutting is the developement of such protocols.
 
@@ -189,11 +189,8 @@ One of the main goals of cake-cutting is the developement of such protocols.
 The most desirable protocols are the finite bounded, because they are the easiest to realise in real life applications. 
 \pagebreak
 \subsection{The Degree of Guaranteed Envy-freeness}
-In the last sixty years the number of proportional finite bounded protocols have grown for arbitrary n. But there exist none envy-free finite bounded protocol for an arbitrary n. The biggest group we can divide a cake in a fix number of steps in an envy-free way is sadly three. But there exist a compromise between envy-freeness and finite boundness and a possibility to valuate proportional cake-cutting protocols between each other, the degree of guaranteed envy-freeness. 
-\begin{description}
- \item[Motivation] For $n\geq4$ ist es offen, ob es ein neidfreies, endlich beschranktes CCP gibt!
- \item[$\Rightarrow$] Abschwachen des Ideals der Neidfreiheit. 
-\end{description}
+In the last sixty years the number of proportional finite bounded protocols have grown for arbitrary n. But there exist none envy-free finite bounded protocol for an arbitrary n. The biggest group we can divide a cake in a fix number of steps in an envy-free way is sadly three. There exist a compromise between envy-freeness and finite boundness and a possibility to valuate proportional cake-cutting protocols between each other, the degree of guaranteed envy-freeness. 
+
 \begin{defi}
  Sei eine Aufteilung des Kuchens $X=\bigcup\limits_{i=1}^n X_i$ fur die Menge $P=\{p_1,\dots,p_n\}$ der Spieler gegeben, wobei $v_i$
  das Mass von $p_i$ und $X_i$ die Portion von $p_i$ ist.
@@ -303,6 +300,46 @@ $\DGEF =$ Anzahl der Neidfrei-Relationen im worst case
                   \end{enumerate}
  \end{description}
 \end{proof}
+\textbf{Overview: DGEF in finite bounded CCP}\\
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|l|l|}
+\hline
+Protocol & DGEF & $n=4$ (12 EF)  \\
+\hline
+Last Diminisher & $2+\frac{n\cdot(n-1)}{2}$&8\\
+\hline
+Lone Chooser & $n$&4\\
+\hline
+Lone Divider & $2n-2$&6\\
+\hline
+Cut your Own Piece & $n$&4\\
+\hline
+Cut your Own Piece (left-right rule) & $2n-2$&6\\
+\hline
+Divide $\&$ Conquer & $n\cdot \lfloor log (n)\rfloor +2n-2^{\lfloor log (n)\rfloor +1}$&6\\
+\hline
+Minimal-Envy Divide $\&$ Conquer & $n\cdot \lfloor log (n)\rfloor +2n-2^{\lfloor log (n)\rfloor +1}$&6\\
+\hline
+Rekursive Divide $\&$ Choose & $n$&4\\
+\hline
+\end{tabular*}
+\pagebreak
+
+\section{Proportional Procedures and their DGEF}
+Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if possible) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
+\subsection{The Steinhaus-Kuhn Lone Divider Procedure}
+
+\newpage
+\subsection{The Banach-Knaster Last-Diminisher Procedure}
+The generalization of ''I cut, you choose''.
+\begin{satz}
+If the valuatons of the players are not equal, there exist a non thruthfull strategy for the first player in each round of getting a piece with $v_i(S_i)>1/N$.\\
+\end{satz}
+\begin{proof}
+The player $p_1$ got the piece $X_1$. So $v_1(X_1)=1/n$ and forall $p_i$ with $2\leq i\leq n$ $v_i(X_1)<1/n$. W.l.o.g. in the assumption, let $\delta=1/n-v_2(X_1)$. It is obvious that $\delta > 0$.\\
+Step 1: Das abgeschnittene St"uck soll den Wert $1/N+$ Rest von $S_1$ haben.\\
+Fallunterscheidung: Entweder Spieler $p_1$ kriegt dieses St"uck oder Spieler $p_i$ beschneidet es und somit kann Spieler $p_1$ ein solches St"uck in der darauffolgenden Runde bekommen, oder bei Cut und Choose am Ende.
+\end{proof}
+
 \begin{satz}
  Das Last-Diminisher-Protokoll hat einen $\DGEF$ von $\frac{n(n-1)}{2}+2$
 \end{satz}
@@ -321,32 +358,14 @@ $\DGEF =$ Anzahl der Neidfrei-Relationen im worst case
  \end{description}
 $\Rightarrow\DGEF=\frac{(n-1)n}{2}+2$ 
 \end{proof}
+\newpage
+\subsection{The Fink Lone-Chooser Procedure}
 \begin{satz}
  Das Lone-Chooser-Protokoll hat einen $\DGEF$ von $n$.
 \end{satz}
 \begin{proof}
  Kein Spieler bewertet die Portion irgendeines anderen Spielers.\\$\stackrel{\text{Lemma}}{\Longrightarrow}\DGEF=n$
 \end{proof}
-
-
-\pagebreak
-
-\section{Proportional Procedures and their DGEF}
-Each proportional procedure consist of rules and strategies. Since the rules are compulsory, the strategies of e... . In this chapter the strategies of common used procedures are shown (probably specialised, if possible) and explained with examples. Then their strategyproofness is analysed. During complications the effect on the DGEF is shown. Complete procedures can be found in \cite{}.
-\subsection{The Steinhaus-Kuhn Lone Divider Procedure}
-\newpage
-\subsection{The Banach-Knaster Last-Diminisher Procedure}
-\textbf{satz}
-If the valuatons of the players are not equal, there exist a not thruthful strategy for the first player in each round for getting a piece with $v_i(S_i)>1/N$.\\
-
-Falls die Bewertungsfunktionen der Spieler nicht "ubereinstimmen, gibt es eine nicht ehrliche Strategie f"ur den ersten Spieler in jeder Runde ein St"uck mit $v_i(S_i)>1/N$ zu bekommen.
-\textbf{satz}
-\textbf{proof}
-Im Schritt 1: Das abgeschnittene St"uck soll den Wert $1/N+$ Rest von $S_1$ haben.\\
-Fallunterscheidung: Entweder Spieler $p_1$ kriegt dieses St"uck oder Spieler $p_i$ beschneidet es und somit kann Spieler $p_1$ ein solches St"uck in der darauffolgenden Runde bekommen, oder bei Cut und Choose am Ende.
-\textbf{proof}
-\newpage
-\subsection{The Fink Lone-Chooser Procedure}
 \newpage
 \subsection{The Cut-Your-Own-Piece Procedure}
 \newpage
