@@ -12,7 +12,7 @@
 %\newcommand{\deutsch}{\usepackage[german]{babel}}
 
 %% Die folgenden auskommentierten Optionen dienen der automatischen
-%% Erkennung des Latex-Kompilers und dem Setzen der davon abhängigen
+%% Erkennung des Latex-Kompilers und dem Setzen der davon abhï¿½ngigen
 %% Einstellungen. Bei Problem z.B. mit dem Einbinden von verschiedenen
 %% Grafiktypen bei Verwendung von PdfLatex oder Latex, einfach die
 %% verschiedenen \usepackage(s) ausprobieren. (Mit diesen Einstellungen
@@ -31,7 +31,7 @@
 
 
 %\usepackage[iso]{umlaute}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage{palatino} % palatino Schriftart
 %\usepackage{makeidx} % um ein Index zu erstellen
 \usepackage{tocbibind}
@@ -39,8 +39,8 @@
 \usepackage{fancybox} % fuer die Rahmen
 \usepackage{shortvrb}
 \usepackage{ifthen}
-\ifthenelse{\equal{\sprache}{deutsch}}{\usepackage[ngerman]{babel}}{}
-
+%\ifthenelse{\equal{\sprache}{deutsch}}{\usepackage[ngerman]{babel}}{}
+\usepackage[utf8]{inputenc}
 \usepackage{lmodern} 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -51,7 +51,7 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{color}
-\usepackage{stmaryrd}
+\usepackage{graphicx}
 \usepackage{nomencl}
 \usepackage[normalem]{ulem} 
 \newcommand{\markup}[1]{\uline{#1}}
@@ -65,8 +65,8 @@
 %\usepackage{thumbpdf} %thumbs fuer Pdf
 %\usepackage[pdfstartview=FitV]{hyperref} %anklickbares Inhaltsverzeichnis
 %\else
-\usepackage[dvips,xdvi]{graphicx}
-\usepackage{hyperref} %anklickbares Inhaltsverzeichnis
+%\usepackage[dvips,xdvi]{graphicx}
+%\usepackage{hyperref} %anklickbares Inhaltsverzeichnis
 %\fi
 
 %%%%%%%%%%%%%%%%%%%%%%% Massangaben fuer die Arbeit %%%%%%%%%%%%%%%
@@ -79,20 +79,21 @@
 \addtolength{\evensidemargin}{-1in}
 
 %\makeindex
-% Umgebungen f"ur Sätze usw.
-\newtheorem*{bemerkung*}{Bemerkung}
+% Umgebungen f"ur Sï¿½tze usw.
+\newtheorem*{bemerkung*}{Comment}
 \newtheorem*{defi}{Definition}
 \newtheorem*{defi*}{Definition}
-\newtheorem*{bezeichnungen}{Bezeichnungen}
-\newtheorem*{fakt}{Fakt}
-\newtheorem*{beispiel}{Beispiel}
-\newtheorem*{bsp}{Beispiel}
-\newtheorem*{beispiel*}{Beispiel}
-\newtheorem*{satz}{Satz}
-\newtheorem*{satz*}{Satz}
-\newtheorem*{lem}{Lemma}
-\newtheorem*{protokoll*}{Protokoll}
-\newtheorem*{idee}{Idee}
+\newtheorem*{bezeichnungen}{Remark}
+\newtheorem*{fakt}{Fact}
+\newtheorem*{beispiel}{Example}
+\newtheorem*{bsp}{Example}
+\newtheorem*{beispiel*}{Example}
+\newtheorem*{satz}{Theorem}
+\newtheorem*{satz*}{Theorem}
+\newtheorem*{lem}{Theorem}
+\newtheorem*{protokoll*}{Protocol}
+\newtheorem*{idee}{Idea}
+\newtheorem*{corollary}{Corollary}
 
 %definition of new commands
 \newcommand{\DGEF}{\text{\textbf{DGEF}}}
@@ -105,7 +106,7 @@
 \pagestyle{headings}
 
 \sloppy % LaTeX ist dann nicht so streng mit der Silbentrennung
-\MakeShortVerb{\§}
+%\MakeShortVerb{\ï¿½}
 
 \parindent0mm
 \parskip0.5em
@@ -134,13 +135,13 @@
     \begin{minipage}[t]{70mm}
       \begin{center}
         %\selectlanguage{german}
-        {\Large INSTITUT FÜR INFORMATIK\\}
+        {\Large INSTITUT FÃœR INFORMATIK\\}
         {\normalsize
-          Lehrstuhl für Komplexit\"atstheorie und Kryptologie
+          Lehrstuhl fÃ¼r KomplexitÃ¤tstheorie und Kryptologie
 \\
         }
         \vspace{3mm}
-        {\small Universitätsstr. 1 \hspace{5ex} D--40225 Düsseldorf\\}
+        {\small UniversitÃ¤tsstr. 1 \hspace{5ex} D--40225 DÃ¼sseldorf\\}
      \end{center}
     \end{minipage}
   }
@@ -168,7 +169,7 @@
 
   \vspace{35mm}
  
-% Prüfungsordnungs-Angaben
+% Prï¿½fungsordnungs-Angaben
   \begin{center}
     %\selectlanguage{german}
     
@@ -201,20 +202,20 @@
 \begin{titlepage}
 \vspace*{\fill}
 
-\section*{Erklärung}
+\section*{ErklÃ¤rung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Und hier ebenfalls ggf. BA durch MA ersetzen...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Hiermit versichere ich, dass ich diese Bachelorarbeit
-selbstständig verfasst habe. Ich habe dazu keine anderen als die
+selbststÃ¤ndig verfasst habe. Ich habe dazu keine anderen als die
 angegebenen Quellen und Hilfsmittel verwendet.
 
 \vspace{25 mm}
 
 \begin{tabular}{lc}
-Düsseldorf, den \abgabedatum \hspace*{2cm} & \underline{\hspace{6cm}}\\
+DÃ¼sseldorf, den \abgabedatum \hspace*{2cm} & \underline{\hspace{6cm}}\\
 & \bearbeiter
 \end{tabular}
 
