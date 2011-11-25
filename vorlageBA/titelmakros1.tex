@@ -51,9 +51,20 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{color}
+%\usepackage{stmaryrd}
 \usepackage{graphicx}
 \usepackage{nomencl}
 \usepackage[normalem]{ulem} 
+\usepackage{verbatim}
+\usepackage{ulsy}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{bbding}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usetikzlibrary{arrows,automata,petri,shapes,snakes}
+
+
 \newcommand{\markup}[1]{\uline{#1}}
 % Befehl umbenennen in abk
 \let\abk\nomenclature
@@ -80,23 +91,24 @@
 
 %\makeindex
 % Umgebungen f"ur S�tze usw.
-\newtheorem*{bemerkung*}{Comment}
-\newtheorem*{defi}{Definition}
-\newtheorem*{defi*}{Definition}
-\newtheorem*{bezeichnungen}{Remark}
-\newtheorem*{fakt}{Fact}
-\newtheorem*{beispiel}{Example}
-\newtheorem*{bsp}{Example}
-\newtheorem*{beispiel*}{Example}
-\newtheorem*{satz}{Theorem}
-\newtheorem*{satz*}{Theorem}
-\newtheorem*{lem}{Theorem}
-\newtheorem*{protokoll*}{Protocol}
-\newtheorem*{idee}{Idea}
-\newtheorem*{corollary}{Corollary}
+\newtheorem{bemerkung*}{Comment}
+\newtheorem{defi}{Definition}
+\newtheorem{defi*}{Definition}
+\newtheorem{bezeichnungen}{Remark}
+\newtheorem{fakt}{Fact}
+\newtheorem{beispiel}{Example}
+\newtheorem{bsp}{Example}
+\newtheorem{beispiel*}{Example}
+\newtheorem{satz}{Theorem}
+\newtheorem{satz*}{Theorem}
+\newtheorem{lem}{Theorem}
+\newtheorem{protokoll*}{Protocol}
+\newtheorem{idee}{Idea}
+\newtheorem{corollary}{Corollary}
 
 %definition of new commands
 \newcommand{\DGEF}{\text{\textbf{DGEF}}}
+\newcommand{\vsp}{\vspace{3mm}}
 
 \begin{document}
 

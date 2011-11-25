@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section*.4}{Contents}{}
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [2][-]{subsection.1.1}{Related Work}{section.1}
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}
+\BOOKMARK [2][-]{subsection.2.1}{Preliminaries of Game Theory}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Preliminaries of Cake-cutting}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Basics}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Different Types of Fairness}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Different Types of Protocols}{subsection.2.2}
+\BOOKMARK [2][-]{subsection.2.3}{Strategyproofness}{section.2}
+\BOOKMARK [1][-]{section.3}{Strategyproof Proportional Protocols}{}
+\BOOKMARK [2][-]{subsection.3.1}{The Steinhaus-Kuhn Lone Divider Protocol}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{The Banach-Knaster Last-Diminisher Protocol}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{The Fink Lone-Chooser Protocol}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{The Divide-and-Conquer Protocol}{section.3}
+\BOOKMARK [1][-]{section.4}{Conclusion}{}
+\BOOKMARK [1][-]{section.5}{Open Questions and Future Research}{}
+\BOOKMARK [1][-]{section*.6}{References}{}
+\BOOKMARK [1][-]{section*.8}{List of Figures}{}
+\BOOKMARK [1][-]{section*.10}{List of Tables}{}

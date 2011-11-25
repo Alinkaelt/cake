@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage[latin1]{inputenc}
+\usepackage{xxcolor}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,automata,petri,shapes,snakes}
+
+\newlength{\imagewidth}
+\newlength{\imagescale}
+
+\begin{document}
+
+\begin{figure}
+	\begin{tikzpicture}
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n1) at (0,5) { };
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n2) at (4,7) {};
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n3) at (4,3) {};
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n4) at (8,8) {};
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n5) at (8,6) {};
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n6) at (8,4) {};
+		\node[circle,draw,ball color=blue!30,shade=ball,inner sep=5pt] (n7) at (8,2) {};
+
+		\node[draw=none,fill=none] (t1) at (0,5.5) {1};
+		\node[draw=none,fill=none] (t2) at (4,7.5) {2};
+		\node[draw=none,fill=none] (t1) at (4,3.5) {2};
+
+		\node[draw=none,fill=none,right] at (8.5,8) {$\left(a, \frac{1}{2}\right)$};
+		\node[draw=none,fill=none,right] at (8.5,6) {$\left(1 - a, \frac{1}{2}\right)$};
+		\node[draw=none,fill=none,right] at (8.5,4) {$\left(a + \delta, \frac{1}{2} + \epsilon \right)$};
+		\node[draw=none,fill=none,right] at (8.5,2) {$\left(1 - a - \delta, \frac{1}{2} - \epsilon \right)$};
+
+		\draw (n1) -- (n2);
+		\draw (n1) -- (n3);
+		\draw (n2) -- (n4);
+		\draw (n2) -- (n5);
+		\draw (n3) -- (n6);
+		\draw (n3) -- (n7);
+
+	\end{tikzpicture}
+	\caption{A caption}
+\end{figure}
+
+\end{document}

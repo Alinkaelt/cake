@@ -1,0 +1,20 @@
+\contentsline {section}{Contents}{1}{section*.4}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Related Work}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Preliminaries}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Preliminaries of Game Theory}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Preliminaries of Cake-cutting}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Basics}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Strategyproofness}{7}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}The Degree of Guaranteed Envy-Freeness}{9}{subsection.2.3}
+\contentsline {section}{\numberline {3}Proportional Protocols and their DGEF}{13}{section.3}
+\contentsline {subsection}{\numberline {3.1}The Steinhaus-Kuhn Lone Divider Procedure}{13}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}The Banach-Knaster Last-Diminisher Procedure}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}The Fink Lone-Chooser Procedure}{14}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}The Cut-Your-Own-Piece Procedure}{15}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}The Divide-and-Conquer Procedure}{15}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}The Parallelized Last Diminisher Procedure}{15}{subsection.3.6}
+\contentsline {section}{\numberline {4}Conclusion}{15}{section.4}
+\contentsline {section}{\numberline {5}Open Questions and Future Research}{16}{section.5}
+\contentsline {section}{List of Figures}{17}{section*.6}
+\contentsline {section}{List of Tables}{17}{section*.8}
