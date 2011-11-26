@@ -300,18 +300,18 @@ A game can be represented in normal or in extended form. The normal form is adva
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Preliminaries of Cake-cutting}
 \subsubsection{Basics}
-First, it is necessary to define the components and challenges of cake-cutting. But what exactly is cake-cutting about? It involves a set of $n \in \mathbb{N}$ players $P_n=\{p_1,\ldots,p_n\}$. It is assumed that each of them wants to get as much as possible of the divided resource. The goal is to find an allocation of a single, divisible and heterogeneous good between the $n$ players.\\ 
+It is necessary to define the components and challenges of cake-cutting. But first, what exactly is cake-cutting about? It involves a set of $n \in \mathbb{N}$ players $P_n=\{p_1,\ldots,p_n\}$. It is assumed that each of them wants to get as much as possible of the divided resource. The goal is to find an allocation of a single, divisible and heterogeneous good between the $n$ players.\\ 
 	\begin{figure}[h]
 		\centering
  		 \includegraphics[width=120pt]{kek.pdf}
    \caption{Cake}Example for a visualisation of a cake with two cuts
   	 \end{figure} 
-Those allocations have to be of a special kind, so that the involved players are pleased with the outcome. For the visualization it is common to use a rectangular cake. The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $I=[0,1] \subseteq \mathbb{R}$. Each subinterval $I'\subseteq I$ or a sequence of disjoint subintervals $$\sideset{}{ }\bigcup\limits_{m\in\mathbb{N}}I_m$$
-with $I_m\subseteq I$ is called a portion (or piece). The portion of the cake, which the player $p_i$ receives is denoted as $X_i$. The state is called an \emph{allocation}, when all portions of the cake are owned by players. Each piece has a public size, which can be computed as the sum of all border differences, and the private value of each player.\\
+Those allocations have to be of a special kind, so that the involved players are pleased with the outcome. For the visualization it is common to use a rectangular cake. The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $X=[0,1] \subseteq \mathbb{R}$. Each subinterval $X'\subseteq X$ or a sequence of disjoint subintervals $$\sideset{}{ }\bigcup\limits_{m\in\mathbb{N}}X_m$$
+with $X_m\subseteq X$ is called a portion (or piece). The portion of the cake, which the player $p_i$ receives is denoted as $X_i$. The state is called an \emph{allocation}, when all portions of the cake are owned by players. Each piece has a public size, which can be computed as the sum of all border differences, and the private value of each player.\\
 
 Every player $p_i\in P_n$ has a \emph{valuation function (valuation)} $v_i:\{X'|X' \subseteq X\} \rightarrow [0,1]$ on the cake $X$ with the following properties:
 \begin{enumerate}
-\item Non-negativity: $v_i(C)\geq 0$ for all $C\subseteq [0,1].$
+\item Non-negativity: $v_i(C)\geq 0$ for all $C\subseteq [0,1]=X.$
 \item Normalisation: $v_i(\emptyset)=0$ and $v_i([0,1])=1.$
 \item Additivity: $v_i(C \cup C')=v_i(C)+v_i(C')$ for disjoint
 $C,C'\subseteq [0,1].$\footnote{Monotonicity: If $C' \subseteq C$ then $v_i(C') \leq v_i(C)$. Monotonicity follows from additivity, because for the assumption $C' \subseteq C$ and $A:=C\backslash C'$: $v_i(C)=v_i(A\cup C')=v_i(A)+v_i(C')=\underbrace{v_i(C\backslash C')}_{\geq 0}+v_i(C')\geq v_i(C').$}
@@ -716,7 +716,7 @@ According to theorem \ref{thm5}, theorem \ref{thm6} and theorem \ref{thm7} cut $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Strategyproof Proportional Protocols}
-The goal in this chapter is to analyse the strategyproofness of commonly used protocols. First of all, they are rewritten into game-theoretic manner. A protocol with $n$ active players has at least $2n$ strategies, since each player has a truthful and a non-truthful strategy. If the obtained value differs in different non-truthful strategies they have to be separated and the amount of strategies would grow and make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the common used protocols can be simplified to an interaction between two kinds of players. So the whole game tree is not interesting.\\
+The goal in this chapter is to analyse the strategyproofness of common used protocols. First of all, they are rewritten into game-theoretic manner.Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the common used protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessery.\\
 The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.
 \\The complete protocols in the standard description can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
@@ -982,7 +982,7 @@ Last diminisher protocol is strategyproof for proportional protocols.
 %\begin{proof}
 % No player values a foreign piece $\stackrel{\text{Theorem:\ 5}}{\Longrightarrow}\DGEF=n$
 %\end{proof}
-For the description of this protocol the players  will be separated in two groups. Players in the first group $P_I=\{p_1, \dots, p_i\}$ in the $i-1$ round have already their proportional piece. Assume that player $p_1$ owns the whole cake before the first round. The performance in each round is the following:
+For the description of this protocol the players  will be separated in two groups. In the $(i-1)$ round players in the first group $P_I=\{p_1, \dots, p_i\}$ have already their proportional piece. Assume that player $p_1$ owns the whole cake before the first round. The performance in each round is the following:
 \begin{table}[htb]
 \begin{tabular*}{\textwidth}[]{|@{\extracolsep{\fill}}l|c|r|}
 \hline

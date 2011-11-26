@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  25 NOV 2011 20:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  26 NOV 2011 15:07
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1273,7 +1273,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  16154 strings out of 495061
  285135 string characters out of 1182621
- 393685 words of memory out of 3000000
+ 393709 words of memory out of 3000000
  18712 multiletter control sequences out of 15000+50000
  78592 words of font info for 62 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
