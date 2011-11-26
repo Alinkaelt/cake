@@ -306,21 +306,21 @@ It is necessary to define the components and challenges of cake-cutting. But fir
  		 \includegraphics[width=120pt]{kek.pdf}
    \caption{Cake}Example for a visualisation of a cake with two cuts
   	 \end{figure} 
-Those allocations have to be of a special kind, so that the involved players are pleased with the outcome. For the visualization it is common to use a rectangular cake. The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $X=[0,1] \subseteq \mathbb{R}$. Each subinterval $X'\subseteq X$ or a sequence of disjoint subintervals $$\sideset{}{ }\bigcup\limits_{m\in\mathbb{N}}X_m$$
-with $X_m\subseteq X$ is called a portion (or piece). The portion of the cake, which the player $p_i$ receives is denoted as $X_i$. The state is called an \emph{allocation}, when all portions of the cake are owned by players. Each piece has a public size, which can be computed as the sum of all border differences, and the private value of each player.\\
+Those allocations have to be of a special kind, so that the involved players are pleased with the outcome. For the visualization it is common to use a rectangular cake. The division is performed by parallel cuts. The cake $X$ is represented by the unit interval $X=[0,1] \subseteq \mathbb{R}$. Each subinterval $X'\subseteq X$ or a sequence of disjoint subintervals $$\sideset{}{ }\bigcup\limits_{m\in\mathbb{N}}X'_m$$
+with $X'_m\subseteq X$ is called a \emph{portion (or piece)}. The portion of the cake, which the player $p_i$ receives is denoted as $X_i$. The state is called an \emph{allocation}, when all portions of the cake are owned by players. Each piece has a public size, which can be computed as the sum of all border differences, and the private value of each player.\\
 
-Every player $p_i\in P_n$ has a \emph{valuation function (valuation)} $v_i:\{X'|X' \subseteq X\} \rightarrow [0,1]$ on the cake $X$ with the following properties:
+Every player $p_i\in P_n$ has a \emph{valuation function (valuation)} $v_i:\{X'|X' \subseteq X\} \rightarrow [0,1]$ on the cake $X=[0,1]$ with the following properties:
 \begin{enumerate}
-\item Non-negativity: $v_i(C)\geq 0$ for all $C\subseteq [0,1]=X.$
+\item Non-negativity: $v_i(C)\geq 0$ for all $C\subseteq X.$
 \item Normalisation: $v_i(\emptyset)=0$ and $v_i([0,1])=1.$
 \item Additivity: $v_i(C \cup C')=v_i(C)+v_i(C')$ for disjoint
-$C,C'\subseteq [0,1].$\footnote{Monotonicity: If $C' \subseteq C$ then $v_i(C') \leq v_i(C)$. Monotonicity follows from additivity, because for the assumption $C' \subseteq C$ and $A:=C\backslash C'$: $v_i(C)=v_i(A\cup C')=v_i(A)+v_i(C')=\underbrace{v_i(C\backslash C')}_{\geq 0}+v_i(C')\geq v_i(C').$}
+$C,C'\subseteq X.$\footnote{Monotonicity: If $C' \subseteq C$ then $v_i(C') \leq v_i(C)$. Monotonicity follows from additivity, because for the assumption $C' \subseteq C$ and $A:=C\backslash C'$: $v_i(C)=v_i(A\cup C')=v_i(A)+v_i(C')=\underbrace{v_i(C\backslash C')}_{\geq 0}+v_i(C')\geq v_i(C').$}
 \item Divisibility: For all $C\subseteq [0,1]$ and all $\alpha \in
 \mathbb{R}$, $0\leq \alpha \leq 1$, there exists a $B\subseteq C$, so that
 $v_i(B)=\alpha \cdot v_i(C).$
 \item  $v_i$ is continuous: If $0<x<y\leq 1$ with $v_i([0,x])=\alpha$ and
 $v_i([0,y])=\beta$, then for every $\gamma \in [\alpha,\beta]$ there exists a $z \in [x,y]$ so that $v_i([0,z])=\gamma.$
-\item Non-atomic:  $v_i([x,x])=0$ for all $x\in [0,1].$
+\item Non-atomic:  $v_i([x,x])=0$ for all $x\in X.$
 \end{enumerate}
 After some basics it would be interesting to see how game-theory is applicable to cake-cutting. Example \ref{bsp1} illustrates the problem in a game-theoretic manner.
 %
@@ -351,8 +351,8 @@ John Cocke and Tadao Kasami want to divide a chocolate-straberry-cake. The cake 
 \end{tabular}
 \caption{C$\&$K cake game in normal form}\label{Table1}
 \end{table}
-Before doing so, he analyses his situation via the normal form:\\Since the valuation is a private function, he does not know the preferences of his collegue and has to assume that he is indefferent between the two pieces. %By choosing not the middlecut he has the possibility to get more than a half, but also to make a loss.
-Tadao is waiting for Johns move in the extended game form and will choose his best strategy: 
+Before doing so, he analyses his situation via the normal form:\\Since the valuation is a private function, he does not know the preferences of his colleague and has to assume that he is indifferent between the two pieces. %By choosing not the middlecut he has the possibility to get more than a half, but also to make a loss.
+Tadao is waiting for John's move in the extended game form and will choose his best strategy: 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h!]
 \begin{center}
@@ -404,7 +404,7 @@ Tadao is waiting for Johns move in the extended game form and will choose his be
 	\caption{C$\&$K cake game in extended form}
 \end{center}
 \end{figure}
-\newline For John the graph shows that if he stays secure he would obtain $v_1(X_1)=\nicefrac{1}{2}$. Otherwise he would get $1/4$ or $2/5$. So to make the middlecut is his best possible move.
+\newline For John the graph shows that if he stays secure he would obtain $v_1(X_1)=\nicefrac{1}{2}$. Otherwise he would get $\nicefrac{1}{4}$ or $\nicefrac{2}{5}$. So to make the middlecut is his best possible move.
 \end{bsp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -412,12 +412,12 @@ Tadao is waiting for Johns move in the extended game form and will choose his be
 \subsubsection{Different Types of Fairness}
 As indicated by the name, the fairness plays an important role in fair division. But how is fairness defined? It can be seen as a valuation criterion of an allocation, which can be normalized and gives a possibility to compare different allocations. Usually the fairness criteria are distinguished between the following:
 \begin{defi}{\textbf{(Proportional or Simple Fair)}}
-\newline An allocation is \emph{proportional (simple fair)} if
-$v_i(X_i) \geq 1/n$ for each player $p_i \in P_n$.
+\newline \emph{An allocation is \emph{proportional (simple fair)} if
+$v_i(X_i) \geq 1/n$ for each player $p_i \in P_n$.}
 \end{defi}
 \begin{defi}{\textbf{(Envy-Freeness)}}
-\newline An allocation is \emph{envy-free} if $v_i(X_i) \geq
-v_i(X_j)$ for each couple of players $p_i, p_j \in P_n$.
+\newline \emph{An allocation is \emph{envy-free} if $v_i(X_i) \geq
+v_i(X_j)$ for each couple of players $p_i, p_j \in P_n$.}
 \end{defi}
 \vsp
 %\begin{defi}{\textbf{(Equity)}}
@@ -443,9 +443,9 @@ The following theorem shows the correlation between the two allocations.
 \item ''$\Rightarrow$'' For two players an allocation is proportional if each player has at least the half of the cake in his valuation. So the first player thinks the second player got at most half of the cake in the valuation of the first player and vice versa. They would not envy each other.\\ ''$\Leftarrow$'' Follows from part 1.\\
 \end{enumerate}
 \end{proof}
-A different criteria to valuate the performance of an allocation is efficiency. The correlation between the fairness criterion and efficiency can be found in \cite{eff}. 
+A different criterion to valuate the performance of an allocation is efficiency. The correlation between the fairness criterion and efficiency can be found in \cite{eff}. 
 \begin{defi}{\textbf{(Efficiency)}}
-\newline An allocation \[A=\{X_1,\dots, X_n\}\] is \emph{efficient (Pareto optimal)} if there is no other allocation \[A'=\{X'_1,\dots, X'_n\}\] such that \[v_i(X_i)\leq v_i(X'_i)\] for all players $p_i \in P_n$ and for at least one player the inequality is strict.
+\newline \emph{An allocation \[A=\{X_1,\dots, X_n\}\] is \emph{efficient (Pareto optimal)} if there is no other allocation \[A'=\{X'_1,\dots, X'_n\}\] such that \[v_i(X_i)\leq v_i(X'_i)\] for all players $p_i \in P_n$ and for at least one player the inequality is strict.}
 \end{defi}
 %
 \begin{lem}
@@ -492,78 +492,83 @@ This allocation is obviously proportional, since $v_i(X_i) \geq 1/3$ for all $i 
 		\item Allocating the whole cake to one player is efficient, but definitely not proportional and therefore not envy-free.
 	\end{enumerate}
 \end{proof}
-In \cite{brams2} the authors showed a general argument that no finite bounded protocol can exist for such an allocation that is both proportional and efficient at the same time.
+In \cite{brams2} the authors show a general argument that no finite bounded protocol can exist for such an allocation that is both proportional and efficient at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Different Types of Protocols}
-It is very important to understand the types, structure and design of protocols, which will be analysed in this paper.\\
+It is very important to understand the types, structure and design of protocols, which are analysed in this paper.\\
 \newline
 Informal: (Algorithm)
 \newline An \emph{algorithm} is an effective method for solving a problem, which is composed of a finite sequence of instructions.
 \begin{defi}{\textbf{(Cake-Cutting-Protocol)}}
-\newline A \emph{cake-cutting-protocol} (or just protocol for short) is an adaptive algorithm with a fixed number of players and the following properties:
+\newline \emph{A \emph{cake-cutting-protocol} (protocol for short) is an adaptive algorithm with a fixed number of players and the following properties:
 \begin{itemize}
 \item{A protocol consists of rules and strategies.\\ \emph{Rules} are requirements, which \emph{have to} be followed by the players without knowledge of their valuations and which execution can be verified.\\
 \emph{Strategies} are recommendations, which \emph{can} be followed for getting the guaranteed fair share.}
 \item Each player should be able to cut the cake at a specific moment independent of other players.
 \item The protocol has no information about the valuation of the players, except of those it got from the steps before. It can not prove whether a player follows the strategy of the protocol.
-\end{itemize}
+\end{itemize}}
 \end{defi}
 \textbf{Comment:} Only such protocols are interesting where the actions of one player does not harm the other players. If a player does not follow his recommended strategy he may get less then a fair share.
 \begin{defi}{\textbf{(Proportional/ Envy-Free Protocol)}}\\
-A cake-cutting \emph{protocol} is called \emph{proportional} or \emph{envy-free} if independent by the players' valuations, each allocation is proportional or envy-free provided that all players follow the rules and strategies given by the protocol.
+\emph{A cake-cutting \emph{protocol} is called \emph{proportional} or \emph{envy-free} if independent by the players' valuations, each allocation is proportional or envy-free provided that all players follow the rules and strategies given by the protocol.}
 \end{defi}
 The development of such protocols is one of the main goals of cake-cutting \cite{bla}.
 
-\begin{defi}{\textbf{(Finite (Discrete)/ Continuous (Moving-Knife))}}
-\newline A \emph{finite (discrete)} protocol gives a solution after a finite number of queries (valuations, marks, $\ldots$). In a \emph{continuous (a.k.a. moving-knife)} protocol a player has to make up to infinitely many queries.
+\begin{defi}{\textbf{(Finite (Discrete)/ Continuous (Moving-Knife) Protocol)}}
+\newline \emph{A \emph{finite (discrete) protocol} gives a solution after a finite number of queries (valuations, marks, $\ldots$). In a \emph{continuous (a.k.a. moving-knife) protocol} a player has to make up to infinitely many queries.}
 \end{defi}
-\begin{defi}{\textbf{(Finite Bounded/ Finite Unbounded))}}
-\newline A \emph{finite bounded} protocol has an upper bound of steps for all possible valuations. The number of those steps is only correlated, in some cases, with the number of players. A \emph{finite unbounded} protocol has no approximated number of steps.
+\begin{defi}{\textbf{(Finite Bounded/ Finite Unbounded Protocol))}}
+\newline \emph{A \emph{finite bounded protocol} has an upper bound of steps for all possible valuations. The number of those steps is only correlated, in some cases, with the number of players. A \emph{finite unbounded protocol} has no approximated number of steps.}
 \end{defi}
 The most desirable protocols are the finite bounded because of the ease of their implementation. \\
-In the last sixty years the number of proportional finite bounded protocols have grown for an arbitrary number of players. But still no envy-free finite bounded protocol for an arbitrary $n$ is known (compare \cite{chen:truth}). Only for three or less players a cake can be divided in a fixed number of steps, so that it is envy-free. \\For the further analysis in the consideration of this work will only be proportional protocols, since allocations done by finite bounded protocols between an arbitrary number of players are of interest.
+In the last sixty years the number of proportional finite bounded protocols have grown for an arbitrary number of players. But still no envy-free finite bounded protocol for an arbitrary $n$ is known \cite{chen:truth}. Only for three or less players a cake can be divided in a fixed number of steps, so that it is envy-free. For this reason only proportional protocols are considered in the further work.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 \subsection{Strategyproofness}
-In practice, players are selfish and try to increase the value of their portion. In order to do so, they may for example report false valuations on parts of the cake.\\ The goal is to prevent this.
-Every strategy is \emph{non-truthful} except of the strategy recommended by the protocol. A player who follows a non-truthful strategy will be called a \emph{non-truthful (cheating) player}. Otherwise the player is called \emph{honest}.\\
-A \emph{true value function} provides the value of the piece a player would receive by following the recommended strategy. This value is at least proportional in a proportional protocol. A strategy is better than an other if the value of the obtained piece is bigger than in the other strategy.
-\begin{defi}{\textbf{(Risk Aversion\cite{brams})}}\\
-A player is \emph{risk averse} if he or she will never choose a strategy that may yield a more valuable piece of cake if it entails the possibility of getting less than a piece of a guaranteed size.
+In practice, players are selfish and try to increase the value of their portion. In order to do so, they may for example report false valuations on parts of the cake. The goal is to prevent this.
+\begin{defi}{\textbf{(Non-Truthful (Cheating) / Honest Player)}}\\
+\emph{Every strategy is \emph{non-truthful} except of the strategy recommended by the protocol. A player who follows a non-truthful strategy will be called a \emph{non-truthful (cheating) player}. Otherwise the player is called \emph{honest}.}
 \end{defi}
-\begin{defi}{\textbf{(Strategyproofness of a Proportinal Protocol\cite{lindner:degrees})}}\\
-A proportional cake-cutting protocol is said to be \emph{strategyproof for risk averse players} (SPP for short) if a cheating player is no longer guaranteed a proportional share, whereas all other players (provided they play truthful) are still guaranteed to receive their proportional share.
+\begin{defi}{\textbf{(True Value Function)}}\\
+\emph{A \emph{true value function} provides the value of the piece a player would receive by following the recommended strategy. This value is at least proportional in a proportional protocol.}
+\end{defi}
+A strategy is better than an other if the value of the obtained piece is bigger than in the other strategy.
+\begin{defi}{\textbf{(Risk Aversion\cite{brams})}}\\
+\emph{A player is \emph{risk averse} if he or she will never choose a strategy that may yield a more valuable piece of cake if it entails the possibility of getting less than a piece of a guaranteed size.}
+\end{defi}
+\begin{defi}{\textbf{(Strategyproofness of a Proportional Protocol\cite{lindner:degrees})}}\\
+\emph{A proportional cake-cutting protocol is said to be \emph{strategyproof for risk averse players} (SPP for short) if a cheating player is no longer guaranteed a proportional share, whereas all other players (provided they play truthful) are still guaranteed to receive their proportional share.}
 \end{defi}
 %\textbf{Notice:} The actions of a player do not harm any of the other players.
 %\begin{defi}{\textbf{(Truthful Allocation)}}
 %An allocation is \emph{truthful} if the value of the cake obtained by a player by reporting false is not greater than by reporting the truth.
 %\end{defi}
 
-\begin{defi}{\textbf{(Strategyproofness in the sence of \cite{pie})}}\\
-A protocol is \emph{strategyproof} if no player has a strategy that is assuredly better than his true value function.
+\begin{defi}{\textbf{(Strategyproofness in the sense of \cite{pie})}}\\
+\emph{A protocol is \emph{strategyproof} if no player has a strategy that is assuredly better than his true value function.}
 \end{defi}
-The strategyproofness in the sence of \cite{pie} will be called weak strategyproofness (WSP for short) since it is always true for a proportional protocol (compare \cite{ccc}).
+The strategyproofness in the sense of \cite{pie} will be called weak strategyproofness (WSP for short) since it is always true for a proportional protocol (compare \cite{ccc}).
 \newpage
 \begin{bsp}
 \label{bsp222}
 \textcolor{white}{x}\\\\
 Assume the case when all valuations over the cake are equal, and all players, except of the cheating one follow the strategy provided by the protocol. Each of the honest player will get his proportional share, which the cheating player also values as $\nicefrac{1}{n}$ or more. Sharing a cake with $n-1$ other players means for the cheater that $\nicefrac{n-1}{n}$ or more of the cake is allocated to other players and so $\nicefrac{1}{n}$ or less remains for him independent of his strategy. 
 \end{bsp}
-This characteristic is not significant, since valuations like in example \ref{bsp222} of the players always exist where the cheater would never get more than a proportional piece.\\
-A controversial point is that with this definition a player with a non-truthful strategy which obtains in one special case the same valuable piece, like the true value function and in all other strickly more valuable pieces would stay honest.\\
+This characteristic is not significant, since valuations like in Example \ref{bsp222} of the players always exist where the cheater would never get more than a proportional piece.\\
+A controversial point is that with this definition a player with a non-truthful strategy which obtains in one special case the same valuable piece, like the true value function and in all other stricly more valuable pieces would stay honest.\\
 \newline
 A stronger condition comes from the social choice literature:
 
-\begin{defi}{\textbf{(Strategyproofness in the sence of \cite{why})}}\\
-A protocol is \emph{strategyproof} if the true value function dominates every other strategy.
+\begin{defi}{\textbf{(Strategyproofness in the sense of \cite{why})}}\\
+\emph{A protocol is \emph{strategyproof} if the true value function dominates every other strategy.}
 \end{defi}
 
 %Assume the statement is true, where each player acts truthful by following his best strategy, which yields to a maximum possible allocation for a player ''$\Leftrightarrow$'' Nash-equilibrium. But there is a problem, like \cite{malik} detected no known algorithm can fulfill this promise. The appealing alternative is the guarantee of a fair share for telling the truth.\\
-In order to prevent missunderstandings, in this paper strategyproofness in the sence of \cite{why} will be called strong strategyproofness (SSP for short). It can be shown that none of the known cake-cutting protocols is able to fulfill the strong strategyproofness criteria, if the valuation of the players is not equal. All protocols shown in chapter 3 work  for two players in exactly the same way as cut $\&$ choose. Example \ref{bsp3} is similar to the one in \cite{chen:truth}.
+In order to prevent missunderstandings, in this paper strategyproofness in the sense of \cite{why} will be called strong strategyproofness (SSP for short). It can be shown that none of the known cake-cutting protocols is able to fulfill the strong strategyproofness criteria, if the valuation of the players is not equal. All protocols shown in Chapter 3 work for two players in exactly the same way as cut $\&$ choose. Example \ref{bsp3} is similar to the one in \cite{chen:truth}.
 
 \begin{bsp}
 \label{bsp3}
@@ -589,19 +594,25 @@ In strong strategyproofness a player would never get a more valuable piece by ly
 \newline
 After a counterexample in \cite{ccc} the definition of strategyproofness in \cite{pie} was restricted to the case with nonequal valuations and for the general case changed to:
 
-\begin{defi}{\textbf{(Strategyproofness in the sence of \cite{note})}}\\
-A protocol is \emph{strategyproof} (SP for short) if no player has a strategy that is sometimes better or is at least as well as his true value function.\end{defi}
+\begin{defi}{\textbf{(Strategyproofness in the sense of \cite{note})}}\\
+\emph{A protocol is \emph{strategyproof} (SP for short) if no player has a strategy that is sometimes better or is at least as well as his true value function.}
+\end{defi}
 %The question arises whether a protocol can enforce truthfulness.\\
 %An example will be the following case where $n$ players cut the cake in pieces with $v_i(X_i)=\nicefrac{1}{n}$ and then allocate them randomly to the players.\\
 Imagine the situation where different sharing processes are happening more than once, and the player is interested in becoming best off in a long term view. A game-theoretical approach leads to the following definition:
 \begin{defi}{\textbf{(Game-Theoretic Strategyproofness)}}\\
-A protocol is \emph{game-theoretic strategyproof} (GTSP for short) if no player has a strategy with a higher expected value than the expected value of his true value function.\end{defi}
-From results with the expected value it is difficult to conclude something about the other strategyproofness criterion. But it is possible to give an definition of strategyproofness with respect to game-theoretic strategyproofness and which can be compared to the other strategyproofness criterion.
+\emph{A protocol is \emph{game-theoretic strategyproof} (GTSP for short) if no player has a strategy with a higher expected value than the expected value of his true value function.}
+\end{defi}
+
+From results with the expected value it is difficult to conclude something about the other strategyproofness criterion. But it is possible to give a definition of strategyproofness with respect to game-theoretic strategyproofness and which can be compared to the other strategyproofness criterion.
 \begin{defi}{\textbf{(Game-Theoretic Cake-Cutting Strategyproofness)}}\\
-A protocol is \emph{game-theoretic cake-cutting strategyproof} (GTCCSP for short) if no player has a strategy that is better in at least one allocation than his true value function and in the other allocations at least as well as his true value function.\end{defi}
-In theorem \ref{thm5} the correlation between the above mentioned definitions of strategyproofness in cake-cutting is shown.
+\emph{A protocol is \emph{game-theoretic cake-cutting strategyproof} (GTCCSP for short) if no player has a strategy that is better in at least one allocation than his true value function and in the other allocations at least as well as his true value function.}
+\end{defi}
+
+In Theorem \ref{thm5} the correlation between the above mentioned definitions of strategyproofness in cake-cutting is shown.
+
 \begin{lem}
-\label{thm5} If the protocol fulfills the criteria then $$SPP \Rightarrow^{1} SP \Rightarrow^{2} GTCCSP \Rightarrow^{3} WSP$$ and
+\label{thm5} The relation between different strategyproofness criteria is the following $$SPP \Rightarrow^{1} SP \Rightarrow^{2} GTCCSP \Rightarrow^{3} WSP$$ and
 $$GTSP \Rightarrow^{4} GTCCSP.$$
 %If the criteria is not fulfilled then $$notWPP \Rightarrow^{5} notGTCCSP \Rightarrow^{6} notSP \Rightarrow^{7} notSPP$$ and
 %$$notGTCCSP \Rightarrow^{8} notGTSP$$
@@ -609,7 +620,7 @@ $$GTSP \Rightarrow^{4} GTCCSP.$$
 \begin{proof}
 \textcolor{white}{x}
 \begin{enumerate}
-\item If a protocol is $SPP$, then for every player in each strategy except of the recommended one exists at least one allocation $A_c$. In $A_c$ the cheating player $p_c$ receives a piece $X_c$ which is not proportional. Since in a proportional protocol all allocations guarantees a proportional share to every player, the value of his piece $X_c$ is less than he would obtain by following the recommended strategy. So the protocol is $SP$.   
+\item If a protocol is $SPP$, then for every player in each strategy except of the recommended one exists at least one allocation $A_c$. In $A_c$ the cheating player $p_c$ receives a piece $X_c$ which is not proportional. Since in a proportional protocol all allocations guarantee a proportional share to every player, the value of his piece $X_c$ is less than he would obtain by following the recommended strategy. So the protocol is $SP$.   
 %Es gibt keine Strategie mit alle Fälle mindestens proportional(Bei jeder strategie gibt es einen Fall mit weniger als proportional) \\
 \item If a protocol is $SP$, then for every player in each strategy except of the recommended one exists at least one allocation $A_c$. In $A_c$ the cheating player $p_c$ receives a piece $X_{c}$ instead of $X_{\not c}$, which he had received by following the recommended strategy. The value of $X_c$ is smaller than the value of $X_{\not c}$. So no non-truthful strategy exist where the cheating player gets in all allocations at least the same valuable piece as in the recommended one. The protocol is $GTCCSP$.
 %SP-Es gibt keine Strategie mit alle Fälle mindestens mehr als TRUE(prop oder mehr)(Bei jeder strategie gibt es einen Fall mit weniger als TRUE(prop oder mehr))\\
@@ -716,7 +727,7 @@ According to theorem \ref{thm5}, theorem \ref{thm6} and theorem \ref{thm7} cut $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Strategyproof Proportional Protocols}
-The goal in this chapter is to analyse the strategyproofness of common used protocols. First of all, they are rewritten into game-theoretic manner.Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the common used protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessery.\\
+The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner.Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessery.\\
 The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.
 \\The complete protocols in the standard description can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
@@ -729,10 +740,10 @@ The proceed is as follows, the interactions between two kinds of players are rep
 \hline
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Player $p_{1}$ strategy}&\multicolumn{1}{c|}{\textbf{Players in  $P_{n-1}$ strategy}}\\
 \hline
-$\:$1. Player $p_1$ cut the cake $X$&Cut $X$ into $n$&\\
+$\:$1. Player $p_1$ cuts the cake $X$&Cut $X$ into $n$&\\
 $\:\:\:\:\:\:\:$into $n$ pieces $\{X_1,\ldots,X_n\}$&pieces of equal value&\\
 \hline
-\multirow{2}*{$\:$2. Players in $P_{n-1}$ mark $s$}&&Mark $X_j$ if $v_i(X_j) \geq \nicefrac{1}{n}$\\&& for $1 \leq j \leq n$ and $2 \leq i \leq n$\\
+$\:$2. Players in $P_{n-1}$ mark $s$&&Mark $X_j$ if $v_i(X_j) \geq \nicefrac{1}{n}$\\$\:\:\:\:\:\:\:$pieces with $0 \leq s\leq n$&& for $1 \leq j \leq n$ and $2 \leq i \leq n$\\
 \hline
 $\:$3. If an allocation is impossible:&&\\$\:\:\:\:\:\:$Form the non-marked pieces&&\\$\:\:\:\:\:\:$to a new cake and exchange&&\\
 $\:\:\:\:\:\:\:$the cutter (last cutter leaves&&\\$\:\:\:\:\:\:\:$with a nonmarked piece)&&\\
@@ -834,8 +845,50 @@ Steinhaus-Kuhn Lone Divider protocol is not game-theoretic cake-cutting strategy
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-For showing that lone divider is $notGTCCSP$ it is nessesary to have one cheating player $p_c$. This player has a non-truthful strategy with $v_c(X_c)>v_c(X_t)$ for one outcome and $v_c(X_c) \geq v_c(X_t)$ for all other outcomes. The case $v_c(X_c)>v_c(X_t)$ can be illustrated with an example.\\
-The strategy is to mark $X_j$ if $v_c(X_j) > \nicefrac{1}{n}$ for $1 \leq j \leq n$.
+For showing that lone divider is $notGTCCSP$ it is nessesary to have at least one cheating player $p_c$. This player has a non-truthful strategy with $v_c(X_c)>v_c(X_t)$ in one allocation and $v_c(X_c) \geq v_c(X_t)$ for all other allocations. The case $v_c(X_c)>v_c(X_t)$ can be illustrated with an example. 
+The non-truthful strategy is to mark $X_j$ if $v_c(X_j) > \nicefrac{1}{n}$ for $1 \leq j \leq n$.\\
+\newline
+\textbf{Example}\\
+\newline
+Imagine the following allocation with three players. The player $p_2$ is going to cheat.
+		\begin{table}[htb]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{c|ccc}
+		& $X_L$& $X_M$& $X_R$\\
+		\hline
+		$p_3$ (divider)  & $\nicefrac{1}{3}$ & {$\nicefrac{1}{3}$} & $\nicefrac{1}{3}$ \\
+  $p_1$ (rank 1) & {$\nicefrac{3}{5}$} & $\nicefrac{2}{5}$ & $0$\\
+  $p_2$ (rank 2)& {$\nicefrac{1}{2}$} & $\nicefrac{1}{3}$ & $\nicefrac{1}{6}$
+ 		\end{tabular}
+ 		
+\caption{Example for a successfull non-truthful strategy}\label{Table10}
+\end{table}
+
+		\begin{table}[htb]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{cc}
+		\multicolumn{2}{c}{The acceptable pieces}\\
+		By following the recommended strategy:& By following the non-truthful strategy:\\
+ 		\begin{tabular}{c|ccc}
+		& $X_L$& $X_M$& $X_R$\\
+		\hline
+		$p_3$ (divider)  &  \Checkmark &  \Checkmark &  \Checkmark \\
+  $p_1$ (rank 1) &  \Checkmark & \Checkmark &  \XSolidBrush \\
+  $p_2$ (rank 2)&  \Checkmark &  \Checkmark & \XSolidBrush
+ 		\end{tabular}&
+ 		\begin{tabular}{c|ccc}
+		& $X_L$& $X_M$& $X_R$\\
+		\hline
+		$p_3$ (divider)  &  \Checkmark &  \Checkmark &  \Checkmark \\
+  $p_1$ (rank 1) &  \Checkmark & \Checkmark &  \XSolidBrush \\
+  $p_2$ (rank 2)&  \Checkmark & \XSolidBrush & \XSolidBrush
+ 		\end{tabular}
+ 		\end{tabular}
+ 		
+\caption{Acceptable pieces by a successfull non-truthful strategy}\label{Table11}
+\end{table}
 \end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -991,7 +1044,7 @@ For the description of this protocol the players  will be separated in two group
 \hline
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Players in $P_I$ strategy}& \multicolumn{1}{c|}{\textbf{Player $p_{i+1}$ strategy}}\\
 \hline
-$\:$1. Players $P_I$ partition &Partition $X_i$ into $i+1$&\\
+$\:$1. Players in $P_I$ partition &Partition $X_i$ into $i+1$&\\
 $\:\:\:\:\:\:\:$their piece $X_i$ into $i+1$&pieces of equal size&\\
 $\:\:\:\:\:\:\:$pieces $\{X_{i,1},\dots, X_{i,i+1}\}$&&\\
 \hline
@@ -1033,10 +1086,10 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 		\node[draw=none,fill=none] (t1) at (5,1.5) {2};
 		\node[draw=none,fill=none] (t1) at (5,2.5) {2};
 
-		\node[draw=none,fill=none,right] at (1.85,5.75) {All $\nicefrac{1}{n}$};
-		\node[draw=none,fill=none,right] at (1.85,1.95) {All $\neq \nicefrac{1}{n}$};
-		\node[draw=none,fill=none,right] at (2.99,3.05) {$n-1$ pieces $\neq \nicefrac{1}{n}$};
-		\node[draw=none,fill=none,right] at (2.99,4.90) {$2$ pieces $\neq \nicefrac{1}{n}$};
+		\node[draw=none,fill=none,right] at (1.85,5.75) {All $\nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (1.85,1.95) {All $\neq \nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (2.99,3.05) {$i$ pieces $\neq \nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (2.99,4.90) {$2$ pieces $\neq \nicefrac{1}{(i+1)}$};
 		\node[draw=none,fill=none,right] at (4.75,4.1) {\Huge{.}};
 		\node[draw=none,fill=none,right] at (4.75,3.9) {\Huge{.}};
 		\node[draw=none,fill=none,right] at (4.75,3.7) {\Huge{.}};
