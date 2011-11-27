@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  27 NOV 2011 00:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  27 NOV 2011 13:19
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1125,132 +1125,148 @@ Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 498--502
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 482--486
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 509.
+[8]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 493.
 
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 509.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 493.
 
 
-LaTeX Warning: Citation `bla' on page 9 undefined on input line 515.
+LaTeX Warning: Citation `bla' on page 9 undefined on input line 499.
 
-[9] [10]
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 539--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--546
+
+ []
+
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 556--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--563
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 573--575
-
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 573--575
+Underfull \hbox (badness 1320) in paragraph at lines 556--558
 \T1/lmr/m/it/10.95 John Warner Backus and Pe-ter Naur are cel-e-brat-ing and Do
 n-ald E. Knuth has
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 591--594
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--576
 
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 591--594
+Underfull \hbox (badness 1067) in paragraph at lines 573--576
 \T1/lmr/m/n/10.95 After a coun-terex-am-ple in [[]] the def-i-ni-tion of strat-
 e-gyproof-ness in [[]]
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 627--636
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 609--618
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--636
+Underfull \hbox (badness 10000) in paragraph at lines 609--618
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 668.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 694.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--716
+Underfull \hbox (badness 10000) in paragraph at lines 740--742
 
  []
 
 [14]
-Underfull \hbox (badness 1097) in paragraph at lines 722--723
+Underfull \hbox (badness 1097) in paragraph at lines 748--749
 \T1/lmr/m/it/10.95 strategyproof for pro-por-tional pro-to-cols, strat-e-gyproo
 f, game-theoretical strat-e-gyproof,
  []
 
-
-Overfull \hbox (1.02269pt too wide) in paragraph at lines 836--837
+[15]
+Overfull \hbox (1.02269pt too wide) in paragraph at lines 863--864
  [] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 845--865
+Underfull \hbox (badness 10000) in paragraph at lines 872--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--865
+Underfull \hbox (badness 10000) in paragraph at lines 872--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--865
+Underfull \hbox (badness 10000) in paragraph at lines 872--892
 
  []
 
-[15]
-LaTeX Font Info:    Try loading font information for U+ding on input line 875.
+[16]
+LaTeX Font Info:    Try loading font information for U+ding on input line 902.
  (/usr/share/texmf-texlive/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
-) [16]
+) [17]
+Underfull \hbox (badness 10000) in paragraph at lines 917--927
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--927
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--927
+
+ []
+
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1111
+
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1061
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1066
-
- []
-
-[19] <bilder/dc1.pdf, id=350, 256.96pt x 188.705pt>
+[20] <bilder/dc1.pdf, id=351, 256.96pt x 188.705pt>
 File: bilder/dc1.pdf Graphic file (type pdf)
  <use bilder/dc1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1189
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1234
 
  []
 
-[20 <./bilder/dc1.pdf>] [21] [22] (./ba.bbl) [23
+[21] [22 <./bilder/dc1.pdf>] [23] [24] (./ba.bbl) [25
 
 ] (./ba.lof)
 \tf@lof=\write7
@@ -1261,7 +1277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1184--1189
 \openout8 = `ba.lot'.
 
 
-[24
+[26
 
 ] (./ba.aux)
 
@@ -1271,15 +1287,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16149 strings out of 495061
- 285001 string characters out of 1182621
- 394246 words of memory out of 3000000
- 18705 multiletter control sequences out of 15000+50000
+ 16148 strings out of 495061
+ 284991 string characters out of 1182621
+ 395539 words of memory out of 3000000
+ 18704 multiletter control sequences out of 15000+50000
  78592 words of font info for 62 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 49i,17n,69p,870b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,20n,69p,870b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} </home/alina/.texmf-var/fonts
 /pk/ljfour/public/bbding/bbding10.657pk> </home/alina/.texmf-var/fonts/pk/ljfou
 r/public/ulsy/ulsy10.600pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr
@@ -1300,9 +1319,9 @@ s/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on ba.pdf (28 pages, 525798 bytes).
+Output written on ba.pdf (30 pages, 530821 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
+ 527 PDF objects out of 1000 (max. 8388607)
  138 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

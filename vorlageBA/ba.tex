@@ -449,8 +449,7 @@ A different criterion to valuate the quality of an allocation is efficiency. The
 \begin{lem}
 \textcolor{white}{x}
 	\begin{enumerate}
-		\item Proportionality does not imply efficiency.
-		\item Envy-freeness does not imply efficiency.
+		\item Envy-freeness and proportionality does not imply efficiency.
 		\item Efficiency does not ensure proportionality and so envy-freeness.
 	\end{enumerate}
 \end{lem}
@@ -458,21 +457,6 @@ A different criterion to valuate the quality of an allocation is efficiency. The
 \begin{proof}
 \textcolor{white}{x}
 	\begin{enumerate}
-		\item Imagine the following allocation with three players:
-		\begin{table}[htb]
-		\centering
-		\renewcommand{\arraystretch}{1.2}
-		\begin{tabular}{c|ccc}
-		& $X_1$& $X_2$& $X_3$\\
-		\hline
-		$p_1$ & \textcolor{blue}{$\nicefrac{1}{3}$} & $\nicefrac{1}{2}$ & $\nicefrac{1}{6}$\\ \\
-  $p_2$ & $\nicefrac{1}{3}$ & \textcolor{blue}{$\nicefrac{1}{3}$} & $\nicefrac{1}{3}$\\ \\
-  $p_3$ & $0$ & $\nicefrac{7}{18}$ & \textcolor{blue}{$\nicefrac{11}{18}$}
- 		\end{tabular}
-\caption{Example for proportionality does not imply efficiency}\label{Table2}
-\end{table}
-\newline	 
-This allocation is obviously proportional, since $v_i(X_i) \geq 1/3$ for all $i \in \{1,2,3\}$. It is not efficient, because if the players $p_1$ and $p_2$ exchange their pieces, $p_1$ would get a more valuable piece of the cake and neither $p_2$ or $p_3$ would get less valuable pieces.
 \item Imagine the following allocation with three players. Each player's portion consists up to three pieces. The value of the whole portion is (because of the additivity of the valuation) the sum of the pieces :
 		\begin{table}[htb]
 		\centering
@@ -486,7 +470,7 @@ This allocation is obviously proportional, since $v_i(X_i) \geq 1/3$ for all $i 
  		\end{tabular}	 
 \caption{Example for envy-freeness does not imply efficiency}\label{Table3}
 \end{table}
-\newline This allocation is obviously envy-free, since $v_i(X_i) \geq v_i(X_j)$ for all $i, j \in \{1,2,3\}, i \neq j$. It is not efficient, because if the players $p_1$ would get $p_2$'s portion $X_2''$, $p_1$ would get a more valuable piece of the cake and neither $p_2$ or $p_3$ would get less valuable pieces. The allocation remains envy-free.
+\newline This allocation is obviously envy-free, since $v_i(X_i) \geq v_i(X_j)$ for all $i, j \in \{1,2,3\}, i \neq j$. It is not efficient, because if the players $p_1$ would get $p_2$'s portion $X_2''$, $p_1$ would get a more valuable piece of the cake and neither $p_2$ or $p_3$ would get less valuable pieces. Since in Theorem 1 was shown that envy-freeness implies proportionality, this example also demonstates that proportionality does not imply efficiency.
 		\item Allocating the whole cake to one player is efficient, but definitely not proportional and therefore not envy-free.
 	\end{enumerate}
 \end{proof}
@@ -550,7 +534,6 @@ A strategy is better than an other if the value of the obtained piece is bigger 
 \emph{A protocol is \emph{strategyproof} if no player has a strategy that is assuredly better than his true value function.}
 \end{defi}
 The strategyproofness in the sense of \cite{pie} will be called weak strategyproofness (WSP for short) since it is always true for a proportional protocol (compare \cite{ccc}).
-\newpage
 \begin{bsp}
 \label{bsp222}
 \textcolor{white}{x}\\\\
@@ -587,7 +570,6 @@ John Warner Backus and Peter Naur are celebrating and Donald E. Knuth has brough
 \end{tabular}
 \caption{B$\&$N cake game in normal form}\label{Table4}
 \end{table}
-\newpage
 In strong strategyproofness a player would never get a more valuable piece by lying independent of the valuation of the other players.\\
 \newline
 After a counterexample in \cite{ccc} the definition of strategyproofness in \cite{pie} was restricted to the case with non-equal valuations and for the general case changed to:
@@ -636,6 +618,51 @@ So $notGTCCSP \Rightarrow notGTSP$ and especially $GTSP \Rightarrow GTCCSP$.
 \end{enumerate}
 \end{proof}
 There are two independent types of strategyproofness to show for having a complete quantity of results. The start will be from the left side until one of the criteria is fulfilled, then the other strategyproofness further on the right follow from theorem 3. Independently a proof for the game-theoretic strategyproofness has to be given, since it cannot be followed from the other.  
+\begin{lem} The relation between different strategyproofness criteria is the following $$SPP \not\Leftarrow^{1} SP \not\Leftarrow^{2} GTCCSP \not\Leftarrow^{3} WSP$$ and
+$$GTSP \not\Leftarrow^{4} GTCCSP.$$
+\end{lem}
+\begin{proof}{via counter-examples:}
+\begin{table}[htb]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{cc}
+		\begin{tabular}{c|cc}
+		& in $A_1$& in $A_2$\\
+		\hline
+		$p_1(X_1)$ by $S_\neg c$ & {$\nicefrac{1}{2}$} & $\nicefrac{2}{3}$\\ 
+  $p_1(X_1)$ by $S_c$& $\nicefrac{1}{2}$ & {$\nicefrac{1}{2}$}\\ 
+ 		\end{tabular}&
+ 				\begin{tabular}{c|cc}
+		& in $A_1$& in $A_2$\\
+		\hline
+		$p_1(X_1)$ by $S_\neg c$ & {$\nicefrac{7}{8}$} & $\nicefrac{3}{4}$\\ 
+  $p_1(X_1)$ by $S_c$& $\nicefrac{7}{8}$ & {$\nicefrac{3}{4}$}\\ 
+ 		\end{tabular}	 \\	
+ 		&\\ 
+Case 1: $SPP \not\Leftarrow SP$ & Case 2: $SP \not\Leftarrow GTCCSP$\\
+\begin{tabular}{c|cc}
+		& in $A_1$& in $A_2$\\
+		\hline
+		$p_1(X_1)$ by $S_\neg c$ & {$\nicefrac{7}{8}$} & $\nicefrac{3}{4}$\\ 
+  $p_1(X_1)$ by $S_c$& $1$ & {$\nicefrac{3}{4}$}\\ 
+ 		\end{tabular}&\begin{tabular}{c|cc}
+		& in $A_1$& in $A_2$\\
+		\hline
+		$p_1(X_1)$ by $S_\neg c$ & {$\nicefrac{1}{2}$} & $\nicefrac{4}{7}$\\ 
+  $p_1(X_1)$ by $S_c$& $1$ & {$\nicefrac{3}{7}$}\\ 
+ 		\end{tabular}\\	 
+ 		&\\
+Case 3: $WSP \not\Leftarrow GTSP$& Case 4: $GTCCSP \not\Leftarrow GTSP$
+\end{tabular}
+\end{table}
+\begin{enumerate}
+
+\item[4] $GTSP \not\Leftarrow^{4} GTCCSP$\\
+Assume a protocol with two different allocations $A_1$ and $A_2$, which have the same probability. In the recommended strategy $p_1$ gets the following values in $A_1$ $p_1(X_1)=\nicefrac{1}{2}$ and in $A_2$ $p_1(X_1)=\nicefrac{4}{7}$. In the non-truthful strategy $p_1$ gets the following values in $A_1$ $p_1(X_1)=1$ and in $A_2$ $p_1(X_1)=\nicefrac{3}{7}$. Since $\nicefrac{3}{7} < \nicefrac{4}{7}$ in $A_2$ the player $p_1$ would stay honest and this protocol is $GTCCSP$. But the expected value for the recommended strategy is $\nicefrac{(\nicefrac{1}{2}+\nicefrac{4}{7})}{2}=\nicefrac{15}{28}$, which is smaller than $\nicefrac{(1+\nicefrac{3}{7})}{2}=\nicefrac{20}{28}$. So the protocol is $notGTSP$. 
+\end{enumerate}
+\end{proof}
+
+
 \begin{bsp}
 (Representation is inspired by \cite{Barbanel})
 \begin{table}[htb]
@@ -662,7 +689,6 @@ $\:\:\:\:\:\:\:$piece&&\\
 \label{thm6}
 Cut $\&$ choose is strategyproof for proportional protocols.
 \end{lem}
-\pagebreak
 \begin{proof}
 \textcolor{white}{x}\\\\
 For the proof a general presentation of cut $\&$ choose game in extended form is used. W. l. o. g. the non-truthful cut is performed on the right part of the cake. The variables have the restrictions: $$0 \leq a \leq 1,\: 0 < \epsilon \leq \nicefrac{1}{2},\: 0 \leq \delta \leq 1\tiny{-}a$$
@@ -726,7 +752,8 @@ According to theorem \ref{thm5}, theorem \ref{thm6} and theorem \ref{thm7} cut $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Strategyproof Proportional Protocols}
 The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner. Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessary.\\
-The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.
+The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.\\
+An improtant pre- comment: Proportionality means each player gets $v_j(X_j)=\nicefrac{1}{n}$ for $1\leq j\leq n$. So if one player $p_n$ leaves the game with $v_i(X_n)<\nicefrac{1}{n}$ for $1\leq i\leq (n-1)$ it still holds for the next round that the cake $X=X-X_n$ is normalized and a proportional piece is $\nicefrac{1}{n-1}$ and not $\nicefrac{1+\epsilon_i}{n}$.
 \\The complete protocols in the standard description can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
 \subsection{The Steinhaus-Kuhn Lone Divider Protocol}
@@ -741,7 +768,7 @@ The proceed is as follows, the interactions between two kinds of players are rep
 $\:$1. Player $p_1$ cuts the cake $X$&Cut $X$ into $n$&\\
 $\:\:\:\:\:\:\:$into $n$ pieces $\{X_1,\ldots,X_n\}$&pieces of equal value&\\
 \hline
-$\:$2. Players in $P_{n-1}$ mark $s$&&Mark $X_j$ if $v_i(X_j) \geq \nicefrac{1}{n}$\\$\:\:\:\:\:\:\:$pieces with $0 \leq s\leq n$&& for $1 \leq j \leq n$ and $2 \leq i \leq n$\\
+$\:$2. Players in $P_{n-1}$ mark $s$&&Mark $X_j$ if $v_i(X_j) \geq \nicefrac{1}{n}$\\$\:\:\:\:\:\:\:$pieces with $1 \leq s\leq n$&& for $1 \leq j \leq n$ and $2 \leq i \leq n$\\
 \hline
 $\:$3. If an allocation is impossible:&&\\$\:\:\:\:\:\:$Form the non-marked pieces&&\\$\:\:\:\:\:\:$to a new cake and exchange&&\\
 $\:\:\:\:\:\:\:$the cutter (last cutter leaves&&\\$\:\:\:\:\:\:\:$with a non-marked piece)&&\\
@@ -771,10 +798,10 @@ $\:\:\:\:\:\:\:$the cutter (last cutter leaves&&\\$\:\:\:\:\:\:\:$with a non-mar
 		\node[circle,draw,ball color=red!20,shade=ball,inner sep=5pt] (n15) at (9,0) {};
 		
 		\node[draw=none,fill=none] (t1) at (1,4.5) {1};
-		\node[draw=none,fill=none] (t2) at (5,7.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,6.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,1.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,2.5) {2};
+		\node[draw=none,fill=none] (t2) at (5,7.5) {$i$};
+		\node[draw=none,fill=none] (t1) at (5,6.5) {$i$};
+		\node[draw=none,fill=none] (t1) at (5,1.5) {$i$};
+		\node[draw=none,fill=none] (t1) at (5,2.5) {$i$};
 
 		\node[draw=none,fill=none,right] at (13.5,8.8) {Player in};
 		\node[draw=none,fill=none,right] at (13.2,8.4) {$P_{n-1}$ strategy};
@@ -839,16 +866,16 @@ $\:\:\:\:\:\:\:$the cutter (last cutter leaves&&\\$\:\:\:\:\:\:\:$with a non-mar
 
 \end{figure}
 \begin{lem}
-Steinhaus-Kuhn Lone Divider protocol is not game-theoretic cake-cutting strategyproof.
+Lone divider protocol is not game-theoretic cake-cutting strategyproof.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-For showing that lone divider is $notGTCCSP$ it is necessary to have at least one cheating player $p_c$. This player has a non-truthful strategy with $v_c(X_c)>v_c(X_t)$ in one allocation and $v_c(X_c) \geq v_c(X_t)$ for all other allocations. The case $v_c(X_c)>v_c(X_t)$ can be illustrated with an example. 
-The non-truthful strategy is to mark $X_j$ if $v_c(X_j) > \nicefrac{1}{n}$ for $1 \leq j \leq n$.\\
+For showing that lone divider is $notGTCCSP$ it is necessary to have at least one cheating player $p_c$. This player has a non-truthful strategy with $v_c(X_c)>v_c(X_t)$ in one allocation and $v_c(X_c) \geq v_c(X_t)$ for all other allocations. The proof is divided in two parts. In the first part the case $v_c(X_c)>v_c(X_t)$ can be is illustrated with an example. And in the second part a case distinction shows that this player is never getting a less valuable piece.
+The non-truthful strategy is to mark $X_j$ if $v_c(X_j) > \nicefrac{1}{n}$ for $1 \leq j \leq n$, or in the only case when all pieces have the same value to mark all of them.\\
 \newline
-\textbf{Example}\\
+\textbf{Part I: Example for a successful non-truthful strategy}\\
 \newline
-Imagine the following allocation with three players. The player $p_2$ is going to cheat.
+Imagine the following allocation with three players. The player $p_1$ is going to cheat.
 		\begin{table}[htb]
 		\centering
 		\renewcommand{\arraystretch}{1.2}
@@ -856,8 +883,8 @@ Imagine the following allocation with three players. The player $p_2$ is going t
 		& $X_L$& $X_M$& $X_R$\\
 		\hline
 		$p_3$ (divider)  & $\nicefrac{1}{3}$ & {$\nicefrac{1}{3}$} & $\nicefrac{1}{3}$ \\
-  $p_1$ (rank 1) & {$\nicefrac{3}{5}$} & $\nicefrac{2}{5}$ & $0$\\
-  $p_2$ (rank 2)& {$\nicefrac{1}{2}$} & $\nicefrac{1}{3}$ & $\nicefrac{1}{6}$
+  $p_2$ (rank 2) & {$\nicefrac{3}{5}$} & $\nicefrac{2}{5}$ & $0$\\
+  $p_1$ (rank 1)& {$\nicefrac{1}{2}$} & $\nicefrac{1}{3}$ & $\nicefrac{1}{6}$
  		\end{tabular}
  		
 \caption{Example for a successful non-truthful strategy}\label{Table10}
@@ -873,20 +900,38 @@ Imagine the following allocation with three players. The player $p_2$ is going t
 		& $X_L$& $X_M$& $X_R$\\
 		\hline
 		$p_3$ (divider)  &  \Checkmark &  \Checkmark &  \Checkmark \\
-  $p_1$ (rank 1) &  \Checkmark & \Checkmark &  \XSolidBrush \\
-  $p_2$ (rank 2)&  \Checkmark &  \Checkmark & \XSolidBrush
+  $p_2$ (rank 2) &  \Checkmark & \Checkmark &  \XSolidBrush \\
+  $p_1$ (rank 1)&  \Checkmark &  \Checkmark & \XSolidBrush
  		\end{tabular}&
  		\begin{tabular}{c|ccc}
 		& $X_L$& $X_M$& $X_R$\\
 		\hline
 		$p_3$ (divider)  &  \Checkmark &  \Checkmark &  \Checkmark \\
-  $p_1$ (rank 1) &  \Checkmark & \Checkmark &  \XSolidBrush \\
-  $p_2$ (rank 2)&  \Checkmark & \XSolidBrush & \XSolidBrush
+  $p_2$ (rank 2) &  \Checkmark & \Checkmark &  \XSolidBrush \\
+  $p_1$ (rank 1)&  \Checkmark & \XSolidBrush & \XSolidBrush
  		\end{tabular}
  		\end{tabular}
  		
 \caption{Acceptable pieces by a successful non-truthful strategy}\label{Table11}
 \end{table}
+\newpage An allocation is possible since each pieces is acceptable for at least one different player.\\ \newline If player $p_1$ chooses the recommended strategy $S_\neg c$:\\
+There are no players with just one acceptable piece, so the player with the highest rank can choose first.
+Player $p_2$ chooses $X_L$ and player $p_1$ gets $X_M$ with $p_1(X_M)= \nicefrac{1}{3}$. The divider gets the last piece.\\
+\newline
+If player $p_1$ chooses the non-truthful strategy $S_c$:\\
+There is one players with just one acceptable piece, so this player chooses first.
+Player $p_1$ chooses $X_L$ with $p_1(X_L)= \nicefrac{1}{2}$ and player $p_2$ gets $X_M$. The divider gets the last piece.\\
+The value of players $p_1$ piece in the non-truthful strategy $S_c$ is $p_1(X_L)=\nicefrac{1}{2}>\nicefrac{1}{2}=p_1(X_M)$ than in the recommended strategy $S_\neg c$. So the player $p_1$ is at least in one allocation better off with the non-truthful strategy than in the recommended one.\\
+\newline
+\textbf{Part II: Case distinction for a successful non-truthful strategy} 
+\begin{itemize}
+\item[Case] 1: 
+\item[Case] 2:
+\item[Case] 3:
+\item[Case] 4:
+\item[Case] 5:
+\item[Case] 6:
+\end{itemize}
 \end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -904,7 +949,7 @@ Round 2: The piece player $p_2$ cut should have the value $1/n+\epsilon$ with $0
 Distinction of cases: Either player $p_2$ gets this piece or player $p_j$ with $3\leq j\leq n$ cuts it and thus player $p_2$ can get a piece with same properties in the next round or during cut $\&$ choose in the end. So even if player $p_2$ acts non-truthful in the sense of definition of strategyproofness in \cite{lindner:degrees} he will get more than his proportional share.
 \end{proof}
 \end{comment}
-The last diminisher protocol consists of $(n-2)$ rounds.\\The players are separated into two groups. In the first group is the player $p_i$ (with $i$ number of the round) and in the second group $P_{>i}$ are all other players $p_j$ with $i <j\leq n$.\\ At the end of each round one player gets a piece and leaves the game. If it is player $p_i$ then player $p_{i+1}$ takes his place, otherwise player $p_i$ is player $p_{i+1}$ in the next round $i+1$ and players in group $P_{>i}$ will be consecutively numbered. In the last round the two remaining players apply cut $\&$ choose. 
+The last diminisher protocol consists of $(n-2)$ rounds.\\The players are separated into two groups. In the first group is the player $p_i$ (with $i$ number of the round) and in the second group $P_{i+k}$ are all other players $p_j$ with $i <j\leq n$, $1\leq k \leq n-1$.\\ At the end of each round one player gets a piece and leaves the game. If it is player $p_i$ then player $p_{i+1}$ takes his place, otherwise player $p_i$ is player $p_{i+1}$ in the next round $i+1$ and players in group $P_{i+k}$ will be consecutively numbered. In the last round the two remaining players apply cut $\&$ choose. 
 
 %\begin{lem}
 % The Last-Diminisher-protocol has a $\DGEF$ of $\nicefrac{n(n-1)}{2}+2$.
@@ -915,7 +960,7 @@ The last diminisher protocol consists of $(n-2)$ rounds.\\The players are separa
 \hline
 \multicolumn{3}{|c|}{\textbf{The Banach-Knaster Last-Diminisher protocol for arbitrary $n$}}\\
 \hline
-\multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Player $p_i$ strategy}& \multicolumn{1}{c|}{\textbf{Players in $P_{>i}$ strategy}}\\
+\multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Player $p_i$ strategy}& \multicolumn{1}{c|}{\textbf{Players in $P_{i+k}$ strategy}}\\
 \hline
 $\:$1. Player $p_i$ cut a piece $I_i$&Cut a piece with value $\nicefrac{1}{n}$&\\
 \hline
@@ -953,13 +998,13 @@ Last diminisher protocol is game-theoretic strategyproof.
 		\node[circle,draw,ball color=blue!10,shade=ball,inner sep=5pt] (n18) at (9,0.6) {};
 		\node[circle,draw,ball color=blue!10,shade=ball,inner sep=5pt] (n20) at (9,0.2) {};
 
-		\node[draw=none,fill=none] (t1) at (1,4.5) {1};
-		\node[draw=none,fill=none] (t2) at (5,7.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,1.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,4.5) {2};
+		\node[draw=none,fill=none] (t1) at (1,4.5) {$i$};
+		\node[draw=none,fill=none] (t2) at (5,7.5) {$j$};
+		\node[draw=none,fill=none] (t1) at (5,1.5) {$j$};
+		\node[draw=none,fill=none] (t1) at (5,4.5) {$j$};
 
-		\node[draw=none,fill=none,right] at (13.5,8.8) {Player in};
-		\node[draw=none,fill=none,right] at (13.2,8.4) {$P_{>i}$ strategy};
+		\node[draw=none,fill=none,right] at (13.5,8.8) {Players in};
+		\node[draw=none,fill=none,right] at (13.2,8.4) {$P_{i+k}$ strategy};
 		\node[draw=none,fill=none,right] at (1.85,6.15) {Cut $> \nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (1.85,1.85) {Cut $< \nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (1.85,4.25) {Cut $= \nicefrac{1}{n}$};
@@ -975,23 +1020,23 @@ Last diminisher protocol is game-theoretic strategyproof.
 		\node[draw=none,fill=none,right] at (13.5,3.2) {trim $=\nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (13.5,1.8) {pass $\leq \nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (13.5,1.4) {pass $> \nicefrac{1}{n}$};
-		\node[draw=none,fill=none,right] at (13.5,1) {trim $< \nicefrac{1}{n}$};
-		\node[draw=none,fill=none,right] at (13.5,0.60) {trim $> \nicefrac{1}{n}$};
+		\node[draw=none,fill=none,right] at (13.5,1) {trim $> \nicefrac{1}{n}$};
+		\node[draw=none,fill=none,right] at (13.5,0.60) {trim $< \nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (13.5,0.2) {trim $=\nicefrac{1}{n}$};
 		\node[draw=none,fill=none,right] at (9.5,7.8) {$\left(\nicefrac{1+\epsilon_1}{n}, \nicefrac{1}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,7.4) {$\left(\nicefrac{1+\epsilon_1}{n}, \nicefrac{(1-\delta_1)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,7.0) {$\left(\color{red}{}\nicefrac{(1-\epsilon_2)}{n}\color{black}{}, \nicefrac{(1-\delta_2)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,6.6) {$\left(\color{red}{}\nicefrac{(1-\epsilon_3)}{n}\color{black}{}, \nicefrac{(1-\delta_3)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,6.2) {$\left(\color{red}{}\nicefrac{(1-\epsilon_4)}{n}\color{black}{}, \nicefrac{1}{n}\right)$};
+		\node[draw=none,fill=none,right] at (9.5,7.4) {$\left(\nicefrac{1+\epsilon_1}{n}, \nicefrac{(1\pm\delta_1)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,7.0) {$\left(\color{red}{}\nicefrac{(1\pm\epsilon_2)}{n}\color{black}{}, \nicefrac{(1\pm\delta_2)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,6.6) {$\left(\color{red}{}\nicefrac{(1\pm\epsilon_3)}{n}\color{black}{}, \nicefrac{(1\pm\delta_3)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,6.2) {$\left(\color{red}{}\nicefrac{(1\pm\epsilon_4)}{n}\color{black}{}, \nicefrac{1}{n}\right)$};
 		\node[draw=none,fill=none,right] at (9.5,4.8) {$\left(\nicefrac{1}{n}, \nicefrac{1}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,4.4) {$\left(\nicefrac{1}{n}, \nicefrac{(1-\delta_4)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,4.0) {$\left(\nicefrac{1}{n}, \nicefrac{(1-\delta_5)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,3.6) {$\left(\nicefrac{1}{n}, \nicefrac{(1-\delta_6)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,4.4) {$\left(\nicefrac{1}{n}, \nicefrac{(1\pm\delta_4)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,4.0) {$\left(\nicefrac{1}{n}, \nicefrac{(1\pm\delta_5)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,3.6) {$\left(\nicefrac{1}{n}, \nicefrac{(1\pm\delta_6)}{n}\right)$\blitza};
 		\node[draw=none,fill=none,right] at (9.5,3.2) {$\left(\nicefrac{1}{n}, \nicefrac{1}{n}\right)$};
 		\node[draw=none,fill=none,right] at (9.5,1.8) {$\left(\color{red}{}\nicefrac{(1-\epsilon_5)}{n}\color{black}{}, \nicefrac{1}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,1.4) {$\left(\color{red}{}\nicefrac{(1-\epsilon_5)}{n}\color{black}{}, \nicefrac{(1-\delta_7)}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,1) {$\left(\nicefrac{1+\epsilon_6}{n}\color{black}{}, \nicefrac{(1-\delta_{8})}{n}\right)$\blitza};
-		\node[draw=none,fill=none,right] at (9.5,0.6) {$\left(\nicefrac{1+\epsilon_7}{n}\color{black}{}, \nicefrac{(1-\delta_{9})}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,1.4) {$\left(\color{red}{}\nicefrac{(1-\epsilon_5)}{n}\color{black}{}, \nicefrac{(1\pm\delta_7)}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,1) {$\left(\nicefrac{1+\epsilon_6}{n}\color{black}{}, \nicefrac{(1\pm\delta_{8})}{n}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,0.6) {$\left(\nicefrac{1+\epsilon_7}{n}\color{black}{}, \nicefrac{(1\pm\delta_{9})}{n}\right)$\blitza};
 		\node[draw=none,fill=none,right] at (9.5,0.2) {$\left(\nicefrac{1+\epsilon_8}{n}\color{black}{},\nicefrac{1}{n}\right)$};
 		
 		
@@ -1078,11 +1123,11 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 		\node[circle,draw,ball color=red!20,shade=ball,inner sep=5pt] (n8) at (9,0.2) {};
 		\node[circle,draw,ball color=red!20,shade=ball,inner sep=5pt] (n9) at (9,1) {};
 
-		\node[draw=none,fill=none] (t1) at (1,4.5) {1};
-		\node[draw=none,fill=none] (t2) at (5,7.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,6.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,1.5) {2};
-		\node[draw=none,fill=none] (t1) at (5,2.5) {2};
+		\node[draw=none,fill=none] (t1) at (1,4.5) {$I$};
+		\node[draw=none,fill=none] (t2) at (5.03,7.5) {$i+1$};
+		\node[draw=none,fill=none] (t1) at (5.03,6.5) {$i+1$};
+		\node[draw=none,fill=none] (t1) at (5.03,1.5) {$i+1$};
+		\node[draw=none,fill=none] (t1) at (5.03,2.5) {$i+1$};
 
 		\node[draw=none,fill=none,right] at (1.85,5.75) {All $\nicefrac{1}{(i+1)}$};
 		\node[draw=none,fill=none,right] at (1.85,1.95) {All $\neq \nicefrac{1}{(i+1)}$};
@@ -1224,9 +1269,9 @@ $\:$Protocol & \multicolumn{1}{c|}{WSP} & GTSP & GTCCSP & SP & SPP &SSP  \\
 \hline
 $\:$Cut $\&$ Choose & \Checkmark & \Checkmark  & \Checkmark &\Checkmark & \Checkmark &  \XSolidBrush\\
 \hline
-$\:$Last Diminisher & \Checkmark & ? & ?  &?& ? &  \XSolidBrush\\
+$\:$Last Diminisher & \Checkmark & \Checkmark & \Checkmark  &\Checkmark& \Checkmark &  \XSolidBrush\\
 \hline
-$\:$Lone Chooser & \Checkmark & ? & ?   &?& ? &  \XSolidBrush\\
+$\:$Lone Chooser & \Checkmark & \Checkmark & \Checkmark  &\Checkmark & \Checkmark &  \XSolidBrush\\
 \hline
 $\:$Lone Divider & \Checkmark & \XSolidBrush & \XSolidBrush & \XSolidBrush &\XSolidBrush & \XSolidBrush \\
 %\hline

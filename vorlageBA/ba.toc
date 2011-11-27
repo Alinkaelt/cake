@@ -6,15 +6,15 @@
 \contentsline {subsection}{\numberline {2.2}Preliminaries of Cake-cutting}{5}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Basics}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Different Types of Fairness}{7}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Different Types of Protocols}{9}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3}Different Types of Protocols}{8}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}Strategyproofness}{10}{subsection.2.3}
 \contentsline {section}{\numberline {3}Strategyproof Proportional Protocols}{15}{section.3}
-\contentsline {subsection}{\numberline {3.1}The Steinhaus-Kuhn Lone Divider Protocol}{15}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}The Banach-Knaster Last-Diminisher Protocol}{17}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}The Fink Lone-Chooser Protocol}{18}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}The Divide-and-Conquer Protocol}{20}{subsection.3.4}
-\contentsline {section}{\numberline {4}Conclusion}{21}{section.4}
-\contentsline {section}{\numberline {5}Open Questions and Future Research}{22}{section.5}
-\contentsline {section}{References}{23}{section*.6}
-\contentsline {section}{List of Figures}{24}{section*.8}
-\contentsline {section}{List of Tables}{24}{section*.10}
+\contentsline {subsection}{\numberline {3.1}The Steinhaus-Kuhn Lone Divider Protocol}{16}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}The Banach-Knaster Last-Diminisher Protocol}{19}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}The Fink Lone-Chooser Protocol}{20}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}The Divide-and-Conquer Protocol}{21}{subsection.3.4}
+\contentsline {section}{\numberline {4}Conclusion}{23}{section.4}
+\contentsline {section}{\numberline {5}Open Questions and Future Research}{24}{section.5}
+\contentsline {section}{References}{25}{section*.6}
+\contentsline {section}{List of Figures}{26}{section*.8}
+\contentsline {section}{List of Tables}{26}{section*.10}
