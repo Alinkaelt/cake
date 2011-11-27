@@ -464,9 +464,9 @@ A different criterion to valuate the quality of an allocation is efficiency. The
 		\begin{tabular}{c|ccc}
 		& $X_1 =X_1'\cup X_1''$& $X_2 =X_2'\cup X_2''$& $X_3 =X_3'\cup X_3''\cup X_3'''$\\
 		\hline
-		$p_1$ & \textcolor{blue}{$\nicefrac{1}{2}=\nicefrac{11}{12}+\nicefrac{1}{12}$} & $\nicefrac{1}{3}=0+\nicefrac{1}{3}$ & $\nicefrac{1}{6}=0+\nicefrac{1}{12}+\nicefrac{1}{12}$\\ \\
-  $p_2$ & $\nicefrac{1}{3}=\nicefrac{1}{6}+\nicefrac{1}{6}$ & \textcolor{blue}{$\nicefrac{1}{3}=\nicefrac{1}{3}+0$} & $\nicefrac{1}{3}=\nicefrac{1}{12}+\nicefrac{1}{12}+\nicefrac{1}{6}$\\ \\
-  $p_3$ & $0=0+0$ & $\nicefrac{7}{18}=\nicefrac{6}{18}+\nicefrac{1}{18}$ & \textcolor{blue}{$\nicefrac{11}{18}=\nicefrac{6}{18}+\nicefrac{3}{18}+\nicefrac{2}{18}$}
+		\multirow{2}*{$p_1$} & \multirow{2}*{\textcolor{blue}{$\nicefrac{1}{2}=\nicefrac{11}{12}+\nicefrac{1}{12}$}} & \multirow{2}*{$\nicefrac{1}{3}=0+\nicefrac{1}{3}$} & \multirow{2}*{$\nicefrac{1}{6}=0+\nicefrac{1}{12}+\nicefrac{1}{12}$}\\ \\
+  \multirow{2}*{$p_2$} & \multirow{2}*{$\nicefrac{1}{3}=\nicefrac{1}{6}+\nicefrac{1}{6}$} & \multirow{2}*{\textcolor{blue}{$\nicefrac{1}{3}=\nicefrac{1}{3}+0$}} & \multirow{2}*{$\nicefrac{1}{3}=\nicefrac{1}{12}+\nicefrac{1}{12}+\nicefrac{1}{6}$}\\ \\
+  \multirow{2}*{$p_3$} & \multirow{2}*{$0=0+0$} & \multirow{2}*{$\nicefrac{7}{18}=\nicefrac{6}{18}+\nicefrac{1}{18}$} & \multirow{2}*{\textcolor{blue}{$\nicefrac{11}{18}=\nicefrac{6}{18}+\nicefrac{3}{18}+\nicefrac{2}{18}$}}\\\\
  		\end{tabular}	 
 \caption{Example for envy-freeness does not imply efficiency}\label{Table3}
 \end{table}
@@ -621,7 +621,10 @@ There are two independent types of strategyproofness to show for having a comple
 \begin{lem} The relation between different strategyproofness criteria is the following $$SPP \not\Leftarrow^{1} SP \not\Leftarrow^{2} GTCCSP \not\Leftarrow^{3} WSP$$ and
 $$GTSP \not\Leftarrow^{4} GTCCSP.$$
 \end{lem}
-\begin{proof}{via counter-examples:}
+\begin{proof}
+\textcolor{white}{x}\\
+\newline
+Assume a protocol with two players $p_1$ and $p_2$ and two possible allocations $A_1$ and $A_2$, which have the same probability. In the recommended strategy $S_\neg c$ and in the non-truthful strategy $S_c$ the player $p_2$ gets the same values in $A_1$ and $A_2$. The values of $p_1$ are shown in the four tables below:\\
 \begin{table}[htb]
 		\centering
 		\renewcommand{\arraystretch}{1.2}
@@ -652,13 +655,19 @@ Case 1: $SPP \not\Leftarrow SP$ & Case 2: $SP \not\Leftarrow GTCCSP$\\
   $p_1(X_1)$ by $S_c$& $1$ & {$\nicefrac{3}{7}$}\\ 
  		\end{tabular}\\	 
  		&\\
-Case 3: $WSP \not\Leftarrow GTSP$& Case 4: $GTCCSP \not\Leftarrow GTSP$
+Case 3: $WSP \not\Leftarrow GTSP$& Case 4: $GTSP \not\Leftarrow GTCCSP$
 \end{tabular}
+\caption{Counter-examples for the correlation between the strategyproofness criteria}\label{234}
 \end{table}
+\newpage
 \begin{enumerate}
-
-\item[4] $GTSP \not\Leftarrow^{4} GTCCSP$\\
-Assume a protocol with two different allocations $A_1$ and $A_2$, which have the same probability. In the recommended strategy $p_1$ gets the following values in $A_1$ $p_1(X_1)=\nicefrac{1}{2}$ and in $A_2$ $p_1(X_1)=\nicefrac{4}{7}$. In the non-truthful strategy $p_1$ gets the following values in $A_1$ $p_1(X_1)=1$ and in $A_2$ $p_1(X_1)=\nicefrac{3}{7}$. Since $\nicefrac{3}{7} < \nicefrac{4}{7}$ in $A_2$ the player $p_1$ would stay honest and this protocol is $GTCCSP$. But the expected value for the recommended strategy is $\nicefrac{(\nicefrac{1}{2}+\nicefrac{4}{7})}{2}=\nicefrac{15}{28}$, which is smaller than $\nicefrac{(1+\nicefrac{3}{7})}{2}=\nicefrac{20}{28}$. So the protocol is $notGTSP$. 
+\item[1] $SPP \not\Leftarrow SP$\\
+In the strategy $S_c$ the player $p_1$ gets $p_1(X_1)=\nicefrac{1}{2}$. Since $\nicefrac{1}{2} < \nicefrac{2}{3}$ in $A_2$ the player $p_1$ would stay honest and this protocol is $SP$. But $1/2$ is proportional so the protocol is $notSPP$. 
+\item[2] $SP \not\Leftarrow GTCCSP$\\Since $\nicefrac{7}{8} = \nicefrac{7}{8}$ in $A_1$ and $\nicefrac{3}{4} = \nicefrac{3}{4}$ in $A_2$ the player $p_1$ would stay honest and this protocol is $SP$. But no value in the non-truthful strategy is smaller than in the recommended strategy, so the protocol is $notSP$.
+\item[3] $GTCCSP \not\Leftarrow WSP$\\
+Since $\nicefrac{3}{4} = \nicefrac{3}{4}$ in $A_2$ and so the player $p_1$ has not a more valuable piece, he would stay honest and this protocol is $WSP$. But $1 > \nicefrac{7}{8}$ in $A_1$ and $\nicefrac{3}{4} = \nicefrac{3}{4}$ and the player $p_1$ has a more valuable piece in one allocation and the same value in the other so the protocol is $notGTCCSP$.
+\item[4] $GTSP \not\Leftarrow GTCCSP$\\
+Since $\nicefrac{3}{7} < \nicefrac{4}{7}$ in $A_2$ the player $p_1$ would stay honest and this protocol is $GTCCSP$. But the expected value for the recommended strategy is $\nicefrac{(\nicefrac{1}{2}+\nicefrac{4}{7})}{2}=\nicefrac{15}{28}$, which is smaller than $\nicefrac{(1+\nicefrac{3}{7})}{2}=\nicefrac{20}{28}$. So the protocol is $notGTSP$. 
 \end{enumerate}
 \end{proof}
 
@@ -692,6 +701,7 @@ Cut $\&$ choose is strategyproof for proportional protocols.
 \begin{proof}
 \textcolor{white}{x}\\\\
 For the proof a general presentation of cut $\&$ choose game in extended form is used. W. l. o. g. the non-truthful cut is performed on the right part of the cake. The variables have the restrictions: $$0 \leq a \leq 1,\: 0 < \epsilon \leq \nicefrac{1}{2},\: 0 \leq \delta \leq 1\tiny{-}a$$
+\newpage
 \begin{figure}[h!]
 \begin{center}
 	\begin{tikzpicture}
@@ -753,7 +763,7 @@ According to theorem \ref{thm5}, theorem \ref{thm6} and theorem \ref{thm7} cut $
 \section{Strategyproof Proportional Protocols}
 The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner. Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessary.\\
 The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.\\
-An improtant pre- comment: Proportionality means each player gets $v_j(X_j)=\nicefrac{1}{n}$ for $1\leq j\leq n$. So if one player $p_n$ leaves the game with $v_i(X_n)<\nicefrac{1}{n}$ for $1\leq i\leq (n-1)$ it still holds for the next round that the cake $X=X-X_n$ is normalized and a proportional piece is $\nicefrac{1}{n-1}$ and not $\nicefrac{1+\epsilon_i}{n}$.
+An important pre-comment: Proportionality means each player gets $v_j(X_j)=\nicefrac{1}{n}$ for $1\leq j\leq n$. So if one player $p_n$ leaves the game with $v_i(X_n)<\nicefrac{1}{n}$ for $1\leq i\leq (n-1)$ it still holds for the next round that the cake $X=X-X_n$ is normalized and a proportional piece is $\nicefrac{1}{n-1}$ and not $\nicefrac{1+\epsilon_i}{n}$.
 \\The complete protocols in the standard description can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
 \subsection{The Steinhaus-Kuhn Lone Divider Protocol}
@@ -868,6 +878,7 @@ $\:\:\:\:\:\:\:$the cutter (last cutter leaves&&\\$\:\:\:\:\:\:\:$with a non-mar
 \begin{lem}
 Lone divider protocol is not game-theoretic cake-cutting strategyproof.
 \end{lem}
+\pagebreak
 \begin{proof}
 \textcolor{white}{x}\\\\
 For showing that lone divider is $notGTCCSP$ it is necessary to have at least one cheating player $p_c$. This player has a non-truthful strategy with $v_c(X_c)>v_c(X_t)$ in one allocation and $v_c(X_c) \geq v_c(X_t)$ for all other allocations. The proof is divided in two parts. In the first part the case $v_c(X_c)>v_c(X_t)$ can be is illustrated with an example. And in the second part a case distinction shows that this player is never getting a less valuable piece.
@@ -938,17 +949,6 @@ The value of players $p_1$ piece in the non-truthful strategy $S_c$ is $p_1(X_L)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Banach-Knaster Last-Diminisher Protocol}
-\begin{comment}
-\begin{lem}
-If the valuations of the players are not equal, there exists a non-truthful strategy for the first player in each round $k$ with $2 \leq k \leq (n-2)$ of getting a piece with $v_i(S_i)>1/n$.
-\end{lem}
-\begin{proof}
-\textcolor{white}{x}\\\\
-Assume $n$ is the fixed number of players before the game. W.l.o.g the player $p_1$ gets the piece $X_1$. So $v_1(X_1)=1/n$ and for all $p_i$ with $2\leq i\leq n$ $v_i(X_1)<1/n$. W.l.o.g. consider the following case for player $p_2$ with $\delta=1/n-v_2(X_1)$. It is obvious that $\delta > 0$, because otherwise this player would not be in the game anymore.\\
-Round 2: The piece player $p_2$ cut should have the value $1/n+\epsilon$ with $0 < \epsilon < \delta$.\\
-Distinction of cases: Either player $p_2$ gets this piece or player $p_j$ with $3\leq j\leq n$ cuts it and thus player $p_2$ can get a piece with same properties in the next round or during cut $\&$ choose in the end. So even if player $p_2$ acts non-truthful in the sense of definition of strategyproofness in \cite{lindner:degrees} he will get more than his proportional share.
-\end{proof}
-\end{comment}
 The last diminisher protocol consists of $(n-2)$ rounds.\\The players are separated into two groups. In the first group is the player $p_i$ (with $i$ number of the round) and in the second group $P_{i+k}$ are all other players $p_j$ with $i <j\leq n$, $1\leq k \leq n-1$.\\ At the end of each round one player gets a piece and leaves the game. If it is player $p_i$ then player $p_{i+1}$ takes his place, otherwise player $p_i$ is player $p_{i+1}$ in the next round $i+1$ and players in group $P_{i+k}$ will be consecutively numbered. In the last round the two remaining players apply cut $\&$ choose. 
 
 %\begin{lem}
@@ -973,8 +973,9 @@ $\:$3. Last trimmer take it&&\\
 \end{table}
 %\textbf{Strategies:} Better to stay in the game. (Proof?)
 \begin{lem}
-Last diminisher protocol is game-theoretic strategyproof.
+Last diminisher protocol is strategyproof for proportional protocols.
 \end{lem}
+\begin{proof}\textcolor{white}{x}\textcolor{black}{}
 \begin{figure}[h!]
 \begin{center}
 	\begin{tikzpicture}
@@ -1064,9 +1065,15 @@ Last diminisher protocol is game-theoretic strategyproof.
 	\caption{Last diminisher cake game in extended form}
 \end{center}
 \end{figure}
+\newpage 
+Blabla
+\end{proof}
 \begin{lem}
-Last diminisher protocol is strategyproof for proportional protocols.
+Last diminisher protocol is game-theoretic strategyproof.
 \end{lem}
+\begin{proof}
+\textcolor{white}{x}\\\\
+\end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1163,30 +1170,10 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 \begin{lem}
 Fink Lone-Chooser protocol is strategyproof for proportional protocols.
 \end{lem}
+\begin{proof}
+\textcolor{white}{x}\\\\
+\end{proof}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\subsection{The Cut-Your-Own-Piece Protocol}
-\begin{table}[htb]
-\begin{tabular*}{\textwidth}[]{|@{\extracolsep{\fill}}l|l|}
-\hline
-\hline
-\multicolumn{2}{|c|}{\textbf{Cut-Your-Own-Piece protocol for arbitrary $n$}}\\
-\hline
-\multicolumn{1}{|c|}{\textbf{Rules}}& \multicolumn{1}{l|}{\textbf{Players strategy}}\\
-\hline
-$\:$1. Make $n-1$ marks&Each piece of size $\nicefrac{1}{n}$\\
-\hline
-$\:$2. The leftmost %($\&$ rightmost)
-piece get allocated&\\
-\hline
-\end{tabular*}
-\caption{Cut-your-own-piece rules and strategies}\label{cyop}
-\end{table}	 
-\newpage
-\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1239,22 +1226,10 @@ share if it is not truthful-can readily be extended to $n > 2$ players.
 \begin{lem}
 The Divide-and-Conquer protocol is game-theoretic strategyproof.
 \end{lem}
+\begin{proof}
+\textcolor{white}{x}\\\\
+\end{proof}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{The Parallelized Last Diminisher protocol}
-%\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{The Extension of the Parallelized Last Diminisher protocol}
-% 1. Divide $\&$ Conquer\\
-%2. Parallelized last diminisher\\
-%\\
-%Although the idea of traiding after an allocation had shown some disadvantage (compare conclusion in \cite{lindner:degrees}), it seems to increase the DGEF while using it as a fixed part of a protocol:\\
-%For this extension the principle of envy-relations is used.
-%\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1309,16 +1284,16 @@ $\:$Divide $\&$ Conquer & \Checkmark & \Checkmark & \Checkmark &\Checkmark &\Che
 \clearpage
 \bibliography{references.bib}
 \bibliographystyle{alphadin}
-
+\thispagestyle{empty}
 %\vspace*{\fill}g
-
+\pagestyle{plain}
 \clearpage
 
 \listoffigures
 
 \listoftables
-
+\thispagestyle{empty}
 %\pagebreak
-
+\pagestyle{plain}
 %\printindex
 \end{document}
