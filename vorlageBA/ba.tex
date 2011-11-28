@@ -510,7 +510,7 @@ In the last sixty years the number of proportional finite bounded protocols have
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
-\subsection{Strategyproofness}
+\section{Strategyproofness}
 In practice, players are selfish and try to increase the value of their portion. In order to do so, they may for example report false valuations on parts of the cake. The goal is to prevent this.
 \begin{defi}{\textbf{(Non-Truthful (Cheating) / Honest Player)}}\\
 \emph{Every strategy is \emph{non-truthful} except of the strategy recommended by the protocol. A player who follows a non-truthful strategy will be called a \emph{non-truthful (cheating) player}. Otherwise the player is called \emph{honest}.}
@@ -683,9 +683,9 @@ Since $\nicefrac{3}{7} < \nicefrac{4}{7}$ in $A_2$ the player $p_1$ would stay h
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Player $p_1$ strategy}& \multicolumn{1}{c|}{\textbf{Player $p_2$ strategy}}\\
 \hline
 $\:$1. Player $p_1$ partitions the cake $X$ &Partition $X$ into two&\\
-$\:\:\:\:\:\:\:$into two pieces $\{X',X-X'\}$&pieces of equal size&\\
+$\:\:\:\:\:\:\:$into two pieces $\{X',X-X'\}$&pieces of equal value&\\
 \hline
-$\:$2. Player $p_2$ chooses one piece&&Choose the bigger piece\\
+$\:$2. Player $p_2$ chooses one piece&&Choose the bigger value\\
 \hline
 $\:$3. Player $p_1$ gets the remaining&&\\
 $\:\:\:\:\:\:\:$piece&&\\
@@ -700,7 +700,7 @@ Cut $\&$ choose is strategyproof for proportional protocols.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-For the proof a general presentation of cut $\&$ choose game in extended form is used. W. l. o. g. the non-truthful cut is performed on the right part of the cake. The variables have the restrictions: $$0 \leq a \leq 1,\: 0 < \epsilon \leq \nicefrac{1}{2},\: 0 \leq \delta \leq 1\tiny{-}a$$
+For the proof a general presentation of cut $\&$ choose game in extended form is used. W. l. o. g. the non-truthful cut is performed on the right part of the cake. The variables have the following restrictions: $$0 \leq a \leq 1,\: 0 < \epsilon \leq \nicefrac{1}{2},\: 0 \leq \delta \leq 1\tiny{-}a$$
 \newpage
 \begin{figure}[h!]
 \begin{center}
@@ -764,7 +764,7 @@ According to theorem \ref{thm5}, theorem \ref{thm6} and theorem \ref{thm7} cut $
 The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner. Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tediously.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole game is unnecessary.\\
 The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different kinds of strategyproofness are analysed.\\
 An important pre-comment: Proportionality means each player gets $v_j(X_j)=\nicefrac{1}{n}$ for $1\leq j\leq n$. So if one player $p_n$ leaves the game with $v_i(X_n)<\nicefrac{1}{n}$ for $1\leq i\leq (n-1)$ it still holds for the next round that the cake $X=X-X_n$ is normalized and a proportional piece is $\nicefrac{1}{n-1}$ and not $\nicefrac{1+\epsilon_i}{n}$.
-\\The complete protocols in the standard description can be found in \cite{robertson:cake-cutting}.
+\\The complete protocols in the standard description as well as the proofs of their proportionality can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
 \subsection{The Steinhaus-Kuhn Lone Divider Protocol}
 \begin{table}[htb]
@@ -1062,17 +1062,24 @@ Last diminisher protocol is strategyproof for proportional protocols.
 		
 
 	\end{tikzpicture}
-	\caption{Last diminisher cake game in extended form}
+	\caption{Last diminisher cake game in extended form}\label{ldef}
 \end{center}
 \end{figure}
 \newpage 
-Blabla
+The consequences for each player $p_j$ in $P_{i+k}$ by choosing the strategy to pass a piece $X_i$ with $v_j(X_i)>\nicefrac{1}{n}$ or to trim a piece $X_i$ to $v_j(X_i)>\nicefrac{1}{n}$ are the same as for the player $p_i$ by cutting a piece with $v_i(X_i)>\nicefrac{1}{n}$.
+The upper red path in Figure \ref{ldef} shows that by choosing this non-truthful strategy a player can obtain a less valuable piece. For that to happen, a following player $p_s$ needs to trim the piece s.t. $v_i(X_s)>\nicefrac{1}{n}$ and $v_j(X_s)>\nicefrac{1}{n}$ and for the reason that he is the last trimmer to get this piece.\\
+\newline
+The consequences for each player $p_j$ in $P_{i+k}$ by choosing the strategy trim a piece $X_i$ to $v_j(X_i)<\nicefrac{1}{n}$ are the same as for the player $p_i$ by cutting a piece with $v_i(X_i)<\nicefrac{1}{n}$. The lower red path in Figure \ref{ldef} shows that by choosing this non-truthful strategy a player can obtain a less valuable piece. For that to happen, no following player $p_s$ is allowed to trim the considered piece. So the cheating player will get this undesirable piece.
+\\
+\newline
+The only strategy which does not conceal this risk, is for all players the recommended one.
 \end{proof}
 \begin{lem}
 Last diminisher protocol is game-theoretic strategyproof.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
+The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$. 
 \end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1095,28 +1102,40 @@ For the description of this protocol the players  will be separated in two group
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Players in $P_I$ strategy}& \multicolumn{1}{c|}{\textbf{Player $p_{i+1}$ strategy}}\\
 \hline
 $\:$1. Players in $P_I$ partition &Partition $X_i$ into $i+1$&\\
-$\:\:\:\:\:\:\:$their piece $X_i$ into $i+1$&pieces of equal size&\\
+$\:\:\:\:\:\:\:$their piece $X_i$ into $i+1$&pieces of equal value&\\
 $\:\:\:\:\:\:\:$pieces $\{X_{i,1},\dots, X_{i,i+1}\}$&&\\
 \hline
-$\:$2. Player $p_{i+1}$ chooses one&&Choose the biggest piece \\
-$\:\:\:\:\:\:\:$piece of each player's cake&&of each player's cake\\
+$\:$2. Player $p_{i+1}$ chooses one&&Choose the most valuable\\
+$\:\:\:\:\:\:\:$piece of each player's cake&&piece of each player's cake\\
 \hline
 \end{tabular*}
 \caption{Lone chooser rules and strategies}\label{lc}
 \end{table}	 
 \begin{lem}
+\label{lc1}
 Fink Lone-Chooser protocol is game-theoretic strategyproof.
 \end{lem}
-\begin{proof} 
-\textcolor{white}{x}\\\\
-\textbf{Options for not following the recommended strategy:}
+\begin{proof} Proof by induction:
+\textcolor{white}{x}
+\begin{itemize} \item{Case} $i=2$: Cut $\&$ choose is game-theoretic strategyproof by Theorem \ref{thm7}.\\
+\item{Case} $(i-1) \rightarrow i$:\\ 
+\newline
+\textbf{Options for not following the recommended strategy:}\\
 \begin{itemize}
-\item Player $p_{i+1}$ takes the smaller piece. This can not be his intention.
-\item Players in $P_I$ cut the cake into $i+1$ non-equal pieces. The chance that player $p_{i+1}$ takes a certain piece is $\nicefrac{1}{(i+1)}$. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case (because he had at least $\nicefrac{1}{i}$ before) at least: $$ i \cdot \nicefrac{1}{(i+1)} \cdot \nicefrac{1}{i} =\nicefrac{1}{(i+1)} $$ and in the dishonest case:\\
-Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \leq i+1$. So the expected value will be: $$ \nicefrac{1}{i} \cdot \nicefrac{(i+1-s)}{(i+1)} + \nicefrac{(s-1)}{(si)}\cdot \nicefrac{s}{(i+1)} =\nicefrac{1}{(i+1)} $$ Even if the value is distributed unequally on the $s$ pieces, it would not affect the outcome, because the probability of the piece the player $p_{i+1}$ take is uniformly distributed.\\
- \newline In the case with equal outcomes the player would stay honest according to the definition of truthfulness.
+\item Player $p_{i+1}$ takes not the biggest piece. Then he has a less valuable piece\\than by following the recommended strategy. 
+\item Players in $P_I$ cut the cake into $i+1$ non-equal pieces. The chance that\\player $p_{i+1}$ takes a certain piece is $\nicefrac{1}{(i+1)}$. In stochastic terms it means,\\that the expected value at the end of the allocation will be in the honest\\case (because he had at least $\nicefrac{1}{i}$ before) at least: $$ i \cdot \nicefrac{1}{(i+1)} \cdot \nicefrac{1}{i} =\nicefrac{1}{(i+1)} $$ and in the dishonest case:\\
+Assume the value of the piece will be distributed on $s$ pieces with\\$1 \leq s \leq i+1$. So the expected value will be: $$ \nicefrac{1}{i} \cdot \nicefrac{(i+1-s)}{(i+1)} + \nicefrac{(s-1)}{(si)}\cdot \nicefrac{s}{(i+1)} =\nicefrac{1}{(i+1)} $$ Even if the value is distributed unequally on the $s$ pieces, it would not\\affect the value of the piece in the allocation, because the probability\\of the piece the player $p_{i+1}$ take is uniformly distributed.\\
+ \newpage According to the definition of game-theoretic strategyproofness in the\\case with equal expected values the player would stay honest.
+\end{itemize}
 \end{itemize}
 \end{proof}
+\begin{lem}
+\label{lc2}
+Fink Lone-Chooser protocol is strategyproof for proportional protocols.
+\end{lem}
+\begin{proof}
+\textcolor{white}{x}\\\\
+For the proof a presentation of Lone chooser game in extended form is used. The variables have the following restrictions: $$ 0 \leq (i\pm\epsilon_1),(i\pm\epsilon_2) \leq (i+1),\: 0 \leq \delta_1,\delta_3 \leq i,\:0 \leq (i\pm\delta_2),(i\pm\delta_4) \leq (i+1),\:\delta_2 \leq \delta_1,\: \delta_4 \leq \delta_3$$
 \begin{figure}[h!]
 \begin{center}
 	\begin{tikzpicture}
@@ -1136,8 +1155,29 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 		\node[draw=none,fill=none] (t1) at (5.03,1.5) {$i+1$};
 		\node[draw=none,fill=none] (t1) at (5.03,2.5) {$i+1$};
 
-		\node[draw=none,fill=none,right] at (1.85,5.75) {All $\nicefrac{1}{(i+1)}$};
-		\node[draw=none,fill=none,right] at (1.85,1.95) {All $\neq \nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (1.85,6.15) {All $\nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (1.85,1.55) {All $\neq \nicefrac{1}{(i+1)}$};
+		\node[draw=none,fill=none,right] at (5.07,6.81) {$\neg most\:valuable\:piece$};
+		\node[draw=none,fill=none,right] at (5.01,0.11) {$\neg most\:valuable\:piece$}; \begin{comment}
+		\node[draw=none,fill=none,right] at (5.25,7.25) {$m$};
+		\node[draw=none,fill=none,right] at (5.585,7.29) {$o$};
+		\node[draw=none,fill=none,right] at (5.75,7.335) {$s$};
+		\node[draw=none,fill=none,right] at (5.91,7.39) {$t$};
+		\node[draw=none,fill=none,right] at (6.135,7.42) {$v$};
+		\node[draw=none,fill=none,right] at (6.309,7.46) {$a$};
+		\node[draw=none,fill=none,right] at (6.499,7.52) {$l$};
+		\node[draw=none,fill=none,right] at (6.60,7.489) {$u$};
+		\node[draw=none,fill=none,right] at (6.80,7.53) {$a$};
+		\node[draw=none,fill=none,right] at (7.00,7.62) {$b$};
+		\node[draw=none,fill=none,right] at (7.20,7.64) {$l$};
+		\node[draw=none,fill=none,right] at (7.30,7.62) {$e$};
+		\node[draw=none,fill=none,right] at (7.60,7.70) {$p$};
+		\node[draw=none,fill=none,right] at (7.80,7.79) {$i$};
+		\node[draw=none,fill=none,right] at (7.95,7.77) {$e$};
+		\node[draw=none,fill=none,right] at (8.15,7.805) {$c$};
+		\node[draw=none,fill=none,right] at (8.32,7.829) {$e$}; \end{comment}
+		\node[draw=none,fill=none,right] at (5.25,7.9) {$most\:valuable\:piece$};
+		\node[draw=none,fill=none,right] at (5.25,1.18) {$most\:valuable\:piece$};
 		\node[draw=none,fill=none,right] at (2.99,3.05) {$i$ pieces $\neq \nicefrac{1}{(i+1)}$};
 		\node[draw=none,fill=none,right] at (2.99,4.90) {$2$ pieces $\neq \nicefrac{1}{(i+1)}$};
 		\node[draw=none,fill=none,right] at (4.75,4.1) {\Huge{.}};
@@ -1148,10 +1188,10 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 		\node[draw=none,fill=none,right] at (2.75,3.9) {\Huge{.}};
 		\node[draw=none,fill=none,right] at (5.5,2) {\huge{...}};
 		\node[draw=none,fill=none,right] at (5.5,6) {\huge{...}};
-		\node[draw=none,fill=none,right] at (9.5,7.8) {$\left(\nicefrac{1}{n}, \nicefrac{1}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,7) {$\left(\nicefrac{1}{n}, \nicefrac{(1+\delta_3)}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,1) {$\left(\color{red}{}\nicefrac{(1\pm\epsilon_1)}{n}\color{black}{}, \nicefrac{1}{n}\right)$};
-		\node[draw=none,fill=none,right] at (9.5,0.2) {$\left(\color{red}{}\nicefrac{(1\pm\epsilon_5)}{n}\color{black}{},\nicefrac{(1+\delta_{3n})}{n}\right)$};
+		\node[draw=none,fill=none,right] at (9.5,7.8) {$\left(\nicefrac{i}{(i+1)}, \nicefrac{(1+\delta_1)}{(i+1)}\right)$};
+		\node[draw=none,fill=none,right] at (9.5,7) {$\left(\nicefrac{i}{(i+1)}, \nicefrac{(1\pm\delta_2)}{(i+1)}\right)$\blitza};
+		\node[draw=none,fill=none,right] at (9.5,1) {$\left(\color{red}{}\nicefrac{(i\pm\epsilon_1)}{(i+1)}\color{black}{}, \nicefrac{(1+\delta_3)}{(i+1)}\right)$};
+		\node[draw=none,fill=none,right] at (9.5,0.2) {$\left(\color{red}{}\nicefrac{(i\pm\epsilon_2)}{(i+1)}\color{black}{},\nicefrac{(1\pm\delta_4)}{(i+1)}\right)$\blitza};
 		
 		
 		\draw (n1) -- (n2);
@@ -1167,12 +1207,12 @@ Assume the value of the piece will be distributed on $s$ pieces with $1 \leq s \
 	\caption{Lone chooser cake game in extended form}
 \end{center}
 \end{figure}
-\begin{lem}
-Fink Lone-Chooser protocol is strategyproof for proportional protocols.
-\end{lem}
-\begin{proof}
-\textcolor{white}{x}\\\\
+\newline
+The red path is the not succesful allocation by following the non-truthful strategy for a player in $P_I$. Here every player becomes less than by following his recommended strategy. Especially it is the case, where the player $p_{i+1}$ takes a piece which a player in $P_I$ values more than $\nicefrac{1}{(i+1)}$.\\If Player $p_2$ would not choose the recommended strategy, he has to take a piece less valuable than in his best possibility. Both kind of players would stay honest. Thus Lone chooser is strategyproof for proportional protocols.
 \end{proof}
+\begin{bezeichnungen}
+According to theorem \ref{thm5}, theorem \ref{lc1} and theorem \ref{lc2} Fink lone chooser is\\strategyproof for proportional protocols, strategyproof, game-theoretical strategyproof, game-theoretical cake-cutting strategyproof and weak strategyproof.
+\end{bezeichnungen}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1188,7 +1228,7 @@ Fink Lone-Chooser protocol is strategyproof for proportional protocols.
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Players in $P_{n-1}$ strategy}&\multicolumn{1}{c|}{\textbf{Player $p_{n}$ strategy}}\\
 \hline
 $\:$1. Each player in $P_{n-1}$ parti-&Partition $X$ into two&\\
-$\:\:\:\:\:\:\:$tions the cake $X$ into two&pieces in the ratio of&\\
+$\:\:\:\:\:\:\:$tions the cake $X$ into two&pieces in the value-ratio of&\\
 $\:\:\:\:\:\:\:$pieces $\{X',X-X'\}$&$\lfloor \nicefrac{n}{2} \rfloor:\lceil \nicefrac{n}{2} \rceil$&\\
 \hline
 $\:$2. Player $p_n$ chooses one&&If $v_n(X') \geq \nicefrac{\lfloor \nicefrac{n}{2} \rfloor}{n}$ choose\\

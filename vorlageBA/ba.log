@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  27 NOV 2011 14:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  28 NOV 2011 14:49
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1255,37 +1255,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 928--938
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1076
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1076
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1083
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1113
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1118
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
 
  []
 
-[20] [21] <bilder/dc1.pdf, id=361, 256.96pt x 188.705pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
+
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 1214--1215
+\T1/lmr/m/it/10.95 strategyproof for pro-por-tional pro-to-cols, strat-e-gyproo
+f, game-theoretical strat-e-gyproof,
+ []
+
+[21] <bilder/dc1.pdf, id=368, 256.96pt x 188.705pt>
 File: bilder/dc1.pdf Graphic file (type pdf)
  <use bilder/dc1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1270--1271
 
  []
 
@@ -1312,10 +1335,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16151 strings out of 495061
- 285011 string characters out of 1182621
- 393694 words of memory out of 3000000
- 18705 multiletter control sequences out of 15000+50000
+ 16155 strings out of 495061
+ 285032 string characters out of 1182621
+ 393948 words of memory out of 3000000
+ 18708 multiletter control sequences out of 15000+50000
  78592 words of font info for 62 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  49i,20n,69p,870b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1339,9 +1362,9 @@ s/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on ba.pdf (32 pages, 533716 bytes).
+Output written on ba.pdf (32 pages, 539862 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

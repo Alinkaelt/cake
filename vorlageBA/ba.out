@@ -7,14 +7,14 @@
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Basics}{subsection.2.2}
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Different Types of Fairness}{subsection.2.2}
 \BOOKMARK [3][-]{subsubsection.2.2.3}{Different Types of Protocols}{subsection.2.2}
-\BOOKMARK [2][-]{subsection.2.3}{Strategyproofness}{section.2}
-\BOOKMARK [1][-]{section.3}{Strategyproof Proportional Protocols}{}
-\BOOKMARK [2][-]{subsection.3.1}{The Steinhaus-Kuhn Lone Divider Protocol}{section.3}
-\BOOKMARK [2][-]{subsection.3.2}{The Banach-Knaster Last-Diminisher Protocol}{section.3}
-\BOOKMARK [2][-]{subsection.3.3}{The Fink Lone-Chooser Protocol}{section.3}
-\BOOKMARK [2][-]{subsection.3.4}{The Divide-and-Conquer Protocol}{section.3}
-\BOOKMARK [1][-]{section.4}{Conclusion}{}
-\BOOKMARK [1][-]{section.5}{Open Questions and Future Research}{}
+\BOOKMARK [1][-]{section.3}{Strategyproofness}{}
+\BOOKMARK [1][-]{section.4}{Strategyproof Proportional Protocols}{}
+\BOOKMARK [2][-]{subsection.4.1}{The Steinhaus-Kuhn Lone Divider Protocol}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{The Banach-Knaster Last-Diminisher Protocol}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{The Fink Lone-Chooser Protocol}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{The Divide-and-Conquer Protocol}{section.4}
+\BOOKMARK [1][-]{section.5}{Conclusion}{}
+\BOOKMARK [1][-]{section.6}{Open Questions and Future Research}{}
 \BOOKMARK [1][-]{section*.6}{References}{}
 \BOOKMARK [1][-]{section*.8}{List of Figures}{}
 \BOOKMARK [1][-]{section*.10}{List of Tables}{}
