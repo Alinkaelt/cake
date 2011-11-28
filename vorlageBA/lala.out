@@ -1,20 +1,14 @@
 \BOOKMARK [1][-]{section*.4}{Contents}{}
-\BOOKMARK [1][-]{section.1}{Introduction}{}
-\BOOKMARK [2][-]{subsection.1.1}{Related Work}{section.1}
-\BOOKMARK [1][-]{section.2}{Preliminaries}{}
-\BOOKMARK [2][-]{subsection.2.1}{Preliminaries of Game Theory}{section.2}
-\BOOKMARK [2][-]{subsection.2.2}{Preliminaries of Cake-cutting}{section.2}
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Basics}{subsection.2.2}
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Strategyproofness}{subsection.2.2}
-\BOOKMARK [2][-]{subsection.2.3}{The Degree of Guaranteed Envy-Freeness}{section.2}
-\BOOKMARK [1][-]{section.3}{Proportional Protocols and their DGEF}{}
-\BOOKMARK [2][-]{subsection.3.1}{The Steinhaus-Kuhn Lone Divider Procedure}{section.3}
-\BOOKMARK [2][-]{subsection.3.2}{The Banach-Knaster Last-Diminisher Procedure}{section.3}
-\BOOKMARK [2][-]{subsection.3.3}{The Fink Lone-Chooser Procedure}{section.3}
-\BOOKMARK [2][-]{subsection.3.4}{The Cut-Your-Own-Piece Procedure}{section.3}
-\BOOKMARK [2][-]{subsection.3.5}{The Divide-and-Conquer Procedure}{section.3}
-\BOOKMARK [2][-]{subsection.3.6}{The Parallelized Last Diminisher Procedure}{section.3}
-\BOOKMARK [1][-]{section.4}{Conclusion}{}
-\BOOKMARK [1][-]{section.5}{Open Questions and Future Research}{}
+\BOOKMARK [2][-]{subsection.0.1}{Preliminaries of Cake-cutting}{section*.4}
+\BOOKMARK [3][-]{subsubsection.0.1.1}{Basics}{subsection.0.1}
+\BOOKMARK [3][-]{subsubsection.0.1.2}{Different Types of Fairness}{subsection.0.1}
+\BOOKMARK [3][-]{subsubsection.0.1.3}{Different Types of Protocols}{subsection.0.1}
+\BOOKMARK [1][-]{section.1}{Strategyproofness}{}
+\BOOKMARK [1][-]{section.2}{Strategyproof Proportional Protocols}{}
+\BOOKMARK [2][-]{subsection.2.1}{The Kuhn \340 la Dawson Lone Divider Protocol}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{The Banach-Knaster Last-Diminisher Protocol}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{The Fink Lone-Chooser Protocol}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{The Even \046 Paz Divide-and-Conquer Protocol}{section.2}
+\BOOKMARK [1][-]{section.3}{Conclusion}{}
 \BOOKMARK [1][-]{section*.6}{List of Figures}{}
 \BOOKMARK [1][-]{section*.8}{List of Tables}{}

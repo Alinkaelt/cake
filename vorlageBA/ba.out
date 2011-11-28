@@ -8,11 +8,11 @@
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Different Types of Fairness}{subsection.2.2}
 \BOOKMARK [3][-]{subsubsection.2.2.3}{Different Types of Protocols}{subsection.2.2}
 \BOOKMARK [1][-]{section.3}{Strategyproofness}{}
-\BOOKMARK [1][-]{section.4}{Strategyproof Proportional Protocols}{}
-\BOOKMARK [2][-]{subsection.4.1}{The Steinhaus-Kuhn Lone Divider Protocol}{section.4}
+\BOOKMARK [1][-]{section.4}{Strategyproofness of Proportional Protocols}{}
+\BOOKMARK [2][-]{subsection.4.1}{The Kuhn \340 la Dawson Lone Divider Protocol}{section.4}
 \BOOKMARK [2][-]{subsection.4.2}{The Banach-Knaster Last-Diminisher Protocol}{section.4}
 \BOOKMARK [2][-]{subsection.4.3}{The Fink Lone-Chooser Protocol}{section.4}
-\BOOKMARK [2][-]{subsection.4.4}{The Divide-and-Conquer Protocol}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{The Even \046 Paz Divide-and-Conquer Protocol}{section.4}
 \BOOKMARK [1][-]{section.5}{Conclusion}{}
 \BOOKMARK [1][-]{section.6}{Open Questions and Future Research}{}
 \BOOKMARK [1][-]{section*.6}{References}{}

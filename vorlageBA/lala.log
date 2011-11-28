@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  16 NOV 2011 16:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  28 NOV 2011 16:38
 entering extended mode
  %&-line parsing enabled.
 **lala.tex
@@ -598,47 +598,394 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 Package: ulem 2000/05/26
 \ULdepth=\dimen123
 )
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/a4wide.sty
+(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks35
+\verbatim@line=\toks36
+\verbatim@in@stream=\read2
+)
+(/usr/share/texmf-texlive/tex/latex/ulsy/ulsy.sty)
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks37
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2008/02/20 v2.00 (rcs-revision 1.21)
+))
+Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
+)
+\pgf@x=\dimen124
+\pgf@y=\dimen125
+\pgf@xa=\dimen126
+\pgf@ya=\dimen127
+\pgf@xb=\dimen128
+\pgf@yb=\dimen129
+\pgf@xc=\dimen130
+\pgf@yc=\dimen131
+\c@pgf@counta=\count112
+\c@pgf@countb=\count113
+\c@pgf@countc=\count114
+\c@pgf@countd=\count115
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 885.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2007/12/20  (rcs-revision 1.20)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2007/12/17  (rcs-revision 1.8)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
+\pgfsyssoftpath@smallbuffer@items=\count116
+\pgfsyssoftpath@bigbuffer@items=\count117
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgfmath@box=\box35
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@stack=\toks40
+\c@pgfmath@parsecounta=\count118
+\c@pgfmath@parsecountb=\count119
+\c@pgfmath@parsecountc=\count120
+\pgfmath@parsex=\dimen132
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathoperations.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathtrig.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathrnd.code.tex))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathbase.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
+\pgf@picminx=\dimen133
+\pgf@picmaxx=\dimen134
+\pgf@picminy=\dimen135
+\pgf@picmaxy=\dimen136
+\pgf@pathminx=\dimen137
+\pgf@pathmaxx=\dimen138
+\pgf@pathminy=\dimen139
+\pgf@pathmaxy=\dimen140
+\pgf@xx=\dimen141
+\pgf@xy=\dimen142
+\pgf@yx=\dimen143
+\pgf@yy=\dimen144
+\pgf@zx=\dimen145
+\pgf@zy=\dimen146
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
+\pgf@path@lastx=\dimen147
+\pgf@path@lasty=\dimen148
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
+\pgf@shorten@end@additional=\dimen149
+\pgf@shorten@start@additional=\dimen150
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count121
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
+\pgflinewidth=\dimen151
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
+\pgf@pt@x=\dimen152
+\pgf@pt@y=\dimen153
+\pgf@pt@temp=\dimen154
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/01/23  (rcs-revision 1.7)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
+\pgf@max=\dimen155
+\pgf@sys@shading@range@num=\count122
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfexternal@startupbox=\box39
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
+\pgfnodeparttextbox=\box40
+\toks@savedmacro=\toks41
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgf@plotwrite=\write4
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen156
+\pgf@nodesepend=\dimen157
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
+\pgffor@iter=\dimen158
+\pgffor@skip=\dimen159
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
+\pgf@plot@mark@count=\count123
+\pgfplotmarksize=\dimen160
+)
+\tikz@lastx=\dimen161
+\tikz@lasty=\dimen162
+\tikz@lastxsaved=\dimen163
+\tikz@lastysaved=\dimen164
+\tikzleveldistance=\dimen165
+\tikzsiblingdistance=\dimen166
+\tikz@figbox=\box41
+\tikz@tempbox=\box42
+\tikztreelevel=\count124
+\tikznumberofchildren=\count125
+\tikznumberofcurrentchild=\count126
+\tikz@fig@count=\count127
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfmatrixcurrentrow=\count128
+\pgfmatrixcurrentcolumn=\count129
+\pgf@matrix@numberofcolumns=\count130
+)
+\tikz@expandcount=\count131
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+))) (/usr/share/texmf-texlive/tex/latex/bbding/bbding.sty
+Package: bbding 1999/04/15 v1.01 Dingbats symbols
+)
+(/usr/share/texmf-texlive/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip63
+\L@UnitsRaiseTextstyle=\skip64
+\L@UnitsRaiseScriptstyle=\skip65
+)
+(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen167
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrow
+s.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2007/06/07 v2.00 (rcs-revision 1.7)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautom
+ata.code.tex
+File: tikzlibraryautomata.code.tex 2008/02/14 v2.00 (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypetri
+.code.tex
+File: tikzlibrarypetri.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/02/01 v2.00 (rcs-revision 1.22)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2008/02/12 v2.00 (rcs-revision 1.10)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2008/01/30 v2.00 (rcs-revision 1.13)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2007/11/10 v2.00 (rcs-revision 1.3)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.callouts.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.callouts.code.tex)
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2008/01/15 v2.00 (rcs-revision 1.7)
+\pgfnodepartlowerbox=\box43
+\pgfnodepartsecondbox=\box44
+\pgfnodepartthirdbox=\box45
+\pgfnodepartfourthbox=\box46
+)))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarysnake
+s.code.tex
+File: tikzlibrarysnakes.code.tex 2008/02/05 v2.00 (rcs-revision 1.6)
+
+
+Package tikz Warning: Snakes have been superseded by decorations. Please use th
+e decoration libraries instead of the snakes library on input line 14.
+
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathmorphing.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen168
+\pgfdecoratedremainingdistance=\dimen169
+\pgfdecoratedinputsegmentcompleteddistance=\dimen170
+\pgfdecoratedinputsegmentremainingdistance=\dimen171
+\pgf@decorate@distancetomove=\dimen172
+\pgf@decorate@repeatstate=\count132
+\pgfdecorationsegmentamplitude=\dimen173
+\pgfdecorationsegmentlength=\dimen174
+))
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibrarydecorations.pathmorphing.
+code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathreplacing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibrarydecorations.pathreplacing
+.code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.shapes.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibrarydecorations.shapes.code.t
+ex))) (/usr/share/texmf-texlive/tex/latex/ltxmisc/a4wide.sty
 Package: a4wide 1994/08/30
 
 (/usr/share/texmf-texlive/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
-No file lala.aux.
+\c@bemerkung*=\count133
+\c@defi=\count134
+\c@defi*=\count135
+\c@bezeichnungen=\count136
+\c@fakt=\count137
+\c@beispiel=\count138
+\c@bsp=\count139
+\c@beispiel*=\count140
+\c@satz=\count141
+\c@satz*=\count142
+\c@lem=\count143
+\c@protokoll*=\count144
+\c@idee=\count145
+\c@corollary=\count146
+ (./lala.aux)
 \openout1 = `lala.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 113.
+
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
-\scratchdimen=\dimen124
-\scratchbox=\box35
-\nofMPsegments=\count113
-\nofMParguments=\count114
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count115
-\MPscratchDim=\dimen125
-\MPnumerator=\count116
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count147
+\scratchdimen=\dimen175
+\scratchbox=\box47
+\nofMPsegments=\count148
+\nofMParguments=\count149
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count150
+\MPscratchDim=\dimen176
+\MPnumerator=\count151
+\everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring OFF on input line 102.
+Package hyperref Info: Link coloring OFF on input line 113.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -646,57 +993,59 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count152
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-\@outlinefile=\write4
-\openout4 = `lala.out'.
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+ (./lala.out)
+(./lala.out)
+\@outlinefile=\write5
+\openout5 = `lala.out'.
 
-\AtBeginShipoutBox=\box36
+\AtBeginShipoutBox=\box48
 
 
 pdfTeX warning: pdflatex (file ./bilder/HHU_Logo.pdf): PDF inclusion: found PDF
  version <1.5>, but at most version <1.4> allowed
-<bilder/HHU_Logo.pdf, id=3, 633.04462pt x 298.39256pt>
+<bilder/HHU_Logo.pdf, id=54, 633.04462pt x 298.39256pt>
 File: bilder/HHU_Logo.pdf Graphic file (type pdf)
 
 <use bilder/HHU_Logo.pdf>
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 184.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 195.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 184.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 195.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 184
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 195
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 184
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 195
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 184.
+(Font)              <10.95> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 184.
+(Font)              <8> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 184.
-LaTeX Font Info:    Try loading font information for U+msa on input line 184.
+(Font)              <6> on input line 195.
+LaTeX Font Info:    Try loading font information for U+msa on input line 195.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 184.
+LaTeX Font Info:    Try loading font information for U+msb on input line 195.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -707,15 +1056,22 @@ TeX warning (ext4): destination with the same identifier (name{page.1}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 \end{titlepage}
+l.211 \end{titlepage}
                       [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.224 \end{titlepage}
+l.235 \end{titlepage}
                       [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.242 ~\end{titlepage}}{}
+                          [1
 
 ]) (./titelmakros2.texpdfTeX warning (ext4): destination with the same identifi
 er (name{page.1}) has been already used, duplicate ignored
@@ -724,248 +1080,383 @@ er (name{page.1}) has been already used, duplicate ignored
 l.6 \end{titlepage}
                     [1
 
-]
-\tf@toc=\write5
-\openout5 = `lala.toc'.
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12 ...arpage\begin{titlepage}~\end{titlepage}}{}
+                                                   [1
 
+] (./lala.toc)
+\tf@toc=\write6
+\openout6 = `lala.toc'.
+
+ [2
+
+])
+<kek.pdf, id=105, 285.065pt x 142.93399pt>
+File: kek.pdf Graphic file (type pdf)
+ <use kek.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 78.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 78.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 \clearpage
-                [1
-
-]) [2
+l.88 \begin{bsp}
+                 [1
 
 
-] [3]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 107.
+ <./kek.pdf>]
+<bilder/ex1.pdf, id=138, 1046.91125pt x 175.65625pt>
+File: bilder/ex1.pdf Graphic file (type pdf)
+ <use bilder/ex1.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 90--167
+
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 90--167
+\T1/lmr/m/it/10.95 John Cocke and Tadao Kasami want to di-vide a chocolate-stra
+wberry-cake. The
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.171 \subsubsection
+                    {Different Types of Fairness} [2 <./bilder/ex1.pdf>]
+LaTeX Font Info:    Try loading font information for U+ulsy on input line 200.
+
+(/usr/share/texmf-texlive/tex/latex/ulsy/Uulsy.fd)
+
+LaTeX Font Warning: Font shape `U/ulsy/m/n' in size <10.95> not available
+(Font)              size <10> substituted on input line 200.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+LaTeX Warning: Citation `eff' on page 3 undefined on input line 205.
+
+[3]
+
+LaTeX Warning: Citation `brams2' on page 4 undefined on input line 238.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--247
+
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 254.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 107.
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 254.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
-
- []
+LaTeX Warning: Citation `bla' on page 5 undefined on input line 260.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+LaTeX Warning: Citation `chen:truth' on page 5 undefined on input line 269.
 
- []
+[5]
+
+LaTeX Warning: Citation `brams' on page 6 undefined on input line 283.
 
 
-LaTeX Warning: Reference `bsp1' on page 4 undefined on input line 133.
+LaTeX Warning: Citation `lindner:degrees' on page 6 undefined on input line 286
+.
 
-<kek.pdf, id=45, 285.065pt x 142.93399pt>
-File: kek.pdf Graphic file (type pdf)
- <use kek.pdf>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation `pie' on page 6 undefined on input line 294.
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
- []
+LaTeX Warning: Citation `pie' on page 6 undefined on input line 297.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 153.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 153.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--167
+LaTeX Warning: Citation `ccc' on page 6 undefined on input line 297.
 
- []
 
-[5 <./kek.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 
-LaTeX Warning: Citation `eff' on page 6 undefined on input line 195.
+Underfull \hbox (badness 10000) in paragraph at lines 303--307
+
+ []
 
 [6]
 
-LaTeX Warning: Citation `brams2' on page 7 undefined on input line 225.
+LaTeX Warning: Citation `why' on page 7 undefined on input line 308.
 
 
-LaTeX Warning: Citation `brams' on page 7 undefined on input line 232.
+LaTeX Warning: Citation `why' on page 7 undefined on input line 313.
 
 
-LaTeX Warning: Citation `lindner:degrees' on page 7 undefined on input line 235
-.
+LaTeX Warning: Citation `chen:truth' on page 7 undefined on input line 313.
 
 
-LaTeX Warning: Citation `pie' on page 7 undefined on input line 243.
+LaTeX Warning: Citation `why' on page 7 undefined on input line 318.
 
 
-LaTeX Warning: Citation `why' on page 7 undefined on input line 249.
-
-
-LaTeX Warning: Citation `chen:truth' on page 7 undefined on input line 254.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
 
  []
 
 
-LaTeX Warning: Citation `why' on page 7 undefined on input line 257.
+Underfull \hbox (badness 1320) in paragraph at lines 317--319
+\T1/lmr/m/it/10.95 John Warner Backus and Pe-ter Naur are cel-e-brat-ing and Do
+n-ald E. Knuth has
+ []
+
+
+LaTeX Warning: Citation `ccc' on page 7 undefined on input line 336.
+
+
+LaTeX Warning: Citation `pie' on page 7 undefined on input line 336.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--337
+
+ []
+
+
+LaTeX Warning: Citation `note' on page 7 undefined on input line 338.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 267--274
+Underfull \hbox (badness 10000) in paragraph at lines 370--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--274
+Underfull \hbox (badness 10000) in paragraph at lines 370--379
 
  []
 
-
-LaTeX Warning: Citation `Barbanel' on page 8 undefined on input line 285.
-
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 312.
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 386--423
 
-LaTeX Warning: Citation `bla' on page 9 undefined on input line 320.
-
-
-LaTeX Warning: Citation `chen:truth' on page 9 undefined on input line 334.
-
-
-LaTeX Warning: Citation `lindner:degrees' on page 9 undefined on input line 334
-.
+ []
 
 [9]
 
-LaTeX Warning: Citation `lindner:degrees' on page 10 undefined on input line 39
-0.
+LaTeX Warning: Citation `Barbanel' on page 10 undefined on input line 437.
 
 
-Overfull \hbox (1.05743pt too wide) in paragraph at lines 394--399
-[] \OT1/lmr/m/n/10.95 : [] \OMS/lmsy/m/n/10.95 ^^A [] \OT1/lmr/m/n/10.95 + [] \
-OMS/lmsy/m/n/10.95 ^^A [] \OT1/lmr/m/n/10.95 =$
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 412--415
 
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 464.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 511--513
+
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 519--520
+\T1/lmr/m/it/10.95 strategyproof for pro-por-tional pro-to-cols, strat-e-gyproo
+f, game-theoretical strat-e-gyproof,
  []
 
 [11]
 
-LaTeX Warning: Citation `lindner:degrees' on page 12 undefined on input line 44
-7.
+LaTeX Warning: Citation `robertson:cake-cutting' on page 12 undefined on input 
+line 528.
 
-<func.pdf, id=135, 361.35pt x 252.945pt>
-File: func.pdf Graphic file (type pdf)
- <use func.pdf>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (1.02269pt too wide) in paragraph at lines 634--635
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12]
-
-LaTeX Warning: Citation `robertson:cake-cutting' on page 13 undefined on input 
-line 489.
-
-
-LaTeX Warning: Citation `lindner:degrees' on page 13 undefined on input line 50
-3.
-
-[13 <./func.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 508--530
+Underfull \hbox (badness 10000) in paragraph at lines 645--665
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--576
+Underfull \hbox (badness 10000) in paragraph at lines 645--665
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--586
+Underfull \hbox (badness 10000) in paragraph at lines 645--665
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 613--631
-
- []
-
-
-LaTeX Warning: Citation `chen:truth' on page 15 undefined on input line 652.
-
-
-LaTeX Warning: Citation `tamuz' on page 15 undefined on input line 652.
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 658--662
+LaTeX Font Info:    Try loading font information for U+ding on input line 675.
+(/usr/share/texmf-texlive/tex/latex/bbding/Uding.fd
+File: Uding.fd 1996/02/01 v1.0 BBding font definitions
+) [13]
+Underfull \hbox (badness 10000) in paragraph at lines 690--700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--662
+Underfull \hbox (badness 10000) in paragraph at lines 690--700
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--700
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 835--842
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--842
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--850
 
  []
 
 [16]
+Underfull \hbox (badness 10000) in paragraph at lines 891--892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 892--895
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 892--895
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 898--899
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 985--986
+\T1/lmr/m/it/10.95 strategyproof for pro-por-tional pro-to-cols, strat-e-gyproo
+f, game-theoretical strat-e-gyproof,
+ []
+
+[18]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 991.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 991.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 991.
+
+<bilder/dc1.pdf, id=303, 256.96pt x 188.705pt>
+File: bilder/dc1.pdf Graphic file (type pdf)
+ <use bilder/dc1.pdf>
+
+LaTeX Warning: Citation `dc' on page 19 undefined on input line 1029.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1033
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
+
+ []
+
+[19 <./bilder/dc1.pdf>] [20]
+
+LaTeX Warning: Citation `chen:truth' on page 21 undefined on input line 1054.
+
+
+LaTeX Warning: Citation `tamuz' on page 21 undefined on input line 1054.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
 No file lala.bbl.
-\tf@lof=\write6
-\openout6 = `lala.lof'.
+(./lala.lof)
+\tf@lof=\write7
+\openout7 = `lala.lof'.
 
-\tf@lot=\write7
-\openout7 = `lala.lot'.
+ (./lala.lot)
+\tf@lot=\write8
+\openout8 = `lala.lot'.
 
-[17
+ [22
 
 
 ] (./lala.aux)
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.95pt have occurred.
+
+
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7051 strings out of 495061
- 96649 string characters out of 1182621
- 176762 words of memory out of 3000000
- 9958 multiletter control sequences out of 15000+50000
- 95643 words of font info for 64 fonts, out of 3000000 for 9000
+ 16133 strings out of 495061
+ 284844 string characters out of 1182621
+ 394064 words of memory out of 3000000
+ 18709 multiletter control sequences out of 15000+50000
+ 79814 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 40i,14n,43p,624b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
-9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lala.pdf (21 pages, 435067 bytes).
+ 49i,20n,69p,872b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc} </home/alina/.texmf-var/fonts
+/pk/ljfour/public/bbding/bbding10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ec.enc} </home/alina/.texmf-var/fonts/pk/ljfour/public/ulsy/ulsy10.600pk>{/usr
+/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/shar
+e/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+mi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on lala.pdf (29 pages, 503048 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
