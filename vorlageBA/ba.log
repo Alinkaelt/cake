@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  28 NOV 2011 17:23
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  28 NOV 2011 18:57
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1265,62 +1265,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 1074--1082
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1090
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1091
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1132--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1132--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1226--1227
+Underfull \hbox (badness 1097) in paragraph at lines 1227--1228
 \T1/lmr/m/it/10.95 strategyproof for pro-por-tional pro-to-cols, strat-e-gyproo
 f, game-theoretical strat-e-gyproof,
  []
 
 [21]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 1232.
+(Font)              <12> on input line 1233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1232.
+(hyperref)                removing `math shift' on input line 1233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1232.
+(hyperref)                removing `math shift' on input line 1233.
 
 <bilder/dc1.pdf, id=377, 256.96pt x 188.705pt>
 File: bilder/dc1.pdf Graphic file (type pdf)
  <use bilder/dc1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1270--1275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
 
  []
 
@@ -1374,7 +1374,7 @@ s/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on ba.pdf (32 pages, 546444 bytes).
+Output written on ba.pdf (32 pages, 546849 bytes).
 PDF statistics:
  560 PDF objects out of 1000 (max. 8388607)
  144 named destinations out of 1000 (max. 500000)

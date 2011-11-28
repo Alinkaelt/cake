@@ -1071,7 +1071,7 @@ Last diminisher protocol is strategyproof for proportional protocols.
 \end{center}
 \end{figure}
 \newpage 
-For the proof a presentation of last diminisher game in extended form is used. The variables have the following restrictions: $$ 0 \leq (i\pm\epsilon_1),(i\pm\epsilon_2) \leq (i+1),\: 0 \leq \delta_1,\delta_3 \leq i,\:0 \leq (i\pm\delta_2),(i\pm\delta_4) \leq (i+1),\:\delta_2 \leq \delta_1,\: \delta_4 \leq \delta_3$$
+For the proof a presentation of last diminisher game in extended form is used. The variables have the following restrictions: $$ 0 < (1\pm\epsilon_2),(1\pm\epsilon_3),(1\pm\epsilon_4) <n,\: 0 < \epsilon_5 \leq 1,\:0 < \epsilon_1,\epsilon_6,\epsilon_7,\epsilon_8 \leq (n-1)$$ and :$$ 0 \leq (1\pm\delta_1),(1\pm\delta_4),(1\pm\delta_7) \leq n,\:0< (1\pm\delta_2),(1\pm\delta_3),(1\pm\delta_5),(1\pm\delta_6),(1\pm\delta_8),(1\pm\delta_9) < n$$
 The consequences for each player $p_j$ in $P_{i+k}$ by choosing the strategy to pass a piece $X_i$ with $v_j(X_i)>\nicefrac{1}{n}$ or to trim a piece $X_i$ to $v_j(X_i)>\nicefrac{1}{n}$ are the same as for the player $p_i$ by cutting a piece with $v_i(X_i)>\nicefrac{1}{n}$.
 The upper red path in Figure \ref{ldef} shows that by choosing this non-truthful strategy a player can obtain a less valuable piece. For that to happen, a following player $p_s$ needs to trim the piece s.t. $v_i(X_s)>\nicefrac{1}{n}$ and $v_j(X_s)>\nicefrac{1}{n}$ and for the reason that he is the last trimmer to get this piece.\\
 \newline
@@ -1086,7 +1086,8 @@ Last diminisher protocol is game-theoretic strategyproof.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$. 
+The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$. There are two different kinds of values in the extended form game. The first is the value of the piece the player directly obtains. The other one is the expected value if he uses in the next moves the recommended strategy.\\
+Now, there are different possibilities how to work with this two types$\ldots$
 \end{proof}
 \begin{bezeichnungen}
 According to Theorem \ref{thm5}, Theorem \ref{ldim1} and Theorem \ref{ldim2} Kuhn à la Dawnson last diminisher is strategyproof for proportional protocols, strategyproof, game-theoretical stra-\\tegyproof, game-theoretical cake-cutting strategyproof and weak strategyproof.
