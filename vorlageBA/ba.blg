@@ -1,54 +1,54 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: ba.aux
-The style file: alphadin.bst
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+The style file: apalike.bst
 Database file #1: references.bib.bib
-Warning--I didn't find a database entry for "bla"
-Warning--I didn't find a database entry for "hill"
 Warning--empty booktitle in pie
+Warning--can't use both volume and number fields in pie
 Warning--empty booktitle in brams2
 Warning--empty booktitle in ccc
+Warning--can't use both volume and number fields in ccc
+Warning--can't use both volume and number fields in note
 Warning--empty booktitle in tamuz
 Warning--empty booktitle in robertson:cake-cutting
-You've used 13 entries,
-            4372 wiz_defined-function locations,
-            895 strings with 7557 characters,
-and the built_in function-call counts, 8175 in all, are:
-= -- 911
-> -- 256
-< -- 306
-+ -- 357
-- -- 103
-* -- 497
-:= -- 1480
-add.period$ -- 8
-call.type$ -- 13
-change.case$ -- 69
-chr.to.int$ -- 12
-cite$ -- 18
-duplicate$ -- 218
-empty$ -- 487
-format.name$ -- 133
-if$ -- 1557
+You've used 14 entries,
+            1935 wiz_defined-function locations,
+            544 strings with 5513 characters,
+and the built_in function-call counts, 5512 in all, are:
+= -- 521
+> -- 193
+< -- 17
++ -- 65
+- -- 62
+* -- 398
+:= -- 908
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 101
+chr.to.int$ -- 13
+cite$ -- 22
+duplicate$ -- 281
+empty$ -- 446
+format.name$ -- 86
+if$ -- 1147
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 67
-num.names$ -- 39
-pop$ -- 86
+missing$ -- 14
+newline$ -- 72
+num.names$ -- 42
+pop$ -- 152
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 101
 quote$ -- 0
-skip$ -- 475
+skip$ -- 177
 stack$ -- 0
-substring$ -- 535
-swap$ -- 43
-text.length$ -- 38
-text.prefix$ -- 3
+substring$ -- 274
+swap$ -- 50
+text.length$ -- 8
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
-warning$ -- 5
-while$ -- 70
-width$ -- 17
-write$ -- 157
-(There were 7 warnings)
+type$ -- 84
+warning$ -- 8
+while$ -- 36
+width$ -- 0
+write$ -- 175
+(There were 8 warnings)

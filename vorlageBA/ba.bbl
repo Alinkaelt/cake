@@ -1,79 +1,79 @@
-\begin{thebibliography}{CKKK09}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{}
 
-\bibitem[Bar95]{Barbanel}
-\textsc{Barbanel}, Julius~B.:
-\newblock Game-theoretic Algorithms for Fair and Strongly Fair Cake Division
-  with Entitlements.
-\newblock {In: }\emph{Colloquium Mathematicum; Vol. 69, No. 1}, 1995, S. 59--73
+\bibitem[Barbanel, 1995]{Barbanel}
+Barbanel, J.~B. (1995).
+\newblock Game-theoretic algorithms for fair and strongly fair cake division
+  with entitlements.
+\newblock In {\em Colloquium Mathematicum; Vol. 69, No. 1}, pages 59--73.
 
-\bibitem[BJK07a]{brams}
-\textsc{Brams}, Steven~J. ; \textsc{Jones}, Michael~A.  ; \textsc{Klamler},
-  Christian:
-\newblock Better Ways to Cut a Cake - Revisited.
-\newblock {In: }\emph{Fair Division}, 2007
+\bibitem[Brams et~al., 2007a]{brams}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2007a).
+\newblock Better ways to cut a cake - revisited.
+\newblock In {\em Fair Division}.
 
-\bibitem[BJK07b]{dc}
-\textsc{Brams}, Steven~J. ; \textsc{Jones}, Michael~A.  ; \textsc{Klamler},
-  Christian:
-\newblock Divide-and-Conquer: A Proportional, Minimal-Envy Cake-Cutting
-  Procedure.
-\newblock {In: }\emph{Fair Division}, Internationales Begegnungs- und
-  Forschungszentrum fuer Informatik (IBFI), Schloss Dagstuhl, Germany, 2007
-  (Dagstuhl Seminar Proceedings)
+\bibitem[Brams et~al., 2007b]{dc}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2007b).
+\newblock Divide-and-conquer: A proportional, minimal-envy cake-cutting
+  procedure.
+\newblock In {\em Fair Division}, Dagstuhl Seminar Proceedings. Internationales
+  Begegnungs- und Forschungszentrum fuer Informatik (IBFI), Schloss Dagstuhl,
+  Germany.
 
-\bibitem[BJK08]{pie}
-\textsc{Brams}, Steven~J. ; \textsc{Jones}, Michael~A.  ; \textsc{Klamler},
-  Christian:
-\newblock Proportional pie-cutting, 2008, S. 353--367
+\bibitem[Brams et~al., 2008]{pie}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2008).
+\newblock Proportional pie-cutting.
+\newblock volume~36, pages 353--367.
 
-\bibitem[BT96]{brams2}
-\textsc{Brams}, Steven~J. ; \textsc{Taylor}, Alan~D.:
-\newblock Fair division - from cake-cutting to dispute resolution, Cambridge
-  University Press, 1996
+\bibitem[Brams and Taylor, 1996]{brams2}
+Brams, S.~J. and Taylor, A.~D. (1996).
+\newblock Fair division - from cake-cutting to dispute resolution.
+\newblock Cambridge University Press.
 
-\bibitem[CKKK09]{eff}
-\textsc{Caragiannis}, Ioannis ; \textsc{Kaklamanis}, Christos ;
-  \textsc{Kanellopoulos}, Panagiotis  ; \textsc{Kyropoulou}, Maria:
-\newblock The Efficiency of Fair Division.
-\newblock {In: }\emph{WINE}, 2009
+\bibitem[Caragiannis et~al., 2009]{eff}
+Caragiannis, I., Kaklamanis, C., Kanellopoulos, P., and Kyropoulou, M. (2009).
+\newblock The efficiency of fair division.
+\newblock In {\em WINE}.
 
-\bibitem[CLPP10]{chen:truth}
-\textsc{Chen}, Yiling ; \textsc{Lai}, John ; \textsc{Parkes}, David~C.  ;
-  \textsc{Procaccia}, Ariel~D.:
-\newblock Truth, Justice, and Cake Cutting.
-\newblock {In: }\emph{AAAI'10}, 2010
+\bibitem[Chen et~al., 2010]{chen:truth}
+Chen, Y., Lai, J., Parkes, D.~C., and Procaccia, A.~D. (2010).
+\newblock Truth, justice, and cake cutting.
+\newblock In {\em AAAI'10}.
 
-\bibitem[HM10]{ccc}
-\textsc{Hill}, Theodore~P. ; \textsc{Morrison}, Kent~E.:
-\newblock Cutting Cakes Carefully, 2010, S. 281--288
+\bibitem[Hill and Morrison, 2010]{ccc}
+Hill, T.~P. and Morrison, K.~E. (2010).
+\newblock Cutting cakes carefully.
+\newblock volume~41, pages 281--288.
 
-\bibitem[LR09]{lindner:degrees}
-\textsc{Lindner}, Claudia ; \textsc{Rothe}, Jörg:
-\newblock Degrees of Guaranteed Envy-Freeness in Finite Bounded Cake-Cutting
-  Protocols.
-\newblock {In: }\emph{WINE'09}, 2009, S. 149--159
+\bibitem[Lindner and Rothe, 2009]{lindner:degrees}
+Lindner, C. and Rothe, J. (2009).
+\newblock Degrees of guaranteed envy-freeness in finite bounded cake-cutting
+  protocols.
+\newblock In {\em WINE'09}, pages 149--159.
 
-\bibitem[Mag08]{note}
-\textsc{Magid}, Andy~R.:
+\bibitem[Magid, 2008]{note}
+Magid, A.~R. (2008).
 \newblock Editor's note: More on cake cutting.
-\newblock {In: }\emph{Notices of Amer. Math. Soc.} Bd.~55, 2008
+\newblock In {\em Notices of Amer. Math. Soc.}, volume~55.
 
-\bibitem[MT10]{tamuz}
-\textsc{Mossel}, Elchanan ; \textsc{Tamuz}, Omer:
-\newblock Truthful Fair Division, 2010
+\bibitem[Meir, 2009]{ba}
+Meir, R. (2009).
+\newblock Strategy proof classification.
+\newblock In {\em Master Thesis in School of Engineering and Computer Science
+  The Hebrew University of Jerusalem}.
 
-\bibitem[RW98]{robertson:cake-cutting}
-\textsc{Robertson}, Jack~M. ; \textsc{Webb}, William~A.:
-\newblock Cake-cutting algorithms - be fair if you can., 1998
+\bibitem[Mossel and Tamuz, 2010]{tamuz}
+Mossel, E. and Tamuz, O. (2010).
+\newblock Truthful fair division.
+\newblock volume abs/1003.5480.
 
-\bibitem[Tho06]{why}
-\textsc{Thomson}, William:
-\newblock Children crying at birthday parties. Why? Fairness and incentives for
+\bibitem[Robertson and Webb, 1998]{robertson:cake-cutting}
+Robertson, J.~M. and Webb, W.~A. (1998).
+\newblock Cake-cutting algorithms - be fair if you can.
+
+\bibitem[Thomson, 2006]{why}
+Thomson, W. (2006).
+\newblock Children crying at birthday parties. why? fairness and incentives for
   cake division problems.
-\newblock {In: }\emph{RCER Working Papers}, 2006
+\newblock In {\em RCER Working Papers}.
 
 \end{thebibliography}

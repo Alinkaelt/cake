@@ -3,17 +3,21 @@
 \contentsline {subsection}{\numberline {1.1}Related Work}{2}{subsection.1.1}
 \contentsline {section}{\numberline {2}Preliminaries}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Preliminaries of Game Theory}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Preliminaries of Cake-cutting}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Basics}{4}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Different Types of Fairness}{6}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Different Types of Protocols}{7}{subsubsection.2.2.3}
-\contentsline {section}{\numberline {3}Strategyproofness}{9}{section.3}
-\contentsline {section}{\numberline {4}Strategyproofness of Proportional Protocols}{15}{section.4}
-\contentsline {subsection}{\numberline {4.1}The Kuhn \IeC {\`a} la Dawson Lone Divider Protocol}{15}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}The Banach-Knaster Last-Diminisher Protocol}{18}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}The Fink Lone-Chooser Protocol}{20}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-and-Conquer Protocol}{22}{subsection.4.4}
-\contentsline {section}{\numberline {5}Conclusion}{24}{section.5}
+\contentsline {subsubsection}{\numberline {2.1.1}Concepts in Game Theory}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Classes of Special Games}{4}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Preliminaries of Cake-cutting}{6}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Basics}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Different Types of Fairness}{8}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Different Types of Protocols}{10}{subsubsection.2.2.3}
+\contentsline {section}{\numberline {3}Strategyproofness}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Correlation between Strategyproofness Criteria}{13}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}The Cut $\&$ Choose Protocol}{15}{subsection.3.2}
+\contentsline {section}{\numberline {4}Strategyproofness of Proportional Protocols}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}The Kuhn \IeC {\`a} la Dawson Lone-Divider Protocol}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}The Banach-Knaster Last-Diminisher Protocol}{20}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}The Fink Lone-Chooser Protocol}{22}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-and-Conquer Protocol}{24}{subsection.4.4}
+\contentsline {section}{\numberline {5}Conclusion}{25}{section.5}
 \contentsline {section}{\numberline {6}Open Questions and Future Research}{25}{section.6}
 \contentsline {section}{References}{26}{section*.6}
 \contentsline {section}{List of Figures}{27}{section*.8}
