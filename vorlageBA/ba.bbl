@@ -6,13 +6,13 @@ Barbanel, J.~B. (1995).
   with entitlements.
 \newblock In {\em Colloquium Mathematicum; Vol. 69, No. 1}, pages 59--73.
 
-\bibitem[Brams et~al., 2007a]{brams}
-Brams, S.~J., Jones, M.~A., and Klamler, C. (2007a).
+\bibitem[Brams et~al., 2006]{brams}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2006).
 \newblock Better ways to cut a cake - revisited.
 \newblock In {\em Fair Division}.
 
-\bibitem[Brams et~al., 2007b]{dc}
-Brams, S.~J., Jones, M.~A., and Klamler, C. (2007b).
+\bibitem[Brams et~al., 2007]{dc}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2007).
 \newblock Divide-and-conquer: A proportional, minimal-envy cake-cutting
   procedure.
 \newblock In {\em Fair Division}, Dagstuhl Seminar Proceedings. Internationales
@@ -23,6 +23,12 @@ Brams, S.~J., Jones, M.~A., and Klamler, C. (2007b).
 Brams, S.~J., Jones, M.~A., and Klamler, C. (2008).
 \newblock Proportional pie-cutting.
 \newblock volume~36, pages 353--367.
+
+\bibitem[Brams et~al., 2010]{dc2}
+Brams, S.~J., Jones, M.~A., and Klamler, C. (2010).
+\newblock Divide-and-conquer: A proportional, minimal-envy cake-cutting
+  algorithm.
+\newblock MPRA Paper 22704, University Library of Munich, Germany.
 
 \bibitem[Brams and Taylor, 1996]{brams2}
 Brams, S.~J. and Taylor, A.~D. (1996).
