@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  30 NOV 2011 22:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  1 DEC 2011 18:06
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1007,7 +1007,7 @@ LaTeX Info: Redefining \pageref on input line 115.
 
 pdfTeX warning: pdflatex (file ./bilder/HHU_Logo.pdf): PDF inclusion: found PDF
  version <1.5>, but at most version <1.4> allowed
-<bilder/HHU_Logo.pdf, id=90, 633.04462pt x 298.39256pt>
+<bilder/HHU_Logo.pdf, id=54, 633.04462pt x 298.39256pt>
 File: bilder/HHU_Logo.pdf Graphic file (type pdf)
 
 <use bilder/HHU_Logo.pdf>
@@ -1108,13 +1108,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--92
 
  []
 
-
-Underfull \hbox (badness 1281) in paragraph at lines 84--92
-\T1/lmr/m/n/10.95 In [[]] the au-thors pro-duced a bet-ter fit-ting def-i-ni-ti
-on of strat-e-
- []
-
-[2] <kek.pdf, id=173, 285.065pt x 142.93399pt>
+[2] <kek.pdf, id=128, 285.065pt x 142.93399pt>
 File: kek.pdf Graphic file (type pdf)
  <use kek.pdf>
 Underfull \hbox (badness 10000) in paragraph at lines 100--102
@@ -1133,57 +1127,89 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 127.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--159
 
  []
 
-[5] <bilder/ex1.pdf, id=229, 1046.91125pt x 175.65625pt>
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+[5]
+
+LaTeX Warning: Reference `bsp1' on page 6 undefined on input line 279.
+
+<bilder/ex1.pdf, id=181, 1046.91125pt x 175.65625pt>
 File: bilder/ex1.pdf Graphic file (type pdf)
  <use bilder/ex1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 283--360
+Underfull \hbox (badness 10000) in paragraph at lines 282--359
 
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 283--360
+Underfull \hbox (badness 1158) in paragraph at lines 282--359
 \T1/lmr/m/it/10.95 John Cocke and Tadao Kasami want to di-vide a chocolate-stra
 wberry-cake. The
  []
 
+[6 <./bilder/ex1.pdf>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `first_theorem' on page 7 undefined on input line 380.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6] [7 <./bilder/ex1.pdf>]
-LaTeX Font Info:    Try loading font information for U+ulsy on input line 394.
+[7]
+LaTeX Font Info:    Try loading font information for U+ulsy on input line 393.
  (/usr/share/texmf-texlive/tex/latex/ulsy/Uulsy.fd)
 
 LaTeX Font Warning: Font shape `U/ulsy/m/n' in size <10.95> not available
-(Font)              size <10> substituted on input line 394.
+(Font)              size <10> substituted on input line 393.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 437--441
+Underfull \hbox (badness 10000) in paragraph at lines 436--440
 
  []
 
 [9]
-Underfull \hbox (badness 3019) in paragraph at lines 455--456
+Underfull \hbox (badness 3019) in paragraph at lines 454--455
 []\T1/lmr/m/n/10.95 The de-vel-op-ment of such pro-to-cols is one of the main g
 oals of cake-cutting
  []
 
 [10]
+
+LaTeX Warning: Reference `blub' on page 11 undefined on input line 494.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
+
+
+LaTeX Warning: Reference `bsp222' on page 11 undefined on input line 505.
+
+
+LaTeX Warning: Reference `laberlaberlaber' on page 11 undefined on input line 5
+15.
+
+
+LaTeX Warning: Reference `sven_hat_recht' on page 11 undefined on input line 51
+5.
+
+
+LaTeX Warning: Reference `bsp3' on page 11 undefined on input line 515.
+
+
+LaTeX Warning: Reference `cuc' on page 11 undefined on input line 520.
+
+
+LaTeX Warning: Reference `Table4' on page 11 undefined on input line 520.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 519--521
@@ -1201,49 +1227,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 536--539
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 581--588
+Underfull \hbox (badness 10000) in paragraph at lines 577--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--626
+Underfull \hbox (badness 10000) in paragraph at lines 604--636
 
  []
 
 [13]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 637.
+(Font)              <12> on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 647.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--676
+
+ []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 664--666
+Underfull \hbox (badness 10000) in paragraph at lines 686--687
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
-
- []
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 677.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 687.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15] [16]
-Overfull \hbox (1.02269pt too wide) in paragraph at lines 836--837
+
+LaTeX Warning: Reference `thm5' on page 15 undefined on input line 730.
+
+
+LaTeX Warning: Reference `thm6' on page 15 undefined on input line 730.
+
+
+LaTeX Warning: Reference `thm7' on page 15 undefined on input line 730.
+
+[15]
+Overfull \hbox (1.02269pt too wide) in paragraph at lines 848--849
  [] 
  []
 
@@ -1251,100 +1283,144 @@ Overfull \hbox (1.02269pt too wide) in paragraph at lines 836--837
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 846--847
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 848--867
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 860--879
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--867
+Underfull \hbox (badness 10000) in paragraph at lines 860--879
 
  []
 
-LaTeX Font Info:    Try loading font information for U+ding on input line 877.
+LaTeX Font Info:    Try loading font information for U+ding on input line 889.
 (/usr/share/texmf-texlive/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 ) [18]
-Underfull \hbox (badness 10000) in paragraph at lines 892--902
+Underfull \hbox (badness 10000) in paragraph at lines 904--914
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--902
+Underfull \hbox (badness 10000) in paragraph at lines 904--914
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--902
-
- []
-
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1045
+Underfull \hbox (badness 10000) in paragraph at lines 904--914
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1045
+LaTeX Warning: Reference `thm5' on page 19 undefined on input line 924.
+
+
+LaTeX Warning: Reference `kd1' on page 19 undefined on input line 924.
+
+
+LaTeX Warning: Reference `bsp222' on page 19 undefined on input line 924.
+
+[19]
+Overfull \hbox (10.52763pt too wide) in paragraph at lines 1044--1045
+ [] 
+ []
+
+[20]
+
+LaTeX Warning: Reference `ldef' on page 21 undefined on input line 1051.
+
+
+LaTeX Warning: Reference `ldef' on page 21 undefined on input line 1053.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1057
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1057
+
+ []
+
+
+LaTeX Warning: Reference `thm5' on page 21 undefined on input line 1068.
+
+
+LaTeX Warning: Reference `ldim1' on page 21 undefined on input line 1068.
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
+
+LaTeX Warning: Reference `thm7' on page 22 undefined on input line 1109.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1104--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1117
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
 
  []
+
+
+LaTeX Warning: Reference `thm5' on page 23 undefined on input line 1205.
+
+
+LaTeX Warning: Reference `lc1' on page 23 undefined on input line 1205.
+
+
+LaTeX Warning: Reference `lc2' on page 23 undefined on input line 1205.
 
 [23]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1211.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1211.
 
-<bilder/dc1.pdf, id=419, 256.96pt x 188.705pt>
+<bilder/dc1.pdf, id=354, 256.96pt x 188.705pt>
 File: bilder/dc1.pdf Graphic file (type pdf)
  <use bilder/dc1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 1236--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1257
 
  []
 
 [24 <./bilder/dc1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1262--1290
+
+LaTeX Warning: Reference `thm5' on page 25 undefined on input line 1270.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1297--1301
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1318
 
  []
 
-[25] (./ba.bbl) [26
+[26] (./ba.bbl) [27
 
 ] (./ba.lof)
 \tf@lof=\write7
@@ -1354,20 +1430,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1297--1301
 \tf@lot=\write8
 \openout8 = `ba.lot'.
 
- [27
+ [28
 
 ] (./ba.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.95pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16196 strings out of 495061
- 285471 string characters out of 1182621
- 395419 words of memory out of 3000000
- 18732 multiletter control sequences out of 15000+50000
- 88346 words of font info for 68 fonts, out of 3000000 for 9000
+ 16178 strings out of 495061
+ 285193 string characters out of 1182621
+ 400052 words of memory out of 3000000
+ 18717 multiletter control sequences out of 15000+50000
+ 79814 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  49i,20n,69p,1222b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/alina/.texmf-var/fonts/pk/ljfour/public/bbding/bbding10.657pk>{/usr/s
@@ -1384,15 +1466,14 @@ nts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb
 1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on ba.pdf (32 pages, 549626 bytes).
+fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ba.pdf (33 pages, 525748 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 154 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

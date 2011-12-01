@@ -9,13 +9,13 @@
 \contentsline {section}{\numberline {3}Strategyproofness}{10}{section.3}
 \contentsline {subsection}{\numberline {3.1}Correlation between Strategyproofness Criteria}{12}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}The Cut $\&$ Choose Protocol}{14}{subsection.3.2}
-\contentsline {section}{\numberline {4}Strategyproofness of Proportional Protocols}{17}{section.4}
-\contentsline {subsection}{\numberline {4.1}The Kuhn \IeC {\`a} la Dawson Lone-Divider Protocol}{17}{subsection.4.1}
+\contentsline {section}{\numberline {4}Strategyproofness of Proportional Protocols}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}The Kuhn \IeC {\`a} la Dawson Lone-Divider Protocol}{16}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}The Banach-Knaster Last-Diminisher Protocol}{20}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}The Fink Lone-Chooser Protocol}{22}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-and-Conquer Protocol}{24}{subsection.4.4}
-\contentsline {section}{\numberline {5}Conclusion}{25}{section.5}
-\contentsline {section}{\numberline {6}Open Questions and Future Research}{25}{section.6}
-\contentsline {section}{References}{26}{section*.6}
-\contentsline {section}{List of Figures}{27}{section*.8}
-\contentsline {section}{List of Tables}{27}{section*.10}
+\contentsline {section}{\numberline {5}Conclusion}{26}{section.5}
+\contentsline {section}{\numberline {6}Open Questions and Future Research}{26}{section.6}
+\contentsline {section}{References}{27}{section*.6}
+\contentsline {section}{List of Figures}{28}{section*.8}
+\contentsline {section}{List of Tables}{28}{section*.10}
