@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  1 DEC 2011 18:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  1 DEC 2011 18:37
 entering extended mode
  %&-line parsing enabled.
 **lala.tex
@@ -1007,7 +1007,7 @@ LaTeX Info: Redefining \pageref on input line 115.
 
 pdfTeX warning: pdflatex (file ./bilder/HHU_Logo.pdf): PDF inclusion: found PDF
  version <1.5>, but at most version <1.4> allowed
-<bilder/HHU_Logo.pdf, id=86, 633.04462pt x 298.39256pt>
+<bilder/HHU_Logo.pdf, id=38, 633.04462pt x 298.39256pt>
 File: bilder/HHU_Logo.pdf Graphic file (type pdf)
 
 <use bilder/HHU_Logo.pdf>
@@ -1146,7 +1146,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--92
 
  []
 
-[2] <kek.pdf, id=146, 285.065pt x 142.93399pt>
+[2] <kek.pdf, id=85, 285.065pt x 142.93399pt>
 File: kek.pdf Graphic file (type pdf)
  <use kek.pdf>
 Underfull \hbox (badness 10000) in paragraph at lines 100--102
@@ -1197,126 +1197,33 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15965 strings out of 495061
- 282801 string characters out of 1182621
- 369058 words of memory out of 3000000
- 18604 multiletter control sequences out of 15000+50000
+ 15892 strings out of 495061
+ 282125 string characters out of 1182621
+ 367323 words of memory out of 3000000
+ 18562 multiletter control sequences out of 15000+50000
  69587 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  49i,11n,69p,1224b,694s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{table.13} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{table.12} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{table.11} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{table.10} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{table.9} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.8} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.7} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.6} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.5} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.4} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.3} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{table.2} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{figure.9} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.8} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.7} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.6} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.5} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
-athex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols
-/msbm10.pfb>
-Output written on lala.pdf (12 pages, 357709 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on lala.pdf (12 pages, 342556 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

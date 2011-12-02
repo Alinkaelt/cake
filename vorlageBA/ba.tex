@@ -145,7 +145,6 @@ The strategy $S_1$ is \emph{dominated} by the strategy $S_2$ if $v_1(X_{1,S_1,i}
 \end{itemize}}
 \end{defi}
 The strategy $S_1$ can be neither dominates nor dominated regarding an other strategy $S_2$, so $v_1(X_{1,S_1,i}) < v_1(X_{1,S_2,i})$ for at least one $i$ and $v_1(X_{1,S_1,i}) > v_1(X_{1,S_2,i})$ for all other $i$. Also  $v_1(X_{1,S_1,i}) = v_1(X_{1,S_2,i})$ for all $i$ is possible, but in this case the strategies can be seen as equal and the player is indifferent between them.\\
-A game can be rather strategic, where all player move simoultaneous or extensive, where the players move in a fixed or variable order.
 %\begin{defi}{\textbf{(Zero-Sum Game / General-Sum Game )}}\\
 %\emph{In a \emph{zero-sum game} the sum of the valuations of an allocation is one. Otherwise the game is called %\emph{variable-sum game}.}
 %\end{defi}
@@ -154,16 +153,18 @@ A game can be rather strategic, where all player move simoultaneous or extensive
 %\emph{A \emph{repeated game} } 
 %\end{defi}
 \newline
-\newline
-\textbf{Information in Games}
+Another important role plays the amount of information a player knows about the game. 
 \begin{defi}{\textbf{(Perfect / Imperfect Information)}}\\
-Perfect information extensive form games are games in tree representation where every inner node represents
+\emph{Perfect information extensive form games are games in tree representation where every inner node represents
 a choice by a single agent, with the out-edges of the node being the possible actions.
-Each leaf node is an outcome labeled by a vector of utilities (one per agent).
+Each leaf node is an outcome labeled by a vector of utilities (one per player).}
 \end{defi}
 \begin{defi}{\textbf{(Complete / Incomplete Information)}}\\
-An imperfect information extensive form games are extensive form games where the agent cannot distinguish
-two or more choice nodes (those nodes are said to belong to an equivalence set).
+\emph{An imperfect information extensive form games are extensive form games where the agent cannot distinguish
+two or more choice nodes (those nodes are said to belong to an equivalence set).}
+\end{defi}
+\begin{defi}{\textbf{(Common Knowledge)}}\\
+\emph{A player's \emph{type} is a complete representation of his private information.}
 \end{defi}
 \begin{comment}
 (Pure strategy (extensive form game)) pure strategy for an extensive form game is a mapping from nodes or equivalence sets to actions {analogous
@@ -174,14 +175,13 @@ the normal form game's actions are pure strategies in the extensive form game. T
 those strategies. Because every extensive form game has a corresponding induced normal form
 game, it must have a Nash equilibrium (by Theorem 27).
 \end{comment}
-\begin{defi}{\textbf{(Bayesian Game)}}\\
-A Bayesian Game is a set of players, each of which has a set of actions and a utility function mapping action and type profiles to utility. A Bayesian game also includes a distribution over type profiles.
+\begin{defi}{\textbf{(Type)}}\\
+\emph{A player's \emph{type} is a complete representation of his private information.}
 \end{defi}
-
-Often, strategic interactions involve some notion of random events and private information. We model these using Bayesian games. Many card games (for example, poker) are instances of this type of interaction.\\
-
-Definition 39 (Type) An agent's type is a complete representation of his private information.\\
-Definition 40 (Type profile) A type profile is a vector of types, one per agent. One simple but powerful way to represent Bayesian games is to say that the agents have different information about which normal form game they are actually playing.
+\begin{defi}{\textbf{(Bayesian Game)}}\\
+\emph{A Bayesian Game is a set of players, each of which has a set of actions and a utility function mapping action and type profiles to utility. A Bayesian game also includes a distribution over type profiles.}
+\end{defi}
+%Definition 40 (Type profile) A type profile is a vector of types, one per agent. One simple but powerful way to represent Bayesian games is to say that the agents have different information about which normal form game they are actually playing.
 \begin{comment}
 Definition 43 (Pure strategy (Bayesian game)) A pure strategy in a Bayesian game
 is a function mapping from type to action.
@@ -208,14 +208,16 @@ type is known.
 Definition 49 (Expost) Ex ante refers to situations where all agent's types are known.\\
 \newline
 \end{comment}
-For issues in cutting a cake it is especially important that the valuation functions are private and that no player knows each others type or his own position in the game. So for the analysis some assumption have to be made and a stochastic model to be defined.
-\begin{defi}{\textbf{(Probability Model)}}\\
-\emph{The sample space $S$ of a random phenomenon is the set of all possible outcomes. An event is an outcome or a set of outcomes of a random phenomenon. That is, an event is a subset of the sample space. A \emph{probability model} is a mathematical description of a random phenomenon consisting of two parts: a sample space $S$ and a way of assigning probabilities to events.} 
+For issues in cutting a cake it is especially important that the valuation functions are private and that no player knows each others type or his own position in the game. So for the analysis some assumption have to be made and a probability model to be defined. A not countably infinite different valuation functions over the cake is possible, so it makes no sense to define a probability measure over this space. Hence, the preferences of each player $p_j$ over a partition $X^1, \ldots, X^n$ cutted by a player $p_i$ with $1 \leq i,j \leq n, i \neq j$ can be defined as follows:    
+\begin{defi}{\textbf{(Probability Space)}}\\
+\emph{For $n$ given disjoint pieces of a cake $X=X^1, \ldots, X^n$ let\\$S=(\Omega_{X^1, \ldots, X^n}, \mathcal{A}_{X^1, \ldots, X^n},{P}_{X^1, \ldots, X^n})$ be a \emph{probability space} with $$\Omega_{X^1, \ldots, X^n}:=\{v_j(X^k)\in [0,1]| \sum\limits_{k=1}^n v_j(X^k)=1\}.$$ And a suitable $\sigma$- algebra is\\ $$\mathcal{A}_{X^1, \ldots, X^n}.$$\\ Every player $p_i$ assumes a probability measure ${P}_{X^1, \ldots, X^n}$ for all $\sigma \in S_n$ so that,\\
+$${P}_{X^1, \ldots, X^n}(v_j(X^{\sigma(1)})\leq v_j(X^{\sigma(2)})\leq \ldots \leq v_j(X^{\sigma(n)}))=\nicefrac{1}{n!}$$\\for $1 \leq i,j \leq n,\: j\neq i$ and $v_j(X^l)$ is independent of $v_m(X^l)$ for all $1 \leq j,m \leq n,\: j \neq m$.} 
 \end{defi}
+Especially: ${P}_{X^1, \ldots, X^n}(v_j(X^{\sigma(k)})\leq v_j(X^{\sigma(n)}))=\nicefrac{1}{n}$ for $1 \leq i,j \leq n,\: j\neq i$ and $1 \leq k < n.$
 \begin{defi}{\textbf{(Expected Value)}}\\
-A 
+\emph{The \emph{expected value} is defined by $$E(X)=\int\limits_{\Omega} X \mathrm{d}P.$$} 
 \end{defi}
-A game can be represented in normal or in extended form. The normal form is advantageous for games where players move simultaneous, which is not often the case in cake-cutting. So rather the presentation in extended form as a game tree will be used in this work.
+A game can be rather strategic, where all player move simoultaneous or extensive, where the players move in a fixed or variable order. A game can be represented in normal or in extended form. The normal form is advantageous for games where players move simultaneous, which is not often the case in cake-cutting. So rather the presentation in extended form as a game tree will be used in this work.
 \begin{defi}\textbf({Normal Form Game)}\\
 \emph{A \emph{normal form game} is a tabular representation of a game. In the case for two players the first player chases the row while the second choses the column. Each cell contains a vector with the value of the obtained piece, one per player.}
 \end{defi}
@@ -675,7 +677,7 @@ Cut $\&$ Choose is game-theoretic strategyproof.
 \textbf{Options for not following the recommended strategy:}
 \begin{itemize}
 \item Player $p_2$ takes the less valuable piece. This can not be his intention, because then he has a piece with less value.
-\item Player $p_1$ cuts the cake into two unequal pieces. The chance to get less in his valuation is equal to the chance to get more in his valuation of the cake. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case: $$ \nicefrac{1}{2} \cdot \nicefrac{1}{2}+\nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{2} $$ and in the dishonest case: $$ \nicefrac{1}{2} \cdot X' +\nicefrac{1}{2} \cdot (X-X') =\nicefrac{1}{2} \cdot \underbrace{X}_{=1}=\nicefrac{1}{2}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Cut $\&$ Choose is game-theoretical strategyproof.
+\item Player $p_1$ cuts the cake into two unequal pieces. The chance to get less in his valuation is equal to the chance to get more in his valuation of the cake. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case: $$ E(v_1(X_1))=P(\sigma(1)=2)\cdot v_1(X')+P(\sigma(1)=1)\cdot v_1(X-X')=\nicefrac{1}{2} \cdot \nicefrac{1}{2}+\nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{2} $$ and in the dishonest case: $$ E(v_1(X_1))=P(\sigma(1)=2)\cdot v_1(X')+P(\sigma(1)=1)\cdot v_1(X-X')$$$$\textcolor{white}{E(v_1(X_1))} \textcolor{black}{}=\nicefrac{1}{2} \cdot v_1(X') +\nicefrac{1}{2} \cdot (X-X') =\nicefrac{1}{2} \cdot \underbrace{v_1(X)}_{=1}=\nicefrac{1}{2}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Cut $\&$ Choose is game-theoretical strategyproof.
 \end{itemize}
 \end{proof}
 \begin{lem}
@@ -1242,8 +1244,8 @@ $\:$4. Repeat the protocol
 %\textbf{Interesting:} Is it possible to get information about the valuations of other players from the sequence?
 \begin{figure}[h!]
 		\centering
- 		 \includegraphics[width=180pt]{bilder/dc1.pdf}
-   \caption{D$\&$C step 3}
+ 		 \includegraphics[width=380pt]{bilder/dcbsp.pdf}
+   \caption{D$\&$C execution for $n=5$}
   	 \end{figure}
 \begin{lem}
 \label{dc1}
@@ -1259,17 +1261,21 @@ But if player $A$ should report that its $\nicefrac{1}{2}$ point is either to th
 getting less than $\nicefrac{1}{2}$ the cake if $(i) |$ is to the left of a or $(ii) |$ is to the right of $b$.  This argument for the vulnerability of D$\&$C-that it does not guarantee a player a proportional 
 share if it is not truthful-can readily be extended to $n > 2$ players.
 \end{proof}
-%\begin{lem}
-%\label{dc2}
-%The Divide-and-Conquer protocol is game-theoretic strategyproof.
-%\end{lem}
-%\begin{proof}
-%\textcolor{white}{x}\\\\
-%\end{proof}
+\begin{lem}
+\label{dc2}
+The Divide-and-Conquer protocol is game-theoretic strategyproof.
+\end{lem}
+A foreseeable value is the proportional value of a piece between the number of players. So is the foreseeable of a piece with the value $\nicefrac{4}{7}$ for $4$ players is $\nicefrac{1}{7}$. This is proportional for an allocation with $7$ players.
+\begin{proof}
+\begin{itemize}
+\item The player $p_n$\\
+\item Every player in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. For the same argument as in Cut $\&$ Choose the expected values are equal and so the player would stay honest.
+\end{itemize}
+\end{proof}
+
 \begin{bezeichnungen}
-According to Theorem \ref{thm5} and Theorem \ref{dc1} %and Theorem \ref{dc2} 
-Even $\&$ Paz Divide-$\&$-Conquer is strategyproof for proportional protocols, strategyproof %game-theoretical strategyproof, 
- and weak strategyproof.
+According to Theorem \ref{thm5} and Theorem \ref{dc1} and Theorem \ref{dc2} 
+Even $\&$ Paz Divide-$\&$-Conquer is strategyproof for proportional protocols, strategyproof game-theoretical strategyproof and weak strategyproof.
 \end{bezeichnungen}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
