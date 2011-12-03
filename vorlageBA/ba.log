@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  3 DEC 2011 02:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  3 DEC 2011 04:27
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1300,37 +1300,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 1036--1044
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1052
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1052
+
+ []
+
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1108
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1118
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1208
 
  []
 
 [25] [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1202.
+(hyperref)                removing `math shift' on input line 1216.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1202.
+(hyperref)                removing `math shift' on input line 1216.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1254
 
  []
 
@@ -1340,23 +1360,23 @@ File: bilder/dcbsp.pdf Graphic file (type pdf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
-
- []
-
-[27] [28 <./bilder/dcbsp.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1302
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1314
+[28 <./bilder/dcbsp.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1317
 
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 1309--1314
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1329
+
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 1324--1329
 \T1/lmr/m/n/10.95 To search for strate-gies which ful-fill the strat-e-gyproof-
 ness cri-te-rion but not the
  []
@@ -1406,7 +1426,7 @@ fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
 /type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ba.pdf (37 pages, 569838 bytes).
+Output written on ba.pdf (37 pages, 572153 bytes).
 PDF statistics:
  619 PDF objects out of 1000 (max. 8388607)
  162 named destinations out of 1000 (max. 500000)

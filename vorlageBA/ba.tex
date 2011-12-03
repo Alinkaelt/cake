@@ -1032,7 +1032,15 @@ Last-Diminisher protocol is strategyproof for proportional protocols.
 	\caption{Last-Diminisher cake game in extended form}\label{ldef}
 \end{center}
 \end{figure}
-\newpage 
+\newpage
+\textbf{Explanation of the obtained values in the game tree:}\\
+\newline
+For every player $p_i$ in the group $P_{n-1}$:\\
+\newline
+$\cdot$ Player $p_i$ obtains certainly $\nicefrac{1}{n}$ if he marks all pieces equal to $\nicefrac{1}{n}$ in his own\\\textcolor{white}{la}\textcolor{black}{}valuation.\\
+$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1+\delta_i)}{n}$ if he marks pieces bigger or equal than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{n}$ in his own valuation.\\
+$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1+\delta_i)}{n}$ if he marks pieces bigger than $\nicefrac{1}{n}$ in his\\\textcolor{white}{la}\textcolor{black}{}own valuation.\\
+$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1-\delta_i)}{n}$ if he marks all pieces and especially\\\textcolor{white}{la}\textcolor{black}{}pieces smaller than $\nicefrac{1}{n}$ in his own valuation and get this in the allocation.\\
 For the proof a presentation of Last-Diminisher game in extended form is used. The variables have the following restrictions: $$ 0 < (1\pm\epsilon_2),(1\pm\epsilon_3),(1\pm\epsilon_4) <n,\: 0 < \epsilon_5 \leq 1,\:0 < \epsilon_1,\epsilon_6,\epsilon_7,\epsilon_8 \leq (n-1)$$ and :$$ 0 \leq (1\pm\delta_1),(1\pm\delta_4),(1\pm\delta_7) \leq n,\:0< (1\pm\delta_2),(1\pm\delta_3),(1\pm\delta_5),(1\pm\delta_6),(1\pm\delta_8),(1\pm\delta_9) < n$$
 The consequences for each player $p_j$ in $P_{n-i+1}$ by choosing the strategy to pass a piece $X_i$ with $v_j(X_i)>\nicefrac{1}{n}$ or to trim a piece $X_i$ to $v_j(X_i)>\nicefrac{1}{n}$ are the same as for the player $p_i$ by cutting a piece with $v_i(X_i)>\nicefrac{1}{n}$.
 The upper red paths in Figure \ref{ldef} show that by choosing this non-truthful strategy a player can obtain a less valuable piece. For that to happen, a following player $p_s$ needs to trim the piece s.t. $v_i(X_s)>\nicefrac{1}{n}$ and $v_j(X_s)>\nicefrac{1}{n}$ and for the reason that he is the last trimmer to get this piece.\\
@@ -1100,10 +1108,10 @@ Fink Lone-Chooser protocol is game-theoretic strategyproof.
 \begin{itemize}
 \item Player $p_{i+1}$ takes not the biggest piece. Then he has a less valuable piece\\than by following the recommended strategy. 
 \item Players in $P_i$ cut the cake into $i+1$ non-equal pieces. The chance that\\player $p_{i+1}$ takes a certain piece $X_k$ is $\nicefrac{1}{(i+1)}$. In stochastic terms it means,\\that the expected value at the end of the allocation will be in the honest\\case (because he had at least $\nicefrac{1}{i}$ before) at least: 
-$$ E(v_1(X_1+X_2+\ldots+X_{k-1}+X_{k+1}+\ldots+X_{i+1}))=$$
-$$P(\sigma(1)=k)\cdot v_1(X_1)+P(\sigma(1)=k)\cdot v_1(X_2)+\ldots+P(\sigma(1)=k)\cdot v_1(X_{i+1})=$$
+$$ E(v_i(X_1+X_2+\ldots+X_{j-1}+X_{j+1}+\ldots+X_{i+1}))=$$
+$$P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_1)+P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_2)+\ldots$$$$+P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_{i+1})=$$
 $$\nicefrac{1}{(i+1)}\cdot \nicefrac{1}{i}+\nicefrac{1}{(i+1)}\cdot \nicefrac{1}{i} + \ldots +\nicefrac{1}{(i+1)}\cdot \nicefrac{1}{i}=i\cdot\nicefrac{1}{(i+1)}\cdot \nicefrac{1}{i}=\nicefrac{1}{(i+1)}$$
-\\Assume the value of the piece will be distributed on $s$ pieces with\\$1 \leq s \leq i+1$. So the expected value will be in the dishonest case:  $$E(v_1(X_1+X_2+\ldots+X_{k-1}+X_{k+1}+\ldots+X_{i+1}))=$$$$P(\sigma(1)=k)\cdot v_1(X_1)+P(\sigma(1)=k)\cdot v_1(X_2)+\ldots+P(\sigma(1)=k)\cdot v_1(X_{i+1})=$$$$ \nicefrac{1}{i} \cdot \nicefrac{(i+1-s)}{(i+1)} + \nicefrac{(s-1)}{(si)}\cdot \nicefrac{s}{(i+1)} =\nicefrac{1}{(i+1)} $$ 
+\\Assume the value of the piece will be distributed on $s$ pieces with\\$1 \leq s \leq i+1$. So the expected value will be in the dishonest case:  $$E(v_1(X_1+X_2+\ldots+X_{j-1}+X_{j+1}+\ldots+X_{i+1}))=$$$$P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_1)+P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_2)+\ldots$$$$+P(v_n(X^k)\leq v_n(X^j))\cdot v_i(X_{i+1})=$$$$ \nicefrac{1}{i} \cdot \nicefrac{(i+1-s)}{(i+1)} + \nicefrac{(s-1)}{(si)}\cdot \nicefrac{s}{(i+1)} =\nicefrac{1}{(i+1)} $$ ZUENDEMACHEN!!!!
 Even if the value is distributed unequally on the $s$ pieces, it would not\\affect the value of the piece in the allocation, because the probability\\of the piece the player $p_{i+1}$ take is uniformly distributed.\\
 According to the definition of game-theoretic strategyproofness in the\\case with equal expected values the player would stay honest.
 \end{itemize}
@@ -1115,7 +1123,7 @@ Fink Lone-Chooser protocol is strategyproof for proportional protocols.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-For the proof a presentation of Lone-Chooser game in extended form is used. The variables have the following restrictions: $$ 0 \leq (i\pm\epsilon_1),(i\pm\epsilon_2) \leq (i+1),\: 0 \leq \delta_1,\delta_3 \leq i,\:0 \leq (i\pm\delta_2),(i\pm\delta_4) \leq (i+1),\:\delta_2 \leq \delta_1,\: \delta_4 \leq \delta_3$$
+For the proof a presentation of Lone-Chooser game in extended form is used. The variables have the following restrictions: $$ 0 \leq (i\pm\epsilon_1),(i\pm\epsilon_2) \leq (i+1),\: 0 \leq \delta_1,\delta_3 \leq (i^2+i-1)$$$$0 \leq (i\pm\delta_2),(i\pm\delta_4) \leq (i+1)\cdot i,\:\delta_2 \leq \delta_1,\: \delta_4 \leq \delta_3$$
 \begin{figure}[h!]
 \begin{center}
 	\begin{tikzpicture}
@@ -1129,7 +1137,7 @@ For the proof a presentation of Lone-Chooser game in extended form is used. The 
 		\node[circle,draw,ball color=red!20,shade=ball,inner sep=5pt] (n8) at (9,0.2) {};
 		\node[circle,draw,ball color=red!20,shade=ball,inner sep=5pt] (n9) at (9,1) {};
 
-		\node[draw=none,fill=none] (t1) at (1,4.5) {$I$};
+		\node[draw=none,fill=none] (t1) at (1,4.5) {$i$};
 		\node[draw=none,fill=none] (t2) at (5.03,7.5) {$i+1$};
 		\node[draw=none,fill=none] (t1) at (5.03,6.5) {$i+1$};
 		\node[draw=none,fill=none] (t1) at (5.03,1.5) {$i+1$};
@@ -1190,6 +1198,12 @@ For the proof a presentation of Lone-Chooser game in extended form is used. The 
 \end{center}
 \end{figure}
 \newline
+\textbf{Explanation of the obtained values in the game tree:}\\
+\newline
+$\cdot$ Player $p_{i+1}$ chooses not the most valuable piece:\\\textcolor{white}{la}\textcolor{black}{}Then the value of $(1+\delta_2)$ can be bigger or smaller than $1$, for example when one\\\textcolor{white}{la}\textcolor{black}{}of the $i+1$ pieces has the whole value.\\
+$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1-\epsilon_i)}{(i+1)}$ if he cuts at least one piece bigger than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{(i+1)}$ in his own valuation and this one would the player $p_{i+1}$ take.
+\\$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1+\epsilon_i)}{(i+1)}$ if he cuts at least one piece smaller than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{(i+1)}$ in his own valuation and this one would the player $p_{i+1}$ take.\\
+\newline
 The red path is the not succesful allocation by following the non-truthful strategy for a player in $P_i$. Here every player gets less than by following his recommended strategy. Especially it is the case, where the player $p_{i+1}$ takes a piece which a player in $P_i$ values more than $\nicefrac{1}{(i+1)}$.\\If Player $p_2$ would not choose the recommended strategy, he has to take a piece less valuable than in his best possibility. Both kind of players would stay honest. Thus Lone-Chooser is strategyproof for proportional protocols.
 \end{proof}
 \begin{bezeichnungen}
@@ -1201,8 +1215,7 @@ According to Theorem \ref{thm5}, Theorem \ref{lc1} and Theorem \ref{lc2} Fink Lo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Even $\&$ Paz Divide-and-Conquer Protocol}
 %Compare Brams, Jones and Klamler (2007) $m$-proportional
-The players are separated in two groups.
-The piece $X'$ that first player $p_1$ marks is labelled as $X'_{1}$ and so on.
+The players are separated in two groups. The player $p_i$ in the group $P_{n-1}$ make the mark on the cake and then get from left to right numbered in ascending order. So the player with the leftmost cut is numbered as player $p_1$. The piece $X'$ that this first player $p_1$ marks is labelled as $X'_{1}$ and so on. For each new allocation the players get new numbers.
 \begin{table}[htb]
 \begin{tabular*}{\textwidth}{|@{\extracolsep{\fill}}l|c|r|}
 \hline
@@ -1237,28 +1250,30 @@ The Divide-and-Conquer protocol is strategyproof for proportional protocols.
 \end{lem}
 \begin{proof} 
 \textcolor{white}{x}\\\\
-The proof can be found in \cite{dc}: Consider the case when two players, $A$ and $B$, must divide a 
-cake, but one may not be truthful.  If their truthful $\nicefrac{1}{2}$ points are as shown below, then 
-cutting the cake at $|$ gives each player more than $\nicefrac{1}{2}$: 
+The proof via induction is similar to \cite{dc}:
+\begin{itemize}
+\item[$n=2$] Assume two players $p_1$ and $p_2$ cutting cake. Player $p_1$ may be the cheating player. The truthful $\nicefrac{1}{2}$ points are shown below, then by making a cut at $|$ would give $p_1$ and $p_2$ more than $\nicefrac{1}{2}$: 
 $$0-----------a-|-b------------1$$ 
-But if player $A$ should report that its $\nicefrac{1}{2}$ point is either to the left or right of a, it risks 
-getting less than $\nicefrac{1}{2}$ the cake if $(i) |$ is to the left of a or $(ii) |$ is to the right of $b$.  This argument for the vulnerability of D$\&$C-that it does not guarantee a player a proportional 
-share if it is not truthful-can readily be extended to $n > 2$ players.
+But if player $p_1$ should move his $\nicefrac{1}{2}$ point to $a$, he gets into the risk of
+getting less than $\nicefrac{1}{2}$ if the other player choose player $p_1$ favourite part.
+\item[$n \mapsto$]$(n+1)$ Assume in the same sketch the $|$ is the mark of the $\lfloor \nicefrac{n}{2} \rfloor$-player. If the player $p_1$ should report false that his $\nicefrac{\lfloor \nicefrac{n}{2} \rfloor}{n}$ point, which is $a$ is more to the left. He risks to cross the $|$ mark and to be assigned to the group of players with whom the value he would obtain is smaller than his proportional piece.
+\end{itemize}
 \end{proof}
 \begin{figure}[h!]
 		\centering
  		 \includegraphics[width=380pt]{bilder/dcbsp.pdf}
    \caption{D$\&$C execution for $n=5$}
   	 \end{figure}
+  	 \newpage
 \begin{lem}
 \label{dc2}
 The Divide-and-Conquer protocol is game-theoretic strategyproof.
 \end{lem}
-A foreseeable value is the proportional value of a piece between the number of players. So is the foreseeable of a piece with the value $\nicefrac{4}{7}$ for $4$ players is $\nicefrac{1}{7}$. This is proportional for an allocation with $7$ players.
 \begin{proof}
+\textcolor{white}{x}
 \begin{itemize}
-\item The player $p_n$\\
-\item Every player in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. For the same argument as in Cut $\&$ Choose the expected values are equal and so the player would stay honest.
+\item The player $p_n$ has no intention to take the smaller piece.\\
+\item Every player $p_i$ in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. For the same argument as in Cut $\&$ Choose the expected values are equal and so the player would stay honest.
 \end{itemize}
 \end{proof}
 
