@@ -50,6 +50,11 @@ Hill, T.~P. and Morrison, K.~E. (2010).
 \newblock Cutting cakes carefully.
 \newblock volume~41, pages 281--288.
 
+\bibitem[Holler et~al., 2008]{stl}
+Holler, M., Leroch, M., and Maaser, N. (2008).
+\newblock {\em Spieltheorie Lite HLM: Aufgaben und L{\"o}sungen}.
+\newblock Accedo Verl.
+
 \bibitem[Lindner and Rothe, 2009]{lindner:degrees}
 Lindner, C. and Rothe, J. (2009).
 \newblock Degrees of guaranteed envy-freeness in finite bounded cake-cutting
@@ -60,6 +65,12 @@ Lindner, C. and Rothe, J. (2009).
 Magid, A.~R. (2008).
 \newblock Editor's note: More on cake cutting.
 \newblock In {\em Notices of Amer. Math. Soc.}, volume~55.
+
+\bibitem[McCain, 2010]{gtt}
+McCain, R.~A. (2010).
+\newblock {\em GAME THEORY:A Nontechnical Introduction to the Analysis of
+  Strategy(Revised Edition)}.
+\newblock World Scientific Publishing Co. Pte. Ltd.
 
 \bibitem[Meir, 2009]{ba}
 Meir, R. (2009).
