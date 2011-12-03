@@ -16,6 +16,6 @@
 \contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-and-Conquer Protocol}{27}{subsection.4.4}
 \contentsline {section}{\numberline {5}Conclusion}{29}{section.5}
 \contentsline {section}{\numberline {6}Open Questions and Future Research}{29}{section.6}
-\contentsline {section}{References}{30}{section*.6}
-\contentsline {section}{List of Figures}{32}{section*.8}
-\contentsline {section}{List of Tables}{32}{section*.10}
+\contentsline {section}{References}{31}{section*.6}
+\contentsline {section}{List of Figures}{33}{section*.8}
+\contentsline {section}{List of Tables}{33}{section*.10}

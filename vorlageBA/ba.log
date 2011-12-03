@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  3 DEC 2011 04:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  3 DEC 2011 21:37
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1371,19 +1371,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1289--1317
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1324--1329
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1330
 
  []
 
+[29] [30] (./ba.bbl [31
 
-Underfull \hbox (badness 1348) in paragraph at lines 1324--1329
-\T1/lmr/m/n/10.95 To search for strate-gies which ful-fill the strat-e-gyproof-
-ness cri-te-rion but not the
- []
-
-[29] (./ba.bbl [30
-
-]) [31] (./ba.lof)
+]) [32] (./ba.lof)
 \tf@lof=\write7
 \openout7 = `ba.lof'.
 
@@ -1391,7 +1385,7 @@ ness cri-te-rion but not the
 \tf@lot=\write8
 \openout8 = `ba.lot'.
 
- [32
+ [33
 
 ] (./ba.aux)
 
@@ -1400,13 +1394,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16214 strings out of 495061
- 285691 string characters out of 1182621
- 395263 words of memory out of 3000000
+ 16215 strings out of 495061
+ 285698 string characters out of 1182621
+ 395268 words of memory out of 3000000
  18741 multiletter control sequences out of 15000+50000
  79814 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 49i,20n,69p,1222b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,20n,69p,1195b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/alina/.texmf-var/fonts/pk/ljfour/public/bbding/bbding10.657pk>{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -rm.enc} </home/alina/.texmf-var/fonts/pk/ljfour/public/ulsy/ulsy10.600pk>{/usr
@@ -1426,9 +1420,9 @@ fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
 /type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ba.pdf (37 pages, 572153 bytes).
+Output written on ba.pdf (38 pages, 574680 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
+ 624 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
