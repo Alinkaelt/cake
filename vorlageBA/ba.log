@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  4 DEC 2011 02:23
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  4 DEC 2011 15:02
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1295,7 +1295,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1027--1042
 
  []
 
-[22]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1051
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1051
+
+ []
+
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 1168--1177
 
  []
@@ -1305,7 +1315,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1168--1177
 
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
 
  []
@@ -1320,7 +1330,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1185--1188
 
  []
 
-[24] [25]
+[25] [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1209.
@@ -1337,51 +1347,55 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1209.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1247
-
- []
-
-<bilder/dcbsp.pdf, id=416, 882.29625pt x 589.20125pt>
+[27] <bilder/dcbsp.pdf, id=427, 882.29625pt x 589.20125pt>
 File: bilder/dcbsp.pdf Graphic file (type pdf)
- <use bilder/dcbsp.pdf>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1269
+<use bilder/dcbsp.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1263
 
  []
 
-[27 <./bilder/dcbsp.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1308
+[28 <./bilder/dcbsp.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1320
+Underfull \hbox (badness 2617) in paragraph at lines 1279--1304
+\T1/lmr/m/n/10.95 The well-known pro-por-tional cake-cutting pro-to-cols have b
+een rewrit-ten into a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1316
 
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 1313--1320
+Underfull \hbox (badness 1603) in paragraph at lines 1309--1316
 \T1/lmr/m/n/10.95 In pie-cutting [[]] showed that a strat-e-gyproof and ef-fi-c
 ient mech-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1320
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1316
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1333
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1329
 
  []
 
-[29] (./ba.bbl [30
 
-]) [31] (./ba.lof)
+Underfull \hbox (badness 1389) in paragraph at lines 1323--1329
+\T1/lmr/m/n/10.95 Another ap-proach about strat-e-gyproof-ness could be a con-s
+ec-u-tively al-lo-ca-tion of
+ []
+
+[30] (./ba.bbl [31
+
+]) [32] (./ba.lof)
 \tf@lof=\write7
 \openout7 = `ba.lof'.
 
@@ -1389,22 +1403,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 1327--1333
 \tf@lot=\write8
 \openout8 = `ba.lot'.
 
- [32
+ [33
 
 ] (./ba.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.95pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16216 strings out of 495061
- 285710 string characters out of 1182621
- 395315 words of memory out of 3000000
- 18742 multiletter control sequences out of 15000+50000
+ 16219 strings out of 495061
+ 285730 string characters out of 1182621
+ 395316 words of memory out of 3000000
+ 18743 multiletter control sequences out of 15000+50000
  79814 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 49i,20n,69p,1195b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,20n,69p,2362b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/alina/.texmf-var/fonts/pk/ljfour/public/bbding/bbding10.657pk>{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -rm.enc} </home/alina/.texmf-var/fonts/pk/ljfour/public/ulsy/ulsy10.600pk>{/usr
@@ -1424,9 +1441,9 @@ fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
 /type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ba.pdf (37 pages, 573404 bytes).
+Output written on ba.pdf (38 pages, 576474 bytes).
 PDF statistics:
- 622 PDF objects out of 1000 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

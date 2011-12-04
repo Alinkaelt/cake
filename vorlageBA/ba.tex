@@ -149,12 +149,12 @@ Another important aspect to consider in studying of games is the amount of infor
 \emph{In a game of \emph{perfect information} every player always knows every move that other players have made before. In a game of \emph{imperfect information} some players sometimes do not know the strategy choices other players have made.}
 \end{defi}
 \begin{defi}{\textbf{(Incomplete / Complete Information)}}\\
-\emph{The games with \emph{incomplete / complete information}, by contrast are about the information of the circumstances under which the game is played.}
+\emph{The games with \emph{incomplete / complete information}, are about the information of the circumstances under which the game is played for example the rules, the order of playing and the set of strategies of the players.}
 \end{defi}
 \begin{defi}{\textbf{(Mutual / Common Knowledge)}}\\
 \emph{An event is \emph{mutual knowledge} if all players know it. \emph{Common knowledge} also requires that all players know the event, all players know that all players know it, and so on ad infinitum.}
 \end{defi}
-By applying game theory in cutting a cake it is especially important that the valuation functions are private and that no player knows each others type or his own position in the game, but the players know the moves of other players before them. So cake-cutting is a game with perfect but incomplete imformations. In game theory for finding solution in such concepts the unavailable informations are imitated through randomness and those games are played against nature.\\For the further analysis some assumption have to be made and a probability to be defined. In cake-cutting the number of different valuation functions over the cake is infinite, so it makes no sense to define a probability for one special valuation. Hence, the possible events in the following chapters depend on special partitions of the cake. The preferences of each player $p_j$ over a partition $X^1, \ldots, X^n$ cutted by a player $p_i$ with $1 \leq i,j \leq n, i \neq j$ can be defined as follows:    
+By applying game theory in cutting a cake it is especially important that the valuation functions are private and that no player knows each others private valuation or his own position in the game. Also the players sometimes do not know the moves of other players before them. So cake-cutting is a game with imperfect and incomplete imformation. In game theory for finding solutions in such concepts the unavailable information is imitated through randomness. This also will be done in this work.\\For the further analysis some assumptions have to be made and a probability model to be defined. In cake-cutting the number of different valuation functions over the cake is infinite, so it makes no sense to define the probability for one special valuation. Hence, the possible events in the following chapters depend on special partitions of the cake. The preferences of each player $p_j$ over a partition $X^1, \ldots, X^n$ cutted by a player $p_i$ with $1 \leq i,j \leq n, i \neq j$ can be defined as follows:    
 \begin{defi}{\textbf{(Event)}}\\
 \emph{An \emph{event} is the selection of a single piece $X^j$ by a player $p_j$ from $X^1, \ldots, X^n$ with $1 \leq j \leq n,\: i \neq j$.}
 \end{defi}
@@ -638,7 +638,7 @@ Cut $\&$ Choose is game-theoretic strategyproof.
 \textbf{Options for not following the recommended strategy:}
 \begin{itemize}
 \item Player $p_2$ takes the less valuable piece. This can not be his intention, because then he has a piece with less value.
-\item Player $p_1$ cuts the cake into two unequal pieces. The chance to get less in his valuation is equal to the chance to get more in his valuation of the cake. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case: $$ \mathbb{E}(v_1(X_1))=P(v_2(X')\leq v_2(X-X'))\cdot v_1(X')+P((X')\leq v_2(X'))\cdot v_1(X-X')$$$$=\nicefrac{1}{2} \cdot \nicefrac{1}{2}+\nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{2} $$ and in the dishonest case: $$ \mathbb{E}(v_1(X_1))=P(v_2(X')\leq v_2(X-X'))\cdot v_1(X')+P(v_2(X-X')\leq v_2(X'))\cdot v_1(X-X')$$$$=\nicefrac{1}{2} \cdot v_1(X') +\nicefrac{1}{2} \cdot v_1(X-X') =\nicefrac{1}{2} \cdot \underbrace{v_1(X)}_{=1}=\nicefrac{1}{2}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Cut $\&$ Choose is game-theoretical strategyproof.
+\item Player $p_1$ cuts the cake into two unequal pieces. The chance to get less in his valuation is equal to the chance to get more in his valuation of the cake. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case: $$ \mathbb{E}(v_1(X_1))=P(v_2(X')\leq v_2(X-X'))\cdot v_1(X')+P(v_2(X')\leq v_2(X'))\cdot v_1(X-X')$$$$=\nicefrac{1}{2} \cdot \nicefrac{1}{2}+\nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{2} $$ and in the dishonest case: $$ \mathbb{E}(v_1(X_1))=P(v_2(X')\leq v_2(X-X'))\cdot v_1(X')+P(v_2(X-X')\leq v_2(X'))\cdot v_1(X-X')$$$$=\nicefrac{1}{2} \cdot v_1(X') +\nicefrac{1}{2} \cdot v_1(X-X') =\nicefrac{1}{2} \cdot \underbrace{v_1(X)}_{=1}=\nicefrac{1}{2}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Cut $\&$ Choose is game-theoretical strategyproof.
 \end{itemize}
 \end{proof}
 \pagebreak
@@ -697,14 +697,14 @@ According to Theorem \ref{thm5}, Theorem \ref{thm6} and Theorem \ref{thm7} Cut $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Strategyproofness of Proportional Protocols}
-The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner. Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be separated. So the amount of strategies would grow and would make the analysis very tedious.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole process is unnecessary.\\
-The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards the different strategies of a protocol are represented as an extended form game and the different types of strategyproofness are analysed.\\
+The goal in this chapter is to analyse the strategyproofness of well-known protocols. First of all, they are rewritten into game-theoretic manner. Since each player has a truthful and a non-truthful strategy, a protocol with $n$ active players has at least $2n$ strategies. If the obtained value is not equal in different non-truthful strategies they have to be look at separately. So the amount of strategies would grow and would make the analysis very tedious.\\Luckily a protocol consists of a lot of repeats and actually each of the well-known protocols can be simplified to an interaction between two kinds of players. So the analysis of the whole process is unnecessary.\\
+The proceed is as follows, the interactions between two kinds of players are represented in tables. A separation between rules and strategies is given. Afterwards, the different strategies of a protocol are represented as an extended form game and the different types of strategyproofness are analysed.\\
 %An important pre-comment: Proportionality means each player gets $v_j(X_j)=\nicefrac{1}{n}$ for $1\leq j\leq n$. So if one player $p_n$ leaves the game with $v_i(X_n)<\nicefrac{1}{n}$ for $1\leq i\leq (n-1)$ it still holds for the next round that the cake $X=X-X_n$ is normalized and a proportional piece is $\nicefrac{1}{n-1}$ and not $\nicefrac{1+\epsilon_i}{n}$.
 %\\
 The complete protocols in the standard description as well as the proofs of their proportionality can be found in \cite{robertson:cake-cutting}.
 %TODO: $\cdot$ Whether it is possible to get less envy-relations trough non truthful playing?
 \subsection{The Kuhn à la Dawson Lone-Divider Protocol}
-The players are separated into two groups. In the first group is the player $p_1$ and the second group consists of $P_{n-1}=\{p_2,\ldots,p_n\}$, so all other players $p_i$ with $2 \leq i \leq n$.\\This protocol is more complicated than the rules described here, but the details are not important for the illustration of strategies.\\In the third step exist two possible cases. If an allocation is possible, first the players with only one acceptable piece choose, then the other players from player $p_n$ in descending order. The cutter is the last chooser.\\If no allocation is possible, the conflicting players form a new piece of cake. For further details see the second part of the proof or \cite{brams2}.
+The players are separated into two groups. The first group consists of the player $p_1$ and the second group consists of $P_{n-1}=\{p_2,\ldots,p_n\}$, so all other players $p_i$ with $2 \leq i \leq n$.\\This protocol is more complicated than the rules described here, but the details are not important for the illustration of strategies.\\In the third step exist two possible cases. If an allocation is possible, first the players with only one acceptable piece choose, then the other players choose starting with player $p_n$ in descending order. The cutter is the last chooser.\\If no allocation is possible, the conflicting players form a new piece of cake. For further details see the second part of the proof or \cite{brams2}.
 \begin{table}[htb]
 \begin{tabular*}{\textwidth}{|@{\extracolsep{\fill}}l|c|r|}
 \hline
@@ -811,14 +811,14 @@ $\:\:\:\:\:\:\:$and exchange the cutter&&\\$\:\:\:\:\:\:\:$(cutter leaves with a
 Every possible strategy is in the game tree. The variables have the restrictions: $$0 \leq (1\pm\epsilon_i)\leq n,\:0 \leq \delta_{4m+1},\delta_{4m+1} \leq (n-1),\:-1 \leq \delta_{4m+2},\delta_{4m+3} \leq 0$$$$\:\:for\:\:0 \leq m \leq (n-1) $$
 $\cdot$ Player $p_1$ obtains certainly $\nicefrac{1}{n}$ if he cuts all pieces equal in his own valuation.\\
 $\cdot$ It is possible that player $p_1$ obtains $\nicefrac{(1+\epsilon_i)}{n}$ if he cuts at least one piece bigger than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{n}$ in his own valuation and get this in the allocation.\\
-$\cdot$ It is possible that player $p_1$ obtains $\nicefrac{(1-\epsilon_i)}{n}$ if he cuts at least one piece smaller than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{n}$ in his own valuation and get this in the allocation.\\
+$\cdot$ It is possible that player $p_1$ obtains $\nicefrac{(1-\epsilon_i)}{n}$ if he cuts at least one piece smaller than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{n}$ in his own valuation and gets this in the allocation.\\
 \newline
 For every player $p_i$ in the group $P_{n-1}$:\\
 \newline
 $\cdot$ Player $p_i$ obtains certainly $\nicefrac{1}{n}$ if he marks all pieces equal to $\nicefrac{1}{n}$ in his own\\\textcolor{white}{la}\textcolor{black}{}valuation.\\
 $\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1+\delta_i)}{n}$ if he marks pieces bigger or equal than\\\textcolor{white}{la}\textcolor{black}{}$\nicefrac{1}{n}$ in his own valuation.\\
 $\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1+\delta_i)}{n}$ if he marks pieces bigger than $\nicefrac{1}{n}$ in his\\\textcolor{white}{la}\textcolor{black}{}own valuation.\\
-$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1-\delta_i)}{n}$ if he marks all pieces and especially\\\textcolor{white}{la}\textcolor{black}{}pieces smaller than $\nicefrac{1}{n}$ in his own valuation and get this in the allocation.
+$\cdot$ It is possible that player $p_i$ obtains $\nicefrac{(1-\delta_i)}{n}$ if he marks all pieces and especially\\\textcolor{white}{la}\textcolor{black}{}pieces smaller than $\nicefrac{1}{n}$ in his own valuation and gets this in the allocation.
 \pagebreak
 \begin{lem}
 \label{kd1}
@@ -870,14 +870,14 @@ Imagine the following allocation with three players. The player $p_1$ is going t
  		
 \caption{Acceptable pieces in a successful non-truthful strategy}\label{Table11}
 \end{table}
-An allocation is possible since each pieces is acceptable for at least one different player.\\ \newline If player $p_1$ chooses the recommended strategy $S_\neg c$:\\
+An allocation is possible since each piece is acceptable for at least one different player.\\ \newline If player $p_1$ chooses the recommended strategy $S_\neg c$:\\
 There are no players with just one acceptable piece, so the player with the highest rank can choose first.
 Player $p_2$ chooses $X_L$ and player $p_1$ gets $X_M$ with $p_1(X_M)= \nicefrac{1}{3}$. The divider gets the last piece.\\
 \newline
 If player $p_1$ chooses the non-truthful strategy $S_c$:\\
 There is one player with just one acceptable piece, so this player chooses first.
 Player $p_1$ chooses $X_L$ with $p_1(X_L)= \nicefrac{1}{2}$ and player $p_2$ gets $X_M$. The divider gets the last piece.\\
-The value of player $p_1$'s piece in the non-truthful strategy $S_c$ is $p_1(X_L)=\nicefrac{1}{2}>\nicefrac{1}{2}=p_1(X_M)$ than in the recommended strategy $S_\neg c$. So the player $p_1$ is at least in one allocation better off with the non-truthful strategy than in the recommended one.\\
+The value of player $p_1$'s piece in the non-truthful strategy $S_c$ is $p_1(X_L)=\nicefrac{1}{2}>\nicefrac{1}{3}=p_1(X_M)$ than in the recommended strategy $S_\neg c$. So the player $p_1$ is at least in one allocation better off with the non-truthful strategy than in the recommended one.\\
 \newline
 \textbf{Part II: Case distinction for a successful non-truthful strategy} 
 \begin{itemize}
@@ -887,12 +887,12 @@ $\cdot$ $l = k:$ The player $p_c$ takes by using $S_c$ and $S_\neg c$ the same p
 $\cdot$ $l < k:$ The player $p_c$ has a smaller amount of acceptable pieces during the allocation\\\textcolor{white}{lalalalall}\textcolor{black}{}by using $S_c$ than by using $S_\neg c$ $\Rightarrow$ $v_c(X_c)\geq v_c(X_t)$.
 
 \item[Case] II: Allocation not possible with $S_c$ and possible with $S_\neg c$\\
-Because an allocation is possible with $S_\neg c$ but not with $S_c$ the player $p_c$ gets a piece with $v_c(X_t)=\nicefrac{1}{n}$, otherwise those piece has been acceptable by using strategy $S_c$ aswell and an allocation has been also possible.\\
+An allocation is possible with $S_\neg c$ but not with $S_c$ the player $p_c$, so he gets a piece with $v_c(X_t)=\nicefrac{1}{n}$, otherwise those piece has been acceptable by using strategy $S_c$ aswell and an allocation has been also possible.\\
 By using $S_c$ the player $p_c$ has to form a new cake $X_{new}$ with $r$ other players ($1 \leq r \leq (n-2)$, $-2$ because $p_c$ and the cutter cannot be included). So $X_{new}$ consists of $r+1$ pieces, since $r+1$ players are involved. This means that $n-r-1$ pieces were succesfully allocated (even if they had separate to be formed to a new cake). Each of this $n-r-1$ pieces $X_b$ has the value $v_c(X_b) \leq \nicefrac{1}{n}$, or otherwise they would be included into $X_{new}$. The proportional part of $X_{new}$ for $p_c$ will be:
-$$\frac{v_c(X_{new})}{(r+1)}=\frac{(v_c(X)-(n-r-1)\cdot v_c(X_b))}{(r+1)} \geq \frac{(v_c(X)-(n-r-1) \cdot \frac{1}{n})}{(r+1)}=$$$$\frac{(1-(n-r-1)\cdot \frac{1}{n})}{(r+1)}=\frac{(\frac{n}{n}-(n-r-1) \cdot \frac{1}{n})}{(r+1)}=\frac{(\frac{(n-n+r+1)}{n})}{(r+1)}=\frac{(\frac{(r+1)}{n})}{(r+1)}=\frac{1}{n}$$
-And so $p_c$ obtains $v_c(X_c)\geq \nicefrac{1}{n}\Rightarrow v_c(X_c)\geq v_c(X_t).$ 
+$$\frac{v_c(X_{new})}{(r+1)}=\frac{v_c(X)-(n-r-1)\cdot v_c(X_b)}{(r+1)} \geq \frac{v_c(X)-(n-r-1) \cdot \frac{1}{n}}{(r+1)}=$$$$\frac{1-(n-r-1)\cdot \frac{1}{n}}{(r+1)}=\frac{\frac{n}{n}-(n-r-1) \cdot \frac{1}{n}}{(r+1)}=\frac{\frac{(n-n+r+1)}{n}}{(r+1)}=\frac{\frac{(r+1)}{n}}{(r+1)}=\frac{1}{n}$$\\
+So $p_c$ obtains $v_c(X_c)\geq \nicefrac{1}{n}\Rightarrow v_c(X_c)\geq v_c(X_t).$ 
 \item[Case] III: Allocation possible with $S_c$ and not possible with $S_\neg c$ \blitza\\
-In $S_\neg c$ is the amount of acceptable pieces bigger or equal to $S_c$, so there is at least one non-conflicting piece which $p_c$ receives by using $S_c$ and those piece $p_c$ would also receive by using $S_\neg c$.
+There is at least one non-conflicting piece which $p_c$ receives by using $S_c$. In $S_\neg c$ the amount of acceptable pieces is bigger or equal to $S_c$. Those piece would $p_c$ also receive by using $S_\neg c$.
 \item[Case] IV: Allocation not possible with $S_c$ and not possible with $S_\neg c$\\
 $\cdot$ The player $p_c$ is the cutter $\Rightarrow$ $v_c(X_c)=v_c(X_t)$\\
 $\cdot$ The player $p_c$ is not the cutter $\Rightarrow$ Case I-IV possible.
@@ -1040,19 +1040,19 @@ The consequences for each player $p_j$ in $P_{n-i+1}$ by choosing the strategy t
 \newline
 The only strategy which does not conceal this risk, is for all players the recommended one.
 \end{proof}
-%\begin{lem}
-%\label{ldim2}
-%Last diminisher protocol is game-theoretic strategyproof.
-%\end{lem}
-%\begin{proof}
-%\textcolor{white}{x}\\\\
-%The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$. There are two different kinds of values in the extended form game. The first is the value of the piece the player directly obtains. The other one is the expected value if he uses in the next moves the recommended strategy.\\
-%Now, there are different possibilities how to work with this two types$\ldots$
-%\end{proof}
+\begin{lem}
+\label{ldim2}
+Last diminisher protocol is game-theoretic strategyproof.
+\end{lem}
+\begin{proof}
+\textcolor{white}{x}\\\\
+The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$.\\There are two different kinds of obtained values in the extended form game. The first is the value of the piece the player directly obtains in the end of the round. The other one is the at least guaranteed value if he uses the recommended strategy in the next moves .\\
+Now, there are different possibilities how to work with this two types, since cake-cutting is a game where the players do not know their order or their stage in the game, it can be assumed that the considered player is the second last.\\
+
+\end{proof}
 \begin{bezeichnungen}
 According to Theorem \ref{thm5} and Theorem \ref{ldim1}% and Theorem \ref{ldim2} 
-Banach-Knaster Last-Diminisher is strategyproof for proportional protocols, strategyproof% game-theoretical stra-\\tegyproof, 
- and weak strategyproof.
+Banach-Knaster Last-Diminisher is strategyproof for proportional protocols, strategyproof, game-theoretical stra-tegyproof and weak strategyproof.
 \end{bezeichnungen}
 
 \newpage
@@ -1208,7 +1208,7 @@ According to Theorem \ref{thm5}, Theorem \ref{lc1} and Theorem \ref{lc2} Fink Lo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Even $\&$ Paz Divide-$\&$-Conquer Protocol}
 %Compare Brams, Jones and Klamler (2007) $m$-proportional
-The players are separated in two groups. The player $p_i$ in the group $P_{n-1}$ make the mark on the cake and then get from left to right numbered in ascending order. So the player with the leftmost cut is numbered as player $p_1$. The piece $X'$ that this first player $p_1$ marks is labelled as $X'_{1}$ and so on. For each new allocation the players get new numbers.
+The players are separated in two groups. The player $p_i$ in the group $P_{n-1}$ make the mark on the cake and then get from left to right numbered in ascending order. So the player with the leftmost mark is numbered as player $p_1$. The piece $X'$ that this first player $p_1$ marks is labelled as $X'_{1}$ and so on. For each new allocation the players get new numbers. Define $a:={\lfloor \nicefrac{n}{2} \rfloor}$ and $b:={\lceil \nicefrac{n}{2} \rceil}$.
 \begin{table}[htb]
 \begin{tabular*}{\textwidth}{|@{\extracolsep{\fill}}l|c|r|}
 \hline
@@ -1219,14 +1219,14 @@ The players are separated in two groups. The player $p_i$ in the group $P_{n-1}$
 \hline
 $\:$1. Each player in $P_{n-1}$&Mark $X$ to two pieces&\\
 $\:\:\:\:\:\:\:$marks the cake $X$ into&with the value-ratio of&\\
-$\:\:\:\:\:\:\:$two pieces $\{X',X-X'\}$&$\lfloor \nicefrac{n}{2} \rfloor:\lceil \nicefrac{n}{2} \rceil$&\\
+$\:\:\:\:\:\:\:$two pieces $\{X',X-X'\}$&$a:b$&\\
 \hline
 $\:$2. Cut in the ratio of the
-&&\\$\:\:\:\:\:\:$player with the $\lfloor \nicefrac{n}{2} \rfloor$-th
+&&\\$\:\:\:\:\:\:$player with the $a$-th
 &&\\$\:\:\:\:\:\:$cut from the left border&&\\
 \hline
-$\:$3. Player $p_n$ chooses one&&If $v_n(X'_{\lfloor \nicefrac{n}{2} \rfloor}) \geq \nicefrac{\lfloor \nicefrac{n}{2} \rfloor}{n}$ choo-\\
-$\:\:\:\:\:\:\:$piece&&se $X'$, otherwise $X-X'$\\
+$\:$3. Player $p_n$ chooses one&&If $v_n(X'_{a}) \geq \nicefrac{a}{n}$ choo-\\
+$\:\:\:\:\:\:\:$piece&&se $X'_{a}$, otherwise $X-X'_{a}$\\
 \hline
 $\:$4. Repeat the protocol
 &&\\$\:\:\:\:\:\:$with the new groups se-
@@ -1238,18 +1238,14 @@ $\:$4. Repeat the protocol
 \end{table}
 %\textbf{Interesting:} Is it possible to get information about the valuations of other players from the sequence?
 \begin{lem}
-\label{dc1}
-The Divide-$\&$-Conquer protocol is strategyproof for proportional protocols.
+\label{dc2}
+The Divide-$\&$-Conquer protocol is game-theoretic strategyproof.
 \end{lem}
-\begin{proof} 
-\textcolor{white}{x}\\\\
-The proof via induction is similar to \cite{dc}:
+\begin{proof}
+\textcolor{white}{x}
 \begin{itemize}
-\item[$n=2$] Assume two players $p_1$ and $p_2$ cutting cake. Player $p_1$ may be the cheating player. The truthful $\nicefrac{1}{2}$ points are shown below, then by making a cut at $|$ would give $p_1$ and $p_2$ more than $\nicefrac{1}{2}$: 
-$$0-----------a-|-b------------1$$ 
-But if player $p_1$ should move his $\nicefrac{1}{2}$ point to $a$, he gets into the risk of
-getting less than $\nicefrac{1}{2}$ if the other player choose player $p_1$ favourite part.
-\item[$n \mapsto$]$(n+1)$ Assume in the same sketch the $|$ is the mark of the $\lfloor \nicefrac{n}{2} \rfloor$-player. If the player $p_1$ should report false that his $\nicefrac{\lfloor \nicefrac{n}{2} \rfloor}{n}$ point, which is $a$ is more to the left. He risks to cross the $|$ mark and to be assigned to the group of players with whom the value he would obtain is smaller than his proportional piece.
+\item The player $p_n$ has no intention to take the less valuable piece.
+\item Every player $p_i$ in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. In stochastic terms it means, that the expected value at the end of the allocation for all $p_i$ will be in the honest case: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2}\cdot \nicefrac{1}{2}+\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil}\cdot \nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{n}$$\\ and in the dishonest case for all $p_i$: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}) +\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}) =\nicefrac{2}{n} \cdot \nicefrac{1}{2} \cdot \underbrace{v_{\lfloor\nicefrac{n}{2}\rfloor}(X)}_{=1}=\nicefrac{1}{n}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Divide-$\&$-Conquer is game-theoretical strategyproof.
 \end{itemize}
 \end{proof}
 \begin{figure}[h!]
@@ -1257,19 +1253,19 @@ getting less than $\nicefrac{1}{2}$ if the other player choose player $p_1$ favo
  		 \includegraphics[width=380pt]{bilder/dcbsp.pdf}
    \caption{D$\&$C execution for $n=5$}
   	 \end{figure}
-  	 \newpage
 \begin{lem}
-\label{dc2}
-The Divide-$\&$-Conquer protocol is game-theoretic strategyproof.
+\label{dc1}
+The Divide-$\&$-Conquer protocol is strategyproof for proportional protocols.
 \end{lem}
-\begin{proof}
-\textcolor{white}{x}
-\begin{itemize}
-\item The player $p_n$ has no intention to take the smaller piece.\\
-\item Every player $p_i$ in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. For the same argument as in Cut $\&$ Choose the expected values are equal and so the player would stay honest.
-\end{itemize}
+\begin{proof} (similar to \cite{dc}:)\\
+\newline
+Assume two players $p_1$ and $p_2$ cutting a cake. Player $p_1$ is the cheater. The truthful $\nicefrac{1}{2}$ points are shown below, then by making a cut at $|$ would give $p_1$ and $p_2$ more than $\nicefrac{1}{2}$: 
+$$l-----------p_1-|-p_2------------r$$ 
+But if player $p_1$ moves his $\nicefrac{1}{2}$ point more to the left, he gets into the risk of
+getting less than $\nicefrac{1}{2}$, if $|$ also moves due to his actions to the left. 
+But if player $p_1$ moves his $\nicefrac{1}{2}$ point more to the right, he gets into the risk of
+getting less than $\nicefrac{1}{2}$, if he crosses $p_2$'s $\nicefrac{1}{2}$ point. This proof can be extended to $n>2$.
 \end{proof}
-
 \begin{bezeichnungen}
 According to Theorem \ref{thm5} and Theorem \ref{dc1} and Theorem \ref{dc2} 
 Even $\&$ Paz Divide-$\&$-Conquer is strategyproof for proportional protocols, strategyproof game-theoretical strategyproof and weak strategyproof.
@@ -1282,7 +1278,7 @@ Even $\&$ Paz Divide-$\&$-Conquer is strategyproof for proportional protocols, s
 \section{Conclusion}
 The strategyproofness in the context of cake-cutting has not been widely researched yet. In this work an overview over the occured definitions of the last five years is given. The applicability of them was proven. Hereby a proportional cake-cutting protocol is always weak and never strong strategyproof. For cake-cutting applicable definitions an overview over the correlation is given.\\
 \newline
-Then the well-known proportional cake-cutting protocols have been rewritten into a game-theoretic manner and analysed on whether a non-truthful strategy could yield a more advantageous situation for a non-truthful player. It was possible to approve game-theoretically that the only strategy which promises the best outcome is the strategy recommended by the protocol.\\
+The well-known proportional cake-cutting protocols have been rewritten into a game-theoretic manner and analysed on whether a non-truthful strategy could yield a more advantageous situation for a non-truthful player. It was possible to approve game-theoretically that the only strategy which promises the best outcome is the strategy recommended by the protocol.\\
 \begin{table}[htb]
 \centering
  \renewcommand{\arraystretch}{1.5} 
@@ -1311,10 +1307,10 @@ $\:$Divide-$\&$-Conquer & \Checkmark & \Checkmark &\Checkmark &\Checkmark &  \XS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Related Work}
 Recently, two papers with the focus on strategyproofness have been published. In \cite{chen:truth} they weakened the basic concepts of cake cutting by including the free disposal assumption, which can lead to a not complete allocation of the cake and allow only piecewise uniform valuations. The second restriction is indeed very hard. Their goal was to give a proportional, envy-free, polynomial and strong strategyproof protocol. In \cite{tamuz} the authors invented new procedures including a referee, who has full knowledge. This extension is a restriction of cake-cutting as well. They partly considered the case with indivisible items, where for example in \cite{Lipton} research in strategyproofness been done earlier, but is not practical applicable to cake-cutting. \cite{chen:truth} and \cite{tamuz} also researched truthfulness in expectation for randomized protocols.\\ \newline
-In pie-cutting \cite{why} showed that a strategyproof and efficient mechanism must be dictatorial. The definition of strategyproofness in this paper is the strongest condition. Also pie-cutting slightly differs from cake-cutting, since the pie ist represented as a circular object and the cuts are wedges. The results for pie-  and cake-cutting do not carry over to each other, but the definition of strategyproofness does. \cite{pie} gave more details in the context of pie-cutting and strategyproofness. \\
+In pie-cutting \cite{why} showed that a strategyproof and efficient mechanism must be dictatorial. The definition of strategyproofness in this paper is the strongest condition and is mostly used in economics, game theory or social choice theory. Also pie-cutting, slightly differs from cake-cutting, since the pie ist represented as a circular object and the cuts are wedges. The results for pie-  and cake-cutting do not carry over to each other, but the definition of strategyproofness does. \cite{pie} gave more details in the context of pie-cutting and strategyproofness. \\
 \newline
-The start of reaserching strategyproofness was \cite{brams}, where the authors introduced a fitting definition of strategyproofness (weak strategyproof in this work) and proved that two procedures called SP and EP are weak strategyproof.\\ A response on their work was a counterexample by \cite{ccc}. The authors argued that each proportional protocol is weak strategyproof. After admitting their mistake, in \cite{note} they restricted their first definition to cases with non-equal valuation functions and introduced a new general definition for strategyproof cake-cutting.\\
-In \cite{dc} and in the revisited version of this work \cite{dc2} the authors focused on the Divide-and-Conquer protocol and showed that it is strategyproof for risk averse players. In the later work they call this property truth-inducing. \\ \cite{lindner:degrees} parallelyzed the Last-Diminisher and proved that this new protocol is also strategyproof for risk-averse players.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The start of researching strategyproofness was \cite{brams}, where the authors introduced a fitting definition of strategyproofness (weak strategyproof in this work) and proved that two procedures called SP and EP are weak strategyproof.\\ A response on their work was a counterexample by \cite{ccc}. The authors argued that each proportional protocol is weak strategyproof. After admitting their mistake, in \cite{note} they restricted their first definition to cases with non-equal valuation functions and introduced a new general definition for strategyproof cake-cutting.\\
+In \cite{dc} and in the revisited version of this work \cite{dc2} the authors focused on the Divide-and-Conquer protocol and showed that it is strategyproof for risk averse players. In the later work they call this property truth-inducing. \\ \cite{lindner:degrees} parallelised the Last-Diminisher and proved that this new protocol is also strategyproof for risk-averse players.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Open Questions and Future Research}
@@ -1326,10 +1322,10 @@ In \cite{dc} and in the revisited version of this work \cite{dc2} the authors fo
 %\end{bsp}
 An interesting aspect would be to take a closer look on groupstrategyproofness. Hereby, groups have public valuations for group members.\\
 \newline
-An other approach about strategyproofness could be a consecutively allocation of several cakes. Then the cake-cutting-game could be interpreted as a repeated game. \\
-Actually only a few game-theoretic methods are applied in this work. A lot more intense reasearch could yield towards different results and different applications in the field of cake-cutting. Some possible application field could be the Last Diminisher protocol where the players know the stage in the game or the Divide-and-Conquer protocol with the focus on whether the participants can gain some advantages from knowing with how many players the are dividing a part of the cake and how many marks are on the left or right side of their mark. \\
-To search for strategies which fulfill the strategyproofness criterion but not the game-theoretic strategyproofness criterion.\\
-The probability model that is used in this work is very primitive, since even if the player $p_1$ cut a cake in two pieces $\{X', X-X'\}$ with the value $v_1(X')=1-\epsilon$ and $v_1(X-X')=\epsilon$ the probabilty that player $p_2$ takes $X'$ or $X-X'$ is equal. Certainly there are valuation where it is possible, but the sense in those is the main question. An further application could be to correlate the valuation of the cutter and the probability of the other player in taking this piece. 
+Another approach about strategyproofness could be a consecutively allocation of several cakes. Then the cake-cutting-game could be interpreted as a repeated game. \\
+Actually only a few game-theoretic methods are applied in this work. A lot more intense research could yield towards different results and different applications in the field of cake-cutting. Some possible application field could be the Last Diminisher protocol where the players know the stage in the game or the Divide-and-Conquer protocol with the focus on whether the participants can gain some advantages from knowing with how many players the are dividing a part of the cake and how many marks are on the left or right side of their mark. \\
+It would also be interessting primary to search for strategies which fulfill the strategyproofness criterion but not the game-theoretic strategyproofness criterion.\\
+The probability model that is used in this work is very simply, since even if the player $p_1$ cuts a cake in two pieces $\{X', X-X'\}$ with the value $v_1(X')=1-\epsilon$ and $v_1(X-X')=\epsilon$ the probability that player $p_2$ takes $X'$ or $X-X'$ is equal. Certainly there are valuations where it is possible, but in many application not reasonable for example in a divorce allocation, if $X'$ is a lamborghini and $X-X'$ the old carpet in the kitchen. A further application could be to correlate the valuation of the cutter and the probability of the other player in taking this piece. 
 
 \pagebreak
 
