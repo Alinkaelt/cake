@@ -10,45 +10,45 @@ Warning--can't use both volume and number fields in ccc
 Warning--can't use both volume and number fields in note
 Warning--empty booktitle in tamuz
 Warning--empty booktitle in robertson:cake-cutting
-You've used 17 entries,
+You've used 18 entries,
             1935 wiz_defined-function locations,
-            557 strings with 5887 characters,
-and the built_in function-call counts, 6462 in all, are:
-= -- 608
-> -- 236
-< -- 19
-+ -- 78
-- -- 76
-* -- 470
-:= -- 1087
-add.period$ -- 51
-call.type$ -- 17
-change.case$ -- 121
-chr.to.int$ -- 17
-cite$ -- 25
-duplicate$ -- 321
-empty$ -- 510
-format.name$ -- 103
-if$ -- 1327
+            567 strings with 6111 characters,
+and the built_in function-call counts, 7058 in all, are:
+= -- 672
+> -- 259
+< -- 20
++ -- 86
+- -- 84
+* -- 516
+:= -- 1178
+add.period$ -- 55
+call.type$ -- 18
+change.case$ -- 130
+chr.to.int$ -- 18
+cite$ -- 26
+duplicate$ -- 348
+empty$ -- 552
+format.name$ -- 112
+if$ -- 1457
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 87
-num.names$ -- 51
-pop$ -- 178
+missing$ -- 19
+newline$ -- 92
+num.names$ -- 54
+pop$ -- 187
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 132
 quote$ -- 0
-skip$ -- 205
+skip$ -- 227
 stack$ -- 0
-substring$ -- 310
-swap$ -- 53
-text.length$ -- 9
+substring$ -- 354
+swap$ -- 63
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
+type$ -- 104
 warning$ -- 8
-while$ -- 42
+while$ -- 47
 width$ -- 0
-write$ -- 212
+write$ -- 228
 (There were 8 warnings)
