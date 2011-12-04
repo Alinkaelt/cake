@@ -906,7 +906,7 @@ According to Theorem \ref{thm5} and Theorem \ref{kd1} Kuhn à la Dawson Lone-Div
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Banach-Knaster Last-Diminisher Protocol}
-The Last-Diminisher protocol consists of $(n-2)$ rounds.\\The players are separated into two groups. In the first group is the player $p_i$ (with $i$ number of the round) and in the second group $P_{n-i+1}$ are all other players $p_j$ with $i <j\leq n$.\\ At the end of each round one player gets a piece and leaves the game. If it is player $p_i$ then player $p_{i+1}$ as $p_{i+1}$ takes his place, otherwise player $p_i$ becomes player $p_{i+1}$ in the next round $i+1$ and players in group $P_{n-i+1}$ will be consecutively numbered. In the last round the two remaining players apply Cut $\&$ Choose. 
+The Last-Diminisher protocol consists of $(n-2)$ rounds.\\The players are separated into two groups. In the first group is the player $p_i$ (with $i$ number of the round) and in the second group $P_{n-i+1}$ are all other players $p_j$ with $i <j\leq n$.\\ At the end of each round one player gets a piece and leaves the game. If it is player $p_i$ then player $p_{i+1}$ as $p_{i+1}$ takes his place, otherwise player $p_i$ becomes player $p_{i+1}$ in the next round $i+1$ and players in group $P_{n-i+1}$ will be consecutively numbered. In the last round the two remaining players apply Cut $\&$ Choose. For the other $k$ rounds with $1 \leq k \leq (n-3)$:
 
 %\begin{lem}
 % The Last-Diminisher-protocol has a $\DGEF$ of $\nicefrac{n(n-1)}{2}+2$.
@@ -919,9 +919,9 @@ The Last-Diminisher protocol consists of $(n-2)$ rounds.\\The players are separa
 \hline
 \multicolumn{1}{|c|}{\textbf{Rules}}& \textbf{Player $p_i$ strategy}& \multicolumn{1}{c|}{\textbf{Players in $P_{n-i+1}$ strategy}}\\
 \hline
-$\:$1. Player $p_i$ cut a piece $I_i$&Cut a piece with value $\nicefrac{1}{n}$&\\
+$\:$1. Player $p_i$ cut a piece $I_k$&Cut a piece with value $\nicefrac{1}{n}$&\\
 \hline
-\multirow{2}*{$\:$2. Players $p_j$ trim or pass}&&If $v_j(I_i)>\nicefrac{1}{n}$ trim so \\&& that $v_j(I_i)=\nicefrac{1}{n}$, else pass\\
+\multirow{2}*{$\:$2. Players $p_j$ trim or pass}&&If $v_j(I_k)>\nicefrac{1}{n}$ trim so \\&& that $v_j(I_k)=\nicefrac{1}{n}$, else pass\\
 \hline
 $\:$3. Last trimmer take it&&\\
 \hline
@@ -1042,13 +1042,29 @@ The only strategy which does not conceal this risk, is for all players the recom
 \end{proof}
 \begin{lem}
 \label{ldim2}
-Last diminisher protocol is game-theoretic strategyproof.
+Last-Diminisher protocol is game-theoretic strategyproof.
 \end{lem}
 \begin{proof}
 \textcolor{white}{x}\\\\
-The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$.\\There are two different kinds of obtained values in the extended form game. The first is the value of the piece the player directly obtains in the end of the round. The other one is the at least guaranteed value if he uses the recommended strategy in the next moves .\\
+The assumption is that the players, who have to value the cake after the considered player value it with the probability $\nicefrac{1}{2}$ as more valuable than $\nicefrac{1}{n}$ and with the same probability with the value smaller or equal to $\nicefrac{1}{n}$.\newpage There are two different kinds of obtained values in the extended form game. The first is the value of the piece the player directly obtains in the end of the round. The other one is the at least guaranteed value if he uses the recommended strategy in the next moves .\\
 Now, there are different possibilities how to work with this two types, since cake-cutting is a game where the players do not know their order or their stage in the game, it can be assumed that the considered player is the second last.\\
-
+Every player $p_i$ and $p_j$ has to assume that he is the second last player. Player $p_i$ has to use Cut $\&$ Choose in that case, which is proven to be game-theoretic strategyproof.\\
+For player $p_j$ the subsequent player $p_{j+1}$ is with probability $\nicefrac{1}{2}$ intersted in the piece $I_k$ on which player $p_j$ has to take action. The residue of the cake $X'=I_k+I_k'=\nicefrac{2}{n}$. 
+\begin{table}[htb]
+		\centering
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabular}{ll}
+\multicolumn{2}{c}{The possibilities for player $p_j$ in round $k$:}\\
+\multicolumn{1}{c}{$\cdot$ $v_j(I_k)\leq \nicefrac{1}{n}$}& \multicolumn{1}{c}{$\cdot$ $v_j(I_k)> \nicefrac{1}{n}$}\\
+Action 1: Pass $v_j(I_k)\leq \nicefrac{1}{n}$ (honest)&
+Action 1: Trim $v_j(I_k)= \nicefrac{1}{n}$ (honest)\\
+Action 2: Trim $v_j(I_k)< \nicefrac{1}{n}$&
+Action 2: Trim $v_j(I_k)< \nicefrac{1}{n}$\\ 
+&Action 3: Pass or trim $v_j(I_k)> \nicefrac{1}{n}$
+\end{tabular}
+\end{table}
+\newline
+Three cases are to consider: The player $p_j$ choose the recommended strategy, trim $v_j(I_k)< \nicefrac{1}{n}$ or pass or trim $v_j(I_k)> \nicefrac{1}{n}$ if possible, otherwise he pass $I_k$. In stochastic terms it means, that the expected value at the end of the allocation will be in the honest case: $$ \mathbb{E}(v_j(X_j))= P(v_{j+1}(I_k)> \nicefrac{1}{n})\cdot v_{j}({I_k'})+ P(v_{j-1}(I_k)\leq \nicefrac{1}{n}) \cdot v_j(I_k)$$$$=\nicefrac{1}{2} \cdot \nicefrac{1}{n}+\nicefrac{1}{2} \cdot \nicefrac{1}{n}=\nicefrac{1}{n}$$\\ in the dishonest case for trim or in the dishonest case for trim $v_j(I_k)> \nicefrac{1}{n}$ if possible, otherwise he pass $I_k$: $$ \mathbb{E}(v_j(X_j))= P(v_{j+1}(I_k)> \nicefrac{1}{n})\cdot v_{j}({I_k'})+ P(v_{j-1}(I_k)\leq \nicefrac{1}{n}) \cdot v_j(I_k)$$$$=\nicefrac{1}{2} \cdot v_{j}({I_k'})+\nicefrac{1}{2} \cdot v_{j}({I_k})=\nicefrac{1}{2} \cdot (v_{j}({I_k'})+v_{j}({I_k}))=\nicefrac{1}{2} \cdot (v_{j}({I_k'+I_k}))$$$$=\nicefrac{1}{2} \cdot\underbrace{v_j(X')}_{=\nicefrac{2}{n}}=\nicefrac{1}{n}$$\\ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. So all player would stay honest and Last-Diminisher is game-theoretical strategyproof.
 \end{proof}
 \begin{bezeichnungen}
 According to Theorem \ref{thm5} and Theorem \ref{ldim1}% and Theorem \ref{ldim2} 
@@ -1195,7 +1211,7 @@ $$\nicefrac{1}{(i+1)}\cdot \nicefrac{1}{i}+\nicefrac{1}{(i+1)}\cdot \nicefrac{1}
 Assume the value of the piece will be distributed on $s$ pieces with\\$1 \leq s \leq i+1$. There are $s$ pieces with the value $$v_i(X_1),\ldots, v_i(X_s)=\nicefrac{1}{i\cdot s}$$ and $$v_i(X_{s+1}),\ldots, v_i(X_{i+1})=
 0$$ \\So the probability that $X^j \in \{X_{s+1},\ldots, X_{i+1}\}$ is $$P(X^j \in \{X_{s+1},\ldots, X_{i+1}\})= \nicefrac{(i+1-s)}{(i+1)}$$ and the probability for $X^j \in \{X_{1},\ldots, X_{s}\}$ is $$P(X^j \in \{X_{1},\ldots, X_{s}\})= \nicefrac{(s)}{(i+1)}$$ So the expected value will be in the dishonest case:  $$\mathbb{E}(v_1(X^1+X^2+\ldots+X^{j-1}+X^{j+1}+\ldots+X^{i+1}))=$$$$ \nicefrac{s}{(s \cdot i)} \cdot P(X^j \in \{X_{s+1},\ldots, X_{i+1}\})+\nicefrac{(s-1)}{(s \cdot i)} \cdot P(X^j \in \{X_{1},\ldots, X_{s}\})=$$$$ \nicefrac{1}{i} \cdot \nicefrac{(i+1-s)}{(i+1)} + \nicefrac{(s-1)}{(s\cdot i)}\cdot \nicefrac{s}{(i+1)}=$$$$\nicefrac{1}{(i+1)} $$
 Even if the value is distributed unequally on the $s$ pieces, it would not\\affect the value of the piece in the allocation, because the probability\\of the piece the player $p_{i+1}$ take is uniformly distributed.\\
-According to the definition of game-theoretic strategyproofness in the\\case with equal expected values the player would stay honest.
+According to the definition of game-theoretic strategyproofness in the\\case with equal expected values the player would stay honest.  So all player would stay honest and Lone-Chooser is game-theoretical strategyproof.
 \end{itemize}
 \end{itemize}
 \end{proof}
@@ -1245,7 +1261,7 @@ The Divide-$\&$-Conquer protocol is game-theoretic strategyproof.
 \textcolor{white}{x}
 \begin{itemize}
 \item The player $p_n$ has no intention to take the less valuable piece.
-\item Every player $p_i$ in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. In stochastic terms it means, that the expected value at the end of the allocation for all $p_i$ will be in the honest case: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2}\cdot \nicefrac{1}{2}+\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil}\cdot \nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{n}$$\\ and in the dishonest case for all $p_i$: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}) +\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}) =\nicefrac{2}{n} \cdot \nicefrac{1}{2} \cdot \underbrace{v_{\lfloor\nicefrac{n}{2}\rfloor}(X)}_{=1}=\nicefrac{1}{n}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest. Divide-$\&$-Conquer is game-theoretical strategyproof.
+\item Every player $p_i$ in the set $P_{n-1}$ has to assume that he is the player with the $\lfloor\nicefrac{n}{2}\rfloor$-th cut, since he does not know the valuation functions of the other players. There is a possibility to get or to have to divide the right or the left piece with other players. In stochastic terms it means, that the expected value at the end of the allocation for all $p_i$ will be in the honest case: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2}\cdot \nicefrac{1}{2}+\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil}\cdot \nicefrac{1}{2} \cdot \nicefrac{1}{2}=\nicefrac{1}{n}$$\\ and in the dishonest case for all $p_i$: $$ \mathbb{E}(v_{\lfloor\nicefrac{n}{2}\rfloor}(X_{\lfloor\nicefrac{n}{2}\rfloor}))=\nicefrac{1}{\lfloor\nicefrac{n}{2}\rfloor} \cdot P(v_{n}(X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_n(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor})+$$$$\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot P(v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})\leq v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}))\cdot v_i(X-X'_{\lfloor\nicefrac{n}{2}\rfloor})$$$$=\nicefrac{1}{{\lfloor\nicefrac{n}{2}\rfloor}} \cdot \nicefrac{1}{2} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X'_{\lfloor\nicefrac{n}{2}\rfloor}) +\nicefrac{1}{\lceil\nicefrac{n}{2}\rceil} \cdot v_{\lfloor\nicefrac{n}{2}\rfloor}(X-X'_{\lfloor\nicefrac{n}{2}\rfloor}) =\nicefrac{2}{n} \cdot \nicefrac{1}{2} \cdot \underbrace{v_{\lfloor\nicefrac{n}{2}\rfloor}(X)}_{=1}=\nicefrac{1}{n}$$ According to the definition of game-theoretical strategyproofness in the case with equal expected values the player would stay honest.  So all player would stay honest and Divide-$\&$-Conquer is game-theoretical strategyproof.
 \end{itemize}
 \end{proof}
 \begin{figure}[h!]
@@ -1288,7 +1304,7 @@ $\:$Protocol & \multicolumn{1}{c|}{WSP} & GTSP & SP & SPP &SSP  \\
 \hline
 $\:$Cut $\&$ Choose & \Checkmark & \Checkmark  &\Checkmark & \Checkmark &  \XSolidBrush\\
 \hline
-$\:$Last-Diminisher & \Checkmark & (\Checkmark) & \Checkmark& \Checkmark &  \XSolidBrush\\
+$\:$Last-Diminisher & \Checkmark & \Checkmark & \Checkmark& \Checkmark &  \XSolidBrush\\
 \hline
 $\:$Lone-Chooser & \Checkmark & \Checkmark  &\Checkmark & \Checkmark &  \XSolidBrush\\
 \hline
@@ -1323,9 +1339,10 @@ In \cite{dc} and in the revisited version of this work \cite{dc2} the authors fo
 An interesting aspect would be to take a closer look on groupstrategyproofness. Hereby, groups have public valuations for group members.\\
 \newline
 Another approach about strategyproofness could be a consecutively allocation of several cakes. Then the cake-cutting-game could be interpreted as a repeated game. \\
-Actually only a few game-theoretic methods are applied in this work. A lot more intense research could yield towards different results and different applications in the field of cake-cutting. Some possible application field could be the Last Diminisher protocol where the players know the stage in the game or the Divide-and-Conquer protocol with the focus on whether the participants can gain some advantages from knowing with how many players the are dividing a part of the cake and how many marks are on the left or right side of their mark. \\
-It would also be interessting primary to search for strategies which fulfill the strategyproofness criterion but not the game-theoretic strategyproofness criterion.\\
-The probability model that is used in this work is very simply, since even if the player $p_1$ cuts a cake in two pieces $\{X', X-X'\}$ with the value $v_1(X')=1-\epsilon$ and $v_1(X-X')=\epsilon$ the probability that player $p_2$ takes $X'$ or $X-X'$ is equal. Certainly there are valuations where it is possible, but in many application not reasonable for example in a divorce allocation, if $X'$ is a lamborghini and $X-X'$ the old carpet in the kitchen. A further application could be to correlate the valuation of the cutter and the probability of the other player in taking this piece. 
+Actually only a few game-theoretic methods are applied in this work. An a lot more intense research could yield towards different results and different applications in the field of cake-cutting. Some possible application field could be the Last Diminisher protocol where the players know their stage in the game or the Divide-$\&$-Conquer protocol with the focus on whether the participants can gain some advantages from knowing with how many players they are dividing a part of the cake and how many marks are on the left or right side of their mark.\\
+More protocols like ''cut your own piece'' or other can be also analysed.\\
+It would be interessting primary to search for strategies which fulfill the strategyproofness criterion but not the game-theoretic strategyproofness criterion.\\
+The probability model that is used in this work is very simply, since even if the player $p_1$ cuts a cake in two pieces $\{X', X-X'\}$ with the value $v_1(X')=1-\epsilon$ and $v_1(X-X')=\epsilon$ the probability that player $p_2$ takes $X'$ or $X-X'$ is equal. In many application is this not reasonable for example in a divorce settlement allocation, if $X'$ is a Lamborghini and $X-X'$ the old carpet in the kitchen. There are valuations where it is possible, for example if the carpet was a gift from Elvis Presley and maybe even more money worth than the car. A further application could be to correlate the valuation of the cutter and the probability of the other players in taking this piece. 
 
 \pagebreak
 
