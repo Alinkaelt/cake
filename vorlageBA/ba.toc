@@ -7,15 +7,15 @@
 \contentsline {subsection}{\numberline {2.4}Different Types of Protocols}{9}{subsection.2.4}
 \contentsline {section}{\numberline {3}Strategyproofness}{10}{section.3}
 \contentsline {subsection}{\numberline {3.1}Correlation between Strategyproofness Criteria}{12}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}The Cut $\&$ Choose Protocol}{15}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}The Cut $\&$ Choose Protocol}{14}{subsection.3.2}
 \contentsline {section}{\numberline {4}Strategyproofness of Proportional Protocols}{17}{section.4}
-\contentsline {subsection}{\numberline {4.1}The Kuhn \IeC {\`a} la Dawson Lone-Divider Protocol}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}The Kuhn-Dawson Lone-Divider Protocol}{17}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}The Banach-Knaster Last-Diminisher Protocol}{21}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}The Fink Lone-Chooser Protocol}{24}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-$\&$-Conquer Protocol}{27}{subsection.4.4}
-\contentsline {section}{\numberline {5}Conclusion}{29}{section.5}
-\contentsline {subsection}{\numberline {5.1}Related Work}{29}{subsection.5.1}
-\contentsline {section}{\numberline {6}Open Questions and Future Research}{30}{section.6}
-\contentsline {section}{References}{31}{section*.6}
-\contentsline {section}{List of Figures}{33}{section*.8}
-\contentsline {section}{List of Tables}{33}{section*.10}
+\contentsline {subsection}{\numberline {4.3}The Fink Lone-Chooser Protocol}{23}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}The Even $\&$ Paz Divide-$\&$-Conquer Protocol}{26}{subsection.4.4}
+\contentsline {section}{\numberline {5}Conclusion}{28}{section.5}
+\contentsline {subsection}{\numberline {5.1}Related Work}{28}{subsection.5.1}
+\contentsline {section}{\numberline {6}Open Questions and Future Research}{29}{section.6}
+\contentsline {section}{References}{30}{section*.6}
+\contentsline {section}{List of Figures}{32}{section*.8}
+\contentsline {section}{List of Tables}{32}{section*.10}

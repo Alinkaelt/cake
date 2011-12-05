@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  4 DEC 2011 16:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.9)  5 DEC 2011 02:37
 entering extended mode
  %&-line parsing enabled.
 **ba.tex
@@ -1087,310 +1087,301 @@ been already used, duplicate ignored
 l.18 \clearpage
                 \setcounter{page}{1} [1
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
-s been already used, duplicate ignored
+])
+Underfull \hbox (badness 10000) in paragraph at lines 61--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--89
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \section
+l.89 \section
              {Preliminaries} [1
 
 
-] <kek.pdf, id=146, 285.065pt x 142.93399pt>
+] <kek.pdf, id=149, 285.065pt x 142.93399pt>
 File: kek.pdf Graphic file (type pdf)
 
 <use kek.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 99.
+(Font)              <9> on input line 106.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 99.
+(Font)              <5> on input line 106.
 [2 <./kek.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 118.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 125.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 118.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 125.
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--155
 
  []
 
 [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 233--239
+Underfull \hbox (badness 10000) in paragraph at lines 240--246
 
  []
 
-[5] <bilder/ex1.pdf, id=214, 1046.91125pt x 175.65625pt>
+[5] <bilder/ex1.pdf, id=217, 1046.91125pt x 175.65625pt>
 File: bilder/ex1.pdf Graphic file (type pdf)
  <use bilder/ex1.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 241--318
+Underfull \hbox (badness 10000) in paragraph at lines 248--325
 
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 241--318
+Underfull \hbox (badness 1158) in paragraph at lines 248--325
 \T1/lmr/m/it/10.95 John Cocke and Tadao Kasami want to di-vide a chocolate-stra
 wberry-cake. The
  []
 
 [6 <./bilder/ex1.pdf>]
-LaTeX Font Info:    Try loading font information for U+ulsy on input line 352.
+LaTeX Font Info:    Try loading font information for U+ulsy on input line 359.
  (/usr/share/texmf-texlive/tex/latex/ulsy/Uulsy.fd)
 
 LaTeX Font Warning: Font shape `U/ulsy/m/n' in size <10.95> not available
-(Font)              size <10> substituted on input line 352.
+(Font)              size <10> substituted on input line 359.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 395--399
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
 
  []
 
 [8]
-Underfull \hbox (badness 3019) in paragraph at lines 413--414
+Underfull \hbox (badness 3019) in paragraph at lines 420--421
 []\T1/lmr/m/n/10.95 The de-vel-op-ment of such pro-to-cols is one of the main g
 oals of cake-cutting
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 456--458
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 478--480
+Underfull \hbox (badness 1320) in paragraph at lines 483--485
 \T1/lmr/m/it/10.95 John Warner Backus and Pe-ter Naur are cel-e-brat-ing and Do
 n-ald E. Knuth has
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--498
+Underfull \hbox (badness 10000) in paragraph at lines 500--503
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 538--545
+Underfull \hbox (badness 10000) in paragraph at lines 546--553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--597
+Underfull \hbox (badness 10000) in paragraph at lines 573--605
 
  []
 
-[13] [14]
+[13]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 610.
+(Font)              <12> on input line 617.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 610.
+(hyperref)                removing `math shift' on input line 617.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 610.
+(hyperref)                removing `math shift' on input line 617.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--639
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 650--651
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
 
  []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 651.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 645.
 
-[16]
-Overfull \hbox (1.02269pt too wide) in paragraph at lines 804--805
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 692--694
+
+ []
+
+[15] [16]
+Overfull \hbox (1.02269pt too wide) in paragraph at lines 812--813
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--811
+Underfull \hbox (badness 10000) in paragraph at lines 715--819
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 811--823
+Underfull \hbox (badness 10000) in paragraph at lines 819--831
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--823
+Underfull \hbox (badness 10000) in paragraph at lines 819--831
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 827--848
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 827--848
+Underfull \hbox (badness 10000) in paragraph at lines 836--856
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 827--848
+Underfull \hbox (badness 10000) in paragraph at lines 836--856
 
  []
 
-LaTeX Font Info:    Try loading font information for U+ding on input line 858.
+LaTeX Font Info:    Try loading font information for U+ding on input line 866.
 (/usr/share/texmf-texlive/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 873--883
+Underfull \hbox (badness 10000) in paragraph at lines 881--891
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--883
+Underfull \hbox (badness 10000) in paragraph at lines 881--891
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--883
+Underfull \hbox (badness 10000) in paragraph at lines 881--891
 
  []
 
 [19] [20]
-Overfull \hbox (10.52763pt too wide) in paragraph at lines 1022--1023
+Overfull \hbox (10.52763pt too wide) in paragraph at lines 1030--1031
  [] 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1050
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1050
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1050
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1050
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1203
 
  []
 
-[22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1193
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1193
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1214
 
  []
 
-[25] [26]
+[24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1225.
+(hyperref)                removing `math shift' on input line 1235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1225.
+(hyperref)                removing `math shift' on input line 1235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1225.
+(hyperref)                removing `math shift' on input line 1235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1225.
+(hyperref)                removing `math shift' on input line 1235.
 
-[27] <bilder/dcbsp.pdf, id=427, 882.29625pt x 589.20125pt>
+[26] <bilder/dcbsp.pdf, id=425, 882.29625pt x 589.20125pt>
 File: bilder/dcbsp.pdf Graphic file (type pdf)
 
 <use bilder/dcbsp.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1279
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1289
 
  []
 
-[28 <./bilder/dcbsp.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1320
-
- []
-
-
-Underfull \hbox (badness 2617) in paragraph at lines 1295--1320
-\T1/lmr/m/n/10.95 The well-known pro-por-tional cake-cutting pro-to-cols have b
-een rewrit-ten into a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1332
+[27 <./bilder/dcbsp.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1330
 
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 1325--1332
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1342
+
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 1335--1342
 \T1/lmr/m/n/10.95 In pie-cutting [[]] showed that a strat-e-gyproof and ef-fi-c
 ient mech-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1332
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1342
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1346
+[28] [29] (./ba.bbl [30
 
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 1339--1346
-\T1/lmr/m/n/10.95 Another ap-proach about strat-e-gyproof-ness could be a con-s
-ec-u-tively al-lo-ca-tion of
- []
-
-[30] (./ba.bbl [31
-
-]) [32] (./ba.lof)
+]) [31] (./ba.lof)
 \tf@lof=\write7
 \openout7 = `ba.lof'.
 
@@ -1398,7 +1389,7 @@ ec-u-tively al-lo-ca-tion of
 \tf@lot=\write8
 \openout8 = `ba.lot'.
 
- [33
+ [32
 
 ] (./ba.aux)
 
@@ -1407,13 +1398,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16219 strings out of 495061
- 285730 string characters out of 1182621
- 395446 words of memory out of 3000000
- 18743 multiletter control sequences out of 15000+50000
+ 16218 strings out of 495061
+ 285731 string characters out of 1182621
+ 395500 words of memory out of 3000000
+ 18744 multiletter control sequences out of 15000+50000
  79814 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 49i,20n,69p,2399b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,20n,69p,2400b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/alina/.texmf-var/fonts/pk/ljfour/public/bbding/bbding10.657pk>{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -rm.enc} </home/alina/.texmf-var/fonts/pk/ljfour/public/ulsy/ulsy10.600pk>{/usr
@@ -1433,9 +1424,9 @@ fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
 /type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ba.pdf (38 pages, 579128 bytes).
+Output written on ba.pdf (37 pages, 576316 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
